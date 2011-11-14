@@ -18,7 +18,7 @@ RequestExecutionLevel user
 DirText "Select directory to designated SIP" "SIP Folder" "" "Select directory to designated SIP"
 
 ; Overrides the default install button text (of "Install") with the specified text
-InstallButtonText "Show SIP..."
+InstallButtonText "convert SIP..."
 
 ;--------------------------------
 
@@ -49,7 +49,8 @@ Section "" ;No components page, name is not important
   ;File example1.nsi
 
   ; Execute the specified program and continue immediately
-  Exec '"$PROGRAMFILES\Internet Explorer\iexplore.exe" "file:\\$EXEDIR\index.html?sip=$INSTDIR"'
+  ; Exec '"$PROGRAMFILES\Internet Explorer\iexplore.exe" "file:\\$EXEDIR\index.html?sip=$INSTDIR"'
+  ExecWait '"$EXEDIR\di-extractor.cmd" "$INSTDIR"'
 
   Quit
   
