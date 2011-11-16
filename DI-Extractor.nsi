@@ -1,7 +1,7 @@
-; InstallOptions script demonstrating custom buttons
-;----------------------------------------------------
 
 !include WinMessages.nsh
+!include ZipDLL.nsh
+!include extractor.nsi
 
 ; The name of the installer
 Name "DI-Extractor"
@@ -9,8 +9,20 @@ Name "DI-Extractor"
 ; The file to write
 OutFile "DI-Extractor.exe"
 
+; The default installation directory
+; InstallDir $DESKTOP
+; InstallDir "$EXEDIR\" 
+
 ; Show install details
 ShowInstDetails show
+
+; Request application privileges for Windows Vista
+RequestExecutionLevel user
+
+; Overrides the default install button text (of "Install") with the specified text
+InstallButtonText "convert SIP..."
+
+;--------------------------------
 
 ; Called before anything else as installer initialises
 Function .onInit
@@ -22,6 +34,8 @@ Function .onInit
 	WriteINIStr "$PLUGINSDIR\test.ini" "Field 5" "State" "$EXEDIR\"
 	WriteINIStr "$PLUGINSDIR\test.ini" "Field 7" "State" "$EXEDIR"
 FunctionEnd
+
+;--------------------------------
 
 ; Our custom page
 Page custom ShowCustom LeaveCustom ": Select SIP"
@@ -92,16 +106,41 @@ validate:
 
 foldersip:
 	ReadINIStr $0 "$PLUGINSDIR\test.ini" "Field 7" "State"
-	IfFileExists "$0/header/metadata.xml" done
+	; check for metadata.xml
+	IfFileExists "$0/header/metadata.xml" +3
 		MessageBox MB_OK "$0 is not a valid SIP"
 		Abort ; Return to the page
+	CopyFiles "$0/header/metadata.xml" "$PLUGINSDIR\metadata.xml"
+	Goto done
 
 zipsip:
-	MessageBox MB_OK "SIP in ZIP format not yet supported"
-	Abort ; Return to the page
+	ReadINIStr $0 "$PLUGINSDIR\test.ini" "Field 5" "State"
+	; get basename part from path/filename
+	push $0
+	Push "\"
+	Call GetAfterChar
+	; remove filename extension ".zip"
+	push ".zip"
+	Exch
+	Call GetLastPart
+	Exch
+	pop $1
+	; look for metadata.xml in simple zip
+	ZipDLL::extractfile "$0" "$PLUGINSDIR" "header\metadata.xml"
+	CopyFiles "$PLUGINSDIR\header\metadata.xml" "$PLUGINSDIR\metadata.xml"
+	; look for metadata.xml in zip with SIP name folder
+	ZipDLL::extractfile "$0" "$PLUGINSDIR" "$1\header\metadata.xml"
+	CopyFiles "$PLUGINSDIR\$1\header\metadata.xml" "$PLUGINSDIR\metadata.xml"
+	; check for metadata.xml
+	IfFileExists "$PLUGINSDIR\metadata.xml" done
+		MessageBox MB_OK "$0 is not a valid SIP in ZIP-format"
+		Abort ; Return to the page
 
 done:
+
 FunctionEnd
+
+;--------------------------------
 
 ; Installation page
 Page instfiles
