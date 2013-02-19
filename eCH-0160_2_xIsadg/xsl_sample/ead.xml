@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+	<eadheader>
+		<eadid/>
+		<filedesc>
+			<titlestmt>
+				<titleproper>Beispielablieferung für LARIS</titleproper>
+			</titlestmt>
+		</filedesc>
+		<profiledesc>
+			<creation>
+				<date>2008-04-16</date>
+			</creation>
+		</profiledesc>
+	</eadheader>
+	<archdesc level="collection">
+		<did>
+			<unitid>EAR</unitid>
+			<unittitle>Elektronisches Archiv</unittitle>
+			<origination>
+				<name role="Provenance">Staatskanzlei</name>
+			</origination>
+		</did>
+		<dsc>
+			<c01 level="fonds">
+				<did>
+					<unitid>AP Räte</unitid>
+					<unittitle>Aktenplan Kantonsrat und Regierung</unittitle>
+					<origination label="RIS id">8910465585691065172:11449852:1120210416004</origination>
+				</did>
+				<c02 level="series">
+					<did>
+						<unitid>3</unitid>
+						<unittitle>Gesundheitspflege, Sozialversicherung, Sozialhilfe</unittitle>
+						<origination label="RIS id">5261788582912246550:11171801:1122555870344</origination>
+					</did>
+					<c03 level="subseries">
+						<did>
+							<unitid>31</unitid>
+							<unittitle>Gesundheitspflege</unittitle>
+							<origination label="RIS id">4504173896742532066:5317362:1122565246621</origination>
+						</did>
+						<c04 level="subgrp">
+							<did>
+								<unitid>310</unitid>
+								<unittitle>Allgemein</unittitle>
+								<abstract>einschliesslich Suchthilfe (-fürsorge) und Spitex Reintegration nach Krankheit und Invalidität, ohne stationäre (AKP Nr. 32)</abstract>
+								<origination label="RIS id">262759323463322332:20783793:1122565262059</origination>
+							</did>
+							<controlaccess>
+								<subject>Gesundheit</subject>
+								<subject>Pflege</subject>
+								<subject>Sanität</subject>
+								<subject>Samariter</subject>
+								<subject>Alkoholfürsorge</subject>
+								<subject>Sucht</subject>
+								<subject>Spitex</subject>
+								<subject>spitalextern</subject>
+								<subject>Rehabilitation</subject>
+								<subject>Wiedereingliederung</subject>
+								<subject>Betreuung</subject>
+							</controlaccess>
+							<c05 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:premis="http://www.loc.gov/standards/premis/v1" level="file">
+								<did>
+									<unitid>22.06.02</unitid>
+									<unittitle>V. N GesG</unittitle>
+									<unitdate>12.01.2006</unitdate>
+									<abstract>V. Nachtrag zum Gesundheitsgesetz</abstract>
+									<origination>Gesundheitsdepartement</origination>
+									<materialspec>KR Gesetzgebung</materialspec>
+								</did>
+								<odd>
+									<list>
+										<defitem>
+											<label>RIS technical ID</label>
+											<item>{46D927EE-D0C8-4292-8169-43643564C6EA}</item>
+										</defitem>
+									</list>
+								</odd>
+								<c06 level="item">
+									<did>
+										<unittitle>Botschaft und Entwurf der Regierung vom 31. Januar 2006</unittitle>
+										<unitdate datechar="creation">2006-02-01 10:22:19</unitdate>
+										<materialspec>Botschaft Bericht</materialspec>
+									</did>
+									<odd>
+										<list>
+											<defitem>
+												<label>RIS technical ID</label>
+												<item>{5AE81DB5-F917-48D2-A7F5-FC98B309688E}</item>
+											</defitem>
+										</list>
+									</odd>
+									<dao xpointer="premis.xml#xpointer(//xmlID('i__97330792_369'))"/>
+								</c06>
+								<c06 level="item">
+									<did>
+										<unittitle>Anträge der vorberatenden Kommission vom 15. März 2006</unittitle>
+										<unitdate datechar="creation">2006-03-22 11:04:41</unitdate>
+										<materialspec>Antrag</materialspec>
+									</did>
+									<odd>
+										<list>
+											<defitem>
+												<label>RIS technical ID</label>
+												<item>{D5099D12-A606-4931-949D-A0D211B438A3}</item>
+											</defitem>
+										</list>
+									</odd>
+									<dao xpointer="premis.xml#xpointer(//xmlID('i__97330792_423'))"/>
+								</c06>
+								<c06 level="item">
+									<did>
+										<unittitle>Antrag SVP-Fraktion vom 3. April 2006</unittitle>
+										<unitdate datechar="creation">2006-04-04 11:03:11</unitdate>
+										<materialspec>Antrag</materialspec>
+									</did>
+									<odd>
+										<list>
+											<defitem>
+												<label>RIS technical ID</label>
+												<item>{F20F4BE7-1DCF-4F53-B07E-01E0E34060D4}</item>
+											</defitem>
+										</list>
+									</odd>
+									<dao xpointer="premis.xml#xpointer(//xmlID('i__97330792_455'))"/>
+								</c06>
+								<c06 level="item">
+									<did>
+										<unittitle>Anträge CVP-Fraktion vom 3. April 2006</unittitle>
+										<unitdate datechar="creation">2006-04-04 11:03:47</unitdate>
+										<materialspec>Antrag</materialspec>
+									</did>
+									<odd>
+										<list>
+											<defitem>
+												<label>RIS technical ID</label>
+												<item>{F6BDD111-8839-4FFA-8EF6-AA9D7FC871DC}</item>
+											</defitem>
+										</list>
+									</odd>
+									<dao xpointer="premis.xml#xpointer(//xmlID('i__97330792_487'))"/>
+								</c06>
+								<c06 level="item">
+									<did>
+										<unittitle>Anträge Baer-Oberuzwil vom 3. April 2006</unittitle>
+										<unitdate datechar="creation">2006-04-04 11:04:42</unitdate>
+										<materialspec>Antrag</materialspec>
+									</did>
+									<odd>
+										<list>
+											<defitem>
+												<label>RIS technical ID</label>
+												<item>{1572898D-1A79-4EF6-BA28-881602B1780A}</item>
+											</defitem>
+										</list>
+									</odd>
+									<dao xpointer="premis.xml#xpointer(//xmlID('i__97330792_519'))"/>
+								</c06>
+								<c06 level="item">
+									<did>
+										<unittitle>Anträge FDP-Fraktion vom 3. April 2006</unittitle>
+										<unitdate datechar="creation">2006-04-04 11:05:30</unitdate>
+										<materialspec>Antrag</materialspec>
+									</did>
+									<odd>
+										<list>
+											<defitem>
+												<label>RIS technical ID</label>
+												<item>{E9FBEE54-CD9A-40BF-95BF-BF1401A392AC}</item>
+											</defitem>
+										</list>
+									</odd>
+									<dao xpointer="premis.xml#xpointer(//xmlID('i__97330792_551'))"/>
+								</c06>
+								<c06 level="item">
+									<did>
+										<unittitle>Anträge FDP-Fraktion vom 3. April 2006</unittitle>
+										<unitdate datechar="creation">2006-04-04 11:06:04</unitdate>
+										<materialspec>Antrag</materialspec>
+									</did>
+									<odd>
+										<list>
+											<defitem>
+												<label>RIS technical ID</label>
+												<item>{3C76E214-1998-4606-9E3D-7C342891FA7C}</item>
+											</defitem>
+										</list>
+									</odd>
+									<dao xpointer="premis.xml#xpointer(//xmlID('i__97330792_583'))"/>
+								</c06>
+								<c06 level="item">
+									<did>
+										<unittitle>Antrag SP-Fraktion vom 3. April 2006</unittitle>
+										<unitdate datechar="creation">2006-04-04 11:06:39</unitdate>
+										<materialspec>Antrag</materialspec>
+									</did>
+									<odd>
+										<list>
+											<defitem>
+												<label>RIS technical ID</label>
+												<item>{AA157931-B48F-4763-A57C-4F95AB16B25D}</item>
+											</defitem>
+										</list>
+									</odd>
+									<dao xpointer="premis.xml#xpointer(//xmlID('i__97330792_615'))"/>
+								</c06>
+								<c06 level="item">
+									<did>
+										<unittitle>Antrag SP-Fraktion vom 3. April 2006</unittitle>
+										<unitdate datechar="creation">2006-04-04 11:07:08</unitdate>
+										<materialspec>Antrag</materialspec>
+									</did>
+									<odd>
+										<list>
+											<defitem>
+												<label>RIS technical ID</label>
+												<item>{626FADF6-8243-4DF7-94D6-363D99EA74E4}</item>
+											</defitem>
+										</list>
+									</odd>
+									<dao xpointer="premis.xml#xpointer(//xmlID('i__97330792_647'))"/>
+								</c06>
+								<c06 level="item">
+									<did>
+										<unittitle>Ergebnis der 1. Lesung des Kantonsrates vom 3. und 4. April 2006</unittitle>
+										<unitdate datechar="creation">2006-04-20 08:36:44</unitdate>
+										<materialspec>Erlass</materialspec>
+									</did>
+									<odd>
+										<list>
+											<defitem>
+												<label>RIS technical ID</label>
+												<item>{216AC389-0EA3-4E5B-94BA-C38E74CF9289}</item>
+											</defitem>
+										</list>
+									</odd>
+									<dao xpointer="premis.xml#xpointer(//xmlID('i__97330792_679'))"/>
+								</c06>
+								<c06 level="item">
+									<did>
+										<unittitle>Antrag der Redaktionskommission vom 6. Juni 2006</unittitle>
+										<unitdate datechar="creation">2006-06-07 10:13:39</unitdate>
+										<materialspec>Antrag</materialspec>
+									</did>
+									<odd>
+										<list>
+											<defitem>
+												<label>RIS technical ID</label>
+												<item>{09665B79-F760-460F-9149-DD7D2E3F7BAE}</item>
+											</defitem>
+										</list>
+									</odd>
+									<dao xpointer="premis.xml#xpointer(//xmlID('i__97330792_711'))"/>
+								</c06>
+								<c06 level="item">
+									<did>
+										<unittitle>Referendumsvorlage vom 7. Juni 2006</unittitle>
+										<unitdate datechar="creation">2006-06-26 16:04:33</unitdate>
+										<materialspec>Erlass</materialspec>
+									</did>
+									<odd>
+										<list>
+											<defitem>
+												<label>RIS technical ID</label>
+												<item>{C5A4CED7-BF74-4941-95AB-2E80AE543FD1}</item>
+											</defitem>
+										</list>
+									</odd>
+									<dao xpointer="premis.xml#xpointer(//xmlID('i__97330792_743'))"/>
+								</c06>
+								<c06 level="item">
+									<did>
+										<unittitle>Aktuelle Mitgliederliste</unittitle>
+										<unitdate datechar="creation">2006-07-31 11:48:03</unitdate>
+										<materialspec>Mitgliederliste</materialspec>
+									</did>
+									<odd>
+										<list>
+											<defitem>
+												<label>RIS technical ID</label>
+												<item>{E630B8B2-A3E3-4FD9-BEC0-1C2B199DB990}</item>
+											</defitem>
+										</list>
+									</odd>
+									<dao xpointer="premis.xml#xpointer(//xmlID('i__97330792_775'))"/>
+								</c06>
+								<c06 level="item">
+									<did>
+										<unittitle>In der Gesetzessammlung veröffentlicht im September 2006</unittitle>
+										<unitdate datechar="creation">2006-10-05 19:05:43</unitdate>
+										<materialspec>Erlass</materialspec>
+									</did>
+									<odd>
+										<list>
+											<defitem>
+												<label>RIS technical ID</label>
+												<item>{B6BF26C7-6674-44A9-BD43-A0D634B73BA4}</item>
+											</defitem>
+										</list>
+									</odd>
+									<dao xpointer="premis.xml#xpointer(//xmlID('i__97330792_807'))"/>
+								</c06>
+							</c05>
+						</c04>
+					</c03>
+				</c02>
+			</c01>
+		</dsc>
+	</archdesc>
+</ead>

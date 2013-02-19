@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archivalDescription xmlns="ISADG" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:schemaLocation="ISADG xIsadg_v1.6.xsd">
+   <identity>
+      <referenceCode>RIS: AP Räte</referenceCode>
+      <title>Ratsinformationssystem des Kantons St.Gallen (RIS), Kantonsrat, Gesetzgebung</title>
+      <dates>
+         <fromDate>unknown</fromDate>
+         <toDate>2007-12-31</toDate>
+      </dates>
+      <descriptionLevel>Bestand</descriptionLevel>
+   </identity>
+</archivalDescription>

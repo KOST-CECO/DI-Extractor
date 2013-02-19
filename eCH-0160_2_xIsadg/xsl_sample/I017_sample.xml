@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="C:\Software\xampp\htdocs\augev\Referenzimplementierung\I0172aip\aktenplan2ead.xsl"?>
+<Ordnungssystem xmlns="http://kost-ceco.ch/gever/I017" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://kost-ceco.ch/gever/I017 I017.xsd">
+	<OrdnungssystemName>Aktenplan Kantonsrat und Regierung</OrdnungssystemName>
+	<OrdnungssystemGültigkeit>primär</OrdnungssystemGültigkeit>
+	<OrdnungssystemGeneration>A</OrdnungssystemGeneration>
+	<aktenbildendeStelle>
+		<AktenbildnerName>Bildungsdepartement</AktenbildnerName>
+		<AktenbildnerRegistratur>KR Gesetzgebung</AktenbildnerRegistratur>
+		<AktenbildnerBemerkung>=AktenbildnerBemerkung</AktenbildnerBemerkung>
+	</aktenbildendeStelle>
+	<Ordnungssystemposition Spezialisierung="Gruppentitel">
+		<OrdnungssystempositionNummer>2</OrdnungssystempositionNummer>
+		<OrdnungssystempositionTitel>Erziehung, Bildung, Kultur</OrdnungssystempositionTitel>
+		<OrdnungssystempositionStatus>aktiv</OrdnungssystempositionStatus>
+		<OrdnungssystempositionKlassifizierungskategorie>nicht klassifiziert</OrdnungssystempositionKlassifizierungskategorie>
+		<OrdnungssystempositionDatenschutzstufe>false</OrdnungssystempositionDatenschutzstufe>
+		<OrdnungssystempositionArchivwürdigkeit>archivwürdig</OrdnungssystempositionArchivwürdigkeit>
+		<OrdnungssystempositionStandort>=OrdnungssystempositionStandort</OrdnungssystempositionStandort>
+		<OrdnungssystempositionVerweis>=OrdnungssystempositionVerweis 1</OrdnungssystempositionVerweis>
+		<OrdnungssystempositionVerweis>=OrdnungssystempositionVerweis 2</OrdnungssystempositionVerweis>
+		<OrdnungssystempositionVerweis>=OrdnungssystempositionVerweis 1</OrdnungssystempositionVerweis>
+		<OrdnungssystempositionSchlagwort>=OrdnungssystempositionSchlagwort 1</OrdnungssystempositionSchlagwort>
+		<OrdnungssystempositionSchlagwort>=OrdnungssystempositionSchlagwort 2</OrdnungssystempositionSchlagwort>
+		<OrdnungssystempositionSchlagwort>=OrdnungssystempositionSchlagwort 3</OrdnungssystempositionSchlagwort>
+		<OrdnungssystempositionBemerkung>=OrdnungssystempositionBemerkung</OrdnungssystempositionBemerkung>
+		<OrdnungssystempositionÖffentlichkeitsstatus>einsehbar</OrdnungssystempositionÖffentlichkeitsstatus>
+		<OrdnungssystempositionÖffentlichkeitsstatusBegründung>=OrdnungssystempositionÖffentlichkeitsstatusBegründung</OrdnungssystempositionÖffentlichkeitsstatusBegründung>
+		<Ordnungssystemposition Spezialisierung="Gruppentitel">
+			<OrdnungssystempositionNummer>21</OrdnungssystempositionNummer>
+			<OrdnungssystempositionTitel>Schulen</OrdnungssystempositionTitel>
+			<OrdnungssystempositionStatus>aktiv</OrdnungssystempositionStatus>
+			<OrdnungssystempositionKlassifizierungskategorie>nicht klassifiziert</OrdnungssystempositionKlassifizierungskategorie>
+			<OrdnungssystempositionDatenschutzstufe>false</OrdnungssystempositionDatenschutzstufe>
+			<OrdnungssystempositionArchivwürdigkeit>archivwürdig</OrdnungssystempositionArchivwürdigkeit>
+			<Ordnungssystemposition Spezialisierung="Rubrik">
+				<OrdnungssystempositionNummer>213</OrdnungssystempositionNummer>
+				<OrdnungssystempositionTitel>Volksschule</OrdnungssystempositionTitel>
+				<OrdnungssystempositionStatus>aktiv</OrdnungssystempositionStatus>
+				<OrdnungssystempositionKlassifizierungskategorie>nicht klassifiziert</OrdnungssystempositionKlassifizierungskategorie>
+				<OrdnungssystempositionDatenschutzstufe>false</OrdnungssystempositionDatenschutzstufe>
+				<OrdnungssystempositionArchivwürdigkeit>archivwürdig</OrdnungssystempositionArchivwürdigkeit>
+				<OrdnungssystempositionSchlagwort>Volksschule</OrdnungssystempositionSchlagwort>
+				<OrdnungssystempositionSchlagwort>Primarschule</OrdnungssystempositionSchlagwort>
+				<OrdnungssystempositionSchlagwort>Schulbesuch</OrdnungssystempositionSchlagwort>
+				<OrdnungssystempositionSchlagwort>Sekundarschule</OrdnungssystempositionSchlagwort>
+				<OrdnungssystempositionSchlagwort>Realschule</OrdnungssystempositionSchlagwort>
+				<OrdnungssystempositionSchlagwort>Sonderschule</OrdnungssystempositionSchlagwort>
+				<OrdnungssystempositionSchlagwort>Kleinklasse</OrdnungssystempositionSchlagwort>
+				<OrdnungssystempositionSchlagwort>Regelklasse</OrdnungssystempositionSchlagwort>
+				<OrdnungssystempositionSchlagwort>Schulleitung</OrdnungssystempositionSchlagwort>
+				<OrdnungssystempositionSchlagwort>Schulklasse</OrdnungssystempositionSchlagwort>
+				<OrdnungssystempositionSchlagwort>Klassengrösse</OrdnungssystempositionSchlagwort>
+				<OrdnungssystempositionBemerkung>ohne Lehrerbesoldung (AKP Nr 210)</OrdnungssystempositionBemerkung>
+				<Rubrik_Dossierbildung>Sachdossier</Rubrik_Dossierbildung>
+				<Dossier>
+					<DossierAktenzeichen>22.06.01</DossierAktenzeichen>
+					<DossierBandnummer>1</DossierBandnummer>
+					<DossierTitel>IX. NG Volksschule</DossierTitel>
+					<DossierEröffnungsdatum>2006-01-04</DossierEröffnungsdatum>
+					<DossierStatus>abgeschlossen</DossierStatus>
+					<DossierKlassifizierungskategorie>nicht klassifiziert</DossierKlassifizierungskategorie>
+					<DossierDatenschutzstufe>false</DossierDatenschutzstufe>
+					<DossierArchivwürdigkeit>archivwürdig</DossierArchivwürdigkeit>
+					<DossierStandort>=DossierStandort</DossierStandort>
+					<DossierAusleihePerson>=DossierAusleihePerson</DossierAusleihePerson>
+					<DossierAusleiheDatum>1000-01-01</DossierAusleiheDatum>
+					<DossierBehältnisnummerBAR>=DossierBehältnisnummerBAR</DossierBehältnisnummerBAR>
+					<DossierAblieferungsnummerBAR>=DossierAblieferungsnummerBAR</DossierAblieferungsnummerBAR>
+					<DossierVerweis>=DossierVerweis 1</DossierVerweis>
+					<DossierVerweis>=DossierVerweis 2</DossierVerweis>
+					<DossierVerweis>=DossierVerweis 3</DossierVerweis>
+					<DossierSchlagwort>=DossierSchlagwort 1</DossierSchlagwort>
+					<DossierSchlagwort>=DossierSchlagwort 2</DossierSchlagwort>
+					<DossierSchlagwort>=DossierSchlagwort 3</DossierSchlagwort>
+					<DossierBemerkung>IX. Nachtrag zum Volksschulgesetz</DossierBemerkung>
+					<DossierÖffentlichkeitsstatus>einsehbar</DossierÖffentlichkeitsstatus>
+					<DossierÖffentlichkeitsstatusBegründung>=DossierÖffentlichkeitsstatusBegründung</DossierÖffentlichkeitsstatusBegründung>
+					<Unterlage>
+						<UnterlageAktenzeichen>{2D3C8201-892B-4AD4-BDEA-720F07DD15CC}</UnterlageAktenzeichen>
+						<UnterlageBetreff>Botschaft und Entwurf der Regierung vom 10. Januar 2006</UnterlageBetreff>
+						<UnterlageAdressat>=UnterlageAdressat 1</UnterlageAdressat>
+						<UnterlageAdressat>=UnterlageAdressat 1</UnterlageAdressat>
+						<UnterlageEmpfängerKopie>=UnterlageEmpfängerKopie 1</UnterlageEmpfängerKopie>
+						<UnterlageEmpfängerKopie>=UnterlageEmpfängerKopie 2</UnterlageEmpfängerKopie>
+						<UnterlageUnterzeichner>=UnterlageUnterzeichner 1</UnterlageUnterzeichner>
+						<UnterlageUnterzeichner>=UnterlageUnterzeichner 2</UnterlageUnterzeichner>
+						<UnterlageAbsenderadresse>=UnterlageAbsenderadresse</UnterlageAbsenderadresse>
+						<UnterlageFremdaktenzeichen>=UnterlageFremdaktenzeichen</UnterlageFremdaktenzeichen>
+						<UnterlageAbsendedatum>1001-01-01</UnterlageAbsendedatum>
+						<UnterlageEingangsdatum>1001-01-01</UnterlageEingangsdatum>
+						<UnterlageRegistrierdatum>2006-03-30</UnterlageRegistrierdatum>
+						<UnterlageVersion>1</UnterlageVersion>
+						<UnterlageKlassifizierungskategorie>nicht klassifiziert</UnterlageKlassifizierungskategorie>
+						<UnterlageDatenschutzstufe>false</UnterlageDatenschutzstufe>
+						<Unterlagedigitale>true</Unterlagedigitale>
+						<UnterlageStatus>Schlussversion</UnterlageStatus>
+						<UnterlageBemerkung>Botschaft Bericht</UnterlageBemerkung>
+						<UnterlageVerweis>=UnterlageVerweis 1</UnterlageVerweis>
+						<UnterlageVerweis>=UnterlageVerweis 1</UnterlageVerweis>
+						<UnterlageSchlagwort>=UnterlageSchlagwort 1</UnterlageSchlagwort>
+						<UnterlageSchlagwort>=UnterlageSchlagwort 2</UnterlageSchlagwort>
+						<UnterlageÖffentlichkeitsstatus>einsehbar</UnterlageÖffentlichkeitsstatus>
+						<UnterlageÖffentlichkeitsstatusBegründung>=UnterlageÖffentlichkeitsstatusBegründung</UnterlageÖffentlichkeitsstatusBegründung>
+						<Erscheinungsform>
+							<ErscheinungsformFormat>=ErscheinungsformFormat</ErscheinungsformFormat>
+							<ErscheinungsformErstellungsdatum>2006-03-30T22:16:15</ErscheinungsformErstellungsdatum>
+							<ErscheinungsformURN>%7B2D3C8201-892B-4AD4-BDEA-720F07DD15CC%7D.pdf</ErscheinungsformURN>
+						</Erscheinungsform>
+					</Unterlage>
+					<Unterlage>
+						<UnterlageAktenzeichen>{D1645386-573E-4813-905E-D8AABE73656D}</UnterlageAktenzeichen>
+						<UnterlageBetreff>Aktuelle Mitgliederliste</UnterlageBetreff>
+						<UnterlageRegistrierdatum>2006-04-03</UnterlageRegistrierdatum>
+						<UnterlageVersion/>
+						<UnterlageKlassifizierungskategorie>nicht klassifiziert</UnterlageKlassifizierungskategorie>
+						<UnterlageDatenschutzstufe>false</UnterlageDatenschutzstufe>
+						<UnterlageStatus>Schlussversion</UnterlageStatus>
+						<UnterlageBemerkung>Mitgliederliste</UnterlageBemerkung>
+						<Erscheinungsform>
+							<ErscheinungsformFormat/>
+							<ErscheinungsformErstellungsdatum>2006-04-03T16:10:49</ErscheinungsformErstellungsdatum>
+							<ErscheinungsformURN>%7BD1645386-573E-4813-905E-D8AABE73656D%7D.pdf</ErscheinungsformURN>
+						</Erscheinungsform>
+					</Unterlage>
+					<Unterlage>
+						<UnterlageAktenzeichen>{69E93C14-D263-499A-95DF-674A22FF6997}</UnterlageAktenzeichen>
+						<UnterlageBetreff>Antrag der vorberatenden Kommission vom 19. April 2006</UnterlageBetreff>
+						<UnterlageRegistrierdatum>2006-04-20</UnterlageRegistrierdatum>
+						<UnterlageVersion/>
+						<UnterlageKlassifizierungskategorie>nicht klassifiziert</UnterlageKlassifizierungskategorie>
+						<UnterlageDatenschutzstufe>false</UnterlageDatenschutzstufe>
+						<UnterlageStatus>Schlussversion</UnterlageStatus>
+						<UnterlageBemerkung>Antrag</UnterlageBemerkung>
+						<Erscheinungsform>
+							<ErscheinungsformFormat/>
+							<ErscheinungsformErstellungsdatum>2006-04-20T08:27:36</ErscheinungsformErstellungsdatum>
+							<ErscheinungsformURN>%7B69E93C14-D263-499A-95DF-674A22FF6997%7D.pdf</ErscheinungsformURN>
+						</Erscheinungsform>
+					</Unterlage>
+					<Unterlage>
+						<UnterlageAktenzeichen>{D323C2A7-B687-4A3F-9862-7FC63DA250D1}</UnterlageAktenzeichen>
+						<UnterlageBetreff>Antrag CVP-Fraktion vom 6. Juni 2006</UnterlageBetreff>
+						<UnterlageRegistrierdatum>2006-06-06</UnterlageRegistrierdatum>
+						<UnterlageVersion/>
+						<UnterlageKlassifizierungskategorie>nicht klassifiziert</UnterlageKlassifizierungskategorie>
+						<UnterlageDatenschutzstufe>false</UnterlageDatenschutzstufe>
+						<UnterlageStatus>Schlussversion</UnterlageStatus>
+						<UnterlageBemerkung>Antrag</UnterlageBemerkung>
+						<Erscheinungsform>
+							<ErscheinungsformFormat/>
+							<ErscheinungsformErstellungsdatum>2006-06-06T21:12:08</ErscheinungsformErstellungsdatum>
+							<ErscheinungsformURN>%7BD323C2A7-B687-4A3F-9862-7FC63DA250D1%7D.pdf</ErscheinungsformURN>
+						</Erscheinungsform>
+					</Unterlage>
+					<Unterlage>
+						<UnterlageAktenzeichen>{CDFD4EFF-DE3D-4B32-90D5-841D0FAFE4C6}</UnterlageAktenzeichen>
+						<UnterlageBetreff>Referendumsvorlage vom 27. September 2006</UnterlageBetreff>
+						<UnterlageRegistrierdatum>2006-10-09</UnterlageRegistrierdatum>
+						<UnterlageVersion/>
+						<UnterlageKlassifizierungskategorie>nicht klassifiziert</UnterlageKlassifizierungskategorie>
+						<UnterlageDatenschutzstufe>false</UnterlageDatenschutzstufe>
+						<UnterlageStatus>Schlussversion</UnterlageStatus>
+						<UnterlageBemerkung>Erlass</UnterlageBemerkung>
+						<Erscheinungsform>
+							<ErscheinungsformFormat/>
+							<ErscheinungsformErstellungsdatum>2006-10-09T16:57:59</ErscheinungsformErstellungsdatum>
+							<ErscheinungsformURN>%7BCDFD4EFF-DE3D-4B32-90D5-841D0FAFE4C6%7D.pdf</ErscheinungsformURN>
+						</Erscheinungsform>
+					</Unterlage>
+					<Unterlage>
+						<UnterlageAktenzeichen>{EAC9D905-3A98-4FEE-8BB3-A8E74AB4AD13}</UnterlageAktenzeichen>
+						<UnterlageBetreff>In der Gesetzessammlung veröffentlicht im Februar 2007</UnterlageBetreff>
+						<UnterlageRegistrierdatum>2007-03-26</UnterlageRegistrierdatum>
+						<UnterlageVersion/>
+						<UnterlageKlassifizierungskategorie>nicht klassifiziert</UnterlageKlassifizierungskategorie>
+						<UnterlageDatenschutzstufe>false</UnterlageDatenschutzstufe>
+						<UnterlageStatus>Schlussversion</UnterlageStatus>
+						<UnterlageBemerkung>Botschaft Bericht</UnterlageBemerkung>
+						<Erscheinungsform>
+							<ErscheinungsformFormat/>
+							<ErscheinungsformErstellungsdatum>2007-03-26T16:13:30</ErscheinungsformErstellungsdatum>
+							<ErscheinungsformURN>%7BEAC9D905-3A98-4FEE-8BB3-A8E74AB4AD13%7D.pdf</ErscheinungsformURN>
+						</Erscheinungsform>
+					</Unterlage>
+				</Dossier>
+			</Ordnungssystemposition>
+		</Ordnungssystemposition>
+	</Ordnungssystemposition>
+</Ordnungssystem>

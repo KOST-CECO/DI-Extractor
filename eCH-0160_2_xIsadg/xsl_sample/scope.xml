@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ead2scope.xsl"?>
+<sc:Uebernahmen xmlns:sc="http://www.scope.ch/Uebernahme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.scope.ch/Uebernahme Uebernah.xsd">
+	<sc:Uebersicht>
+		<sc:AblieferndeStelle/>
+		<sc:Kontraktperson/>
+		<sc:AktenbildendeStelle/>
+		<sc:Ablage/>
+		<sc:EDVSystem/>
+		<sc:Titel/>
+		<sc:Zeitraum/>
+		<sc:Beschreibung/>
+	</sc:Uebersicht>
+	<sc:Verzeichnungseinheit>
+		<sc:VerzeichnungseinheitId/>
+		<sc:Titel/>
+	</sc:Verzeichnungseinheit>
+</sc:Uebernahmen>

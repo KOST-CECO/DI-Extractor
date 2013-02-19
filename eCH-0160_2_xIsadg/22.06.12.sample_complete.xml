@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archivalDescription xmlns="ISADG" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="ISADG xIsadg_v1.6.xsd">
+	<identity>
+		<referenceCode isadId="1.1" obligation="inherited">AKR</referenceCode>
+		<title isadId="1.2" obligation="mandatory">Aktenplan Kantonsrat und Regierung</title>
+		<dates isadId="1.3" obligation="aggregated">
+			<fromYear>2006</fromYear>
+			<toYear>2006</toYear>
+		</dates>
+		<descriptionLevel isadId="1.4" obligation="mandatory">Bestand</descriptionLevel>
+		<extentMedium isadId="1.5">
+			<extent obligation="aggregated">
+				<dataQuantity>6</dataQuantity>
+			</extent>
+		</extentMedium>
+	</identity>
+	<context>
+		<creator isadId="2.1" obligation="inherited">Grossrat des Kantons St.Gallen</creator>
+	</context>
+	<contentStructure>
+		<scopeContent isadId="3.1">
+			<scope obligation="aggregated">text</scope>
+		</scopeContent>
+	</contentStructure>
+	<conditionsAccessUse>
+		<accessConditions isadId="4.1">
+			<openToThePublic obligation="aggregated">public</openToThePublic>
+		</accessConditions>
+		<physTech isadId="4.4" obligation="aggregated">digital</physTech>
+	</conditionsAccessUse>
+	<additionalReference>
+		<recordReference obligation="inherited">22.06.12</recordReference>
+		<aipReference obligation="inherited">elarch:22.06.12</aipReference>
+	</additionalReference>
+	<archivalDescription>
+		<identity>
+			<referenceCode isadId="1.1" obligation="inherited">2</referenceCode>
+			<title isadId="1.2" obligation="mandatory">Erziehung, Bildung, Kultur</title>
+			<dates isadId="1.3" obligation="aggregated">
+				<fromYear>2006</fromYear>
+				<toYear>2006</toYear>
+			</dates>
+			<descriptionLevel isadId="1.4" obligation="mandatory">Serie</descriptionLevel>
+			<extentMedium isadId="1.5">
+				<extent obligation="aggregated">
+					<dataQuantity>6</dataQuantity>
+				</extent>
+			</extentMedium>
+		</identity>
+		<contentStructure>
+			<scopeContent isadId="3.1">
+				<scope obligation="aggregated">text</scope>
+			</scopeContent>
+		</contentStructure>
+		<conditionsAccessUse>
+			<accessConditions isadId="4.1">
+				<openToThePublic obligation="aggregated">public</openToThePublic>
+			</accessConditions>
+			<physTech isadId="4.4" obligation="aggregated">digital</physTech>
+		</conditionsAccessUse>
+		<additionalReference>
+			<recordReference obligation="inherited">22.06.12:2</recordReference>
+		</additionalReference>
+		<archivalDescription>
+			<identity>
+				<referenceCode isadId="1.1" obligation="inherited">21</referenceCode>
+				<title isadId="1.2" obligation="mandatory">Schulen</title>
+				<dates isadId="1.3" obligation="aggregated">
+					<fromYear>2006</fromYear>
+					<toYear>2006</toYear>
+				</dates>
+				<descriptionLevel isadId="1.4" obligation="mandatory">Teilserie</descriptionLevel>
+				<extentMedium isadId="1.5">
+					<extent obligation="aggregated">
+						<dataQuantity>6</dataQuantity>
+					</extent>
+				</extentMedium>
+			</identity>
+			<contentStructure>
+				<scopeContent isadId="3.1">
+					<scope obligation="aggregated">text</scope>
+				</scopeContent>
+			</contentStructure>
+			<conditionsAccessUse>
+				<accessConditions isadId="4.1">
+					<openToThePublic obligation="aggregated">public</openToThePublic>
+				</accessConditions>
+				<physTech isadId="4.4" obligation="aggregated">digital</physTech>
+			</conditionsAccessUse>
+			<additionalReference>
+				<recordReference obligation="inherited">22.06.12:2:21</recordReference>
+			</additionalReference>
+			<archivalDescription>
+				<identity>
+					<referenceCode isadId="1.1" obligation="inherited">210</referenceCode>
+					<title isadId="1.2" obligation="mandatory">Allgemein</title>
+					<dates isadId="1.3" obligation="aggregated">
+						<fromYear>2006</fromYear>
+						<toYear>2006</toYear>
+					</dates>
+					<descriptionLevel isadId="1.4" obligation="mandatory">Teilserie</descriptionLevel>
+					<extentMedium isadId="1.5">
+						<extent obligation="aggregated">
+							<dataQuantity>6</dataQuantity>
+						</extent>
+					</extentMedium>
+				</identity>
+				<contentStructure>
+					<scopeContent isadId="3.1">
+						<scope obligation="aggregated">text</scope>
+					</scopeContent>
+				</contentStructure>
+				<conditionsAccessUse>
+					<accessConditions isadId="4.1">
+						<openToThePublic obligation="aggregated">public</openToThePublic>
+					</accessConditions>
+				</conditionsAccessUse>
+				<alliedMaterials>
+					<relatedUnits isadId="5.3" obligation="optional">ohne ausserschulische Betreuung (AKP Nr 257) und allgemeine Fragen der Anstellung (AKP Nr 143)</relatedUnits>
+				</alliedMaterials>
+				<additionalReference>
+					<recordReference obligation="inherited">22.06.12:2:210</recordReference>
+				</additionalReference>
+				<archivalDescription>
+					<identity>
+						<referenceCode isadId="1.1" obligation="inherited">22.06.12</referenceCode>
+						<title isadId="1.2" obligation="mandatory">X. Nachtrag zum Volksschulgesetz</title>
+						<dates isadId="1.3" obligation="aggregated">
+							<fromYear>2006</fromYear>
+							<toYear>2006</toYear>
+						</dates>
+						<descriptionLevel isadId="1.4" obligation="mandatory">Dossier</descriptionLevel>
+						<extentMedium isadId="1.5">
+							<extent obligation="aggregated">
+								<dataQuantity>6</dataQuantity>
+							</extent>
+						</extentMedium>
+					</identity>
+					<contentStructure>
+						<scopeContent isadId="3.1">
+							<scope obligation="aggregated">text</scope>
+						</scopeContent>
+					</contentStructure>
+					<conditionsAccessUse>
+						<accessConditions isadId="4.1">
+							<openToThePublic obligation="aggregated">public</openToThePublic>
+						</accessConditions>
+					</conditionsAccessUse>
+					<additionalReference>
+						<recordReference obligation="inherited">22.06.12:2:210</recordReference>
+					</additionalReference>
+				</archivalDescription>
+			</archivalDescription>
+		</archivalDescription>
+	</archivalDescription>
+</archivalDescription>
