@@ -2,7 +2,31 @@
 <!-- edited with XMLSpy v2012 rel. 2 (http://www.altova.com) by Thomas Bula (Bundesamt für Informatik und Telekommunikation) -->
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="ISADG" xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<xsl:output method="xml" encoding="UTF-8" indent="yes" media-type="application/xml"/>
-	<!-- Functions -->
+	<!-- function checkXdate -->
+	<xsl:function name="arelda:checkXdate">
+		<xsl:param name="date"/>
+		<xsl:element name="dates">
+			<xsl:element name="fromDate">
+				<xsl:value-of select="$date"/>
+			</xsl:element>
+			<xsl:element name="toDate">
+				<xsl:value-of select="$date"/>
+			</xsl:element>
+		</xsl:element>
+	</xsl:function>
+	<!-- named template checkXdate -->
+	<xsl:template name="insertXdate">
+		<xsl:param name="datum"/>
+		<xsl:element name="dates">
+			<xsl:element name="fromDate">
+				<xsl:value-of select="$datum/arelda:von/arelda:datum"/>
+			</xsl:element>
+			<xsl:element name="toDate">
+				<xsl:value-of select="$datum/arelda:bis/arelda:datum"/>
+			</xsl:element>
+		</xsl:element>
+	</xsl:template>
+	<!-- function toXdate -->
 	<xsl:function name="arelda:toXdate">
 		<xsl:param name="date"/>
 		<xsl:param name="spread" as="xs:string"/>
@@ -31,9 +55,9 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:function>
-	<!-- Schema location -->
+	<!-- schema location -->
 	<xsl:variable name="location">ISADG xIsadg_v1.6.xsd</xsl:variable>
-	<!-- Root node transformation sets namespace and schema location -->
+	<!-- root node transformation sets namespace and schema location -->
 	<xsl:template match="/arelda:paket">
 		<xsl:element name="archivalDescription">
 			<!--    
@@ -46,7 +70,7 @@
 			<xsl:apply-templates select="arelda:ablieferung"/>
 		</xsl:element>
 	</xsl:template>
-	<!-- Ablieferung  -->
+	<!-- Ablieferung - Provenienz - Ordnungsystem -->
 	<xsl:template match="arelda:ablieferung">
 		<xsl:element name="identity">
 			<!-- 3.1.1 -->
@@ -78,17 +102,13 @@
 			<!-- 3.1.3 -->
 			<xsl:choose>
 				<xsl:when test="arelda:entstehungszeitraum">
-					<xsl:element name="dates">
-						<xsl:element name="fromDate">
-							<xsl:value-of select="arelda:entstehungszeitraum/arelda:von/arelda:datum"/>
-						</xsl:element>
-						<xsl:element name="toDate">
-							<xsl:value-of select="arelda:entstehungszeitraum/arelda:bis/arelda:datum"/>
-						</xsl:element>
-					</xsl:element>
+					<xsl:call-template name="insertXdate">
+						<xsl:with-param name="datum" select="arelda:entstehungszeitraum"/>
+					</xsl:call-template>
+					
 				</xsl:when>
 				<xsl:when test="arelda:ordnungssystem/arelda:anwendungszeitraum">
-					<xsl:variable name="az_from" select="arelda:toXdate(arelda:ordnungssystem/arelda:anwendungszeitraum/arelda:von/arelda:datum, 'bottom')"/>	
+					<xsl:variable name="az_from" select="arelda:toXdate(arelda:ordnungssystem/arelda:anwendungszeitraum/arelda:von/arelda:datum, 'bottom')"/>
 					<xsl:variable name="az_to" select="arelda:toXdate(arelda:ordnungssystem/arelda:anwendungszeitraum/arelda:bis/arelda:datum, 'ceiling')"/>
 					<xsl:element name="dates">
 						<xsl:element name="fromDate">
