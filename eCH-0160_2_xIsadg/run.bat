@@ -7,6 +7,6 @@ SET PATH=%JAVA_HOME%\bin;%PATH%
 
 DEL "XSL Output.xml"
 
-java -cp %SAXON%\saxon9.jar net.sf.saxon.Transform -s:metadata_plus.xml -xsl:eCH2xIsadg.xsl -o:"XSL Output.xml"
+java -cp %SAXON%\saxon9.jar net.sf.saxon.Transform -s:metadata.xml -xsl:eCH2xIsadg.xsl -o:"XSL Output.xml"
 
 REM PAUSE
