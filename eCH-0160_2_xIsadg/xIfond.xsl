@@ -32,12 +32,12 @@
 			<!-- 3.1.3 Entstehungszeitraum / Laufzeit -->
 			<xsl:choose>
 				<xsl:when test="arelda:entstehungszeitraum">
-					<xsl:call-template name="insertxIdate">
+					<xsl:call-template name="xIdate">
 						<xsl:with-param name="datum" select="arelda:entstehungszeitraum"/>
 					</xsl:call-template>
 				</xsl:when>
 				<xsl:when test="arelda:ordnungssystem/arelda:anwendungszeitraum">
-					<xsl:call-template name="insertxIdate">
+					<xsl:call-template name="xIdate">
 						<xsl:with-param name="datum" select="arelda:ordnungssystem/arelda:anwendungszeitraum"/>
 					</xsl:call-template>
 				</xsl:when>

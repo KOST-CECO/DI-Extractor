@@ -2,7 +2,8 @@
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="ISADG" xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<xsl:output method="xml" encoding="UTF-8" indent="yes" media-type="application/xml"/>
 	<!-- helper functions and named templates -->
-	<xsl:include href="xIfunction.xsl"/>
+	<xsl:include href="xIdate.xsl"/>
+	<xsl:include href="xIaccess.xsl"/>
 	<!-- schema location -->
 	<xsl:variable name="location">ISADG xIsadg_v1.6.xsd</xsl:variable>
 	<!-- root node transformation sets namespace and schema location -->
