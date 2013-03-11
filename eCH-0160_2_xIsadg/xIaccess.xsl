@@ -9,6 +9,46 @@
 					<xsl:value-of select="arelda:datenschutz"/>
 				</xsl:element>
 			</xsl:if>
+			<xsl:if test="arelda:oeffentlichkeitsstatus">
+				<xsl:element name="openToThePublic">
+					<xsl:choose>
+						<xsl:when test="arelda:oeffentlichkeitsstatus/text()='einsehbar' or arelda:oeffentlichkeitsstatus/text()='accessible'">
+							<xsl:text>public</xsl:text>
+						</xsl:when>
+						<xsl:when test="arelda:oeffentlichkeitsstatus/text()='nicht einsehbar' or arelda:oeffentlichkeitsstatus/text()='not accessible'">
+							<xsl:text>not public</xsl:text>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:text>undefined</xsl:text>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:element>
+			</xsl:if>
+			<xsl:if test="arelda:klassifizierungskategorie">
+				<xsl:element name="classification">
+					<xsl:choose>
+						<xsl:when test="arelda:klassifizierungskategorie/text()='geheim'">
+							<xsl:text>secret</xsl:text>
+						</xsl:when>
+						<xsl:when test="arelda:klassifizierungskategorie/text()='vertraulich'">
+							<xsl:text>confidential</xsl:text>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:text>unclassified</xsl:text>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:element>
+			</xsl:if>
+			<xsl:if test="arelda:oeffentlichkeitsstatusBegruendung">
+				<xsl:element name="otherAccessConditions">
+					<xsl:value-of select="arelda:oeffentlichkeitsstatusBegruendung/text()"/>
+				</xsl:element>
+			</xsl:if>
+			<xsl:if test="arelda:sonstigeBestimmungen">
+				<xsl:element name="accessConditionsNotes">
+					<xsl:value-of select="arelda:sonstigeBestimmungen/text()"/>
+				</xsl:element>
+			</xsl:if>
 		</xsl:element>
 	</xsl:template>
 </xsl:stylesheet>

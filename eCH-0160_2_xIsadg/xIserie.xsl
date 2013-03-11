@@ -44,6 +44,7 @@
 			<!-- 3.6.1 Allgemeine Anmerkungen -->
 			<!--   -->
 			<xsl:apply-templates select="arelda:ordnungssystemposition"/>
+			<xsl:apply-templates select="arelda:dossier"/>
 		</xsl:element>
 	</xsl:template>
 </xsl:stylesheet>

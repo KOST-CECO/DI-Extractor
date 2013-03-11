@@ -27,4 +27,6 @@
 	</xsl:template>
 	<!-- Ordnungsystemposition -->
 	<xsl:include href="xIserie.xsl"/>
+	<!-- Dossier -->
+	<xsl:include href="xIfile.xsl"/>
 </xsl:stylesheet>

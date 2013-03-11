@@ -65,7 +65,7 @@
 			<!-- 3.2.3 Bestandesgeschichte -->
 			<xsl:if test="arelda:provenienz/arelda:systemBeschreibung/text()">
 				<xsl:element name="archivalHistory">
-					<xsl:value-of select="arelda:provenienz/arelda:systemBeschreibung"/>
+					<xsl:value-of select="arelda:provenienz/arelda:systemBeschreibung/text()"/>
 				</xsl:element>
 			</xsl:if>
 			<!-- 3.2.4 Abgebende Stelle -->

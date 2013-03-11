@@ -336,7 +336,7 @@
 				<federfuehrendeOrganisationseinheit>-- Federfuehrende Organisationseinheit --</federfuehrendeOrganisationseinheit>
 				<klassifizierungskategorie>-- Klassifizierungskategorie --</klassifizierungskategorie>
 				<datenschutz>false</datenschutz>
-				<oeffentlichkeitsstatus>-- Oeffentlichkeitsstatus --</oeffentlichkeitsstatus>
+				<oeffentlichkeitsstatus>einsehbar</oeffentlichkeitsstatus>
 				<oeffentlichkeitsstatusBegruendung>-- Oeffentlichkeitsstatus Begruendung --</oeffentlichkeitsstatusBegruendung>
 				<sonstigeBestimmungen>-- sonstige Bestimmungen --</sonstigeBestimmungen>
 				<zusatzDaten>
