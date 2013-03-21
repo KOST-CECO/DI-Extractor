@@ -29,4 +29,6 @@
 	<xsl:include href="xIserie.xsl"/>
 	<!-- Dossier -->
 	<xsl:include href="xIfile.xsl"/>
+	<!-- Dokument -->
+	<xsl:include href="xIitem.xsl"/>
 </xsl:stylesheet>

@@ -33,12 +33,12 @@
 			<xsl:choose>
 				<xsl:when test="arelda:entstehungszeitraum">
 					<xsl:call-template name="xIdate">
-						<xsl:with-param name="datum" select="arelda:entstehungszeitraum"/>
+						<xsl:with-param name="range" select="arelda:entstehungszeitraum"/>
 					</xsl:call-template>
 				</xsl:when>
 				<xsl:when test="arelda:ordnungssystem/arelda:anwendungszeitraum">
 					<xsl:call-template name="xIdate">
-						<xsl:with-param name="datum" select="arelda:ordnungssystem/arelda:anwendungszeitraum"/>
+						<xsl:with-param name="range" select="arelda:ordnungssystem/arelda:anwendungszeitraum"/>
 					</xsl:call-template>
 				</xsl:when>
 				<xsl:otherwise/>

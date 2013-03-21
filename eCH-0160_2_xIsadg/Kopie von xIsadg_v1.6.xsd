@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2012 rel. 2 (http://www.altova.com) by Thomas Bula (Bundesamt für Informatik und Telekommunikation) -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:isad="ISADG" targetNamespace="ISADG" elementFormDefault="qualified" version="2.0">
+<xs:schema targetNamespace="ISADG" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:isad="ISADG" elementFormDefault="qualified" version="2.0">
 	<!--xIsadgAip_v1-6 -->
 	<xs:annotation>
 		<xs:documentation xml:lang="en">isad.xsd: XML Schema based on ISAD(G): General International Standard Archival Description, Stockholm, 19-22 September 1999, represented in XML bei Filip Boudrez - eDAVID - April, 19th 2005</xs:documentation>
@@ -596,10 +596,6 @@
 			<xs:sequence>
 				<xs:element name="fromYear" type="xs:gYear"/>
 				<xs:element name="toYear" type="xs:gYear"/>
-			</xs:sequence>
-			<xs:sequence>
-				<xs:element name="fromUnknown"/>
-				<xs:element name="toUnknown"/>
 			</xs:sequence>
 		</xs:choice>
 		<xs:attribute name="isadId" type="xs:string" use="optional" fixed="1.3"/>
