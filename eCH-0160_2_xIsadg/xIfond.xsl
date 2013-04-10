@@ -87,7 +87,7 @@
 		</xsl:element>
 		<xsl:element name="conditionsAccessUse">
 			<!-- 3.4.1 Zugangsbestimmungen -->
-			<!-- To-Do -->
+			<!-- ToDo -->
 			<!-- 3.4.4 Physische Beschaffenheit und technische Anforderungen -->
 			<!--   -->
 		</xsl:element>
