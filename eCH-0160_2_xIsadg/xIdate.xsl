@@ -3,37 +3,57 @@
 	<!-- named template xIdate -->
 	<xsl:template name="xIdate">
 		<xsl:param name="range"/>
-		<xsl:element name="dates">
-			<xsl:choose>
-				<xsl:when test="string-length(string($range/arelda:von/arelda:datum)) = 4">
-					<xsl:element name="fromYear">
-						<xsl:value-of select="$range/arelda:von/arelda:datum"/>
-					</xsl:element>
-				</xsl:when>
-				<xsl:when test="string-length(string($range/arelda:von/arelda:datum)) = 10">
-					<xsl:element name="fromDate">
-						<xsl:value-of select="$range/arelda:von/arelda:datum"/>
-					</xsl:element>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:element name="fromUnknown"/>
-				</xsl:otherwise>
-			</xsl:choose>
-			<xsl:choose>
-				<xsl:when test="string-length(string($range/arelda:bis/arelda:datum)) = 4">
-					<xsl:element name="toYear">
-						<xsl:value-of select="$range/arelda:bis/arelda:datum"/>
-					</xsl:element>
-				</xsl:when>
-				<xsl:when test="string-length(string($range/arelda:bis/arelda:datum)) = 10">
-					<xsl:element name="toDate">
-						<xsl:value-of select="$range/arelda:bis/arelda:datum"/>
-					</xsl:element>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:element name="toUnknown"/>
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:element>
+		<xsl:if test="not ($range/arelda:von/arelda:datum/text() = 'keine Angabe' and $range/arelda:bis/arelda:datum/text() = 'keine Angabe')">
+			<xsl:element name="dates">
+				<xsl:choose>
+					<xsl:when test="string-length(string($range/arelda:von/arelda:datum)) = 4">
+						<xsl:element name="fromDate">
+							<xsl:if test="$range/arelda:von/arelda:ca/text() = 'true'">
+								<xsl:attribute name="circa">true</xsl:attribute>
+							</xsl:if>
+							<xsl:value-of select="$range/arelda:von/arelda:datum"/>
+						</xsl:element>
+					</xsl:when>
+					<xsl:when test="string-length(string($range/arelda:von/arelda:datum)) = 10">
+						<xsl:element name="fromDate">
+							<xsl:if test="$range/arelda:von/arelda:ca/text() = 'true'">
+								<xsl:attribute name="circa">true</xsl:attribute>
+							</xsl:if>
+							<xsl:value-of select="$range/arelda:von/arelda:datum"/>
+						</xsl:element>
+					</xsl:when>
+					<xsl:when test="$range/arelda:von/arelda:datum/text() = 'keine Angabe'">
+						<xsl:element name="fromDate">
+							<xsl:text>unknown</xsl:text>
+						</xsl:element>
+					</xsl:when>
+					<xsl:otherwise/>
+				</xsl:choose>
+				<xsl:choose>
+					<xsl:when test="string-length(string($range/arelda:bis/arelda:datum)) = 4">
+						<xsl:element name="toDate">
+							<xsl:if test="$range/arelda:bis/arelda:ca/text() = 'true'">
+								<xsl:attribute name="circa">true</xsl:attribute>
+							</xsl:if>
+							<xsl:value-of select="$range/arelda:bis/arelda:datum"/>
+						</xsl:element>
+					</xsl:when>
+					<xsl:when test="string-length(string($range/arelda:bis/arelda:datum)) = 10">
+						<xsl:element name="toDate">
+							<xsl:if test="$range/arelda:bis/arelda:ca/text() = 'true'">
+								<xsl:attribute name="circa">true</xsl:attribute>
+							</xsl:if>
+							<xsl:value-of select="$range/arelda:bis/arelda:datum"/>
+						</xsl:element>
+					</xsl:when>
+					<xsl:when test="$range/arelda:bis/arelda:datum/text() = 'keine Angabe'">
+						<xsl:element name="toDate">
+							<xsl:text>unknown</xsl:text>
+						</xsl:element>
+					</xsl:when>
+					<xsl:otherwise/>
+				</xsl:choose>
+			</xsl:element>
+		</xsl:if>
 	</xsl:template>
 </xsl:stylesheet>

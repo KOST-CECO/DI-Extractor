@@ -6,9 +6,11 @@ SET UNIX_HOME=C:\Software\PCUnixUtils
 SET SAXON=C:\software\saxon9
 SET PATH=%UNIX_HOME%;%JAVA_HOME%\bin;%PATH%
 
-DEL "XSL Output.xml"
+SET OUTPUT=xIsadg_metadata.xml
 
-java -cp %SAXON%\saxon9.jar net.sf.saxon.Transform -s:metadata_plus.xml -xsl:eCH2xIsadg.xsl -o:"XSL Output.xml"
+DEL /Q %OUTPUT%
+
+java -cp %SAXON%\saxon9.jar net.sf.saxon.Transform -s:metadata_plus.xml -xsl:eCH2xIsadg.xsl -o:"%OUTPUT%"
 
 ECHO SLEEP 1
 SLEEP 1

@@ -5,7 +5,7 @@
 	<xsl:include href="xIdate.xsl"/>
 	<xsl:include href="xIaccess.xsl"/>
 	<!-- schema location -->
-	<xsl:variable name="location">ISADG xIsadg_v1.6.xsd</xsl:variable>
+	<xsl:variable name="location">ISADG xIsadg_v1.6.1.xsd</xsl:variable>
 	<!-- root node transformation sets namespace and schema location -->
 	<xsl:template match="/arelda:paket">
 		<xsl:element name="archivalDescription">

@@ -590,12 +590,12 @@
 	<xs:complexType name="datesType">
 		<xs:choice>
 			<xs:sequence>
-				<xs:element name="fromDate" type="isad:historicalDate" minOccurs="0"/>
-				<xs:element name="toDate" type="isad:historicalDate" minOccurs="0"/>
+				<xs:element name="fromDate" type="isad:universalDateType" minOccurs="0"/>
+				<xs:element name="toDate" type="isad:universalDateType" minOccurs="0"/>
 			</xs:sequence>
 			<xs:sequence>
-				<xs:element name="fromYear" type="isad:historicalYear"/>
-				<xs:element name="toYear" type="isad:historicalYear"/>
+				<xs:element name="fromYear" type="xs:gYear" minOccurs="0"/>
+				<xs:element name="toYear" type="xs:gYear" minOccurs="0"/>
 			</xs:sequence>
 		</xs:choice>
 		<xs:attribute name="isadId" type="xs:string" use="optional" fixed="1.3"/>
@@ -918,26 +918,24 @@ Einzelstücke und die nicht aufgrund des Titels zu erwarten sind.</xs:documentat
 			<xs:enumeration value="not_defined"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="historicalDate">
+	<xs:complexType name="universalDateType">
 		<xs:annotation>
-			<xs:documentation xml:lang="de">Historisches Datumsangabe, kann auch geschätzt sein</xs:documentation>
+			<xs:documentation xml:lang="de">Universelle Datums oder Jahresangabe, kann auch geschätzt sein (Attribut 'circa')</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
-			<xs:extension base="xs:date">
+			<xs:extension base="isad:dateYearType">
 				<xs:attribute name="circa" type="xs:boolean" use="optional" default="true"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="historicalYear">
-	<xs:annotation>
-			<xs:documentation xml:lang="de">Historische Jahresangabe, kann auch geschätzt sein</xs:documentation>
-		</xs:annotation>
-		<xs:simpleContent>
-			<xs:extension base="xs:gYear">
-				<xs:attribute name="circa" type="xs:boolean" use="optional" default="true"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
+	<xs:simpleType name="dateYearType">
+		<xs:union memberTypes="xs:dateTime xs:date xs:gYear isad:unKnown"/>
+	</xs:simpleType>
+	<xs:simpleType name="unKnown">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="unknown"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="levelType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Liste der möglichen Verzeichnungsstufen</xs:documentation>
