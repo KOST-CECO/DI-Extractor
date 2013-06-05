@@ -4,6 +4,7 @@
 	<!-- helper functions and named templates -->
 	<xsl:include href="xIdate.xsl"/>
 	<xsl:include href="xIaccess.xsl"/>
+	<xsl:include href="xIreference.xsl"/>
 	<!-- schema location -->
 	<xsl:variable name="location">ISADG xIsadg_v1.6.1.xsd</xsl:variable>
 	<!-- root node transformation sets namespace and schema location -->

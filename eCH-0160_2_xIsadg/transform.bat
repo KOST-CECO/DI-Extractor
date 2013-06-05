@@ -3,10 +3,15 @@ SETLOCAL
 
 SET JAVA_HOME=C:\Software\jre6
 SET SAXON=C:\Software\saxon9
-SET OUTFILE=xIsadg_metadata.xml
+SET LINT=C:\Software\PCUnixUtils
 
 IF [%1]==[] (
-        ECHO usage: %0 path\SIP...
+        ECHO usage: %0  path\SIP...  OUTPUT
+        EXIT /B
+)
+
+IF [%2]==[] (
+        ECHO usage: %0  path\SIP...  OUTPUT
         EXIT /B
 )
 
@@ -22,18 +27,20 @@ IF NOT EXIST %1\header\metadata.xml (
         EXIT /B
 )
 
-
 SET ECH-0160=%1
-IF EXIST %OUTFILE% (
-        DEL /Q %OUTFILE%
+SET OUTPUT=%2
+IF EXIST %OUTPUT% (
+        DEL /Q %OUTPUT%
 )
 
-%JAVA_HOME%\bin\java -cp %SAXON%\saxon9.jar net.sf.saxon.Transform -s:%ECH-0160%\header\metadata.xml -xsl:eCH2xIsadg.xsl -o:"%OUTFILE%"
+%JAVA_HOME%\bin\java -cp %SAXON%\saxon9.jar net.sf.saxon.Transform -s:%ECH-0160%\header\metadata.xml -xsl:eCH2xIsadg.xsl -o:"%OUTPUT%"
 
-IF EXIST %OUTFILE% (
-        ECHO.
+%LINT%\xmllint.exe -sax -noout -schema xIsadg_v1.6.1.xsd "%OUTPUT%"
+ECHO.
+
+IF %ERRORLEVEL%==0 (
         ECHO SIP %ECH-0160% converted
-        ECHO output is %OUTFILE%
+        ECHO output is %OUTPUT%
         ECHO.
 )
 

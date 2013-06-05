@@ -7,14 +7,17 @@
 			<xsl:element name="referenceCode">
 				<xsl:choose>
 					<xsl:when test="arelda:provenienz/arelda:systemName/text()">
-						<xsl:value-of select="arelda:provenienz/arelda:systemName"/>
-						<xsl:if test="arelda:ordnungssystem/arelda:generation/text()">
-							<xsl:text>: </xsl:text>
-							<xsl:value-of select="arelda:ordnungssystem/arelda:generation"/>
-						</xsl:if>
+						<xsl:variable name="ref">
+							<xsl:value-of select="arelda:provenienz/arelda:systemName"/>
+							<xsl:if test="arelda:ordnungssystem/arelda:generation/text()">
+								<xsl:text>: </xsl:text>
+								<xsl:value-of select="arelda:ordnungssystem/arelda:generation"/>
+							</xsl:if>
+						</xsl:variable>
+						<xsl:value-of select="arelda:xIreference($ref)"/>
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:value-of select="arelda:ablieferungsnummer"/>
+						<xsl:value-of select="arelda:xIreference(arelda:ablieferungsnummer)"/>
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:element>

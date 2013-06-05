@@ -6,7 +6,7 @@
 			<xsl:element name="identity">
 				<!-- 3.1.1 Signatur -->
 				<xsl:element name="referenceCode">
-					<xsl:value-of select="@id"/>
+					<xsl:value-of select="arelda:xIreference(@id)"/>
 				</xsl:element>
 				<!-- 3.1.2 Titel -->
 				<xsl:element name="title">
