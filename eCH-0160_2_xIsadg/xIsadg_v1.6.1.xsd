@@ -869,6 +869,7 @@
 			<xs:enumeration value="confidential"/>
 			<xs:enumeration value="secret"/>
 			<xs:enumeration value="in_house"/>
+			<xs:enumeration value="other"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="contentType">
@@ -934,6 +935,7 @@ Einzelstücke und die nicht aufgrund des Titels zu erwarten sind.</xs:documentat
 	<xs:simpleType name="unKnown">
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="unknown"/>
+			<xs:enumeration value="sine dato"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="levelType">
@@ -993,6 +995,14 @@ Einzelstücke und die nicht aufgrund des Titels zu erwarten sind.</xs:documentat
 					<xs:documentation xml:lang="en">Item</xs:documentation>
 					<xs:documentation xml:lang="fr">Pièce</xs:documentation>
 					<xs:documentation xml:lang="it">Unità documentaria</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Repräsentation">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Repräsentation: (Digitale) Erscheinungsform einer Verzeichniseinheit</xs:documentation>
+					<xs:documentation xml:lang="en">Representation</xs:documentation>
+					<xs:documentation xml:lang="fr">Représentation</xs:documentation>
+					<xs:documentation xml:lang="it">Rappresentanza</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
