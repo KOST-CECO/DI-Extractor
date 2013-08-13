@@ -24,6 +24,9 @@
 			<!-- 3.1.2 Titel -->
 			<xsl:element name="title">
 				<xsl:choose>
+					<xsl:when test="$fondtitle">
+						<xsl:value-of select="$fondtitle"/>
+					</xsl:when>
 					<xsl:when test="arelda:provenienz/arelda:registratur/text()">
 						<xsl:value-of select="arelda:provenienz/arelda:registratur"/>
 					</xsl:when>

@@ -33,7 +33,14 @@ IF EXIST %OUTPUT% (
         DEL /Q %OUTPUT%
 )
 
-%JAVA_HOME%\bin\java -cp %SAXON%\saxon9.jar net.sf.saxon.Transform -s:%ECH-0160%\header\metadata.xml -xsl:eCH2xIsadg.xsl -o:"%OUTPUT%"
+REM User input -----------------------------------------------------------------
+ECHO.
+ECHO Benutzereingabe
+ECHO ===============
+SET /P FONDTITLE=Bestand Titel: 
+ECHO.
+
+%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -s:%ECH-0160%\header\metadata.xml -xsl:eCH2xIsadg.xsl -o:"%OUTPUT%" fondtitle=%FONDTITLE%
 
 %LINT%\xmllint.exe -sax -noout -schema xIsadg_v1.6.1.xsd "%OUTPUT%"
 ECHO.
