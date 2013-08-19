@@ -41,7 +41,12 @@ SET /P FONDTITLE=Bestand Titel:
 SET /P SIGNATUR=Archivkürzel und Bestandessignatur: 
 ECHO.
 
-%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -s:%ECH-0160%\header\metadata.xml -xsl:xInumber.xsl -o:"xInumber.xml" fondtitle=%FONDTITLE% signatur=%SIGNATUR%
+REM create unique reference for each archival object
+%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -s:%ECH-0160%\header\metadata.xml -xsl:xIcreateRef.xsl -o:"xIcreateRef.xml"
+
+REM create unique number for each archival object
+%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -s:xIcreateRef.xml -xsl:xInumberRef.xsl -o:"xInumberRef.xml" 
+
 %JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -s:%ECH-0160%\header\metadata.xml -xsl:eCH2xIsadg.xsl -o:"%OUTPUT%" fondtitle=%FONDTITLE% signatur=%SIGNATUR%
 
 REM %LINT%\xmllint.exe -sax -noout -schema xIsadg_v1.6.1.xsd "%OUTPUT%"
