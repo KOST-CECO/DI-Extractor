@@ -38,11 +38,13 @@ ECHO.
 ECHO Benutzereingabe
 ECHO ===============
 SET /P FONDTITLE=Bestand Titel: 
+SET /P SIGNATUR=Archivkürzel und Bestandessignatur: 
 ECHO.
 
-%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -s:%ECH-0160%\header\metadata.xml -xsl:eCH2xIsadg.xsl -o:"%OUTPUT%" fondtitle=%FONDTITLE%
+%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -s:%ECH-0160%\header\metadata.xml -xsl:xInumber.xsl -o:"xInumber.xml" fondtitle=%FONDTITLE% signatur=%SIGNATUR%
+%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -s:%ECH-0160%\header\metadata.xml -xsl:eCH2xIsadg.xsl -o:"%OUTPUT%" fondtitle=%FONDTITLE% signatur=%SIGNATUR%
 
-%LINT%\xmllint.exe -sax -noout -schema xIsadg_v1.6.1.xsd "%OUTPUT%"
+REM %LINT%\xmllint.exe -sax -noout -schema xIsadg_v1.6.1.xsd "%OUTPUT%"
 ECHO.
 
 IF %ERRORLEVEL%==0 (

@@ -83,7 +83,13 @@
 		</xsl:element>
 		<xsl:element name="contentStructure">
 			<!-- 3.3.1 Form und Inhalt -->
-			<!--   -->
+			<xsl:if test="arelda:ablieferungsteile/text()">
+				<xsl:element name="scopeContent">
+					<xsl:element name="content">
+						<xsl:value-of select="arelda:ablieferungsteile"/>
+					</xsl:element>
+				</xsl:element>
+			</xsl:if>
 			<!-- 3.3.2 Bewertung und Kassation -->
 			<xsl:if test="arelda:referenzBewertungsentscheid/text()">
 				<xsl:element name="appraisalDestruction">

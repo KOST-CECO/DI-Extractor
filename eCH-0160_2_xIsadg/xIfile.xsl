@@ -26,7 +26,9 @@
 				<!-- 3.1.5 Umfang (Menge und Abmessung) -->
 				<xsl:if test="arelda:umfang/text()">
 					<xsl:element name="extentMedium">
-						<xsl:value-of select="arelda:umfang/text()"/>
+						<xsl:element name="medium">
+							<xsl:value-of select="arelda:umfang/text()"/>
+						</xsl:element>
 					</xsl:element>
 				</xsl:if>
 				<!--   -->
