@@ -3,6 +3,7 @@
 	<xsl:output method="xml" encoding="UTF-8" indent="yes" media-type="application/xml"/>
 	<!-- parameter -->
 	<xsl:param name="fondtitle"/>
+	<xsl:param name="archsignatur"/>
 	<xsl:variable name="reffile" select="document('xInumberRef.xml')"/>
 	<!-- helper functions and named templates -->
 	<xsl:include href="xIdate.xsl"/>
@@ -10,24 +11,25 @@
 	<xsl:include href="xIreference.xsl"/>
 	<!-- schema location -->
 	<xsl:variable name="location">ISADG xIsadg_v1.6.1.xsd</xsl:variable>
+	<!-- Ablieferung - Provenienz -->
+	<xsl:include href="xIfond.xsl"/>
 	<!-- root node transformation sets namespace and schema location -->
 	<xsl:template match="/arelda:paket">
 		<xsl:element name="archivalDescription">
-			<!--    
-			<xsl:variable name="temp">
-				<xsl:element name="xlink:dummy" namespace="http://www.scope.ch/Uebernahme"/>
-			</xsl:variable>
-			<xsl:copy-of select="msxsl:node-set($temp)//namespace::*"/>
-			-->
 			<xsl:attribute name="xsi:schemaLocation"><xsl:value-of select="$location"/></xsl:attribute>
 			<xsl:apply-templates select="arelda:ablieferung"/>
 			<xsl:apply-templates select="arelda:ablieferung/arelda:ordnungssystem"/>
 		</xsl:element>
 	</xsl:template>
-	<!-- Ablieferung - Provenienz - Ordnungsystem -->
-	<xsl:include href="xIfond.xsl"/>
+	<!-- Ordnungsystem -->
 	<xsl:template match="arelda:ablieferung/arelda:ordnungssystem">
-		<xsl:apply-templates select="arelda:ordnungssystemposition"/>
+		<xsl:apply-templates select="arelda:ordnungssystemposition">
+			<xsl:with-param name="sig">
+				<xsl:value-of select="$archsignatur"/>
+				<xsl:text>.</xsl:text>
+				<xsl:number/>
+			</xsl:with-param>
+		</xsl:apply-templates>
 	</xsl:template>
 	<!-- Ordnungsystemposition -->
 	<xsl:include href="xIserie.xsl"/>

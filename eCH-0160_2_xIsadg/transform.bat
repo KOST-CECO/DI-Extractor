@@ -38,18 +38,24 @@ ECHO.
 ECHO Benutzereingabe
 ECHO ===============
 SET /P FONDTITLE=Bestand Titel: 
-SET /P SIGNATUR=Archivkürzel und Bestandessignatur: 
+SET /P SIGNATUR=Archivkuerzel und Bestandessignatur: 
+SET STIL=1
+SET /P STIL=Signaturstil (fortlaufend SIG.1 SIG2 / hierarchisch SIG.1 SIG.1.1): [1] oder [2] 
 ECHO.
 
 REM create unique reference for each archival object
-%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -s:%ECH-0160%\header\metadata.xml -xsl:xIcreateRef.xsl -o:"xIcreateRef.xml"
+%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -s:%ECH-0160%\header\metadata.xml -xsl:xIcreateRef.xsl -o:"xIcreateRef.xml" fondtitle=%FONDTITLE% archsignatur=%SIGNATUR%
 
 REM create unique number for each archival object
-%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -s:xIcreateRef.xml -xsl:xInumberRef.xsl -o:"xInumberRef.xml" 
+%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -s:xIcreateRef.xml -xsl:xInumberRef.xsl -o:"xInumberRef.xml" fondtitle=%FONDTITLE% archsignatur=%SIGNATUR%
 
-%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -s:%ECH-0160%\header\metadata.xml -xsl:eCH2xIsadg.xsl -o:"%OUTPUT%" fondtitle=%FONDTITLE% signatur=%SIGNATUR%
+IF %STIL% == 2 (
+        COPY null.xml xInumberRef.xml
+)
 
-REM %LINT%\xmllint.exe -sax -noout -schema xIsadg_v1.6.1.xsd "%OUTPUT%"
+%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -s:%ECH-0160%\header\metadata.xml -xsl:eCH2xIsadg.xsl -o:"%OUTPUT%" fondtitle=%FONDTITLE% archsignatur=%SIGNATUR%
+
+%LINT%\xmllint.exe -sax -noout -schema xIsadg_v1.6.1.xsd "%OUTPUT%"
 ECHO.
 
 IF %ERRORLEVEL%==0 (
@@ -58,3 +64,4 @@ IF %ERRORLEVEL%==0 (
         ECHO.
 )
 
+grep referenceCode "%OUTPUT%"

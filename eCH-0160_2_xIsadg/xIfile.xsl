@@ -2,11 +2,17 @@
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="ISADG" xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<!-- Ordnungsystemposition -->
 	<xsl:template match="arelda:dossier">
+		<xsl:param name="sig"/>
+		<xsl:variable name="signature">
+			<xsl:value-of select="$sig"/>
+			<xsl:text>.</xsl:text>
+			<xsl:number/>
+		</xsl:variable>
 		<xsl:element name="archivalDescription">
 			<xsl:element name="identity">
 				<!-- 3.1.1 Signatur -->
 				<xsl:call-template name="xIreference">
-					<xsl:with-param name="ref" select="arelda:aktenzeichen"/>
+					<xsl:with-param name="signature" select="$signature"/>
 				</xsl:call-template>
 				<!-- 3.1.2 Titel -->
 				<xsl:element name="title">
@@ -124,7 +130,9 @@
 					</xsl:element>
 				</xsl:if>
 			</xsl:element>
-			<xsl:apply-templates select="arelda:dokument"/>
+			<xsl:apply-templates select="arelda:dokument">
+				<xsl:with-param name="sig" select="$signature"/>
+			</xsl:apply-templates>
 		</xsl:element>
 	</xsl:template>
 </xsl:stylesheet>

@@ -2,10 +2,15 @@
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="ISADG" xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<!-- Ablieferung - Provenienz - Ordnungsystem -->
 	<xsl:template match="arelda:ablieferung">
+		<xsl:variable name="signature">
+			<xsl:value-of select="$archsignatur"/>
+			<xsl:text>.</xsl:text>
+			<xsl:number/>
+		</xsl:variable>
 		<xsl:element name="identity">
 			<!-- 3.1.1 Signatur -->
 			<xsl:call-template name="xIreference">
-				<xsl:with-param name="ref" select="arelda:ordnungssystem"/>
+				<xsl:with-param name="signature" select="$signature"/>
 			</xsl:call-template>
 			<!-- 3.1.2 Titel -->
 			<xsl:element name="title">
