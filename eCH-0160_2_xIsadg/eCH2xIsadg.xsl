@@ -3,6 +3,7 @@
 	<xsl:output method="xml" encoding="UTF-8" indent="yes" media-type="application/xml"/>
 	<!-- parameter -->
 	<xsl:param name="fondtitle"/>
+	<xsl:variable name="reffile" select="document('xInumberRef.xml')"/>
 	<!-- helper functions and named templates -->
 	<xsl:include href="xIdate.xsl"/>
 	<xsl:include href="xIaccess.xsl"/>

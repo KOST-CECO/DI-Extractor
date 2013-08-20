@@ -6,10 +6,10 @@
 	<!-- root node transformation sets namespace and schema location -->
 	<xsl:template match="/">
 		<xsl:element name="reference">
-			<xsl:for-each select="reference/identity">
+			<xsl:for-each select="//reference/identity">
 				<xsl:element name="identity">
 					<xsl:element name="referenceCode">
-						<xsl:value-of select="referenceCode/text()"/>
+						<xsl:value-of select="referenceCode"/>
 					</xsl:element>
 					<xsl:element name="referenceNo">
 						<xsl:number/>

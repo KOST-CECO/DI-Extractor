@@ -5,9 +5,9 @@
 		<xsl:element name="archivalDescription">
 			<xsl:element name="identity">
 				<!-- 3.1.1 Signatur -->
-				<xsl:element name="referenceCode">
-					<xsl:value-of select="arelda:xIreference(@id)"/>
-				</xsl:element>
+				<xsl:call-template name="xIreference">
+					<xsl:with-param name="ref" select="@id"/>
+				</xsl:call-template>
 				<!-- 3.1.2 Titel -->
 				<xsl:element name="title">
 					<xsl:value-of select="arelda:titel"/>
