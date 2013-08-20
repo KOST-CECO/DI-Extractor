@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2012 rel. 2 (http://www.altova.com) by Thomas Bula (Bundesamt für Informatik und Telekommunikation) -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:isad="ISADG" targetNamespace="ISADG" elementFormDefault="qualified" version="2.0">
 	<!--xIsadgAip_v1-6 -->
 	<xs:annotation>
@@ -929,7 +928,7 @@ Einzelstücke und die nicht aufgrund des Titels zu erwarten sind.</xs:documentat
 		</xs:simpleContent>
 	</xs:complexType>
 	<xs:complexType name="historicalYear">
-	<xs:annotation>
+		<xs:annotation>
 			<xs:documentation xml:lang="de">Historische Jahresangabe, kann auch geschätzt sein</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>

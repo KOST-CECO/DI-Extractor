@@ -37,7 +37,7 @@ REM User input -----------------------------------------------------------------
 ECHO.
 ECHO Benutzereingabe
 ECHO ===============
-SET /P FONDTITLE=Bestand Titel: 
+SET /P FONDTITLE=Bestand Titel:
 SET /P SIGNATUR=Archivkuerzel und Bestandessignatur: 
 SET STIL=1
 SET /P STIL=Signaturstil (fortlaufend SIG.1 SIG2 / hierarchisch SIG.1 SIG.1.1): [1] oder [2] 
