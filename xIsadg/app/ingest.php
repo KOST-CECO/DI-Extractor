@@ -1,7 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
 <?
 // Arbeitsverzeichnis setzen (relativ zum Applikationspfad)
-$target = "wdir";
+$target = 'wdir';
+$flag = '';
 ?>
 <html>
     <head>
@@ -35,7 +36,7 @@ $target = "wdir";
 if ($_POST['RESET']=='true') {
     if ($handle = opendir($target)) {
         while (false !== ($file = readdir($handle))) {
-            if ($file != "." && $file != "..") {
+            if ($file != "." && $file != ".." && $file != ".svn") {
                 unlink("$target/$file");
             }
         }
@@ -56,7 +57,7 @@ echo "<i>Folgende Datei steht zur Konvertierung bereit:</i>";
 libxml_use_internal_errors(true);
 if ($handle = opendir($target)) {
     while (false !== ($file = readdir($handle))) {
-        if ($file != "." && $file != "..") {
+        if ($file != "." && $file != ".." && $file != ".svn") {
             echo "<li>";
             echo "$file&nbsp;&nbsp;&nbsp; (" . filesize("$target/$file") . " bytes)";
             if (substr($file, -4) == ".xml") {
@@ -64,13 +65,16 @@ if ($handle = opendir($target)) {
                 $xml->load("$target/$file");
                 if ($xml->schemaValidate('./xsd/arelda.xsd')) { 
                    echo "&nbsp;&nbsp;&nbsp; <b><i>eCH-0160 / arelda_v4 SIP Metadata</i></b>";
-                   $flag != 'arelda_4';
+                   $flag = "$target/$file";
                 } 
                 elseif ($xml->schemaValidate('./xsd_v3.13.2/arelda_v3.13.2.xsd')) { 
                     echo "&nbsp;&nbsp;&nbsp; arelda_v3.13.2 SIP Metadata";
                 }
                 elseif ($xml->schemaValidate('./xIsadg_v1.6.1.xsd')) { 
                     echo "&nbsp;&nbsp;&nbsp; xIsadg_v1.6 SIP Metadata";
+                }
+                elseif ($xml->schemaValidate('./ead.xsd')) { 
+                    echo "&nbsp;&nbsp;&nbsp; EAD Metadata";
                 }
                 else { 
                     echo "&nbsp;&nbsp;&nbsp; unbekannte XML Datei";
@@ -81,8 +85,8 @@ if ($handle = opendir($target)) {
     }
 closedir($handle);
 }
-if ($flag != 'arelda_4') {
-//include 'maninput.php';
+if ($flag != '') {
+include 'maninput.php';
 }
 ?>
     </body>
