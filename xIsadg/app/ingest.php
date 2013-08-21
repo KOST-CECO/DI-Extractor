@@ -6,18 +6,44 @@ $target = "wdir";
 <html>
     <head>
         <title>KOST Referenzimplementierung</title>
-    </head>
+    </head> 
     <body>
-        <h3>KOST Referenzimplementierung - Ingest</h3>
-        <form enctype="multipart/form-data" action="ris_ingest.php" method="post">
-            <i>Dateien für Ingest wählen:</i><br>
-            <input type="hidden" name="MAX_FILE_SIZE" value="1000000">
-            <input name="uploadedfile" type="file" size="60">
-            <input type="submit" value="Datei übermitteln">
-        </form>
-    <hr>
-
+        <h3>KOST Referenzimplementierung - Descriptive Information</h3>
+        <i>eCH-0160 metadata.xml für Konvertierung auswählen:</i>
+        <br>
+        <table border="0">
+            <tr>
+                <th>
+                    <form enctype="multipart/form-data" action="ingest.php" method="post"> 
+                        <input type="hidden" name="MAX_FILE_SIZE" value="1000000">
+                        <input name="uploadedfile" type="file" size="60">
+                        <input type="submit" value="Datei übermitteln">
+                    </form>
+                </th> 
+                <th>
+                    <form action="ingest.php" method="post">
+                        <input type="hidden" name="RESET" value="true">
+                        <input type="submit" value="Reset">
+                    </form>
+                </th>
+            </tr>
+        </table>
+        <hr>
 <?
+
+// alle Dateien im Arbeitsverzeichnis "$target" löschen
+if ($_POST['RESET']=='true') {
+    if ($handle = opendir($target)) {
+        while (false !== ($file = readdir($handle))) {
+            if ($file != "." && $file != "..") {
+                unlink("$target/$file");
+            }
+        }
+    closedir($handle);
+    }
+}
+
+// hochgeladene Datei ins Arbeitsverzeichnis kopieren
 if ($_FILES['uploadedfile']['name'] != "") {
     $target_file = "$target/" . basename($_FILES['uploadedfile']['name']);
 // Achtung: verhindert das Kopieren von php Dateien auf den Webserver
@@ -26,21 +52,37 @@ if ($_FILES['uploadedfile']['name'] != "") {
         echo "<p><b>Beim übernehmen der Datei ist ein Fehler aufgetreten!</b></p>";
     }
 }
-echo "<i>Folgende Dateien stehen zum Ingest bereit:</i>";
+echo "<i>Folgende Datei steht zur Konvertierung bereit:</i>";
+libxml_use_internal_errors(true);
 if ($handle = opendir($target)) {
     while (false !== ($file = readdir($handle))) {
         if ($file != "." && $file != "..") {
-            if (substr($file, 0, 10) == "geschaeft_") {
-            $geschaeft = $file;
+            echo "<li>";
+            echo "$file&nbsp;&nbsp;&nbsp; (" . filesize("$target/$file") . " bytes)";
+            if (substr($file, -4) == ".xml") {
+                $xml = new DOMDocument(); 
+                $xml->load("$target/$file");
+                if ($xml->schemaValidate('./xsd/arelda.xsd')) { 
+                   echo "&nbsp;&nbsp;&nbsp; <b><i>eCH-0160 / arelda_v4 SIP Metadata</i></b>";
+                   $flag != 'arelda_4';
+                } 
+                elseif ($xml->schemaValidate('./xsd_v3.13.2/arelda_v3.13.2.xsd')) { 
+                    echo "&nbsp;&nbsp;&nbsp; arelda_v3.13.2 SIP Metadata";
+                }
+                elseif ($xml->schemaValidate('./xIsadg_v1.6.1.xsd')) { 
+                    echo "&nbsp;&nbsp;&nbsp; xIsadg_v1.6 SIP Metadata";
+                }
+                else { 
+                    echo "&nbsp;&nbsp;&nbsp; unbekannte XML Datei";
+                }
             }
-            echo "<li>$file&nbsp;&nbsp;&nbsp; (" . filesize("$target/$file") . " bytes)</li>";
+            echo "</li>";
         }
     }
 closedir($handle);
 }
-
-if ($geschaeft != '') {
-include 'maninput.php';
+if ($flag != 'arelda_4') {
+//include 'maninput.php';
 }
 ?>
     </body>
