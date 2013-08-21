@@ -46,15 +46,15 @@ ECHO.
 REM create unique reference for each archival object
 %JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -s:%ECH-0160%\header\metadata.xml -xsl:xIcreateRef.xsl -o:"xIcreateRef.xml" fondtitle=%FONDTITLE% archsignatur=%SIGNATUR%
 
-REM create unique number for each archival object
+REM create running number for each archival object
 %JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -s:xIcreateRef.xml -xsl:xInumberRef.xsl -o:"xInumberRef.xml" fondtitle=%FONDTITLE% archsignatur=%SIGNATUR%
 
 IF %STIL% == 2 (
         COPY null.xml xInumberRef.xml
 )
-
 %JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -s:%ECH-0160%\header\metadata.xml -xsl:eCH2xIsadg.xsl -o:"%OUTPUT%" fondtitle=%FONDTITLE% archsignatur=%SIGNATUR%
 
+REM schema validate with xmllint
 %LINT%\xmllint.exe -sax -noout -schema xIsadg_v1.6.1.xsd "%OUTPUT%"
 ECHO.
 
@@ -63,5 +63,3 @@ IF %ERRORLEVEL%==0 (
         ECHO output is %OUTPUT%
         ECHO.
 )
-
-grep referenceCode "%OUTPUT%"
