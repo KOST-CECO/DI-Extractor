@@ -1,18 +1,20 @@
+<hr>
+<i>Folgende Datei steht zur Konvertierung bereit: <b><?=$metadatafile?></b></i><br><br>
+<hr>
 <form action="processingest.php" method="get">
-    <hr>
-    <input name="geschaeft" value="<? echo $geschaeft; ?>" type="hidden">
-    <input name="target" value="<? echo $target; ?>" type="hidden">
-    <table>
+    <input name="metadatafile" value="<? echo $metadatafile; ?>" type="hidden">
+    <input name="wdir" value="<? echo $$wdir; ?>" type="hidden">
+    <table border="0">
         <tr>
             <td colspan="2" rowspan="1">
-                <i>Zielakzession (Archivtektonik):</i></td>
+                <i>Manuelle Angaben zur Zielakzession (Archivtektonik):</i></td>
         </tr>
         <tr>
             <td style="text-align: right;">
-                 Signatur:</td>
+                Bestand-Signatur:</td>
             <td>
-                <input name="collsig" size="10" type="text" title="Signatur des Knoten in der Archivtektonik an den die Ablieferung eingehängt werden soll"> Titel:
-                <input name="colltitle" size="40" type="text" title="Beschreibung des Knotens in der Archivtektonik an den die Ablieferung eingehängt werden soll"></td>
+                <input name="collsig" size="20" type="text" title="Signatur (Archiv- & Bestandkürzel) des Knoten in der Archivtektonik an den die Ablieferung eingehängt werden soll"> Bestandtitel:
+                <input name="colltitle" size="60" type="text" title="Beschreibung des Knotens in der Archivtektonik an den die Ablieferung eingehängt werden soll"></td>
         </tr>
         <tr>
             <td></td>
@@ -20,56 +22,20 @@
         </tr>
         <tr>
             <td colspan="2" rowspan="1">
-                <i>Ablieferungsinformationen (Quelle):</i></td>
+                <i>Angaben zur Signaturbildung:</i></td>
         </tr>
         <tr>
             <td style="text-align: right;">
-                Abliefernde Stelle:</td>
+                Signaturstil:</td>
             <td>
-                <input name="sipAbl" size="60" title="Der Name der abliefernden Stelle" type="text"></td>
+                <input type="radio" name="collstyle" value="fortlaufend" title="Fortlaufend nummeriert in der Art SIG.1 SIG.2 SIG.3" checked> fortlaufende Nummerierung
+                <input type="radio" name="collstyle" value="dezimal" title="Hierarchische Dezimalgliederung in der Art SIG.1 SIG.1.1 SIG.1.2 SIG.1.3">
+                dezimal Gliederung</td>
         </tr>
         <tr>
-            <td style="text-align: right;">
-                Kontraktperson:</td>
-            <td>
-                <input name="sipKont" size="60" title="Der Name inkl. Vorname des Ansprechpartners innerhalb der abliefernden Stelle"></td>
-        </tr>
-        <tr>
-            <td style="text-align: right;">
-                Aktenbildende Stelle:</td>
-            <td>
-                <input name="sipProv" size="60" title="Bezeichnung der Stelle die die Akten produziert hat. Muss nicht identisch sein mit der abliefernden Stelle"></td>
-        </tr>
-        <tr>
-            <td style="text-align: right;">
-                Ablage:</td>
-            <td>
-                <input name="sipReg" size="60" title="Bezeichnung der Ablage/Registratur in der die abgelieferten Unterlagen geführt wurden"></td>
-        </tr>
-        <tr>
-            <td style="text-align: right;">
-                EDV System:</td>
-            <td>
-                <input name="sipEDV" size="60" title="Bezeichnung des EDV Systems in welchem die Daten geführt wurden"></td>
-        </tr>
-        <tr>
-            <td style="text-align: right;">
-                Titel:</td>
-            <td>
-                <input name="sipTit" size="60" title="Erfassung eines aussagekräftigen Namens oder Titels für die Ablieferung"></td>
-        </tr>
-        <tr>
-            <td style="text-align: right;">
-                Zeitraum:</td>
-            <td>
-                <input name="sipZtr" size="60" title="Eine Zeitraumangabe als beliebiger Text innerhalb dem die Akten entstanden sind. Z.B. 1980-1990 oder Jan. 1990 bis Dez. 2000"></td>
-        </tr>
-        <tr>
-            <td style="text-align: right;">
-                Beschreibung:</td>
-            <td>
-                <input name="sipBeschr" size="60" title="Erlaubt die Erfassung zusätzlicher Hinweise und Kommentare zur Ablieferung">
-                <input value="Ablieferung starten" type="submit"></td>
+            <td colspan="2" rowspan="1" style="text-align: right;">
+                <input value="Konvertieren" type="submit"></td>
         </tr>
     </table>
 </form>
+<hr>
