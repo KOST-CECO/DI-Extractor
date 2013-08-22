@@ -13,8 +13,8 @@
             <td style="text-align: right;">
                 Bestand-Signatur:</td>
             <td>
-                <input name="collsig" size="20" type="text" title="Signatur (Archiv- & Bestandkürzel) des Knoten in der Archivtektonik an den die Ablieferung eingehängt werden soll"> Bestandtitel:
-                <input name="colltitle" size="60" type="text" title="Beschreibung des Knotens in der Archivtektonik an den die Ablieferung eingehängt werden soll"></td>
+                <input name="collsig" size="20" type="text" title="Signatur (Archiv- & Bestandk&uuml;rzel) des Knoten in der Archivtektonik an den die Ablieferung eingeh&auml;ngt werden soll"> Bestandtitel:
+                <input name="colltitle" size="60" type="text" title="Beschreibung des Knotens in der Archivtektonik an den die Ablieferung eingeh&auml;ngt werden soll"></td>
         </tr>
         <tr>
             <td></td>
