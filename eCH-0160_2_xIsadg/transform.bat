@@ -37,10 +37,16 @@ REM User input -----------------------------------------------------------------
 ECHO.
 ECHO Benutzereingabe
 ECHO ===============
-SET /P FONDTITLE=Bestand Titel:
-SET /P SIGNATUR=Archivkuerzel und Bestandessignatur: 
+SET /P "FONDTITLE=Bestand Titel: "
+REM left trim xslt parameter
+for /f "tokens=* delims= " %%a in ("%FONDTITLE%") do set FONDTITLE=%%a
+
+SET /P "SIGNATUR=Archivkuerzel und Bestandessignatur: "
+REM left trim xslt parameter
+for /f "tokens=* delims= " %%a in ("%SIGNATUR%") do set SIGNATUR=%%a
+
 SET STIL=1
-SET /P STIL=Signaturstil (fortlaufend SIG.1 SIG.2 / hierarchisch SIG.1 SIG.1.1): [1] oder [2] 
+SET /P "STIL=Signaturstil (fortlaufend SIG.1 SIG.2 / hierarchisch SIG.1 SIG.1.1): [1] oder [2] "
 ECHO.
 
 REM create unique reference for each archival object
