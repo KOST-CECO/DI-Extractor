@@ -1,17 +1,26 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
 <?
+// wenn kein User Verzeichnis existiert wird ein Redirect auf input.php ausgelöst
+$usr = '';
+if ($_GET['usr']!='') { $usr = $_GET['usr']; }
+if ($_POST['usr']!='') { $usr = $_POST['usr']; }
+if ($usr=='') { header ("location: ./input.php"); }
+
 // Arbeitsverzeichnis setzen (relativ zum Applikationspfad)
-$wdir = 'wdir';
+$wdir = "wdir/$usr";
+if (!is_dir($wdir)) { header ("location: ./input.php"); }
 $metadatafile = '';
 ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
 <html>
   <head>
     <link href="ingest.css" rel="stylesheet" type="text/css"/>
     <title>KOST Referenzimplementierung</title>
   </head>
   <body>
-    <h3>KOST Referenzimplementierung - Descriptive Information</h3>
-    <i>eCH-0160 metadata.xml f&uuml;r Konvertierung ausw&auml;hlen:</i>
+    <h2>KOST Referenzimplementierung - Descriptive Information</h2>
+    <? include 'helptext.php'; ?>
+    <i>Eine eCH-0160 Metadaten Datei f&uuml;r die Konvertierung ausw&auml;hlen:</i>
     <br>
     <table border="0">
       <tbody>
@@ -19,12 +28,14 @@ $metadatafile = '';
           <th>
             <form enctype="multipart/form-data" action="ingest.php" method="post">
               <input name="MAX_FILE_SIZE"  value="1000000" type="hidden">
+              <input name="usr" value=<?=$usr?> type="hidden">
               <input name="uploadedfile" size="60" type="file">
               <input value="Datei &uuml;bermitteln" type="submit">
             </form>
           </th>
           <th>
             <form action="ingest.php" method="post">
+              <input name="usr" value=<?=$usr?> type="hidden">
               <input name="RESET" value="true" type="hidden">
               <input value="Reset" type="submit">
             </form>
@@ -34,7 +45,7 @@ $metadatafile = '';
     </table>
     <hr>
 <?
-// alle Dateien im Arbeitsverzeichnis "$wdir" löschen
+// alle Dateien im Arbeitsverzeichnis "$wdir/$usr" löschen
 if ($_POST['RESET']=='true') {
     if ($handle = opendir($wdir)) {
         while (false !== ($file = readdir($handle))) {
@@ -45,6 +56,7 @@ if ($_POST['RESET']=='true') {
     closedir($handle);
     }
 }
+
 // hochgeladene Datei ins Arbeitsverzeichnis kopieren
 if ($_FILES['uploadedfile']['name'] != "") {
     $target_file = "$wdir/" . basename($_FILES['uploadedfile']['name']);
@@ -54,6 +66,8 @@ if ($_FILES['uploadedfile']['name'] != "") {
         echo "<p><b>Beim &uuml;bernehmen der Datei ist ein Fehler aufgetreten!</b></p>";
     }
 }
+
+// hochgeladene Datei in Liste anzeigen
 echo "<i>Folgende Dateien sind bereits &uuml;bertragen:</i>";
 libxml_use_internal_errors(true);
 if ($handle = opendir($wdir)) {
@@ -91,6 +105,9 @@ if ($handle = opendir($wdir)) {
 if ($metadatafile != '') {
 include 'maninput.php';
 }
-    ?>
+?>
+<hr>
+    <i>Copyright © 2005-2013 by Koordinationsstelle f&uuml;r die dauerhafte Archivierung elektronischer Unterlagen 
+    &nbsp;&nbsp;&nbsp;<a href="mailto:info@kost-ceco.ch">info@kost-ceco.ch</a></i>
   </body>
 </html>

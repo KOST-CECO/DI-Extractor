@@ -1,9 +1,12 @@
+<?
+if ($wdir=='') { header ("location: ./input.php"); }
+?>
 <hr>
 <i>Folgende Datei steht zur Konvertierung bereit: <b><?=$metadatafile?></b></i><br><br>
-<hr>
-<form action="processingest.php" method="get">
+
+<form action="processingest.php" method="post">
     <input name="metadatafile" value="<? echo $metadatafile; ?>" type="hidden">
-    <input name="wdir" value="<? echo $$wdir; ?>" type="hidden">
+    <input name="wdir" value=<?=$wdir?> type="hidden">
     <table border="0">
         <tr>
             <td colspan="2" rowspan="1">
@@ -38,4 +41,3 @@
         </tr>
     </table>
 </form>
-<hr>

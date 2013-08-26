@@ -1,17 +1,18 @@
 <?
 // Ingest Informationen verarbeiten
-if ($_GET['wdir']=='') { die; } else {$wdir = $_GET['wdir']; }
-if ($_GET['metadatafile']=='') { die; } else {$metadatafile = $_GET['metadatafile']; }
+if ($_POST['wdir']=='') { die; } else {$wdir = $_POST['wdir']; }
+if ($_POST['metadatafile']=='') { die; } else {$metadatafile = $_POST['metadatafile']; }
 
 // include class file for "PHP Input Filter"
 require_once("class.inputfilter.php");
 $myFilter = new InputFilter();
-$collsig   = utf8_encode( $myFilter->process( stripslashes($_GET['collsig'] ) ) );
-$colltitle = utf8_encode( $myFilter->process( stripslashes($_GET['colltitle']) ) );
-$collstyle = utf8_encode( $myFilter->process( stripslashes($_GET['collstyle']) ) );
+$collsig   = utf8_encode( $myFilter->process( stripslashes($_POST['collsig'] ) ) );
+$colltitle = utf8_encode( $myFilter->process( stripslashes($_POST['colltitle']) ) );
+$collstyle = utf8_encode( $myFilter->process( stripslashes($_POST['collstyle']) ) );
 
 // Referenzdatei für die Signaturnummerierung
-$reffile = "./$wdir/$wdir.xml";
+$reffile = "./$wdir/_signaturereference.xml";
+@unlink($reffile);
 
 // Disable libxml errors
 libxml_use_internal_errors(true);
@@ -70,10 +71,12 @@ $xisadg = $proc->transformToXML($xml);
 if ($handle = opendir($wdir)) {
     while (false !== ($file = readdir($handle))) {
         if ($file != "." && $file != ".." && $file != ".svn") {
-            unlink("$wdir/$file");
+            @unlink("$wdir/$file");
         }
     }
 closedir($handle);
+// Userverzeichnis im Arbeitsverzeichnis löschen
+@rmdir($wdir);
 }
 
 // We'll be outputting a XML
