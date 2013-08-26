@@ -34,6 +34,7 @@ IF EXIST %OUTPUT% (
 )
 
 REM User input -----------------------------------------------------------------
+
 ECHO.
 ECHO Benutzereingabe
 ECHO ===============
@@ -47,18 +48,19 @@ for /f "tokens=* delims= " %%a in ("%SIGNATUR%") do set SIGNATUR=%%a
 
 SET STIL=1
 SET /P "STIL=Signaturstil (fortlaufend SIG.1 SIG.2 / hierarchisch SIG.1 SIG.1.1): [1] oder [2] "
+SET REF=xInumberRef.xml
+IF %STIL% == 2 (
+        SET REF=null.xml
+)
 ECHO.
 
 REM create unique reference for each archival object
-%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -s:%ECH-0160%\header\metadata.xml -xsl:xIcreateRef.xsl -o:"xIcreateRef.xml" fondtitle=%FONDTITLE% archsignatur=%SIGNATUR%
+%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -versionmsg:off -s:%ECH-0160%\header\metadata.xml -xsl:xIcreateRef.xsl -o:"xIcreateRef.xml" fondtitle=%FONDTITLE% archsig=%SIGNATUR%
 
 REM create running number for each archival object
-%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -s:xIcreateRef.xml -xsl:xInumberRef.xsl -o:"xInumberRef.xml" fondtitle=%FONDTITLE% archsignatur=%SIGNATUR%
+%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -versionmsg:off -s:xIcreateRef.xml -xsl:xInumberRef.xsl -o:"xInumberRef.xml" fondtitle=%FONDTITLE% archsig=%SIGNATUR%
 
-IF %STIL% == 2 (
-        COPY null.xml xInumberRef.xml
-)
-%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -s:%ECH-0160%\header\metadata.xml -xsl:eCH2xIsadg.xsl -o:"%OUTPUT%" fondtitle=%FONDTITLE% archsignatur=%SIGNATUR%
+%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -versionmsg:off -s:%ECH-0160%\header\metadata.xml -xsl:eCH2xIsadg.xsl -o:"%OUTPUT%" fondtitle=%FONDTITLE% archsig=%SIGNATUR% reffilename=%REF%
 
 REM schema validate with xmllint
 %LINT%\xmllint.exe -sax -noout -schema xIsadg_v1.6.1.xsd "%OUTPUT%"
