@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arelda="http://bar.admin.ch/arelda/v4">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<xsl:output method="xml" encoding="UTF-8" indent="yes" media-type="application/xml"/>
 	<!-- helper functions and named templates -->
-	<xsl:param name="archsignatur"/>
+	<xsl:param name="archsig"/>
 	<!-- root node transformation sets namespace and schema location -->
 	<xsl:template match="/arelda:paket">
 		<xsl:element name="reference">
@@ -15,7 +15,7 @@
 		<xsl:element name="identity">
 			<!-- 3.1.1 Signatur -->
 			<xsl:element name="referenceCode">
-				<xsl:value-of select="$archsignatur"/>
+				<xsl:value-of select="$archsig"/>
 				<xsl:text>.</xsl:text>
 				<xsl:number/>
 			</xsl:element>
@@ -25,7 +25,7 @@
 	<xsl:template match="arelda:ablieferung/arelda:ordnungssystem">
 		<xsl:apply-templates select="arelda:ordnungssystemposition">
 			<xsl:with-param name="sig">
-				<xsl:value-of select="$archsignatur"/>
+				<xsl:value-of select="$archsig"/>
 				<xsl:text>.</xsl:text>
 				<xsl:number/>
 			</xsl:with-param>
