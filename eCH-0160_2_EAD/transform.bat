@@ -33,8 +33,36 @@ IF EXIST %OUTPUT% (
         DEL /Q %OUTPUT%
 )
 
-%JAVA_HOME%\bin\java -cp %SAXON%\saxon9.jar net.sf.saxon.Transform -s:%ECH-0160%\header\metadata.xml -xsl:eCH2EAD.xsl -o:"%OUTPUT%"
+REM User input -----------------------------------------------------------------
 
+ECHO.
+ECHO Benutzereingabe
+ECHO ===============
+SET /P "FONDTITLE=Bestand Titel: "
+REM left trim xslt parameter
+for /f "tokens=* delims= " %%a in ("%FONDTITLE%") do set FONDTITLE=%%a
+
+SET /P "SIGNATUR=Archivkuerzel und Bestandessignatur: "
+REM left trim xslt parameter
+for /f "tokens=* delims= " %%a in ("%SIGNATUR%") do set SIGNATUR=%%a
+
+SET STIL=1
+SET /P "STIL=Signaturstil (fortlaufend SIG.1 SIG.2 / hierarchisch SIG.1 SIG.1.1): [1] oder [2] "
+SET REF=numberRef.xml
+IF %STIL% == 2 (
+        SET REF=null.xml
+)
+ECHO.
+
+REM create unique reference for each archival object
+%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -versionmsg:off -s:%ECH-0160%\header\metadata.xml -xsl:createRef.xsl -o:"createRef.xml" fondtitle=%FONDTITLE% archsig=%SIGNATUR%
+
+REM create running number for each archival object
+%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -versionmsg:off -s:createRef.xml -xsl:numberRef.xsl -o:"numberRef.xml" fondtitle=%FONDTITLE% archsig=%SIGNATUR%
+
+%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -versionmsg:off -s:%ECH-0160%\header\metadata.xml -xsl:eCH2EAD.xsl -o:"%OUTPUT%" fondtitle=%FONDTITLE% archsig=%SIGNATUR% reffilename=%REF%
+
+REM schema validate with xmllint
 %LINT%\xmllint.exe -sax -noout -schema ead.xsd "%OUTPUT%"
 ECHO.
 
@@ -43,4 +71,3 @@ IF %ERRORLEVEL%==0 (
         ECHO output is %OUTPUT%
         ECHO.
 )
-

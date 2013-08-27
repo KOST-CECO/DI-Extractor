@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="2.0" xmlns:EAD="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arelda="http://bar.admin.ch/arelda/v4">
+<xsl:stylesheet version="1.0" xmlns:EAD="urn:isbn:1-931666-22-9" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<xsl:output method="xml" encoding="UTF-8" indent="yes" media-type="application/xml"/>
+	<!-- parameter -->
+	<xsl:param name="fondtitle"/>
+	<xsl:param name="archsig"/>
+	<xsl:param name="reffilename"/>
+	<xsl:variable name="reffile" select="document($reffilename)"/>
 	<!-- helper functions and named templates -->
 	<xsl:include href="EADdate.xsl"/>
 	<xsl:include href="EADaccess.xsl"/>
 	<xsl:include href="EADreference.xsl"/>
 	<!-- schema location -->
 	<xsl:variable name="location">urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd</xsl:variable>
+	<!-- Ablieferung - Provenienz -->
+	<xsl:include href="EADfond.xsl"/>
 	<!-- root node transformation sets namespace and schema location -->
 	<xsl:template match="/arelda:paket">
 		<xsl:element name="EAD:ead">
@@ -42,15 +49,20 @@
 			</xsl:element>
 		</xsl:element>
 	</xsl:template>
-	<!-- Ablieferung - Provenienz - Ordnungsystem -->
-	<xsl:include href="EADfond.xsl"/>
+	<!-- Ordnungsystem -->
 	<xsl:template match="arelda:ablieferung/arelda:ordnungssystem">
-		<xsl:apply-templates select="arelda:ordnungssystemposition"/>
+		<xsl:apply-templates select="arelda:ordnungssystemposition">
+			<xsl:with-param name="sig">
+				<xsl:value-of select="$archsig"/>
+				<xsl:text>.</xsl:text>
+				<xsl:number/>
+			</xsl:with-param>
+		</xsl:apply-templates>
 	</xsl:template>
-	<!-- Ordnungsystemposition -->
+	<!-- Ordnungsystemposition  -->
 	<xsl:include href="EADserie.xsl"/>
-	<!-- Dossier -->
+	<!-- Dossier  -->
 	<xsl:include href="EADfile.xsl"/>
-	<!-- Dokument -->
+	<!-- Dokument  -->
 	<xsl:include href="EADitem.xsl"/>
 </xsl:stylesheet>
