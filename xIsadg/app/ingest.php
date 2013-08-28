@@ -17,7 +17,7 @@ $metadatafile = '';
     <link href="ingest.css" rel="stylesheet" type="text/css"/>
     <title>KOST Referenzimplementierung</title>
   </head>
-  <body>
+  <body background="background.jpg">
     <h2>KOST Referenzimplementierung - Descriptive Information</h2>
     <? include 'helptext.php'; ?>
     <i>Eine eCH-0160 Metadaten Datei f&uuml;r die Konvertierung ausw&auml;hlen:</i>

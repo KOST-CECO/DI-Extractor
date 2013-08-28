@@ -2,8 +2,11 @@
 if ($wdir=='') { header ("location: ./input.php"); }
 ?>
 <hr>
-<i>Folgende Datei steht zur Konvertierung bereit: <b><?=$metadatafile?></b></i><br><br>
-
+<i> Folgende Datei steht zur Konvertierung bereit:
+    <b>
+        <?=$metadatafile?></b></i>
+<br>
+<br>
 <form action="processingest.php" method="post">
     <input name="metadatafile" value="<? echo $metadatafile; ?>" type="hidden">
     <input name="wdir" value=<?=$wdir?> type="hidden">
@@ -36,8 +39,14 @@ if ($wdir=='') { header ("location: ./input.php"); }
                 dezimal Gliederung</td>
         </tr>
         <tr>
-            <td colspan="2" rowspan="1" style="text-align: right;">
-                <input value="Konvertieren" type="submit"></td>
+            <td style="text-align: right;">
+                Ausgabeformat:</td>
+            <td>
+                <input type="radio" name="xschema" value="xIsadg" title="Ausgabe als xIsadg Metadaten Datei" checked> xIsadg
+                <input type="radio" name="xschema" value="EAD" title="Ausgabe als EAD Metadaten Datei (METS Matterhorn Style)"> EAD
+                <div style="text-align: right;">
+                    <input value="Konvertieren" type="submit">
+                </div></td>
         </tr>
     </table>
 </form>

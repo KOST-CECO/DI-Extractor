@@ -9,6 +9,7 @@ $myFilter = new InputFilter();
 $collsig   = utf8_encode( $myFilter->process( stripslashes($_POST['collsig'] ) ) );
 $colltitle = utf8_encode( $myFilter->process( stripslashes($_POST['colltitle']) ) );
 $collstyle = utf8_encode( $myFilter->process( stripslashes($_POST['collstyle']) ) );
+$xschema = utf8_encode( $myFilter->process( stripslashes($_POST['xschema']) ) );
 
 // Referenzdatei für die Signaturnummerierung
 $reffile = "./$wdir/_signaturereference.xml";
@@ -56,7 +57,12 @@ else {
 
 // Load the XSLT source
 $xsl = new DOMDocument;
-$xsl->load('eCH2xIsadg.xsl');
+if ($xschema == 'xIsadg') {
+    $xsl->load('eCH2xIsadg.xsl');
+}
+else {
+    $xsl->load('eCH2EAD.xsl');
+}
 // Configure the transformer
 $proc = new XSLTProcessor;
 $proc->importStyleSheet($xsl); // attach the xsl rules
