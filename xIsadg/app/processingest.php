@@ -1,7 +1,10 @@
 <?
+//date_default_timezone_set('Europe/Berlin');
+
 // Ingest Informationen verarbeiten
 if ($_POST['wdir']=='') { die; } else {$wdir = $_POST['wdir']; }
 if ($_POST['metadatafile']=='') { die; } else {$metadatafile = $_POST['metadatafile']; }
+if (!is_file("./$wdir/$metadatafile")) { { header ("location: ./input.php"); } }
 
 // include class file for "PHP Input Filter"
 require_once("class.inputfilter.php");
@@ -18,11 +21,12 @@ $reffile = "./$wdir/_signaturereference.xml";
 // Disable libxml errors
 libxml_use_internal_errors(true);
 
+// Load the XML source
+$xml = new DOMDocument;
+$xml->load("./$wdir/$metadatafile");
+
 if ($collstyle == 'fortlaufend') {
     // Signatur generieren: Liste aller Objektreferenzen erzeugen
-    // Load the XML source
-    $xml = new DOMDocument;
-    $xml->load("./$wdir/$metadatafile");
     // Load the XSLT source
     $xsl = new DOMDocument;
     $xsl->load('xIcreateRef.xsl');
@@ -49,9 +53,6 @@ if ($collstyle == 'fortlaufend') {
     file_put_contents("$reffile", $numlist);
 }
 else {
-    // Load the XML source
-    $xml = new DOMDocument;
-    $xml->load("./$wdir/$metadatafile");
     $reffile = 'null.xml';
 }
 
