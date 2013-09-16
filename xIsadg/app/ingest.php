@@ -18,30 +18,28 @@ $metadatafile = '';
     <title>KOST Referenzimplementierung</title>
   </head>
   <body background="background.jpg">
-    <h2>KOST Referenzimplementierung - Descriptive Information</h2>
+    <h1>KOST Referenzimplementierung - Descriptive Information</h1>
     <? include 'helptext.php'; ?>
     <i>Eine eCH-0160 Metadaten Datei f&uuml;r die Konvertierung ausw&auml;hlen:</i>
     <br>
-    <table border="0">
-      <tbody>
+    <table>
         <tr>
           <th>
             <form enctype="multipart/form-data" action="ingest.php" method="post">
               <input name="MAX_FILE_SIZE"  value="1000000" type="hidden">
               <input name="usr" value=<?=$usr?> type="hidden">
-              <input name="uploadedfile" size="60" type="file">
-              <input value="Datei &uuml;bermitteln" type="submit">
+              <input name="uploadedfile" size="60" type="file" style="font-size:100%">
+              <input value="Datei &uuml;bermitteln" type="submit" style="font-size:100%">
             </form>
           </th>
           <th>
             <form action="ingest.php" method="post">
               <input name="usr" value=<?=$usr?> type="hidden">
               <input name="RESET" value="true" type="hidden">
-              <input value="Reset" type="submit">
+              <input value="Reset" type="submit" style="font-size:100%">
             </form>
           </th>
         </tr>
-      </tbody>
     </table>
     <hr>
 <?
@@ -105,9 +103,6 @@ if ($handle = opendir($wdir)) {
 if ($metadatafile != '') {
 include 'maninput.php';
 }
-?>
-<hr>
-    <i>Copyright © 2005-2013 by Koordinationsstelle f&uuml;r die dauerhafte Archivierung elektronischer Unterlagen 
-    &nbsp;&nbsp;&nbsp;<a href="mailto:info@kost-ceco.ch">info@kost-ceco.ch</a></i>
+include 'copyright.php'; ?>
   </body>
 </html>

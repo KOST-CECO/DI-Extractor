@@ -29,7 +29,7 @@ if ($collstyle == 'fortlaufend') {
     // Signatur generieren: Liste aller Objektreferenzen erzeugen
     // Load the XSLT source
     $xsl = new DOMDocument;
-    $xsl->load('xIcreateRef.xsl');
+    $xsl->load('createRef.xsl');
     // Configure the transformer
     $proc = new XSLTProcessor;
     $proc->importStyleSheet($xsl); // attach the xsl rules
@@ -44,7 +44,7 @@ if ($collstyle == 'fortlaufend') {
     $xml_ref->loadXML($reflist);
     // Load the XSLT source
     $xsl = new DOMDocument;
-    $xsl->load('xInumberRef.xsl');
+    $xsl->load('numberRef.xsl');
     // Configure the transformer
     $proc = new XSLTProcessor;
     $proc->importStyleSheet($xsl); // attach the xsl rules

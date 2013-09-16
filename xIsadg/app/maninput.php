@@ -10,7 +10,7 @@ if ($wdir=='') { header ("location: ./input.php"); }
 <form action="processingest.php" method="post">
     <input name="metadatafile" value="<? echo $metadatafile; ?>" type="hidden">
     <input name="wdir" value=<?=$wdir?> type="hidden">
-    <table border="0">
+    <table>
         <tr>
             <td colspan="2" rowspan="1">
                 <i>Manuelle Angaben zur Zielakzession (Archivtektonik):</i></td>
@@ -45,7 +45,7 @@ if ($wdir=='') { header ("location: ./input.php"); }
                 <input type="radio" name="xschema" value="xIsadg" title="Ausgabe als xIsadg Metadaten Datei" checked> xIsadg
                 <input type="radio" name="xschema" value="EAD" title="Ausgabe als EAD Metadaten Datei (METS Matterhorn Style)"> EAD 
                 <div style="text-align: right;">
-                    <input value="Konvertieren" type="submit">
+                    <input value="Konvertieren" type="submit" style="font-size:100%">
                 </div></td>
         </tr>
     </table>
