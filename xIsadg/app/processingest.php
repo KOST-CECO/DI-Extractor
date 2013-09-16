@@ -19,7 +19,7 @@ $reffile = "./$wdir/_signaturereference.xml";
 @unlink($reffile);
 
 // Disable libxml errors
-libxml_use_internal_errors(true);
+//libxml_use_internal_errors(true);
 
 // Load the XML source
 $xml = new DOMDocument;

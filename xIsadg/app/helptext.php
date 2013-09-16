@@ -13,16 +13,15 @@ if ($wdir=='') { header ("location: ./input.php"); }
   <br>Grundlage der Konvertierung ist der folgender Crosswalk
   <a href="eCH-0160%20zu%20xIsadg_v3.xlsx">eCH-0160 zu xIsadg_v3.xlsx</a>
   und
-  <a href="eCH-0160%20zu%20xIsadg_v3.xlsx">CH-0160 zu EAD_v1.xlsx</a>
+  <a href="eCH-0160%20zu%20EAD_v1.xlsx">CH-0160 zu EAD_v1.xlsx</a>
   <br>Technisch basiert die Konvertierung auf folgenden XSLT Transformation
   <a href="eCH2xIsadg.zip">eCH2xIsadg.zip</a>
   und
   <a href="eCH2EAD.zip">eCH2EAD.zip</a>
   <br> Eine Windows Commandline Version ben&ouml;tigt Saxon9 und xmllint und ist hier zu finden
-  <a href="eCH2xIsadg_cmd.zip">eCH2ISADG_cmd.zip</a>
+  <a href="eCH2ISADG_cmd.zip">eCH2ISADG_cmd.zip</a>
   <br>Die Basisdokumente f&uuml;r die beiden Metadatenschema sind die folgenden
-  <i> Data Dictionaries</i>
-  :
+  <i> Data Dictionaries</i>:
   <br>
   <a href="" http:="" www.ech.ch="" alfresco="" guestdownload="" attach="" workspace="" spacesstore="" 49573954-e271-4cd0-8d08-4841373072eb="" stan_d_def_2012-11-29_ech-0160_v1.0_archivischeablieferungsschnittstelle_datadictionary.pdf="">eCH-0160_V1.0_ArchivischeAblieferungsschnittstelle_DataDictionary.pdf</a>
   und

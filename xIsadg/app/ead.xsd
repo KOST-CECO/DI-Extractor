@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- edited with XML Spy v4.2 U (http://www.xmlspy.com) by Heinz Gnehm (Schweizerisches Bundesarchiv / Fachstelle ARELDA) -->
 <xs:schema targetNamespace="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="urn:isbn:1-931666-22-9" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- 
 		EAD 2002 W3C Schema

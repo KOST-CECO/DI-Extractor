@@ -109,12 +109,16 @@
 			</xsl:element>
 		</xsl:if>
 		<!-- 3.4.1 Zugangsbestimmungen -->
+		<xsl:call-template name="EADaccess">
+			<xsl:with-param name="position" select="."/>
+		</xsl:call-template>
+<!-- 
 		<xsl:element name="EAD:accessrestrict">
 			<xsl:attribute name="type">restrict</xsl:attribute>
 			<xsl:element name="EAD:p">
 				<xsl:text>ToDo</xsl:text>
 			</xsl:element>
-		</xsl:element>
+		</xsl:element> -->
 		<!-- 3.4.4 Physische Beschaffenheit und technische Anforderungen -->
 		<!--   -->
 	</xsl:template>
