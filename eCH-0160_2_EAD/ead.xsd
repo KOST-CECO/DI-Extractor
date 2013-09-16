@@ -1,73 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSpy v2012 rel. 2 (http://www.altova.com) by Thomas Bula (Bundesamt für Informatik und Telekommunikation) -->
-<!-- 
-	EAD 2002 W3C Schema
-	Version: 200804 Release
-	Date: 20080421
-	
-	Previous Version: 200612 Release
-	
-	Publisher: Society of American Archivists and the Library of Congress
-	
-	Funding: National Historical Publications and Records Commission 
-	
-	*** Comments, questions, and error reports should be sent to the EAD listserv
-	with subject line: Schema Comment ***
-	
-	Listserv address: EAD@LOC.GOV
-	
-	Editors (SAA/EADWG/EAD Schema Working Group):
-	
-	Francoise Bourdon (Bibliothèque nationale de France)
-	Terry Catapano (Columbia University)
-	Jerry McDonough (University of Illinois)
-	Lee Mandell (New York University)
-	Chris Prom (University of Illinois)
-	Stephen Yearl (Yale University)
-	Daniel Pitti (University of Virginia), Chair
-	
-	EAD DTD / Schema Relationship
-	
-	With one exception (XLink elements and attributes), the EAD Schema is a subset of the 
-	EAD 2002 DTD. 
-	
-	The Xlink compatible elements and attributes in the DTD have been made compliant
-	by implementing XML Namespace. As a result, DTD compliant instances containing 
-	ANY of the XLink tags and attributes will not validate against the Schema. These instances
-	must be converted into XLink compliant tags and attributes. The EAD Schema WG will
-	provide XSLT for this conversion with the release of the official version of the Schema. 
-	
-	The following elements and their XLink-specific attributes are impacted by this change:
-	
-	arc archref
-	bibref
-	dao daogrp daoloc
-	extptr extptrloc extref extrefloc
-	linkgrp
-	ptr ptrloc
-	ref refloc resource
-	title
-	
-	With the exception of the XLink tags and attributes, a Schema valid instance will be a DTD
-	valid instance. However, because of the imposition of datatype contrainst on specific 
-	attribute values, a DTD valid instance may not be Schema valid. 
-	
-	The following attributes are impacted by the imposition of datatype constraints:
-	
-	@normal on <unitdate> and <date>: constrained to date and date range subset of ISO 8601
-	@repositorycode: constrained to ISO 15511 (ISIL) 
-	@mainagencycode: constrained to ISO 15511 (ISIL)
-	@langcode: constrained to ISO 639-2 alpha-3 code list
-	@scriptcode: constrained to ISO 15924 code list
-	@countrycode: constrained to ISO 3166-1 alpha-2 code list
-	
-	Revision history: 
-	1.  Revised definitions of XLink elements and attributes in order to make the XSD schema 
-	conform to xlink.xsd instance used by MODS and METS (20080421)
-	
--->
-<xs:schema xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:isbn:1-931666-22-9" elementFormDefault="qualified">
-	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="xlink.xsd"/>
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xs:schema targetNamespace="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="urn:isbn:1-931666-22-9" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<!-- 
+		EAD 2002 W3C Schema
+		Version: 200612 Release
+		Date: 20061204
+		
+		Publisher: Society of American Archivists and the Library of Congress
+		
+		Funding: National Historical Publications and Records Commission 
+		
+			*** Comments, questions, and error reports should be sent to the EAD listserv
+		with subject line: Schema Comment ***
+		
+		Listserv address: EAD@LOC.GOV
+		
+		Editors (SAA/EADWG/EAD Schema Working Group):
+		
+		Francoise Bourdon (Biblioth�que nationale de France)
+		Terry Catapano (Columbia University)
+		Jerry McDonough (University of Illinois)
+		Lee Mandell (New York University)
+		Chris Prom (University of Illinois)
+		Stephen Yearl (Yale University)
+		Daniel Pitti (University of Virginia), Chair
+		
+		EAD DTD / Schema Relationship
+		
+		With one exception (XLink elements and attributes), the EAD Schema is a subset of the 
+		EAD 2002 DTD. 
+		
+		The Xlink compatible elements and attributes in the DTD have been made compliant
+		by implementing XML Namespace. As a result, DTD compliant instances containing 
+		ANY of the XLink tags and attributes will not validate against the Schema. These instances
+		must be converted into XLink compliant tags and attributes. The EAD Schema WG will
+		provide XSLT for this conversion with the release of the official version of the Schema. 
+		
+		The following elements and their XLink-specific attributes are impacted by this change:
+		
+		arc archref
+		bibref
+		dao daogrp daoloc
+		extptr extptrloc extref extrefloc
+		linkgrp
+		ptr ptrloc
+		ref refloc resource
+		title
+		
+		With the exception of the XLink tags and attributes, a Schema valid instance will be a DTD
+		valid instance. However, because of the imposition of datatype contrainst on specific 
+		attribute values, a DTD valid instance may not be Schema valid. 
+		
+		The following attributes are impacted by the imposition of datatype constraints:
+		
+		@normal on <unitdate> and <date>: constrained to date and date range subset of ISO 8601
+		@repositorycode: constrained to ISO 15511 (ISIL) 
+		@mainagencycode: constrained to ISO 15511 (ISIL)
+		@langcode: constrained to ISO 639-2 alpha-3 code list
+		@scriptcode: constrained to ISO 15924 code list
+		@countrycode: constrained to ISO 3166-1 alpha-2 code list
+		
+	-->
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="xlink_ead.xsd"/>
 	<xs:attributeGroup name="am.date.normal">
 		<xs:attribute name="normal">
 			<xs:simpleType>
@@ -871,7 +864,7 @@
 	<xs:complexType name="linkgrp">
 		<xs:group ref="extended.els" maxOccurs="unbounded"/>
 		<xs:attributeGroup ref="a.common"/>
-		<xs:attributeGroup ref="xlink:extendedLink"/>
+		<xs:attributeGroup ref="extended.atts"/>
 	</xs:complexType>
 	<xs:group name="m.access">
 		<xs:choice>
@@ -1331,20 +1324,20 @@
 	<xs:attributeGroup name="a.internal.ptr">
 		<xs:attribute name="target" type="xs:IDREF"/>
 		<xs:attribute name="xpointer"/>
-		<xs:attributeGroup ref="xlink:simpleLink"/>
+		<xs:attributeGroup ref="simple"/>
 	</xs:attributeGroup>
 	<xs:attributeGroup name="a.external.ptr">
 		<xs:attribute name="entityref" type="xs:ENTITY"/>
 		<xs:attribute name="xpointer"/>
-		<xs:attributeGroup ref="xlink:simpleLink"/>
+		<xs:attributeGroup ref="simple"/>
 	</xs:attributeGroup>
 	<xs:attributeGroup name="a.loc.internal.ptr">
-		<xs:attributeGroup ref="xlink:locatorLink"/>
+		<xs:attributeGroup ref="locator"/>
 		<xs:attribute name="target" type="xs:IDREF"/>
 		<xs:attribute name="xpointer"/>
 	</xs:attributeGroup>
 	<xs:attributeGroup name="a.loc.external.ptr">
-		<xs:attributeGroup ref="xlink:locatorLink"/>
+		<xs:attributeGroup ref="locator"/>
 		<xs:attribute name="entityref" type="xs:ENTITY"/>
 		<xs:attribute name="xpointer"/>
 	</xs:attributeGroup>
@@ -2316,7 +2309,7 @@
 			</xs:choice>
 		</xs:sequence>
 		<xs:attributeGroup ref="a.common"/>
-		<xs:attributeGroup ref="xlink:extendedLink"/>
+		<xs:attributeGroup ref="extended.atts"/>
 	</xs:complexType>
 	<xs:complexType name="daoloc">
 		<xs:sequence>
@@ -2363,7 +2356,13 @@
 		<xs:attributeGroup ref="a.access"/>
 		<xs:attribute name="entityref" type="xs:ENTITY"/>
 		<xs:attribute name="xpointer"/>
-		<xs:attributeGroup ref="xlink:simpleLink"/>
+		<xs:attributeGroup ref="xlink:type"/>
+		<xs:attribute ref="xlink:href"/>
+		<xs:attribute ref="xlink:role"/>
+		<xs:attribute ref="xlink:arcrole"/>
+		<xs:attribute ref="xlink:title"/>
+		<xs:attribute ref="xlink:show"/>
+		<xs:attribute ref="xlink:actuate"/>
 		<xs:attribute name="encodinganalog"/>
 	</xs:complexType>
 	<xs:complexType name="archref" mixed="true">
@@ -2378,7 +2377,13 @@
 		<xs:attributeGroup ref="a.common"/>
 		<xs:attribute name="entityref" type="xs:ENTITY"/>
 		<xs:attribute name="xpointer"/>
-		<xs:attributeGroup ref="xlink:simpleLink"/>
+		<xs:attributeGroup ref="xlink:type"/>
+		<xs:attribute ref="xlink:href"/>
+		<xs:attribute ref="xlink:role"/>
+		<xs:attribute ref="xlink:arcrole"/>
+		<xs:attribute ref="xlink:title"/>
+		<xs:attribute ref="xlink:show"/>
+		<xs:attribute ref="xlink:actuate"/>
 	</xs:complexType>
 	<xs:complexType name="bibref" mixed="true">
 		<xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -2399,7 +2404,13 @@
 		<xs:attributeGroup ref="a.common"/>
 		<xs:attribute name="entityref" type="xs:ENTITY"/>
 		<xs:attribute name="xpointer"/>
-		<xs:attributeGroup ref="xlink:simpleLink"/>
+		<xs:attributeGroup ref="xlink:type"/>
+		<xs:attribute ref="xlink:href"/>
+		<xs:attribute ref="xlink:role"/>
+		<xs:attribute ref="xlink:arcrole"/>
+		<xs:attribute ref="xlink:title"/>
+		<xs:attribute ref="xlink:show"/>
+		<xs:attribute ref="xlink:actuate"/>
 		<xs:attribute name="encodinganalog"/>
 	</xs:complexType>
 	<xs:complexType name="edition" mixed="true">
@@ -2671,6 +2682,44 @@
 			</xs:simpleType>
 		</xs:attribute>
 	</xs:complexType>
+	<xs:attributeGroup name="href">
+		<xs:attribute ref="xlink:href" use="required"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="role">
+		<xs:attribute ref="xlink:role" use="required"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="arcrole">
+		<xs:attribute ref="xlink:arcrole" use="required"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="title.att">
+		<xs:attribute ref="xlink:title" use="required"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="show">
+		<xs:attribute ref="xlink:show" use="required"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="actuate">
+		<xs:attribute ref="xlink:actuate" use="required"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="labelXlink">
+		<xs:attribute ref="xlink:label" use="required"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="extendedType">
+		<xs:attributeGroup ref="xlink:type1"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="simple">
+		<xs:attributeGroup ref="xlink:type"/>
+		<xs:attribute ref="xlink:href"/>
+		<xs:attribute ref="xlink:role"/>
+		<xs:attribute ref="xlink:arcrole"/>
+		<xs:attribute ref="xlink:title"/>
+		<xs:attribute ref="xlink:show"/>
+		<xs:attribute ref="xlink:actuate"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="extended.atts">
+		<xs:attributeGroup ref="extendedType"/>
+		<xs:attribute ref="xlink:role"/>
+		<xs:attribute ref="xlink:title"/>
+	</xs:attributeGroup>
 	<xs:group name="extended.els">
 		<xs:choice>
 			<xs:element name="resource" type="resource"/>
@@ -2708,15 +2757,33 @@
 		</xs:sequence>
 	</xs:group>
 	<xs:attributeGroup name="extended">
-		<xs:attributeGroup ref="xlink:extendedLink"/>
+		<xs:attributeGroup ref="extendedType"/>
+		<xs:attribute ref="xlink:role"/>
+		<xs:attribute ref="xlink:title"/>
 	</xs:attributeGroup>
-	<xs:complexType name="arc">
-		<xs:attributeGroup ref="a.common"/>
-		<xs:attributeGroup ref="xlink:arcLink"/>
-	</xs:complexType>
 	<xs:complexType name="resource" mixed="true">
 		<xs:group ref="m.render" minOccurs="0" maxOccurs="unbounded"/>
+		<xs:attributeGroup ref="xlink:type2"/>
 		<xs:attributeGroup ref="a.common"/>
-		<xs:attributeGroup ref="xlink:resourceLink"/>
+		<xs:attribute ref="xlink:role"/>
+		<xs:attribute ref="xlink:title"/>
+		<xs:attribute ref="xlink:label"/>
+	</xs:complexType>
+	<xs:attributeGroup name="locator">
+		<xs:attributeGroup ref="xlink:type3"/>
+		<xs:attributeGroup ref="href"/>
+		<xs:attribute ref="xlink:role"/>
+		<xs:attribute ref="xlink:title"/>
+		<xs:attribute ref="xlink:label"/>
+	</xs:attributeGroup>
+	<xs:complexType name="arc">
+		<xs:attributeGroup ref="xlink:type4"/>
+		<xs:attributeGroup ref="a.common"/>
+		<xs:attribute ref="xlink:arcrole"/>
+		<xs:attribute ref="xlink:title"/>
+		<xs:attribute ref="xlink:show"/>
+		<xs:attribute ref="xlink:actuate"/>
+		<xs:attribute ref="xlink:from"/>
+		<xs:attribute ref="xlink:to"/>
 	</xs:complexType>
 </xs:schema>

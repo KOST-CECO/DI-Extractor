@@ -48,24 +48,36 @@ for /f "tokens=* delims= " %%a in ("%SIGNATUR%") do set SIGNATUR=%%a
 
 SET STIL=1
 SET /P "STIL=Signaturstil (fortlaufend SIG.1 SIG.2 / hierarchisch SIG.1 SIG.1.1): [1] oder [2] "
-SET REF=xInumberRef.xml
+SET REF=numberRef.xml
 IF %STIL% == 2 (
         SET REF=null.xml
 )
+
+SET FMT=1
+SET /P "FMT=Ausgabeformat (xIadg / EAD): [1] oder [2] "
 ECHO.
 
 REM create unique reference for each archival object
-%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -versionmsg:off -s:%ECH-0160%\header\metadata.xml -xsl:xIcreateRef.xsl -o:"xIcreateRef.xml" fondtitle=%FONDTITLE% archsig=%SIGNATUR%
+%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -versionmsg:off -s:%ECH-0160%\header\metadata.xml -xsl:createRef.xsl -o:"createRef.xml" fondtitle=%FONDTITLE% archsig=%SIGNATUR%
 
 REM create running number for each archival object
-%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -versionmsg:off -s:xIcreateRef.xml -xsl:xInumberRef.xsl -o:"xInumberRef.xml" fondtitle=%FONDTITLE% archsig=%SIGNATUR%
+%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -versionmsg:off -s:createRef.xml -xsl:numberRef.xsl -o:"numberRef.xml" fondtitle=%FONDTITLE% archsig=%SIGNATUR%
 
+REM convert to xIsadg and validate with xmllint
+IF %FMT% == 1 (
 %JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -versionmsg:off -s:%ECH-0160%\header\metadata.xml -xsl:eCH2xIsadg.xsl -o:"%OUTPUT%" fondtitle=%FONDTITLE% archsig=%SIGNATUR% reffilename=%REF%
-
 REM schema validate with xmllint
 %LINT%\xmllint.exe -sax -noout -schema xIsadg_v1.6.1.xsd "%OUTPUT%"
-ECHO.
+)
 
+REM convert to EAD and validate with xmllint
+IF %FMT% == 2 (
+%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -versionmsg:off -s:%ECH-0160%\header\metadata.xml -xsl:eCH2EAD.xsl -o:"%OUTPUT%" fondtitle=%FONDTITLE% archsig=%SIGNATUR% reffilename=%REF%
+REM schema validate with xmllint
+%LINT%\xmllint.exe -sax -noout -schema ead.xsd "%OUTPUT%"
+)
+
+ECHO.
 IF %ERRORLEVEL%==0 (
         ECHO SIP %ECH-0160% converted
         ECHO output is %OUTPUT%
