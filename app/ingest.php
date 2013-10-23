@@ -26,7 +26,7 @@ $metadatafile = '';
         <tr>
           <th>
             <form enctype="multipart/form-data" action="ingest.php" method="post">
-              <input name="MAX_FILE_SIZE"  value="1000000" type="hidden">
+              <input name="MAX_FILE_SIZE"  value="100000000" type="hidden">
               <input name="usr" value=<?=$usr?> type="hidden">
               <input name="uploadedfile" size="60" type="file" style="font-size:100%">
               <input value="Datei &uuml;bermitteln" type="submit" style="font-size:100%">

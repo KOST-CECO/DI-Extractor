@@ -40,6 +40,10 @@
 			<xsl:number/>
 		</xsl:variable>
 		<xsl:element name="identity">
+			<!-- 3.1.2 Titel -->
+			<xsl:element name="title">
+				<xsl:value-of select="arelda:titel"/>
+			</xsl:element>
 			<!-- 3.1.1 Signatur -->
 			<xsl:element name="referenceCode">
 				<xsl:value-of select="$signature"/>
@@ -61,6 +65,10 @@
 			<xsl:number/>
 		</xsl:variable>
 		<xsl:element name="identity">
+			<!-- 3.1.2 Titel -->
+			<xsl:element name="title">
+				<xsl:value-of select="arelda:titel"/>
+			</xsl:element>
 			<!-- 3.1.1 Signatur -->
 			<xsl:element name="referenceCode">
 				<xsl:value-of select="$signature"/>
@@ -69,8 +77,18 @@
 		<xsl:apply-templates select="arelda:dokument">
 			<xsl:with-param name="sig" select="$signature"/>
 		</xsl:apply-templates>
+		<xsl:apply-templates select="arelda:dateiRef">
+			<xsl:with-param name="sig" select="$signature"/>
+		</xsl:apply-templates>
+		<xsl:apply-templates select="arelda:dossier">
+			<xsl:with-param name="sig">
+				<xsl:value-of select="$sig"/>
+				<xsl:text>.</xsl:text>
+				<xsl:number count="node()"/>
+			</xsl:with-param>
+		</xsl:apply-templates>
 	</xsl:template>
-	<!-- Dokument -->
+	<!-- Dokument GEVER -->
 	<xsl:template match="arelda:dokument">
 		<xsl:param name="sig"/>
 		<xsl:variable name="signature">
@@ -79,6 +97,29 @@
 			<xsl:number/>
 		</xsl:variable>
 		<xsl:element name="identity">
+			<!-- 3.1.2 Titel -->
+			<xsl:element name="title">
+				<xsl:value-of select="arelda:titel"/>
+			</xsl:element>
+			<!-- 3.1.1 Signatur -->
+			<xsl:element name="referenceCode">
+				<xsl:value-of select="$signature"/>
+			</xsl:element>
+		</xsl:element>
+	</xsl:template>
+	<!-- Dokument FILE -->
+	<xsl:template match="arelda:dateiRef">
+		<xsl:param name="sig"/>
+		<xsl:variable name="signature">
+			<xsl:value-of select="$sig"/>
+			<xsl:text>.</xsl:text>
+			<xsl:number/>
+		</xsl:variable>
+		<xsl:element name="identity">
+			<!-- 3.1.2 Titel -->
+			<xsl:element name="title">
+				<xsl:value-of select="."/>
+			</xsl:element>
 			<!-- 3.1.1 Signatur -->
 			<xsl:element name="referenceCode">
 				<xsl:value-of select="$signature"/>

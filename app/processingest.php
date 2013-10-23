@@ -37,6 +37,7 @@ if ($collstyle == 'fortlaufend') {
     $proc->setParameter('', 'archsig', $collsig);
     // Transform according to the xsl rules
     $reflist = $proc->transformToXML($xml);
+file_put_contents("reflist.xml", $reflist);
     
     // Signatur generieren: Liste aller Objektreferenzen fortlaufend nummerieren
     // Load the XML source
