@@ -125,8 +125,16 @@
 					</xsl:element>
 				</xsl:element>
 			</xsl:if>
-			<!--   -->
+			<!--  GEVER SIP -->
 			<xsl:apply-templates select="arelda:dokument">
+				<xsl:with-param name="sig" select="$signature"/>
+			</xsl:apply-templates>
+			<!--  FILE SIP -->
+			<xsl:apply-templates select="arelda:dateiRef">
+				<xsl:with-param name="sig" select="$signature"/>
+			</xsl:apply-templates>
+			<!--  Sub-Dossier -->
+			<xsl:apply-templates select="arelda:dossier">
 				<xsl:with-param name="sig" select="$signature"/>
 			</xsl:apply-templates>
 		</xsl:element>

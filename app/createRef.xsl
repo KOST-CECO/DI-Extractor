@@ -81,11 +81,7 @@
 			<xsl:with-param name="sig" select="$signature"/>
 		</xsl:apply-templates>
 		<xsl:apply-templates select="arelda:dossier">
-			<xsl:with-param name="sig">
-				<xsl:value-of select="$sig"/>
-				<xsl:text>.</xsl:text>
-				<xsl:number count="node()"/>
-			</xsl:with-param>
+			<xsl:with-param name="sig" select="$signature"/>
 		</xsl:apply-templates>
 	</xsl:template>
 	<!-- Dokument GEVER -->
@@ -93,7 +89,7 @@
 		<xsl:param name="sig"/>
 		<xsl:variable name="signature">
 			<xsl:value-of select="$sig"/>
-			<xsl:text>.</xsl:text>
+			<xsl:text>_</xsl:text>
 			<xsl:number/>
 		</xsl:variable>
 		<xsl:element name="identity">
@@ -112,7 +108,7 @@
 		<xsl:param name="sig"/>
 		<xsl:variable name="signature">
 			<xsl:value-of select="$sig"/>
-			<xsl:text>.</xsl:text>
+			<xsl:text>_</xsl:text>
 			<xsl:number/>
 		</xsl:variable>
 		<xsl:element name="identity">

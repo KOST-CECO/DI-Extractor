@@ -37,7 +37,7 @@ if ($collstyle == 'fortlaufend') {
     $proc->setParameter('', 'archsig', $collsig);
     // Transform according to the xsl rules
     $reflist = $proc->transformToXML($xml);
-file_put_contents("reflist.xml", $reflist);
+    // file_put_contents("reflist.xml", $reflist); // TEST
     
     // Signatur generieren: Liste aller Objektreferenzen fortlaufend nummerieren
     // Load the XML source
@@ -52,6 +52,7 @@ file_put_contents("reflist.xml", $reflist);
     // Transform according to the xsl rules
     $numlist = $proc->transformToXML($xml_ref);
     file_put_contents("$reffile", $numlist);
+    // file_put_contents("numlist.xml", $numlist); // TEST
 }
 else {
     $reffile = 'null.xml';
@@ -74,6 +75,8 @@ $proc->setParameter('', 'archsig', $collsig);
 $proc->setParameter('', 'reffilename', "$reffile");
 // Transform according to the xsl rules
 $xisadg = $proc->transformToXML($xml);
+
+// file_put_contents("outlist.xml", $xisadg); // TEST
 
 // alle Dateien im Arbeitsverzeichnis "$wdir" löschen
 if ($handle = opendir($wdir)) {

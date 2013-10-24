@@ -5,7 +5,7 @@
 		<xsl:param name="sig"/>
 		<xsl:variable name="signature">
 			<xsl:value-of select="$sig"/>
-			<xsl:text>.</xsl:text>
+			<xsl:text>_</xsl:text>
 			<xsl:number/>
 		</xsl:variable>
 		<xsl:element name="archivalDescription">
@@ -94,7 +94,7 @@
 		<xsl:param name="sig"/>
 		<xsl:variable name="signature">
 			<xsl:value-of select="$sig"/>
-			<xsl:text>.</xsl:text>
+			<xsl:text>_</xsl:text>
 			<xsl:number/>
 		</xsl:variable>
 		<xsl:variable name="fileid">

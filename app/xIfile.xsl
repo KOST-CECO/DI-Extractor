@@ -140,11 +140,7 @@
 			</xsl:apply-templates>
 			<!--  Sub-Dossier -->
 			<xsl:apply-templates select="arelda:dossier">
-				<xsl:with-param name="sig">
-					<xsl:value-of select="$sig"/>
-					<xsl:text>.</xsl:text>
-					<xsl:number count="node()"/>
-				</xsl:with-param>
+				<xsl:with-param name="sig" select="$signature"/>
 			</xsl:apply-templates>
 		</xsl:element>
 	</xsl:template>
