@@ -6,9 +6,16 @@
 		<xsl:element name="referenceCode">
 			<xsl:choose>
 				<xsl:when test="$reffile//reference">
+					<!-- 
 					<xsl:value-of select="$archsig"/>
 					<xsl:text>.</xsl:text>
 					<xsl:value-of select="$reffile//reference/identity[referenceCode=$signature]/referenceNo/text()"/>
+					-->
+					<xsl:for-each select="$reffile//reference">
+						<xsl:if test="referenceCode=$signature">
+							<xsl:value-of select="referenceNo/text()"/>
+						</xsl:if>
+					</xsl:for-each>
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:value-of select="$signature"/>

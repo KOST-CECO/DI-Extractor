@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference>
+  <identity>
+    <referenceCode>.1</referenceCode>
+  </identity>
+  <identity>
+    <title>Beispiel-OSP</title>
+    <referenceCode>.1.1</referenceCode>
+  </identity>
+  <identity>
+    <title>Geschäft blau</title>
+    <referenceCode>.1.1.1</referenceCode>
+  </identity>
+  <identity>
+    <title>_EV7q4MEWEeGjN725uNwvBQ</title>
+    <referenceCode>.1.1.1_1</referenceCode>
+  </identity>
+  <identity>
+    <title>_EWrRwMEWEeGjN725uNwvBQ</title>
+    <referenceCode>.1.1.1_2</referenceCode>
+  </identity>
+  <identity>
+    <title>_EXH9sMEWEeGjN725uNwvBQ</title>
+    <referenceCode>.1.1.1_3</referenceCode>
+  </identity>
+  <identity>
+    <title>Geschäft hellblau</title>
+    <referenceCode>.1.1.1.1</referenceCode>
+  </identity>
+  <identity>
+    <title>Geschäft rot</title>
+    <referenceCode>.1.1.2</referenceCode>
+  </identity>
+  <identity>
+    <title>_EXtzkMEWEeGjN725uNwvBQ</title>
+    <referenceCode>.1.1.2_1</referenceCode>
+  </identity>
+  <identity>
+    <title>_EYKfgMEWEeGjN725uNwvBQ</title>
+    <referenceCode>.1.1.2_2</referenceCode>
+  </identity>
+  <identity>
+    <title>Geschäft gelb</title>
+    <referenceCode>.1.1.3</referenceCode>
+  </identity>
+  <identity>
+    <title>_EZD3YMEWEeGjN725uNwvBQ</title>
+    <referenceCode>.1.1.3_1</referenceCode>
+  </identity>
+  <identity>
+    <title>_EZf8QMEWEeGjN725uNwvBQ</title>
+    <referenceCode>.1.1.3_2</referenceCode>
+  </identity>
+</reference>

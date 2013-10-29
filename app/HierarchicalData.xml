@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tree>
+	<node>
+		<name>root</name>
+		<depth>0</depth>
+	</node>
+	<node>
+		<name>TELEVISIONS</name>
+		<depth>1</depth>
+	</node>
+	<node>
+		<name>TUBE</name>
+		<depth>2</depth>
+	</node>
+	<node>
+		<name>LCD</name>
+		<depth>2</depth>
+	</node>
+	<node>
+		<name>PLASMA</name>
+		<depth>2</depth>
+	</node>
+	<node>
+		<name>PORTABLE ELECTRONICS</name>
+		<depth>1</depth>
+	</node>
+	<node>
+		<name>MP3 PLAYERS</name>
+		<depth>2</depth>
+	</node>
+	<node>
+		<name>FLASH</name>
+		<depth>3</depth>
+	</node>
+	<node>
+		<name>CD PLAYERS</name>
+		<depth>2</depth>
+	</node>
+	<node>
+		<name>2 WAY RADIOS</name>
+		<depth>2</depth>
+	</node>
+</tree>
