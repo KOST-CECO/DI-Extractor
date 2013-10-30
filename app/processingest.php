@@ -27,7 +27,6 @@ $xml->load("./$wdir/$metadatafile");
 
 if ($collstyle == 'fortlaufend') {
     // Signatur generieren: Liste aller Objektreferenzen erzeugen
-    // Load the XSLT source
     $xsl = new DOMDocument;
     $xsl->load('createRef.xsl');
     // Configure the transformer
@@ -40,7 +39,6 @@ if ($collstyle == 'fortlaufend') {
 file_put_contents("reflist.xml", $reflist); // TEST
     
     // Signatur generieren: Liste aller Objektreferenzen fortlaufend nummerieren
-    // Load the XML source
     $xml_ref = new DOMDocument;
     $xml_ref->loadXML($reflist);
     // Load the XSLT source
@@ -53,6 +51,20 @@ file_put_contents("reflist.xml", $reflist); // TEST
     $numlist = $proc->transformToXML($xml_ref);
     file_put_contents("$reffile", $numlist);
 file_put_contents("numlist.xml", $numlist); // TEST
+
+    // Signatur generieren: Liste aller Objektreferenzen fortlaufend nummerieren als BT
+    $xml_ref = new DOMDocument;
+    $xml_ref->loadXML($numlist);
+    // Load the XSLT source
+    $xsl = new DOMDocument;
+    $xsl->load('treeRef.xsl');
+    // Configure the transformer
+    $proc = new XSLTProcessor;
+    $proc->importStyleSheet($xsl); // attach the xsl rules
+    // Transform according to the xsl rules
+    $numtree = $proc->transformToXML($xml_ref);
+    //file_put_contents("$reffile", $numlist);
+file_put_contents("numtree.xml", $numtree); // TEST
 }
 else {
     $reffile = 'null.xml';

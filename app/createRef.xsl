@@ -19,11 +19,15 @@
 				<xsl:text>.</xsl:text>
 				<xsl:number/>
 			</xsl:element>
+			<xsl:element name="depth">
+				<xsl:value-of select="0"/>
+			</xsl:element>
 		</xsl:element>
 	</xsl:template>
 	<!-- Ordnungsystem -->
 	<xsl:template match="arelda:ablieferung/arelda:ordnungssystem">
 		<xsl:apply-templates select="arelda:ordnungssystemposition">
+			<xsl:with-param name="depth" select="1"/>
 			<xsl:with-param name="sig">
 				<xsl:value-of select="$archsig"/>
 				<xsl:text>.</xsl:text>
@@ -33,6 +37,7 @@
 	</xsl:template>
 	<!-- Ordnungsystemposition -->
 	<xsl:template match="arelda:ordnungssystemposition">
+		<xsl:param name="depth"/>
 		<xsl:param name="sig"/>
 		<xsl:variable name="signature">
 			<xsl:value-of select="$sig"/>
@@ -48,16 +53,22 @@
 			<xsl:element name="referenceCode">
 				<xsl:value-of select="$signature"/>
 			</xsl:element>
+			<xsl:element name="depth">
+				<xsl:value-of select="$depth"/>
+			</xsl:element>
 		</xsl:element>
 		<xsl:apply-templates select="arelda:ordnungssystemposition">
+			<xsl:with-param name="depth" select="$depth+1"/>
 			<xsl:with-param name="sig" select="$signature"/>
 		</xsl:apply-templates>
 		<xsl:apply-templates select="arelda:dossier">
+			<xsl:with-param name="depth" select="$depth+1"/>
 			<xsl:with-param name="sig" select="$signature"/>
 		</xsl:apply-templates>
 	</xsl:template>
 	<!-- Dossier -->
 	<xsl:template match="arelda:dossier">
+		<xsl:param name="depth"/>
 		<xsl:param name="sig"/>
 		<xsl:variable name="signature">
 			<xsl:value-of select="$sig"/>
@@ -73,19 +84,26 @@
 			<xsl:element name="referenceCode">
 				<xsl:value-of select="$signature"/>
 			</xsl:element>
+			<xsl:element name="depth">
+				<xsl:value-of select="$depth"/>
+			</xsl:element>
 		</xsl:element>
 		<xsl:apply-templates select="arelda:dokument">
+			<xsl:with-param name="depth" select="$depth+1"/>
 			<xsl:with-param name="sig" select="$signature"/>
 		</xsl:apply-templates>
 		<xsl:apply-templates select="arelda:dateiRef">
+			<xsl:with-param name="depth" select="$depth+1"/>
 			<xsl:with-param name="sig" select="$signature"/>
 		</xsl:apply-templates>
 		<xsl:apply-templates select="arelda:dossier">
+			<xsl:with-param name="depth" select="$depth+1"/>
 			<xsl:with-param name="sig" select="$signature"/>
 		</xsl:apply-templates>
 	</xsl:template>
 	<!-- Dokument GEVER -->
 	<xsl:template match="arelda:dokument">
+		<xsl:param name="depth"/>
 		<xsl:param name="sig"/>
 		<xsl:variable name="signature">
 			<xsl:value-of select="$sig"/>
@@ -101,10 +119,14 @@
 			<xsl:element name="referenceCode">
 				<xsl:value-of select="$signature"/>
 			</xsl:element>
+			<xsl:element name="depth">
+				<xsl:value-of select="$depth"/>
+			</xsl:element>
 		</xsl:element>
 	</xsl:template>
 	<!-- Dokument FILE -->
 	<xsl:template match="arelda:dateiRef">
+		<xsl:param name="depth"/>
 		<xsl:param name="sig"/>
 		<xsl:variable name="signature">
 			<xsl:value-of select="$sig"/>
@@ -119,6 +141,9 @@
 			<!-- 3.1.1 Signatur -->
 			<xsl:element name="referenceCode">
 				<xsl:value-of select="$signature"/>
+			</xsl:element>
+			<xsl:element name="depth">
+				<xsl:value-of select="$depth"/>
 			</xsl:element>
 		</xsl:element>
 	</xsl:template>

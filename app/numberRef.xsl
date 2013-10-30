@@ -13,6 +13,9 @@
 					<xsl:element name="referenceNo">
 						<xsl:number/>
 					</xsl:element>
+					<xsl:element name="depth">
+						<xsl:value-of select="depth"/>
+					</xsl:element>
 				</xsl:element>
 			</xsl:for-each>
 		</xsl:element>
