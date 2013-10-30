@@ -3,18 +3,27 @@
 	<!-- named template EADreference -->
 	<xsl:template name="EADreference">
 		<xsl:param name="signature"/>
-			<xsl:element name="EAD:unitid">
-				<xsl:attribute name="label">refCode</xsl:attribute>
+		<xsl:variable name="sig">
+			<xsl:text>_</xsl:text>
+			<xsl:value-of select="$signature"/>
+		</xsl:variable>
+		<xsl:element name="EAD:unitid">
+			<xsl:attribute name="label">refCode</xsl:attribute>
 			<xsl:choose>
 				<xsl:when test="$reffile//reference">
 					<xsl:value-of select="$archsig"/>
 					<xsl:text>.</xsl:text>
-					<xsl:value-of select="$reffile//reference/identity[referenceCode=$signature]/referenceNo/text()"/>
+					<!-- apply template using select on reference file to find number for signature  -->
+					<xsl:apply-templates select="$reffile//reference/*[name()=$sig]" mode="refNo"/>
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:value-of select="$signature"/>
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:element>
+	</xsl:template>
+	<!--                                         -->
+	<xsl:template match="*" mode="refNo">
+		<xsl:value-of select="referenceNo"/>
 	</xsl:template>
 </xsl:stylesheet>

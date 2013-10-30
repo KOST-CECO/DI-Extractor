@@ -36,35 +36,21 @@ if ($collstyle == 'fortlaufend') {
     $proc->setParameter('', 'archsig', $collsig);
     // Transform according to the xsl rules
     $reflist = $proc->transformToXML($xml);
-file_put_contents("reflist.xml", $reflist); // TEST
+//file_put_contents("reflist.xml", $reflist); // TEST
     
-    // Signatur generieren: Liste aller Objektreferenzen fortlaufend nummerieren
+    // Signatur generieren: Liste aller Objektelemente fortlaufend nummerieren
     $xml_ref = new DOMDocument;
     $xml_ref->loadXML($reflist);
     // Load the XSLT source
     $xsl = new DOMDocument;
-    $xsl->load('numberRef.xsl');
+    $xsl->load('elementRef.xsl');
     // Configure the transformer
     $proc = new XSLTProcessor;
     $proc->importStyleSheet($xsl); // attach the xsl rules
     // Transform according to the xsl rules
     $numlist = $proc->transformToXML($xml_ref);
     file_put_contents("$reffile", $numlist);
-file_put_contents("numlist.xml", $numlist); // TEST
-
-    // Signatur generieren: Liste aller Objektreferenzen fortlaufend nummerieren als BT
-    $xml_ref = new DOMDocument;
-    $xml_ref->loadXML($numlist);
-    // Load the XSLT source
-    $xsl = new DOMDocument;
-    $xsl->load('treeRef.xsl');
-    // Configure the transformer
-    $proc = new XSLTProcessor;
-    $proc->importStyleSheet($xsl); // attach the xsl rules
-    // Transform according to the xsl rules
-    $numtree = $proc->transformToXML($xml_ref);
-    //file_put_contents("$reffile", $numlist);
-file_put_contents("numtree.xml", $numtree); // TEST
+//file_put_contents("elementlist.xml", $numlist); // TEST
 }
 else {
     $reffile = 'null.xml';
@@ -88,7 +74,7 @@ $proc->setParameter('', 'reffilename', "$reffile");
 // Transform according to the xsl rules
 $xisadg = $proc->transformToXML($xml);
 
-file_put_contents("outlist.xml", $xisadg); // TEST
+//file_put_contents("outlist.xml", $xisadg); // TEST
 
 // alle Dateien im Arbeitsverzeichnis "$wdir" löschen
 if ($handle = opendir($wdir)) {
