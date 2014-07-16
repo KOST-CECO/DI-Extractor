@@ -1,213 +1,243 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<paket xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://bar.admin.ch/arelda/v3.13.2" xsi:schemaLocation="http://bar.admin.ch/arelda/v3.13.2 xsd/arelda_v3.13.2.xsd" xsi:type="paketSIP">
-	<paketTyp>SIP</paketTyp>
-	<inhaltsverzeichnis>
-		<ordner>
-			<name>header</name>
-			<ordner>
-				<name>xsd</name>
-				<datei id="XSD0">
-					<name>ablieferung.xsd</name>
-					<originalName>ablieferung.xsd</originalName>
-					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>1570582079ab49b1187cde6aaa288555</pruefsumme>
-				</datei>
-				<datei id="XSD1">
-					<name>archivischeNotiz.xsd</name>
-					<originalName>archivischeNotiz.xsd</originalName>
-					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>930a3ea49eb8af2b692665e5827e6309</pruefsumme>
-				</datei>
-				<datei id="XSD2">
-					<name>archivischerVorgang.xsd</name>
-					<originalName>archivischerVorgang.xsd</originalName>
-					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>3b0b980e1a1bb76ee49abd9db66b0a47</pruefsumme>
-				</datei>
-				<datei id="XSD3">
-					<name>arelda_v3.13.2.xsd</name>
-					<originalName>arelda_v3.13.2.xsd</originalName>
-					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>f00819c38c123c1be887640e596d96f9</pruefsumme>
-				</datei>
-				<datei id="XSD4">
-					<name>base.xsd</name>
-					<originalName>base.xsd</originalName>
-					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>b3b92643cacf3bb7911da14c23c1f126</pruefsumme>
-				</datei>
-				<datei id="XSD5">
-					<name>datei.xsd</name>
-					<originalName>datei.xsd</originalName>
-					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>46120fc9d0fa91b6964223300aef9fdc</pruefsumme>
-				</datei>
-				<datei id="XSD6">
-					<name>dokument.xsd</name>
-					<originalName>dokument.xsd</originalName>
-					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>ad940cb82cc3ee16a66804aa826256f7</pruefsumme>
-				</datei>
-				<datei id="XSD7">
-					<name>dossier.xsd</name>
-					<originalName>dossier.xsd</originalName>
-					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>79e179d1788a99429cf64d3ed752ec96</pruefsumme>
-				</datei>
-				<datei id="XSD8">
-					<name>ordner.xsd</name>
-					<originalName>ordner.xsd</originalName>
-					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>4add36567f49877d9b2fcea9ee9f7fd8</pruefsumme>
-				</datei>
-				<datei id="XSD9">
-					<name>ordnungssystem.xsd</name>
-					<originalName>ordnungssystem.xsd</originalName>
-					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>d5fcb0c64136fad7ad687565e9f33ca2</pruefsumme>
-				</datei>
-				<datei id="XSD10">
-					<name>ordnungssystemposition.xsd</name>
-					<originalName>ordnungssystemposition.xsd</originalName>
-					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>d0e709ef591187fa4c36ec3453cf4477</pruefsumme>
-				</datei>
-				<datei id="XSD11">
-					<name>paket.xsd</name>
-					<originalName>paket.xsd</originalName>
-					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>d700aeab23ddf93e720d98772e2f7c09</pruefsumme>
-				</datei>
-				<datei id="XSD12">
-					<name>provenienz.xsd</name>
-					<originalName>provenienz.xsd</originalName>
-					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>d36088d0a4b4e7bfe8bee1cdee8049c7</pruefsumme>
-				</datei>
-			</ordner>
-		</ordner>
-		<ordner>
-			<name>content</name>
-			<ordner>
-				<name>d0001</name>
-				<datei id="DAT0">
-					<name>69D68D97-D16F-4F62-88C8-6E03CD945C3F.pdf</name>
-					<originalName>{69D68D97-D16F-4F62-88C8-6E03CD945C3F}.pdf</originalName>
-					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>1b624b06b39e5d08ecbaf732c9e90f78</pruefsumme>
-				</datei>
-				<datei id="DAT1">
-					<name>F30B1CF5-2948-4F23-98DA-BDDBE76E357B.pdf</name>
-					<originalName>{F30B1CF5-2948-4F23-98DA-BDDBE76E357B}.pdf</originalName>
-					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>93068cb96cab99dd3c5d9883ddf5baef</pruefsumme>
-				</datei>
-				<datei id="DAT2">
-					<name>3AD4D0BA-933C-48E5-A897-41A79638DFF8.pdf</name>
-					<originalName>{3AD4D0BA-933C-48E5-A897-41A79638DFF8}.pdf</originalName>
-					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>f0277862beaf0356716b9b92999b4538</pruefsumme>
-				</datei>
-				<datei id="DAT3">
-					<name>46E5084F-407D-4582-8BEE-1D69FC0FC8E5.pdf</name>
-					<originalName>{46E5084F-407D-4582-8BEE-1D69FC0FC8E5}.pdf</originalName>
-					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>32b51b697901db25ba740605d6fcdb2a</pruefsumme>
-				</datei>
-			</ordner>
-		</ordner>
-	</inhaltsverzeichnis>
-	<ablieferung xsi:type="ablieferungGeverSIP">
-		<ablieferungstyp>GEVER</ablieferungstyp>
-		<ablieferndeStelle>Staatskanzlei des Kantons St.Gallen</ablieferndeStelle>
-		<entstehungszeitraum>
-			<von>
-				<datum>2006-12-13</datum>
-			</von>
-			<bis>
-				<datum>2007-05-04</datum>
-			</bis>
-		</entstehungszeitraum>
-		<bemerkung>ein Test</bemerkung>
-		<ablieferungsnummer>2007/24</ablieferungsnummer>
-		<provenienz>
-			<aktenbildnerName>Grossrat des Kantons St.Gallen</aktenbildnerName>
-			<registratur>Ratsinformationssystem des Kantons St.Gallen (RIS), Kantonsrat, Gesetzgebung</registratur>
-		</provenienz>
-		<ordnungssystem>
-			<name>Räte - Aktenplan Kantonsrat und Regierung</name>
-			<ordnungssystemposition id="OSP-0">
-				<klassifizierungskategorie>nicht klassifiziert</klassifizierungskategorie>
-				<datenschutz>false</datenschutz>
-				<nummer>2</nummer>
-				<titel>Erziehung, Bildung, Kultur</titel>
-				<ordnungssystemposition id="OSP-1">
-					<klassifizierungskategorie>nicht klassifiziert</klassifizierungskategorie>
-					<datenschutz>false</datenschutz>
-					<nummer>21</nummer>
-					<titel>Schulen</titel>
-					<ordnungssystemposition id="OSP-2">
-						<klassifizierungskategorie>nicht klassifiziert</klassifizierungskategorie>
-						<datenschutz>false</datenschutz>
-						<nummer>210</nummer>
-						<titel>Allgemein</titel>
-						<dossier id="DS-0">
-							<titel>X. Nachtrag zum Volksschulgesetz</titel>
-							<erscheinungsform>digital</erscheinungsform>
-							<entstehungszeitraum>
-								<von>
-									<datum>2006-12-13</datum>
-								</von>
-								<bis>
-									<datum>2007-04-25</datum>
-								</bis>
-							</entstehungszeitraum>
-							<klassifizierungskategorie>nicht klassifiziert</klassifizierungskategorie>
-							<datenschutz>false</datenschutz>
-							<aktenzeichen>22.06.12</aktenzeichen>
-							<eroeffnungsdatum>
-								<datum>2006-12-13</datum>
-							</eroeffnungsdatum>
-							<dokument id="DOK-0">
-								<titel>Botschaft und Entwurf der Regierung vom 12. Dezember 2006 </titel>
-								<erscheinungsform>digital</erscheinungsform>
-								<registrierdatum>
-									<datum>2006-12-15</datum>
-								</registrierdatum>
-								<dateiRef>DAT0</dateiRef>
-								<anwendung>Botschaft Bericht</anwendung>
-							</dokument>
-							<dokument id="DOK-1">
-								<titel>Aktuelle Mitgliederliste </titel>
-								<erscheinungsform>digital</erscheinungsform>
-								<registrierdatum>
-									<datum>2007-02-21</datum>
-								</registrierdatum>
-								<dateiRef>DAT1</dateiRef>
-								<anwendung>Mitgliederliste</anwendung>
-							</dokument>
-							<dokument id="DOK-2">
-								<titel>Anträge der vorberatenden Kommission vom 14. März 2007</titel>
-								<erscheinungsform>digital</erscheinungsform>
-								<registrierdatum>
-									<datum>2007-03-22</datum>
-								</registrierdatum>
-								<dateiRef>DAT2</dateiRef>
-								<anwendung>Antrag</anwendung>
-							</dokument>
-							<dokument id="DOK-3">
-								<titel>Antrag Hobi-Neu St.Johann zu Art. 20 vom 23. April 2007</titel>
-								<erscheinungsform>digital</erscheinungsform>
-								<registrierdatum>
-									<datum>2007-04-25</datum>
-								</registrierdatum>
-								<dateiRef>DAT3</dateiRef>
-								<anwendung>Antrag</anwendung>
-							</dokument>
-						</dossier>
-					</ordnungssystemposition>
-				</ordnungssystemposition>
-			</ordnungssystemposition>
-		</ordnungssystem>
-	</ablieferung>
+<paket xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://bar.admin.ch/arelda/v3.13.2" xsi:schemaLocation="http://bar.admin.ch/arelda/v3.13.2 xsd\arelda_v3.13.2.xsd" xsi:type="paketSIP">
+  <paketTyp>SIP</paketTyp>
+  <inhaltsverzeichnis>
+    <ordner>
+      <name>header</name>
+      <ordner>
+        <name>xsd</name>
+        <datei id="XSD0">
+          <name>ablieferung.xsd</name>
+          <originalName>ablieferung.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>1570582079ab49b1187cde6aaa288555</pruefsumme>
+        </datei>
+        <datei id="XSD1">
+          <name>archivischeNotiz.xsd</name>
+          <originalName>archivischeNotiz.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>930a3ea49eb8af2b692665e5827e6309</pruefsumme>
+        </datei>
+        <datei id="XSD2">
+          <name>archivischerVorgang.xsd</name>
+          <originalName>archivischerVorgang.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>3b0b980e1a1bb76ee49abd9db66b0a47</pruefsumme>
+        </datei>
+        <datei id="XSD3">
+          <name>arelda_v3.13.2.xsd</name>
+          <originalName>arelda_v3.13.2.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>f00819c38c123c1be887640e596d96f9</pruefsumme>
+        </datei>
+        <datei id="XSD4">
+          <name>base.xsd</name>
+          <originalName>base.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>b3b92643cacf3bb7911da14c23c1f126</pruefsumme>
+        </datei>
+        <datei id="XSD5">
+          <name>datei.xsd</name>
+          <originalName>datei.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>46120fc9d0fa91b6964223300aef9fdc</pruefsumme>
+        </datei>
+        <datei id="XSD6">
+          <name>dokument.xsd</name>
+          <originalName>dokument.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>ad940cb82cc3ee16a66804aa826256f7</pruefsumme>
+        </datei>
+        <datei id="XSD7">
+          <name>dossier.xsd</name>
+          <originalName>dossier.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>79e179d1788a99429cf64d3ed752ec96</pruefsumme>
+        </datei>
+        <datei id="XSD8">
+          <name>ordner.xsd</name>
+          <originalName>ordner.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>4add36567f49877d9b2fcea9ee9f7fd8</pruefsumme>
+        </datei>
+        <datei id="XSD9">
+          <name>ordnungssystem.xsd</name>
+          <originalName>ordnungssystem.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>d5fcb0c64136fad7ad687565e9f33ca2</pruefsumme>
+        </datei>
+        <datei id="XSD10">
+          <name>ordnungssystemposition.xsd</name>
+          <originalName>ordnungssystemposition.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>d0e709ef591187fa4c36ec3453cf4477</pruefsumme>
+        </datei>
+        <datei id="XSD11">
+          <name>paket.xsd</name>
+          <originalName>paket.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>d700aeab23ddf93e720d98772e2f7c09</pruefsumme>
+        </datei>
+        <datei id="XSD12">
+          <name>provenienz.xsd</name>
+          <originalName>provenienz.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>d36088d0a4b4e7bfe8bee1cdee8049c7</pruefsumme>
+        </datei>
+      </ordner>
+    </ordner>
+    <ordner>
+      <name>content</name>
+      <ordner>
+        <name>DOS_01</name>
+        <datei id="DAT0">
+          <name>Auftragsuebersicht.pdf</name>
+          <originalName>Auftragsuebersicht.pdf</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>ea205477f15961fa22553b94c4152fd5</pruefsumme>
+        </datei>
+        <datei id="DAT1">
+          <name>Auftragsuebersicht.tiff</name>
+          <originalName>Auftragsuebersicht.tiff</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>96735499dc13488418baf02c75cf58e8</pruefsumme>
+        </datei>
+        <datei id="DAT2">
+          <name>Customers.csv</name>
+          <originalName>Customers.csv</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>d9c897c8098cc1f463a2f77973f296d3</pruefsumme>
+        </datei>
+        <datei id="DAT3">
+          <name>NW_Standard.siard</name>
+          <originalName>NW_Standard.siard</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>e8af61c2bd4f8fda258ea2c4c84b28d8</pruefsumme>
+        </datei>
+        <datei id="DAT4">
+          <name>ReadMe.txt</name>
+          <originalName>ReadMe.txt</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>1de381a512b512c0edb22a89a9e01566</pruefsumme>
+        </datei>
+        <datei id="DAT5">
+          <name>WAVE-Testdatei.wav</name>
+          <originalName>WAVE-Testdatei.wav</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>5b96bb22211f0db96723ec293f95246d</pruefsumme>
+        </datei>
+      </ordner>
+      <ordner>
+        <name>DOS_02</name>
+        <datei id="DAT21">
+          <name>gpl2.pdf</name>
+          <originalName>gpl2.pdf</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>d226e66f7211d484bbacca6624e82af3</pruefsumme>
+        </datei>
+        <datei id="DAT22">
+          <name>gpl2.tif</name>
+          <originalName>gpl2.tif</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>6e945e26be4019fc5ab472066a00c2bc</pruefsumme>
+        </datei>
+        <datei id="DAT23">
+          <name>Licence.txt</name>
+          <originalName>Licence.txt</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>d2e82915fd7dd842e9a0d90ed72d6c1a</pruefsumme>
+        </datei>
+        <datei id="DAT24">
+          <name>gpl2.jp2</name>
+          <originalName>gpl2.jp2</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>9a87ba972d0c24446e733b5d6a9b1dc5</pruefsumme>
+        </datei>
+      </ordner>
+    </ordner>
+  </inhaltsverzeichnis>
+  <ablieferung xsi:type="ablieferungFilesSIP">
+    <ablieferungstyp>FILES</ablieferungstyp>
+    <ablieferndeStelle>KOST-CECO</ablieferndeStelle>
+    <entstehungszeitraum>
+      <von>
+        <datum>2004</datum>
+      </von>
+      <bis>
+        <datum>2009</datum>
+      </bis>
+    </entstehungszeitraum>
+    <ablieferungsnummer>2009/1</ablieferungsnummer>
+    <provenienz>
+      <aktenbildnerName>KOST-CECO</aktenbildnerName>
+      <systemName>Test</systemName>
+      <existenzzeitraum>
+        <von>
+          <datum>1966</datum>
+        </von>
+        <bis>
+          <datum>keine Angabe</datum>
+        </bis>
+      </existenzzeitraum>
+      <bemerkung>Das ist ein frei erfundenes TEST-SIP</bemerkung>
+      <registratur></registratur>
+    </provenienz>
+    <ordnungssystem>
+      <anwendungszeitraum>
+        <von>
+          <datum>2000</datum>
+        </von>
+        <bis>
+          <datum>keine Angabe</datum>
+        </bis>
+      </anwendungszeitraum>
+      <mitbenutzung>keine Mitbenutzung bekannt</mitbenutzung>
+      <bemerkung></bemerkung>
+      <name>KOST-CECO: System Test</name>
+      <ordnungssystemposition id="IdO-0">
+        <nummer>0</nummer>
+        <titel>Allgemeines</titel>
+      </ordnungssystemposition>
+      <ordnungssystemposition id="IdO-1">
+        <nummer>1</nummer>
+        <titel>Aufgabengebiet</titel>
+        <dossier id="IdD-1">
+          <titel>Allgemeines zum Test</titel>
+          <erscheinungsform>digital</erscheinungsform>
+          <entstehungszeitraum>
+            <von>
+              <datum>2006</datum>
+            </von>
+            <bis>
+              <datum>2008</datum>
+            </bis>
+          </entstehungszeitraum>
+          <aktenzeichen>1</aktenzeichen>
+          <dateiRef>DAT0</dateiRef>
+          <dateiRef>DAT1</dateiRef>
+          <dateiRef>DAT2</dateiRef>
+          <dateiRef>DAT3</dateiRef>
+          <dateiRef>DAT4</dateiRef>
+          <dateiRef>DAT5</dateiRef>
+        </dossier>
+        <dossier id="IdD-2">
+          <titel>Lizenz</titel>
+          <erscheinungsform>digital</erscheinungsform>
+          <entstehungszeitraum>
+            <von>
+              <datum>2006</datum>
+            </von>
+            <bis>
+              <datum>2008</datum>
+            </bis>
+          </entstehungszeitraum>
+          <aktenzeichen>1</aktenzeichen>
+          <dateiRef>DAT21</dateiRef>
+          <dateiRef>DAT22</dateiRef>
+          <dateiRef>DAT23</dateiRef>
+          <dateiRef>DAT24</dateiRef>
+        </dossier>
+      </ordnungssystemposition>
+    </ordnungssystem>
+  </ablieferung>
 </paket>

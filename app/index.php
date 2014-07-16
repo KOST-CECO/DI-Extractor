@@ -1,4 +1,4 @@
-<?
+<?php
 // Ein tempor„res User Verzeichnis im Arbeitsverzeichnis anlegen
 $wdir = './wdir';
 $tmpfile = tempnam('', 'usr_');

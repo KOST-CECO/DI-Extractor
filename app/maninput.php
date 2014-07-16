@@ -1,4 +1,4 @@
-<?
+<?php
 if ($wdir=='') { header ("location: ./input.php"); }
 ?>
 <hr>
@@ -8,7 +8,7 @@ if ($wdir=='') { header ("location: ./input.php"); }
 <br>
 <br>
 <form action="processingest.php" method="post">
-    <input name="metadatafile" value="<? echo $metadatafile; ?>" type="hidden">
+    <input name="metadatafile" value="<?php echo $metadatafile; ?>" type="hidden">
     <input name="wdir" value=<?=$wdir?> type="hidden">
     <table>
         <tr>

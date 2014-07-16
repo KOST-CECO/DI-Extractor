@@ -1,4 +1,4 @@
-<?
+<?php
 if ($wdir=='') { header ("location: ./input.php"); }
 ?>
 <p> Diese

@@ -1,4 +1,4 @@
-<?
+<?php
 //date_default_timezone_set('Europe/Berlin');
 
 // Ingest Informationen verarbeiten
@@ -43,7 +43,6 @@ if ($collstyle == 'fortlaufend') {
     $xml_ref->loadXML($reflist);
     // Load the XSLT source
     $xsl = new DOMDocument;
-    //$xsl->load('numberRef.xsl.xsl');
     $xsl->load('elementRef.xsl');
     // Configure the transformer
     $proc = new XSLTProcessor;
@@ -51,7 +50,7 @@ if ($collstyle == 'fortlaufend') {
     // Transform according to the xsl rules
     $numlist = $proc->transformToXML($xml_ref);
     file_put_contents("$reffile", $numlist);
-//file_put_contents("numlist.xml", $numlist); // TEST
+//file_put_contents("elementlist.xml", $numlist); // TEST
 }
 else {
     $reffile = 'null.xml';

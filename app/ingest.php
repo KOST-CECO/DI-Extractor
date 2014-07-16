@@ -1,8 +1,12 @@
-<?
+<?php
 // wenn kein User Verzeichnis existiert wird ein Redirect auf input.php ausgelöst
 $usr = '';
-if ($_GET['usr']!='') { $usr = $_GET['usr']; }
-if ($_POST['usr']!='') { $usr = $_POST['usr']; }
+if (array_key_exists('usr', $_GET)) {
+    if ($_GET['usr']!='') { $usr = $_GET['usr']; }
+}
+if (array_key_exists('usr', $_POST)) {
+    if ($_POST['usr']!='') { $usr = $_POST['usr']; }
+}
 if ($usr=='') { header ("location: ./input.php"); }
 
 // Arbeitsverzeichnis setzen (relativ zum Applikationspfad)
@@ -18,8 +22,8 @@ $metadatafile = '';
     <title>KOST Referenzimplementierung</title>
   </head>
   <body background="background.jpg">
-    <h1>KOST Referenzimplementierung - Descriptive Information</h1>
-    <? include 'helptext.php'; ?>
+    <h1>KOST Referenzimplementierung - Descriptive Information <span class="versionText">(rev. 51)</span></h1>
+    <?php include 'helptext.php'; ?>
     <i>Eine eCH-0160 Metadaten Datei f&uuml;r die Konvertierung ausw&auml;hlen:</i>
     <br>
     <table>
@@ -42,26 +46,30 @@ $metadatafile = '';
         </tr>
     </table>
     <hr>
-<?
+<?php
 // alle Dateien im Arbeitsverzeichnis "$wdir/$usr" löschen
-if ($_POST['RESET']=='true') {
-    if ($handle = opendir($wdir)) {
-        while (false !== ($file = readdir($handle))) {
-            if ($file != "." && $file != ".." && $file != ".svn") {
-                unlink("$wdir/$file");
+if (array_key_exists('RESET', $_POST)) {
+    if ($_POST['RESET']=='true') {
+        if ($handle = opendir($wdir)) {
+            while (false !== ($file = readdir($handle))) {
+                if ($file != "." && $file != ".." && $file != ".svn") {
+                    unlink("$wdir/$file");
+                }
             }
+        closedir($handle);
         }
-    closedir($handle);
     }
 }
 
 // hochgeladene Datei ins Arbeitsverzeichnis kopieren
-if ($_FILES['uploadedfile']['name'] != "") {
-    $target_file = "$wdir/" . basename($_FILES['uploadedfile']['name']);
+if (array_key_exists('uploadedfile', $_FILES)) {
+    if ($_FILES['uploadedfile']['name'] != "") {
+        $target_file = "$wdir/" . basename($_FILES['uploadedfile']['name']);
 // Achtung: verhindert das Kopieren von php Dateien auf den Webserver
-    $target_file = str_replace('.php', '.p~p', $target_file);
-    if (!move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_file)) {
-        echo "<p><b>Beim &uuml;bernehmen der Datei ist ein Fehler aufgetreten!</b></p>";
+        $target_file = str_replace('.php', '.p~p', $target_file);
+        if (!move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_file)) {
+            echo "<p><b>Beim &uuml;bernehmen der Datei ist ein Fehler aufgetreten!</b></p>";
+        }
     }
 }
 

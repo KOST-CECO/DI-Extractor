@@ -1,6 +1,6 @@
 body {
-   margin-left:10px;
-   width: 800px;
+	margin-left:10px;
+	width: 800px;
 	font-family: Verdana, Helvetica, Arial, sans-serif;
 	font-size: 11px;
 }
@@ -9,8 +9,8 @@ form, div, p, h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 }
 table {
-      border: 0;
-      }
+	border: 0;
+}
 
 td, th, p, div, span {
 	font-family: Verdana, Helvetica, Arial, sans-serif;
@@ -45,10 +45,17 @@ h3 {
 }
 
 hr {
-   margin-left:0;
-   width: 800px;
-   height: 1px;
-   background-color: #A0A0A0;
-   border: none;
-   color: #A0A0A0;
+	margin-left:0;
+	width: 800px;
+	height: 1px;
+	background-color: #A0A0A0;
+	border: none;
+	color: #A0A0A0;
 }
+
+.versionText { 
+	font-size: 12px; 
+	font-weight: normal; 
+	font-style: italic; 
+}
+
