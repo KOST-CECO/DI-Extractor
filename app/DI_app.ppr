@@ -1,0 +1,28 @@
+[Config]
+Relative path=1
+Compilator.SaveAll=0
+Compilator.Capture=0
+Compilator.HideOutput=0
+DefaultCPIndex=0
+LogtoEnd=1
+DontOpen=0
+FileFormat=0
+[Project tree]
+DI_app
+	+app
+		index.php
+		input.php
+		ingest.php
+		maninput.php
+		processingest.php
+		helptext.php
+		copyright.php
+		class.inputfilter.php
+[Open project files]
+0=..\technotes\run.bat
+[Selected Project Files]
+Main=ingest.php
+Selected=..\technotes\run.bat
+[..\technotes\run.bat]
+TopLine=1
+Caret=155,10

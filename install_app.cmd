@@ -5,9 +5,12 @@ ECHO "Installieren aller notwendigen Dateien in C:\Tools\xampp\htdocs\app -> htt
 ECHO.
 PAUSE
 
-RMDIR /S /Q C:\Tools\xampp\htdocs\app
+SET WORKDIR=%CD%
+SET HTDOCS=C:\Tools\xampp\htdocs
 
-ROBOCOPY C:\Tools\workbench\_DI-Extractor\app C:\Tools\xampp\htdocs\app /MIR
+RMDIR /S /Q %HTDOCS%\app
+
+ROBOCOPY %WORKDIR%\app %HTDOCS%\app /MIR
 
 CALL "C:\Program Files\Internet Explorer\iexplore.exe" "http://localhost:90/app/"
 
