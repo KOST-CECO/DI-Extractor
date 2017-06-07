@@ -19,10 +19,10 @@ DI_app
 		copyright.php
 		class.inputfilter.php
 [Open project files]
-0=..\technotes\run.bat
+0=run_transform.bat
 [Selected Project Files]
 Main=ingest.php
-Selected=..\technotes\run.bat
-[..\technotes\run.bat]
+Selected=run_transform.bat
+[run_transform.bat]
 TopLine=1
-Caret=155,10
+Caret=8,7
