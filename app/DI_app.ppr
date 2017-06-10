@@ -9,6 +9,19 @@ DontOpen=0
 FileFormat=0
 [Project tree]
 DI_app
+	-EAD
+	+xIsad
+		eCH2xIsadg.xsl
+		xIfond.xsl
+		xIserie.xsl
+		xIfile.xsl
+		xIitem.xsl
+		xIfunction.xsl
+		xIdate.xsl
+		xIaccess.xsl
+		xIreference.xsl
+		xIsadg_v1.6.1.xsd
+		createRef.xsl
 	+app
 		index.php
 		input.php
@@ -18,11 +31,12 @@ DI_app
 		helptext.php
 		copyright.php
 		class.inputfilter.php
+		transform.bat
 [Open project files]
-0=run_transform.bat
+0=xIreference.xsl
 [Selected Project Files]
 Main=ingest.php
-Selected=run_transform.bat
-[run_transform.bat]
-TopLine=1
-Caret=8,7
+Selected=xIreference.xsl
+[xIreference.xsl]
+TopLine=21
+Caret=2,40
