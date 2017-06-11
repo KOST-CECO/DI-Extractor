@@ -9,8 +9,17 @@ DontOpen=0
 FileFormat=0
 [Project tree]
 DI_app
-	-EAD
-	+xIsad
+	-app
+		index.php
+		input.php
+		ingest.php
+		maninput.php
+		processingest.php
+		helptext.php
+		copyright.php
+		class.inputfilter.php
+		transform.bat
+	-xIsad
 		eCH2xIsadg.xsl
 		xIfond.xsl
 		xIserie.xsl
@@ -22,21 +31,16 @@ DI_app
 		xIreference.xsl
 		xIsadg_v1.6.1.xsd
 		createRef.xsl
-	+app
-		index.php
-		input.php
-		ingest.php
-		maninput.php
-		processingest.php
-		helptext.php
-		copyright.php
-		class.inputfilter.php
-		transform.bat
+		elementRef.xsl
+	-EAD
+		eCH2EAD.xsl
+		EADfond.xsl
+		EADserie.xsl
+		EADfile.xsl
+		EADitem.xsl
+		EADdate.xsl
+		EADaccess.xsl
+		EADreference.xsl
 [Open project files]
-0=xIreference.xsl
 [Selected Project Files]
-Main=ingest.php
-Selected=xIreference.xsl
-[xIreference.xsl]
-TopLine=21
-Caret=2,40
+Main=processingest.php
