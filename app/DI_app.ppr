@@ -9,7 +9,7 @@ DontOpen=0
 FileFormat=0
 [Project tree]
 DI_app
-	-app
+	+app
 		index.php
 		input.php
 		ingest.php
@@ -19,13 +19,12 @@ DI_app
 		copyright.php
 		class.inputfilter.php
 		transform.bat
-	-xIsad
+	+xIsad
 		eCH2xIsadg.xsl
 		xIfond.xsl
 		xIserie.xsl
 		xIfile.xsl
 		xIitem.xsl
-		xIfunction.xsl
 		xIdate.xsl
 		xIaccess.xsl
 		xIreference.xsl
@@ -42,5 +41,10 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
+0=Neu1.txt
 [Selected Project Files]
 Main=processingest.php
+Selected=Neu1.txt
+[Neu1.txt]
+TopLine=1
+Caret=935,5

@@ -1,6 +1,0 @@
-@ECHO OFF
-SETLOCAL
-
-ECHO %0 %1
-
-PAUSE
