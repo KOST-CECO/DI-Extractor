@@ -19,6 +19,7 @@ DI_app
 		copyright.php
 		class.inputfilter.php
 		transform.bat
+		run_transform.bat
 	+xIsad
 		eCH2xIsadg.xsl
 		xIfond.xsl
@@ -41,10 +42,10 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=Neu1.txt
+0=run_transform.bat
 [Selected Project Files]
 Main=processingest.php
-Selected=Neu1.txt
-[Neu1.txt]
-TopLine=1
-Caret=935,5
+Selected=run_transform.bat
+[run_transform.bat]
+TopLine=11
+Caret=1,47
