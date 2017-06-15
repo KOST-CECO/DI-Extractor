@@ -85,15 +85,24 @@ if ($handle = opendir($wdir)) {
             if (substr($file, -4) == ".xml") {
                 $xml = new DOMDocument();
                 $xml->load("$wdir/$file");
-                if ($xml->schemaValidate('./xsd/arelda.xsd')) {
-                   echo "&nbsp;&nbsp;&nbsp; eCH-0160 / arelda_v4 SIP Metadata";
+                if ($xml->schemaValidate('./xsd_v4/arelda.xsd')) {
+                   echo "&nbsp;&nbsp;&nbsp; eCH-0160 1.0 / arelda_v4 SIP Metadata";
+                   // konvertierung wird initialisiert
+                   $metadatafile = "$file";
+                }
+                elseif ($xml->schemaValidate('./xsd_v4.1/arelda.xsd')) {
+                   echo "&nbsp;&nbsp;&nbsp; eCH-0160 1.1 / arelda_v4.1 SIP Metadata";
+                   // konvertierung wird initialisiert
                    $metadatafile = "$file";
                 }
                 elseif ($xml->schemaValidate('./xsd_v3.13.2/arelda_v3.13.2.xsd')) {
                     echo "&nbsp;&nbsp;&nbsp; arelda_v3.13.2 SIP Metadata";
                 }
                 elseif ($xml->schemaValidate('./xIsadg_v1.6.1.xsd')) {
-                    echo "&nbsp;&nbsp;&nbsp; xIsadg_v1.6 SIP Metadata";
+                    echo "&nbsp;&nbsp;&nbsp; xIsadg_v1.6 DI Metadata";
+                }
+                elseif ($xml->schemaValidate('./xIsadg_v2.0.xsd')) {
+                    echo "&nbsp;&nbsp;&nbsp; xIsadg_v2.0 DI Metadata";
                 }
                 elseif ($xml->schemaValidate('./ead.xsd')) {
                     echo "&nbsp;&nbsp;&nbsp; EAD Metadata";
