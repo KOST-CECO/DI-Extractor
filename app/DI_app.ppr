@@ -3,10 +3,13 @@ Relative path=1
 Compilator.SaveAll=0
 Compilator.Capture=0
 Compilator.HideOutput=0
-DefaultCPIndex=0
+DefaultDir=C:\Tools\workbench\_DI-Extractor\app
+DefaultCPIndex=7
 LogtoEnd=1
 DontOpen=0
 FileFormat=0
+DocumentRoot=C:\Tools\xampp\htdocs\app
+HTServer=http://localhost:90/app/
 [Project tree]
 DI_app
 	+app
@@ -42,10 +45,5 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=ingest.php
 [Selected Project Files]
 Main=processingest.php
-Selected=ingest.php
-[ingest.php]
-TopLine=67
-Caret=55,95
