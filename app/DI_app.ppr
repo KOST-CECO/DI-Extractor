@@ -12,7 +12,7 @@ DocumentRoot=C:\Tools\xampp\htdocs\app
 HTServer=http://localhost:90/app/
 [Project tree]
 DI_app
-	+app
+	-app
 		index.php
 		input.php
 		ingest.php
@@ -24,7 +24,7 @@ DI_app
 		transform.bat
 		run_transform.bat
 		ingest.css
-	+xIsad
+	+xIsadg
 		eCH2xIsadg.xsl
 		xIfond.xsl
 		xIserie.xsl
@@ -33,10 +33,20 @@ DI_app
 		xIdate.xsl
 		xIaccess.xsl
 		xIreference.xsl
-		xIsadg_v1.6.1.xsd
 		createRef.xsl
 		elementRef.xsl
-	+EAD
+		xIsadg_v1.6.1.xsd
+	+xIsadg_v2.0
+		eCH2xI2sadg.xsl
+		xI2fond.xsl
+		xI2serie.xsl
+		xI2file.xsl
+		xI2item.xsl
+		xI2reference.xsl
+		xI2date.xsl
+		xI2access.xsl
+		xIsadg_v2.0.xsd
+	-EAD
 		eCH2EAD.xsl
 		EADfond.xsl
 		EADserie.xsl
@@ -46,18 +56,22 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=KOST Referenzimplementierung.htm
-1=ingest.css
-2=ingest.php
+0=processingest.php
+1=maninput.php
+2=eCH2xIsadg.xsl
+3=eCH2xI2sadg.xsl
 [Selected Project Files]
 Main=processingest.php
-Selected=ingest.css
-[KOST Referenzimplementierung.htm]
-TopLine=3
-Caret=1,13
-[ingest.css]
-TopLine=19
+Selected=eCH2xI2sadg.xsl
+[processingest.php]
+TopLine=47
+Caret=5,64
+[maninput.php]
+TopLine=29
+Caret=36,45
+[eCH2xIsadg.xsl]
+TopLine=1
 Caret=1,14
-[ingest.php]
-TopLine=23
-Caret=11,30
+[eCH2xI2sadg.xsl]
+TopLine=1
+Caret=40,14

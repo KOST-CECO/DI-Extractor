@@ -61,6 +61,9 @@ $xsl = new DOMDocument;
 if ($xschema == 'xIsadg') {
     $xsl->load('eCH2xIsadg.xsl');
 }
+elseif ($xschema == 'xI2sadg') {
+    $xsl->load('eCH2xI2sadg.xsl');
+}
 else {
     $xsl->load('eCH2EAD.xsl');
 }
