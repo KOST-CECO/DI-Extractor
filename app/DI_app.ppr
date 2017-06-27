@@ -23,6 +23,7 @@ DI_app
 		class.inputfilter.php
 		transform.bat
 		run_transform.bat
+		ingest.css
 	+xIsad
 		eCH2xIsadg.xsl
 		xIfond.xsl
@@ -35,7 +36,7 @@ DI_app
 		xIsadg_v1.6.1.xsd
 		createRef.xsl
 		elementRef.xsl
-	-EAD
+	+EAD
 		eCH2EAD.xsl
 		EADfond.xsl
 		EADserie.xsl
@@ -45,5 +46,18 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
+0=KOST Referenzimplementierung.htm
+1=ingest.css
+2=ingest.php
 [Selected Project Files]
 Main=processingest.php
+Selected=ingest.css
+[KOST Referenzimplementierung.htm]
+TopLine=3
+Caret=1,13
+[ingest.css]
+TopLine=19
+Caret=1,14
+[ingest.php]
+TopLine=23
+Caret=11,30
