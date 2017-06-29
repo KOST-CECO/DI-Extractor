@@ -12,7 +12,7 @@ DocumentRoot=C:\Tools\xampp\htdocs\app
 HTServer=http://localhost:90/app/
 [Project tree]
 DI_app
-	-app
+	+app
 		index.php
 		input.php
 		ingest.php
@@ -56,22 +56,10 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=processingest.php
-1=maninput.php
-2=eCH2xIsadg.xsl
-3=eCH2xI2sadg.xsl
+0=Neu1.txt
 [Selected Project Files]
 Main=processingest.php
-Selected=eCH2xI2sadg.xsl
-[processingest.php]
-TopLine=47
-Caret=5,64
-[maninput.php]
-TopLine=29
-Caret=36,45
-[eCH2xIsadg.xsl]
+Selected=Neu1.txt
+[Neu1.txt]
 TopLine=1
-Caret=1,14
-[eCH2xI2sadg.xsl]
-TopLine=1
-Caret=40,14
+Caret=1,1
