@@ -22,7 +22,7 @@ $metadatafile = '';
     <title>KOST Referenzimplementierung</title>
   </head>
   <body background="background.jpg">
-    <h1>KOST Referenzimplementierung - Descriptive Information <span class="versionText">(Rev. 65)</span></h1>
+    <h1>KOST Referenzimplementierung - Descriptive Information 2.0 <span class="versionText">(Rev. 42)</span></h1>
     <?php include 'helptext.php'; ?>
     <i>Eine eCH-0160 Metadaten Datei f&uuml;r die Konvertierung ausw&auml;hlen:</i>
     <br>
