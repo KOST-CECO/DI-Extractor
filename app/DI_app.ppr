@@ -56,14 +56,14 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=Neu1.txt
-1=P:\KOST\Pilotloesungen\arcun\arcunTAR-Lösung\13_PROXY\ProxyDetection\cpp\proxy_test.cpp
+0=class.inputfilter.php
+1=processingest.php
 [Selected Project Files]
 Main=processingest.php
-Selected=P:\KOST\Pilotloesungen\arcun\arcunTAR-Lösung\13_PROXY\ProxyDetection\cpp\proxy_test.cpp
-[Neu1.txt]
+Selected=processingest.php
+[class.inputfilter.php]
+TopLine=237
+Caret=38,254
+[processingest.php]
 TopLine=1
-Caret=1,1
-[P:\KOST\Pilotloesungen\arcun\arcunTAR-Lösung\13_PROXY\ProxyDetection\cpp\proxy_test.cpp]
-TopLine=185
-Caret=3,31
+Caret=32,10

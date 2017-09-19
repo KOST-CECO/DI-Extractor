@@ -14,6 +14,13 @@ $colltitle = utf8_encode( $myFilter->process( stripslashes($_POST['colltitle']) 
 $collstyle = utf8_encode( $myFilter->process( stripslashes($_POST['collstyle']) ) );
 $xschema = utf8_encode( $myFilter->process( stripslashes($_POST['xschema']) ) );
 
+/* ohne input Filterung
+$collsig   = utf8_encode( stripslashes($_POST['collsig'] ) );
+$colltitle = utf8_encode( stripslashes($_POST['colltitle']) );
+$collstyle = utf8_encode( stripslashes($_POST['collstyle']) );
+$xschema = utf8_encode( stripslashes($_POST['xschema']) );
+*/
+
 // Referenzdatei für die Signaturnummerierung
 $reffile = "./$wdir/_signaturereference.xml";
 @unlink($reffile);
