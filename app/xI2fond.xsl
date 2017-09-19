@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="ISADG" xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<!-- Ablieferung - Provenienz - Ordnungsystem -->
 	<xsl:template match="arelda:ablieferung">
@@ -14,6 +14,9 @@
 			</xsl:call-template>
 			<!-- 3.1.2 Titel -->
 			<xsl:element name="title">
+				<xsl:attribute name="origin">archival</xsl:attribute>
+				<xsl:attribute name="obligation">mandatory</xsl:attribute>
+				<xsl:attribute name="isadId">1.2</xsl:attribute>
 				<xsl:choose>
 					<xsl:when test="$fondtitle">
 						<xsl:value-of select="$fondtitle"/>
