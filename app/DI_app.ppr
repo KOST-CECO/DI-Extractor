@@ -24,6 +24,7 @@ DI_app
 		transform.bat
 		run_transform.bat
 		ingest.css
+		..\install_app.cmd
 	+xIsadg
 		eCH2xIsadg.xsl
 		xIfond.xsl
@@ -56,14 +57,5 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=class.inputfilter.php
-1=processingest.php
 [Selected Project Files]
 Main=processingest.php
-Selected=processingest.php
-[class.inputfilter.php]
-TopLine=237
-Caret=38,254
-[processingest.php]
-TopLine=1
-Caret=32,10
