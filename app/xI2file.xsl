@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="ISADG" xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<!-- Ordnungsystemposition -->
 	<xsl:template match="arelda:dossier">
@@ -16,17 +16,36 @@
 				</xsl:call-template>
 				<!-- 3.1.2 Titel -->
 				<xsl:element name="title">
+					<xsl:attribute name="isadId">1.2</xsl:attribute>
+					<xsl:attribute name="origin">//dossier/titel</xsl:attribute>
+					<xsl:attribute name="obligation">mandatory</xsl:attribute>
 					<xsl:value-of select="arelda:titel"/>
 				</xsl:element>
 				<!-- 3.1.3 Entstehungszeitraum / Laufzeit -->
 				<xsl:if test="arelda:entstehungszeitraum">
 					<xsl:call-template name="xI2date">
 						<xsl:with-param name="range" select="arelda:entstehungszeitraum"/>
+						<xsl:with-param name="org">//dossier/entstehungszeitraum</xsl:with-param>
+					</xsl:call-template>
+				</xsl:if>
+				<xsl:if test="arelda:eroeffnungsdatum">
+					<xsl:call-template name="xI2date">
+						<xsl:with-param name="range" select="arelda:eroeffnungsdatum"/>
+						<xsl:with-param name="org">//dossier/eroeffnungsdatum</xsl:with-param>
+					</xsl:call-template>
+				</xsl:if>
+				<xsl:if test="arelda:abschlussdatum">
+					<xsl:call-template name="xI2date">
+						<xsl:with-param name="range" select="arelda:abschlussdatum"/>
+						<xsl:with-param name="org">//dossier/abschlussdatum</xsl:with-param>
 					</xsl:call-template>
 				</xsl:if>
 				<!--   -->
 				<!-- 3.1.4 Verzeichnungsstufe -->
 				<xsl:element name="descriptionLevel">
+					<xsl:attribute name="isadId">1.4</xsl:attribute>
+					<xsl:attribute name="origin">ingest</xsl:attribute>
+					<xsl:attribute name="obligation">mandatory</xsl:attribute>
 					<xsl:text>Dossier</xsl:text>
 				</xsl:element>
 				<!-- 3.1.5 Umfang (Menge und Abmessung) -->

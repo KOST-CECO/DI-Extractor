@@ -11,12 +11,13 @@
 			<!-- 3.1.1 Signatur -->
 			<xsl:call-template name="xI2reference">
 				<xsl:with-param name="signature" select="$signature"/>
+				<xsl:with-param name="org">archival</xsl:with-param>
 			</xsl:call-template>
 			<!-- 3.1.2 Titel -->
 			<xsl:element name="title">
+				<xsl:attribute name="isadId">1.2</xsl:attribute>
 				<xsl:attribute name="origin">archival</xsl:attribute>
 				<xsl:attribute name="obligation">mandatory</xsl:attribute>
-				<xsl:attribute name="isadId">1.2</xsl:attribute>
 				<xsl:choose>
 					<xsl:when test="$fondtitle">
 						<xsl:value-of select="$fondtitle"/>
@@ -50,6 +51,9 @@
 			</xsl:if>
 			<!-- 3.1.4 Verzeichnungsstufe -->
 			<xsl:element name="descriptionLevel">
+				<xsl:attribute name="isadId">1.4</xsl:attribute>
+				<xsl:attribute name="origin">ingest</xsl:attribute>
+				<xsl:attribute name="obligation">mandatory</xsl:attribute>
 				<xsl:text>Bestand</xsl:text>
 			</xsl:element>
 			<!-- 3.1.5 Umfang (Menge und Abmessung) -->

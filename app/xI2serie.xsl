@@ -16,12 +16,18 @@
 				</xsl:call-template>
 				<!-- 3.1.2 Titel -->
 				<xsl:element name="title">
+				<xsl:attribute name="isadId">1.2</xsl:attribute>
+				<xsl:attribute name="origin">//ordnungssystemposition/titel</xsl:attribute>
+				<xsl:attribute name="obligation">mandatory</xsl:attribute>
 					<xsl:value-of select="arelda:titel"/>
 				</xsl:element>
 				<!-- 3.1.3 Entstehungszeitraum / Laufzeit -->
 				<!--   -->
 				<!-- 3.1.4 Verzeichnungsstufe -->
 				<xsl:element name="descriptionLevel">
+				<xsl:attribute name="isadId">1.4</xsl:attribute>
+				<xsl:attribute name="origin">ingest</xsl:attribute>
+				<xsl:attribute name="obligation">mandatory</xsl:attribute>
 					<xsl:text>Serie</xsl:text>
 				</xsl:element>
 				<!-- 3.1.5 Umfang (Menge und Abmessung) -->
