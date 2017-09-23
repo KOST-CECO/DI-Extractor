@@ -30,19 +30,24 @@
 				</xsl:choose>
 			</xsl:element>
 			<!-- 3.1.3 Entstehungszeitraum / Laufzeit -->
-			<xsl:choose>
-				<xsl:when test="arelda:entstehungszeitraum">
-					<xsl:call-template name="xI2date">
-						<xsl:with-param name="range" select="arelda:entstehungszeitraum"/>
-					</xsl:call-template>
-				</xsl:when>
-				<xsl:when test="arelda:ordnungssystem/arelda:anwendungszeitraum">
-					<xsl:call-template name="xI2date">
-						<xsl:with-param name="range" select="arelda:ordnungssystem/arelda:anwendungszeitraum"/>
-					</xsl:call-template>
-				</xsl:when>
-				<xsl:otherwise/>
-			</xsl:choose>
+			<xsl:if test="arelda:entstehungszeitraum">
+				<xsl:call-template name="xI2date">
+					<xsl:with-param name="range" select="arelda:entstehungszeitraum"/>
+					<xsl:with-param name="org">/entstehungszeitraum</xsl:with-param>
+				</xsl:call-template>
+			</xsl:if>
+			<xsl:if test="arelda:provenienz/arelda:existenzzeitraum">
+				<xsl:call-template name="xI2date">
+					<xsl:with-param name="range" select="arelda:provenienz/arelda:existenzzeitraum"/>
+					<xsl:with-param name="org">/provenienz/existenzzeitraum</xsl:with-param>
+				</xsl:call-template>
+			</xsl:if>
+			<xsl:if test="arelda:ordnungssystem/arelda:anwendungszeitraum">
+				<xsl:call-template name="xI2date">
+					<xsl:with-param name="range" select="arelda:ordnungssystem/arelda:anwendungszeitraum"/>
+					<xsl:with-param name="org">/ordnungssystem/anwendungszeitraum</xsl:with-param>
+				</xsl:call-template>
+			</xsl:if>
 			<!-- 3.1.4 Verzeichnungsstufe -->
 			<xsl:element name="descriptionLevel">
 				<xsl:text>Bestand</xsl:text>
@@ -92,6 +97,8 @@
 			</xsl:if>
 		</xsl:element>
 		<xsl:element name="conditionsAccessUse">
+			<!-- 3.3.4 Ornungssystem und Klassifikation -->
+			<!-- ToDo -->
 			<!-- 3.4.1 Zugangsbestimmungen -->
 			<!-- ToDo -->
 			<!-- 3.4.4 Physische Beschaffenheit und technische Anforderungen -->

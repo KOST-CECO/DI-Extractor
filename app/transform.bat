@@ -1,7 +1,7 @@
-@ECHO OFF
+@ECHO OFF 
 SETLOCAL
 
-REM SET JAVA_HOME=C:\Tools\jre6
+SET JAVA_HOME=C:\Tools\jdk1.8.0_40
 SET SAXON=C:\Tools\saxon9
 SET LINT=C:\Tools\PCUnixUtils
 
@@ -21,13 +21,18 @@ IF NOT EXIST %1 (
     EXIT /B
 )
 
-IF NOT EXIST %1\header\metadata.xml (
-    ECHO %1\header\metadata.xml not found
+SET ECH-0160=%1\header\metadata.xml
+
+IF NOT EXIST %ECH-0160% (
+    SET ECH-0160=%1
+)
+
+IF NOT EXIST %ECH-0160% (
+    ECHO %ECH-0160% not found
     ECHO usage: %0 path\SIP...
     EXIT /B
 )
 
-SET ECH-0160=%1
 SET OUTPUT=%2
 IF EXIST %OUTPUT% (
     DEL /Q %OUTPUT%
@@ -57,13 +62,13 @@ IF [%STIL%]==[] (
 
 IF [%FMT%]==[] (
     SET FMT=1
-    SET /P "FMT=Ausgabeformat (xIadg / EAD): [1] oder [2] "
+    SET /P "FMT=Ausgabeformat (xIadg / xIsadg 2.0 / EAD ): [1] [2] oder [3] "
 )
 ECHO.
 
 REM create unique reference for each archival object
 SET REF=numberRef.xml
-%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -versionmsg:off -s:%ECH-0160%\header\metadata.xml -xsl:createRef.xsl -o:"createRef.xml" fondtitle=%FONDTITLE% archsig=%SIGNATUR%
+%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -versionmsg:off -s:%ECH-0160% -xsl:createRef.xsl -o:"createRef.xml" fondtitle=%FONDTITLE% archsig=%SIGNATUR%
 
 REM create running number for each archival object
 %JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -versionmsg:off -s:createRef.xml -xsl:elementRef.xsl -o:%REF% fondtitle=%FONDTITLE% archsig=%SIGNATUR%
@@ -73,17 +78,25 @@ IF %STIL% == 2 (
 
 REM convert to xIsadg and validate with xmllint
 IF %FMT% == 1 (
-%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -versionmsg:off -s:%ECH-0160%\header\metadata.xml -xsl:eCH2xIsadg.xsl -o:"%OUTPUT%" fondtitle=%FONDTITLE% archsig=%SIGNATUR% reffilename=%REF%
+%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -versionmsg:off -s:%ECH-0160% -xsl:eCH2xIsadg.xsl -o:"%OUTPUT%" fondtitle=%FONDTITLE% archsig=%SIGNATUR% reffilename=%REF%
 REM schema validate with xmllint
 %LINT%\xmllint.exe -sax -noout -schema xIsadg_v1.6.1.xsd "%OUTPUT%"
 )
 
-REM convert to EAD and validate with xmllint
+REM convert to xIsadg 2.0 and validate with xmllint
 IF %FMT% == 2 (
-%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -versionmsg:off -s:%ECH-0160%\header\metadata.xml -xsl:eCH2EAD.xsl -o:"%OUTPUT%" fondtitle=%FONDTITLE% archsig=%SIGNATUR% reffilename=%REF%
+%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -versionmsg:off -s:%ECH-0160% -xsl:eCH2xI2sadg.xsl -o:"%OUTPUT%" fondtitle=%FONDTITLE% archsig=%SIGNATUR% reffilename=%REF%
+REM schema validate with xmllint
+%LINT%\xmllint.exe -sax -noout -schema xIsadg_v2.0.xsd "%OUTPUT%"
+)
+
+REM convert to EAD and validate with xmllint
+IF %FMT% == 3 (
+%JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -versionmsg:off -s:%ECH-0160% -xsl:eCH2EAD.xsl -o:"%OUTPUT%" fondtitle=%FONDTITLE% archsig=%SIGNATUR% reffilename=%REF%
 REM schema validate with xmllint
 %LINT%\xmllint.exe -sax -noout -schema ead.xsd "%OUTPUT%"
 )
+
 
 ECHO.
 IF %ERRORLEVEL%==0 (

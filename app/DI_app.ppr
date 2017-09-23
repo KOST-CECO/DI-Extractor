@@ -57,5 +57,30 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
+0=xIfond.xsl
+1=EADfond.xsl
+2=EADitem.xsl
+3=..\xslt_sample\aktenplan2ead.xsl
+4=..\xslt_sample\ead2dip.xsl
+5=..\xslt_sample\ead2scope.xsl
 [Selected Project Files]
 Main=processingest.php
+Selected=..\xslt_sample\ead2scope.xsl
+[xIfond.xsl]
+TopLine=27
+Caret=1,37
+[EADfond.xsl]
+TopLine=26
+Caret=1,36
+[EADitem.xsl]
+TopLine=95
+Caret=1,105
+[..\xslt_sample\aktenplan2ead.xsl]
+TopLine=137
+Caret=1,147
+[..\xslt_sample\ead2dip.xsl]
+TopLine=233
+Caret=1,243
+[..\xslt_sample\ead2scope.xsl]
+TopLine=14
+Caret=1,24

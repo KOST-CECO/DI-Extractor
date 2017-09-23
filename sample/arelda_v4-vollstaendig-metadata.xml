@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="eCH2xIsadg.xsl"?>
-<paket xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://bar.admin.ch/arelda/v4" xsi:schemaLocation="http://bar.admin.ch/arelda/v4 v4_xsd/arelda.xsd" xsi:type="paketSIP" schemaVersion="4.0">
+<paket xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://bar.admin.ch/arelda/v4" xsi:type="paketSIP" schemaVersion="4.0" xsi:schemaLocation="http://bar.admin.ch/arelda/v4 xsd_v4/arelda.xsd">
 	<paketTyp>SIP</paketTyp>
 	<zusatzDaten>
 		<merkmal name="#01_zusatzDaten_key">#02_zusatzDaten_value</merkmal>

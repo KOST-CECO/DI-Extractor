@@ -3,8 +3,11 @@
 	<!-- named template xI2date -->
 	<xsl:template name="xI2date">
 		<xsl:param name="range"/>
+		<xsl:param name="org"/>
 		<xsl:if test="not ($range/arelda:von/arelda:datum/text() = 'keine Angabe' and $range/arelda:bis/arelda:datum/text() = 'keine Angabe')">
 			<xsl:element name="dates">
+				<xsl:attribute name="isadId">1.3</xsl:attribute>
+				<xsl:attribute name="origin"><xsl:value-of select="$org"/></xsl:attribute>
 				<xsl:choose>
 					<xsl:when test="string-length(string($range/arelda:von/arelda:datum)) = 4">
 						<xsl:element name="fromDate">
