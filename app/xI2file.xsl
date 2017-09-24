@@ -49,10 +49,10 @@
 					<xsl:attribute name="obligation">mandatory</xsl:attribute>
 					<xsl:text>Dossier</xsl:text>
 				</xsl:element>
-				<!-- 3.1.5 Umfang (Menge und Abmessung) -->
+				<!-- 3.1.5 Umfang (Menge und Abmessung) nur in FilesSIP -->
 				<xsl:if test="arelda:umfang/text()">
 					<xsl:element name="extentMedium">
-						<xsl:element name="medium">
+						<xsl:element name="description">
 							<xsl:value-of select="arelda:umfang/text()"/>
 						</xsl:element>
 					</xsl:element>

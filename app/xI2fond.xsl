@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="ISADG" xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<!-- Ablieferung - Provenienz - Ordnungsystem -->
 	<xsl:template match="arelda:ablieferung">
@@ -62,24 +62,39 @@
 			<!-- 3.2.1 Name der Provenienzstelle -->
 			<xsl:if test="arelda:provenienz/arelda:aktenbildnerName/text()">
 				<xsl:element name="creator">
+					<xsl:attribute name="isadId">2.1</xsl:attribute>
+					<xsl:attribute name="origin">//provenienz/aktenbildnerName</xsl:attribute>
 					<xsl:value-of select="arelda:provenienz/arelda:aktenbildnerName"/>
 				</xsl:element>
 			</xsl:if>
 			<!-- 3.2.2 Verwaltungsgeschichte / Biographische Angaben -->
 			<xsl:if test="arelda:provenienz/arelda:geschichteAktenbildner/text()">
 				<xsl:element name="adminBioHistory">
+					<xsl:attribute name="isadId">2.2</xsl:attribute>
+					<xsl:attribute name="origin">//provenienz/geschichteAktenbildner</xsl:attribute>
 					<xsl:value-of select="arelda:provenienz/arelda:geschichteAktenbildner"/>
 				</xsl:element>
 			</xsl:if>
 			<!-- 3.2.3 Bestandesgeschichte -->
+			<xsl:if test="arelda:provenienz/arelda:systemName/text()">
+				<xsl:element name="archivalHistory">
+					<xsl:attribute name="isadId">2.3</xsl:attribute>
+					<xsl:attribute name="origin">//provenienz/systemName</xsl:attribute>
+					<xsl:value-of select="arelda:provenienz/arelda:systemName/text()"/>
+				</xsl:element>
+			</xsl:if>
 			<xsl:if test="arelda:provenienz/arelda:systemBeschreibung/text()">
 				<xsl:element name="archivalHistory">
+					<xsl:attribute name="isadId">2.3</xsl:attribute>
+					<xsl:attribute name="origin">//provenienz/systemBeschreibung</xsl:attribute>
 					<xsl:value-of select="arelda:provenienz/arelda:systemBeschreibung/text()"/>
 				</xsl:element>
 			</xsl:if>
 			<!-- 3.2.4 Abgebende Stelle -->
 			<xsl:if test="arelda:ablieferndeStelle/text()">
 				<xsl:element name="acqInfo">
+					<xsl:attribute name="isadId">2.4</xsl:attribute>
+					<xsl:attribute name="origin">//ablieferndeStelle</xsl:attribute>
 					<xsl:value-of select="arelda:ablieferndeStelle"/>
 				</xsl:element>
 			</xsl:if>
@@ -88,7 +103,9 @@
 			<!-- 3.3.1 Form und Inhalt -->
 			<xsl:if test="arelda:ablieferungsteile/text()">
 				<xsl:element name="scopeContent">
+					<xsl:attribute name="isadId">3.1</xsl:attribute>
 					<xsl:element name="content">
+						<xsl:attribute name="origin">//ablieferungsteile</xsl:attribute>
 						<xsl:value-of select="arelda:ablieferungsteile"/>
 					</xsl:element>
 				</xsl:element>
@@ -96,18 +113,47 @@
 			<!-- 3.3.2 Bewertung und Kassation -->
 			<xsl:if test="arelda:referenzBewertungsentscheid/text()">
 				<xsl:element name="appraisalDestruction">
+					<xsl:attribute name="isadId">3.2</xsl:attribute>
+					<xsl:attribute name="origin">//referenzBewertungsentscheid</xsl:attribute>
 					<xsl:value-of select="arelda:referenzBewertungsentscheid"/>
 				</xsl:element>
 			</xsl:if>
-		</xsl:element>
-		<xsl:element name="conditionsAccessUse">
 			<!-- 3.3.4 Ornungssystem und Klassifikation -->
-			<!-- ToDo -->
-			<!-- 3.4.1 Zugangsbestimmungen -->
-			<!-- ToDo -->
-			<!-- 3.4.4 Physische Beschaffenheit und technische Anforderungen -->
-			<!--   -->
+			<xsl:if test="arelda:ordnungssystem/arelda:name/text()">
+				<xsl:element name="arrangement">
+					<xsl:attribute name="isadId">3.4</xsl:attribute>
+					<xsl:attribute name="origin">//arelda:ordnungssystem/name</xsl:attribute>
+					<xsl:value-of select="arelda:ordnungssystem/arelda:name"/>
+				</xsl:element>
+			</xsl:if>
 		</xsl:element>
+		<!-- 3.4.1 Zugangsbestimmungen -->
+		<xsl:element name="conditionsAccessUse">
+			<xsl:element name="accessConditions">
+				<xsl:attribute name="isadId">4.1</xsl:attribute>
+				<xsl:if test="arelda:schutzfrist/text()">
+					<xsl:element name="retentionPeriod">
+						<xsl:attribute name="origin">//schutzfrist</xsl:attribute>
+						<xsl:value-of select="arelda:schutzfrist"/>
+					</xsl:element>
+				</xsl:if>
+				<xsl:if test="arelda:schutzfristenkategorie/text()">
+					<xsl:element name="retentionPeriodConditions">
+						<xsl:attribute name="origin">//schutzfristenkategorie</xsl:attribute>
+						<xsl:value-of select="arelda:schutzfristenkategorie"/>
+					</xsl:element>
+				</xsl:if>
+				<xsl:if test="arelda:referenzSchutzfristenFormular/text()">
+					<xsl:element name="retentionPeriodNotes">
+						<xsl:attribute name="origin">//referenzSchutzfristenFormular</xsl:attribute>
+						<xsl:value-of select="arelda:referenzSchutzfristenFormular"/>
+					</xsl:element>
+				</xsl:if>
+			</xsl:element>
+		</xsl:element>
+		<!-- ToDo -->
+		<!-- 3.4.4 Physische Beschaffenheit und technische Anforderungen -->
+		<!--   -->
 		<xsl:element name="notes">
 			<!-- 3.6.1 Allgemeine Anmerkungen -->
 			<xsl:if test="arelda:bemerkung/text()">

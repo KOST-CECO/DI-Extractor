@@ -45,7 +45,16 @@
 				<!-- 3.1.5 Umfang (Menge und Abmessung) -->
 				<!--   -->
 			</xsl:element>
-			<!-- 3.2.1 Name der Provenienzstelle -->
+			<!-- 3.2.1 Name der Provenienzstelle [Autor] -->
+			<xsl:if test="arelda:autor/text()">
+				<xsl:element name="context">
+					<xsl:element name="creator">
+						<xsl:attribute name="isadId">2.1</xsl:attribute>
+						<xsl:attribute name="origin">//dokument/autor</xsl:attribute>
+						<xsl:value-of select="arelda:autor"/>
+					</xsl:element>
+				</xsl:element>
+			</xsl:if>
 			<!--   -->
 			<!-- 3.2.2 Verwaltungsgeschichte / Biographische Angaben -->
 			<!--   -->
