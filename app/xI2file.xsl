@@ -25,19 +25,20 @@
 				<xsl:if test="arelda:entstehungszeitraum">
 					<xsl:call-template name="xI2date">
 						<xsl:with-param name="range" select="arelda:entstehungszeitraum"/>
-						<xsl:with-param name="org">//dossier/entstehungszeitraum</xsl:with-param>
+						<xsl:with-param name="orig">//dossier/entstehungszeitraum</xsl:with-param>
+						<xsl:with-param name="comment" select="arelda:entstehungszeitraumAnmerkung"/>
 					</xsl:call-template>
 				</xsl:if>
 				<xsl:if test="arelda:eroeffnungsdatum">
 					<xsl:call-template name="xI2date">
 						<xsl:with-param name="range" select="arelda:eroeffnungsdatum"/>
-						<xsl:with-param name="org">//dossier/eroeffnungsdatum</xsl:with-param>
+						<xsl:with-param name="orig">//dossier/eroeffnungsdatum</xsl:with-param>
 					</xsl:call-template>
 				</xsl:if>
 				<xsl:if test="arelda:abschlussdatum">
 					<xsl:call-template name="xI2date">
 						<xsl:with-param name="range" select="arelda:abschlussdatum"/>
-						<xsl:with-param name="org">//dossier/abschlussdatum</xsl:with-param>
+						<xsl:with-param name="orig">//dossier/abschlussdatum</xsl:with-param>
 					</xsl:call-template>
 				</xsl:if>
 				<!--   -->

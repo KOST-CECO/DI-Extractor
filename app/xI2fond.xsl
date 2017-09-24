@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="ISADG" xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<!-- Ablieferung - Provenienz - Ordnungsystem -->
 	<xsl:template match="arelda:ablieferung">
@@ -11,7 +11,7 @@
 			<!-- 3.1.1 Signatur -->
 			<xsl:call-template name="xI2reference">
 				<xsl:with-param name="signature" select="$signature"/>
-				<xsl:with-param name="org">archival</xsl:with-param>
+				<xsl:with-param name="orig">archival</xsl:with-param>
 			</xsl:call-template>
 			<!-- 3.1.2 Titel -->
 			<xsl:element name="title">
@@ -34,19 +34,19 @@
 			<xsl:if test="arelda:entstehungszeitraum">
 				<xsl:call-template name="xI2date">
 					<xsl:with-param name="range" select="arelda:entstehungszeitraum"/>
-					<xsl:with-param name="org">/entstehungszeitraum</xsl:with-param>
+					<xsl:with-param name="orig">/entstehungszeitraum</xsl:with-param>
 				</xsl:call-template>
 			</xsl:if>
 			<xsl:if test="arelda:provenienz/arelda:existenzzeitraum">
 				<xsl:call-template name="xI2date">
 					<xsl:with-param name="range" select="arelda:provenienz/arelda:existenzzeitraum"/>
-					<xsl:with-param name="org">/provenienz/existenzzeitraum</xsl:with-param>
+					<xsl:with-param name="orig">/provenienz/existenzzeitraum</xsl:with-param>
 				</xsl:call-template>
 			</xsl:if>
 			<xsl:if test="arelda:ordnungssystem/arelda:anwendungszeitraum">
 				<xsl:call-template name="xI2date">
 					<xsl:with-param name="range" select="arelda:ordnungssystem/arelda:anwendungszeitraum"/>
-					<xsl:with-param name="org">/ordnungssystem/anwendungszeitraum</xsl:with-param>
+					<xsl:with-param name="orig">/ordnungssystem/anwendungszeitraum</xsl:with-param>
 				</xsl:call-template>
 			</xsl:if>
 			<!-- 3.1.4 Verzeichnungsstufe -->

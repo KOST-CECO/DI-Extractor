@@ -3,11 +3,12 @@
 	<!-- named template xI2date -->
 	<xsl:template name="xI2date">
 		<xsl:param name="range"/>
-		<xsl:param name="org"/>
+		<xsl:param name="orig"/>
+		<xsl:param name="comment"/>
 		<xsl:if test="not ($range/arelda:von/arelda:datum/text() = 'keine Angabe' and $range/arelda:bis/arelda:datum/text() = 'keine Angabe')">
 			<xsl:element name="dates">
 				<xsl:attribute name="isadId">1.3</xsl:attribute>
-				<xsl:attribute name="origin"><xsl:value-of select="$org"/></xsl:attribute>
+				<xsl:attribute name="origin"><xsl:value-of select="$orig"/></xsl:attribute>
 				<xsl:choose>
 					<!-- point of Time -->
 					<xsl:when test="$range/arelda:datum">
@@ -70,6 +71,12 @@
 						</xsl:choose>
 					</xsl:otherwise>
 				</xsl:choose>
+				<!-- comment Date -->
+				<xsl:if test="string-length(string($comment)) > 0">
+					<xsl:element name="commentDate">
+						<xsl:value-of select="$comment"/>
+					</xsl:element>
+				</xsl:if>
 			</xsl:element>
 		</xsl:if>
 	</xsl:template>
