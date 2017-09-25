@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="ISADG" xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<!-- named template xI2access -->
 	<xsl:template name="xI2access">
@@ -81,6 +81,13 @@
 				<xsl:element name="retentionPeriodNotes">
 					<xsl:attribute name="origin"><xsl:value-of select="$orig"/><xsl:text>/referenzSchutzfristenFormular</xsl:text></xsl:attribute>
 					<xsl:value-of select="arelda:referenzSchutzfristenFormular"/>
+				</xsl:element>
+			</xsl:if>
+			<!--   -->
+			<xsl:if test="arelda:schutzfristenBegruendung/text()">
+				<xsl:element name="retentionPeriodNotes">
+					<xsl:attribute name="origin"><xsl:value-of select="$orig"/><xsl:text>/schutzfristenBegruendung</xsl:text></xsl:attribute>
+					<xsl:value-of select="arelda:schutzfristenBegruendung"/>
 				</xsl:element>
 			</xsl:if>
 			<!--   -->

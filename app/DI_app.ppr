@@ -25,6 +25,7 @@ DI_app
 		run_transform.bat
 		ingest.css
 		..\install_app.cmd
+		extract_element.cmd
 	+xIsadg
 		eCH2xIsadg.xsl
 		xIfond.xsl
@@ -57,14 +58,5 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=Neu1.txt
-1=ingest.php
 [Selected Project Files]
 Main=processingest.php
-Selected=ingest.php
-[Neu1.txt]
-TopLine=1
-Caret=1,1
-[ingest.php]
-TopLine=9
-Caret=13,31
