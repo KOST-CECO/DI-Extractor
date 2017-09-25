@@ -81,6 +81,7 @@
 				<!-- 3.4.1 Zugangsbestimmungen -->
 				<xsl:call-template name="xI2access">
 					<xsl:with-param name="position" select="."/>
+					<xsl:with-param name="orig">//dokument</xsl:with-param>
 				</xsl:call-template>
 				<!-- 3.4.4 Physische Beschaffenheit und technische Anforderungen -->
 				<xsl:if test="arelda:erscheinungsform">

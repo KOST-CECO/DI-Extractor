@@ -129,29 +129,12 @@
 		</xsl:element>
 		<!-- 3.4.1 Zugangsbestimmungen -->
 		<xsl:element name="conditionsAccessUse">
-			<xsl:element name="accessConditions">
-				<xsl:attribute name="isadId">4.1</xsl:attribute>
-				<xsl:if test="arelda:schutzfrist/text()">
-					<xsl:element name="retentionPeriod">
-						<xsl:attribute name="origin">//ablieferung/schutzfrist</xsl:attribute>
-						<xsl:value-of select="arelda:schutzfrist"/>
-					</xsl:element>
-				</xsl:if>
-				<xsl:if test="arelda:schutzfristenkategorie/text()">
-					<xsl:element name="retentionPeriodConditions">
-						<xsl:attribute name="origin">//ablieferung/schutzfristenkategorie</xsl:attribute>
-						<xsl:value-of select="arelda:schutzfristenkategorie"/>
-					</xsl:element>
-				</xsl:if>
-				<xsl:if test="arelda:referenzSchutzfristenFormular/text()">
-					<xsl:element name="retentionPeriodNotes">
-						<xsl:attribute name="origin">//ablieferung/referenzSchutzfristenFormular</xsl:attribute>
-						<xsl:value-of select="arelda:referenzSchutzfristenFormular"/>
-					</xsl:element>
-				</xsl:if>
-			</xsl:element>
+			<!-- 3.4.1 Zugangsbestimmungen -->
+			<xsl:call-template name="xI2access">
+				<xsl:with-param name="position" select="."/>
+				<xsl:with-param name="orig">//dokument</xsl:with-param>
+			</xsl:call-template>
 		</xsl:element>
-		<!-- ToDo -->
 		<!-- 3.4.4 Physische Beschaffenheit und technische Anforderungen -->
 		<!--   -->
 		<xsl:element name="notes">

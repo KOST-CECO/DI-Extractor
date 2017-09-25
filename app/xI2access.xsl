@@ -62,6 +62,28 @@
 					<xsl:value-of select="arelda:sonstigeBestimmungen/text()"/>
 				</xsl:element>
 			</xsl:if>
+			<!--   -->
+			<xsl:if test="arelda:schutzfrist/text()">
+				<xsl:element name="retentionPeriod">
+					<xsl:attribute name="origin"><xsl:value-of select="$orig"/><xsl:text>/schutzfrist</xsl:text></xsl:attribute>
+					<xsl:value-of select="arelda:schutzfrist"/>
+				</xsl:element>
+			</xsl:if>
+			<!--   -->
+			<xsl:if test="arelda:schutzfristenkategorie/text()">
+				<xsl:element name="retentionPeriodConditions">
+					<xsl:attribute name="origin"><xsl:value-of select="$orig"/><xsl:text>/schutzfristenkategorie</xsl:text></xsl:attribute>
+					<xsl:value-of select="arelda:schutzfristenkategorie"/>
+				</xsl:element>
+			</xsl:if>
+			<!--   -->
+			<xsl:if test="arelda:referenzSchutzfristenFormular/text()">
+				<xsl:element name="retentionPeriodNotes">
+					<xsl:attribute name="origin"><xsl:value-of select="$orig"/><xsl:text>/referenzSchutzfristenFormular</xsl:text></xsl:attribute>
+					<xsl:value-of select="arelda:referenzSchutzfristenFormular"/>
+				</xsl:element>
+			</xsl:if>
+			<!--   -->
 		</xsl:element>
 	</xsl:template>
 </xsl:stylesheet>
