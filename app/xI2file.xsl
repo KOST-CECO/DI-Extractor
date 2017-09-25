@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="ISADG" xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<!-- Ordnungsystemposition -->
 	<xsl:template match="arelda:dossier">
@@ -10,6 +10,7 @@
 		</xsl:variable>
 		<xsl:element name="archivalDescription">
 			<xsl:element name="identity">
+				<xsl:attribute name="isadId">1</xsl:attribute>
 				<!-- 3.1.1 Signatur -->
 				<xsl:call-template name="xI2reference">
 					<xsl:with-param name="signature" select="$signature"/>
@@ -60,6 +61,7 @@
 				<!--   -->
 			</xsl:element>
 			<xsl:element name="context">
+			<xsl:attribute name="isadId">2</xsl:attribute>
 				<!-- 3.2.1 Name der Provenienzstelle -->
 				<!--   -->
 				<!-- 3.2.2 Verwaltungsgeschichte / Biographische Angaben -->
@@ -70,6 +72,7 @@
 			<!-- 3.2.4 Abgebende Stelle -->
 			<!--   -->
 			<xsl:element name="contentStructure">
+				<xsl:attribute name="isadId">3</xsl:attribute>
 				<!-- 3.3.1 Form und Inhalt -->
 				<xsl:if test="arelda:formInhalt or arelda:inhalt">
 					<xsl:element name="scopeContent">
@@ -120,6 +123,7 @@
 			</xsl:element>
 			<!--   -->
 			<xsl:element name="conditionsAccessUse">
+				<xsl:attribute name="isadId">4</xsl:attribute>
 				<!-- 3.4.1 Zugangsbestimmungen -->
 				<xsl:call-template name="xI2access">
 					<xsl:with-param name="position" select="."/>
