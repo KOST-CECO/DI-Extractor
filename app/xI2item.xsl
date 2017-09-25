@@ -66,7 +66,9 @@
 				<!-- 3.3.1 Form und Inhalt -->
 				<xsl:if test="arelda:dokumenttyp">
 					<xsl:element name="scopeContent">
+						<xsl:attribute name="isadId">3.1</xsl:attribute>
 						<xsl:element name="content">
+							<xsl:attribute name="origin">//dokument/dokumenttyp</xsl:attribute>
 							<xsl:value-of select="arelda:dokumenttyp/text()"/>
 						</xsl:element>
 					</xsl:element>
@@ -83,6 +85,8 @@
 				<!-- 3.4.4 Physische Beschaffenheit und technische Anforderungen -->
 				<xsl:if test="arelda:erscheinungsform">
 					<xsl:element name="physTech">
+						<xsl:attribute name="isadId">4.4</xsl:attribute>
+						<xsl:attribute name="origin">ingest</xsl:attribute>
 						<xsl:choose>
 							<xsl:when test="arelda:erscheinungsform/text()='digital'">
 								<xsl:text>digital</xsl:text>
@@ -99,12 +103,21 @@
 						</xsl:choose>
 					</xsl:element>
 				</xsl:if>
+				<xsl:if test="arelda:erscheinungsform">
+					<xsl:element name="physTech">
+						<xsl:attribute name="isadId">4.4</xsl:attribute>
+						<xsl:attribute name="origin">//dokument/erscheinungsform</xsl:attribute>
+						<xsl:value-of select="arelda:erscheinungsform/text()"/>
+					</xsl:element>
+				</xsl:if>
 				<!--   -->
 			</xsl:element>
 			<!-- 3.6.1 Allgemeine Anmerkungen -->
 			<xsl:if test="arelda:bemerkung/text()">
 				<xsl:element name="notes">
+					<xsl:attribute name="isadId">6</xsl:attribute>
 					<xsl:element name="note">
+						<xsl:attribute name="origin">//dokument/bemerkung</xsl:attribute>
 						<xsl:value-of select="arelda:bemerkung"/>
 					</xsl:element>
 				</xsl:element>

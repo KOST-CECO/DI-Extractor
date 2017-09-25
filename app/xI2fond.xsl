@@ -34,19 +34,19 @@
 			<xsl:if test="arelda:entstehungszeitraum">
 				<xsl:call-template name="xI2date">
 					<xsl:with-param name="range" select="arelda:entstehungszeitraum"/>
-					<xsl:with-param name="orig">/entstehungszeitraum</xsl:with-param>
+					<xsl:with-param name="orig">//ablieferung/entstehungszeitraum</xsl:with-param>
 				</xsl:call-template>
 			</xsl:if>
 			<xsl:if test="arelda:provenienz/arelda:existenzzeitraum">
 				<xsl:call-template name="xI2date">
 					<xsl:with-param name="range" select="arelda:provenienz/arelda:existenzzeitraum"/>
-					<xsl:with-param name="orig">/provenienz/existenzzeitraum</xsl:with-param>
+					<xsl:with-param name="orig">//provenienz/existenzzeitraum</xsl:with-param>
 				</xsl:call-template>
 			</xsl:if>
 			<xsl:if test="arelda:ordnungssystem/arelda:anwendungszeitraum">
 				<xsl:call-template name="xI2date">
 					<xsl:with-param name="range" select="arelda:ordnungssystem/arelda:anwendungszeitraum"/>
-					<xsl:with-param name="orig">/ordnungssystem/anwendungszeitraum</xsl:with-param>
+					<xsl:with-param name="orig">//ordnungssystem/anwendungszeitraum</xsl:with-param>
 				</xsl:call-template>
 			</xsl:if>
 			<!-- 3.1.4 Verzeichnungsstufe -->
@@ -94,7 +94,7 @@
 			<xsl:if test="arelda:ablieferndeStelle/text()">
 				<xsl:element name="acqInfo">
 					<xsl:attribute name="isadId">2.4</xsl:attribute>
-					<xsl:attribute name="origin">//ablieferndeStelle</xsl:attribute>
+					<xsl:attribute name="origin">//ablieferung/ablieferndeStelle</xsl:attribute>
 					<xsl:value-of select="arelda:ablieferndeStelle"/>
 				</xsl:element>
 			</xsl:if>
@@ -105,7 +105,7 @@
 				<xsl:element name="scopeContent">
 					<xsl:attribute name="isadId">3.1</xsl:attribute>
 					<xsl:element name="content">
-						<xsl:attribute name="origin">//ablieferungsteile</xsl:attribute>
+						<xsl:attribute name="origin">//ablieferung/ablieferungsteile</xsl:attribute>
 						<xsl:value-of select="arelda:ablieferungsteile"/>
 					</xsl:element>
 				</xsl:element>
@@ -114,7 +114,7 @@
 			<xsl:if test="arelda:referenzBewertungsentscheid/text()">
 				<xsl:element name="appraisalDestruction">
 					<xsl:attribute name="isadId">3.2</xsl:attribute>
-					<xsl:attribute name="origin">//referenzBewertungsentscheid</xsl:attribute>
+					<xsl:attribute name="origin">//ablieferung/referenzBewertungsentscheid</xsl:attribute>
 					<xsl:value-of select="arelda:referenzBewertungsentscheid"/>
 				</xsl:element>
 			</xsl:if>
@@ -133,19 +133,19 @@
 				<xsl:attribute name="isadId">4.1</xsl:attribute>
 				<xsl:if test="arelda:schutzfrist/text()">
 					<xsl:element name="retentionPeriod">
-						<xsl:attribute name="origin">//schutzfrist</xsl:attribute>
+						<xsl:attribute name="origin">//ablieferung/schutzfrist</xsl:attribute>
 						<xsl:value-of select="arelda:schutzfrist"/>
 					</xsl:element>
 				</xsl:if>
 				<xsl:if test="arelda:schutzfristenkategorie/text()">
 					<xsl:element name="retentionPeriodConditions">
-						<xsl:attribute name="origin">//schutzfristenkategorie</xsl:attribute>
+						<xsl:attribute name="origin">//ablieferung/schutzfristenkategorie</xsl:attribute>
 						<xsl:value-of select="arelda:schutzfristenkategorie"/>
 					</xsl:element>
 				</xsl:if>
 				<xsl:if test="arelda:referenzSchutzfristenFormular/text()">
 					<xsl:element name="retentionPeriodNotes">
-						<xsl:attribute name="origin">//referenzSchutzfristenFormular</xsl:attribute>
+						<xsl:attribute name="origin">//ablieferung/referenzSchutzfristenFormular</xsl:attribute>
 						<xsl:value-of select="arelda:referenzSchutzfristenFormular"/>
 					</xsl:element>
 				</xsl:if>
@@ -155,19 +155,23 @@
 		<!-- 3.4.4 Physische Beschaffenheit und technische Anforderungen -->
 		<!--   -->
 		<xsl:element name="notes">
+			<xsl:attribute name="isadId">6</xsl:attribute>
 			<!-- 3.6.1 Allgemeine Anmerkungen -->
 			<xsl:if test="arelda:bemerkung/text()">
 				<xsl:element name="note">
+					<xsl:attribute name="origin">//ablieferung/bemerkung</xsl:attribute>
 					<xsl:value-of select="arelda:bemerkung"/>
 				</xsl:element>
 			</xsl:if>
 			<xsl:if test="arelda:provenienz/arelda:bemerkung/text()">
 				<xsl:element name="note">
+					<xsl:attribute name="origin">//provenienz/bemerkung</xsl:attribute>
 					<xsl:value-of select="arelda:provenienz/arelda:bemerkung"/>
 				</xsl:element>
 			</xsl:if>
 			<xsl:if test="arelda:ordnungssystem/arelda:bemerkung/text()">
 				<xsl:element name="note">
+					<xsl:attribute name="origin">//ordnungssystem/bemerkung</xsl:attribute>
 					<xsl:value-of select="arelda:ordnungssystem/arelda:bemerkung"/>
 				</xsl:element>
 			</xsl:if>

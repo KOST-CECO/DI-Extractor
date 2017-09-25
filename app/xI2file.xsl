@@ -76,8 +76,9 @@
 			<!--   -->
 			<xsl:element name="contentStructure">
 				<!-- 3.3.1 Form und Inhalt -->
-				<xsl:if test="arelda:formInhalt or arelda:Inhalt">
+				<xsl:if test="arelda:formInhalt or arelda:inhalt">
 					<xsl:element name="scopeContent">
+						<xsl:attribute name="isadId">3.1</xsl:attribute>
 						<xsl:if test="arelda:formInhalt">
 							<xsl:element name="scope">
 								<xsl:choose>
@@ -105,9 +106,16 @@
 								</xsl:choose>
 							</xsl:element>
 						</xsl:if>
-						<xsl:if test="arelda:Inhalt">
+						<xsl:if test="arelda:formInhalt">
+							<xsl:element name="scope">
+								<xsl:attribute name="origin">//dossier/formInhalt</xsl:attribute>
+								<xsl:value-of select="arelda:formInhalt/text()"/>
+							</xsl:element>
+						</xsl:if>
+						<xsl:if test="arelda:inhalt">
 							<xsl:element name="content">
-								<xsl:value-of select="arelda:Inhalt/text()"/>
+								<xsl:attribute name="origin">//dossier/inhalt</xsl:attribute>
+								<xsl:value-of select="arelda:inhalt/text()"/>
 							</xsl:element>
 						</xsl:if>
 					</xsl:element>
@@ -124,6 +132,8 @@
 				<!-- 3.4.4 Physische Beschaffenheit und technische Anforderungen -->
 				<xsl:if test="arelda:erscheinungsform">
 					<xsl:element name="physTech">
+						<xsl:attribute name="isadId">4.4</xsl:attribute>
+						<xsl:attribute name="origin">ingest</xsl:attribute>
 						<xsl:choose>
 							<xsl:when test="arelda:erscheinungsform/text()='digital'">
 								<xsl:text>digital</xsl:text>
@@ -140,16 +150,25 @@
 						</xsl:choose>
 					</xsl:element>
 				</xsl:if>
-				<!--   -->
-			</xsl:element>
-			<xsl:element name="notes">
-				<!-- 3.6.1 Allgemeine Anmerkungen -->
-				<xsl:if test="arelda:bemerkung/text()">
-					<xsl:element name="note">
-						<xsl:value-of select="arelda:bemerkung"/>
+				<xsl:if test="arelda:erscheinungsform">
+					<xsl:element name="physTech">
+						<xsl:attribute name="isadId">4.4</xsl:attribute>
+						<xsl:attribute name="origin">//dossier/erscheinungsform</xsl:attribute>
+						<xsl:value-of select="arelda:erscheinungsform/text()"/>
 					</xsl:element>
 				</xsl:if>
+				<!--   -->
 			</xsl:element>
+			<!-- 3.6.1 Allgemeine Anmerkungen -->
+			<xsl:if test="arelda:bemerkung/text()">
+				<xsl:element name="notes">
+					<xsl:attribute name="isadId">6</xsl:attribute>
+					<xsl:element name="note">
+						<xsl:attribute name="origin">//dossier/bemerkung</xsl:attribute>
+						<xsl:value-of select="arelda:bemerkung"/>
+					</xsl:element>
+				</xsl:element>
+			</xsl:if>
 			<!--  GEVER SIP -->
 			<xsl:apply-templates select="arelda:dokument">
 				<xsl:with-param name="sig" select="$signature"/>
