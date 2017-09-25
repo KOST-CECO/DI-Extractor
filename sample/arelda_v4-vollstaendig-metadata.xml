@@ -244,7 +244,7 @@
 						<datenschutz>true</datenschutz>
 						<oeffentlichkeitsstatus>#63_oeffentlichkeitsstatus</oeffentlichkeitsstatus>
 						<oeffentlichkeitsstatusBegruendung>#64_oeffentlichkeitsstatusBegruendung</oeffentlichkeitsstatusBegruendung>
-						<sonstigeBestimmungen>#65_oeffentlichkeitsstatusBegruendung</sonstigeBestimmungen>
+						<sonstigeBestimmungen>#65_sonstigeBestimmungen</sonstigeBestimmungen>
 						<bemerkung>#66_dokumentBemerkung</bemerkung>
 						<zusatzDaten>
 							<merkmal name="#67_zusatzDatenKey">#68_zusatzDatenValue</merkmal>
