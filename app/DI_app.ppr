@@ -58,5 +58,10 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
+0=..\sample\ScopeBLOCKxIsadgAip.xml
 [Selected Project Files]
 Main=processingest.php
+Selected=..\sample\ScopeBLOCKxIsadgAip.xml
+[..\sample\ScopeBLOCKxIsadgAip.xml]
+TopLine=1
+Caret=23,38

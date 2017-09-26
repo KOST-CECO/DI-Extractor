@@ -208,7 +208,9 @@
 					<sonstigeBestimmungen>#51_sonstigeBestimmungen</sonstigeBestimmungen>
 					<bemerkung>#52_dossierBemerkung</bemerkung>
 					<zusatzDaten>
-						<merkmal name="#53_zusatzDatenKey">#54_zusatzDatenValue</merkmal>
+						<merkmal name="#53a_zusatzDatenKey">#54a_zusatzDatenValue</merkmal>
+						<merkmal name="#53b_zusatzDatenKey">#54b_zusatzDatenValue</merkmal>
+						<merkmal name="#53c_zusatzDatenKey">#54c_zusatzDatenValue</merkmal>
 					</zusatzDaten>
 					<aktenzeichen>#55_aktenzeichen</aktenzeichen>
 					<eroeffnungsdatum>
