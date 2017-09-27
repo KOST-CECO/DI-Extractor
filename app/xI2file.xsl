@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="ISADG" xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<!-- Ordnungsystemposition -->
 	<xsl:template match="arelda:dossier">
@@ -126,7 +126,6 @@
 				<xsl:attribute name="isadId">4</xsl:attribute>
 				<!-- 3.4.1 Zugangsbestimmungen -->
 				<xsl:call-template name="xI2access">
-					<xsl:with-param name="position" select="."/>
 					<xsl:with-param name="orig">//dossier</xsl:with-param>
 				</xsl:call-template>
 				<!-- 3.4.4 Physische Beschaffenheit und technische Anforderungen -->

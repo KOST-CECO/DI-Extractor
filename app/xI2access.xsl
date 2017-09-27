@@ -2,7 +2,6 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="ISADG" xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<!-- named template xI2access -->
 	<xsl:template name="xI2access">
-		<xsl:param name="position"/>
 		<xsl:param name="orig"/>
 		<!--   -->
 		<xsl:element name="accessConditions">

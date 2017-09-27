@@ -92,6 +92,29 @@
 					<xsl:value-of select="arelda:provenienz/arelda:systemBeschreibung/text()"/>
 				</xsl:element>
 			</xsl:if>
+			<xsl:if test="arelda:provenienz/arelda:registratur/text()">
+				<xsl:element name="archivalHistory">
+					<xsl:attribute name="isadId">2.3</xsl:attribute>
+					<xsl:attribute name="origin">//provenienz/registratur</xsl:attribute>
+					<xsl:value-of select="arelda:provenienz/arelda:registratur/text()"/>
+				</xsl:element>
+			</xsl:if>
+			<!-- Typ FILES  -->
+			<xsl:if test="arelda:provenienz/arelda:verwandteSysteme/text()">
+				<xsl:element name="archivalHistory">
+					<xsl:attribute name="isadId">2.3</xsl:attribute>
+					<xsl:attribute name="origin">//provenienz/verwandteSysteme</xsl:attribute>
+					<xsl:value-of select="arelda:provenienz/arelda:verwandteSysteme/text()"/>
+				</xsl:element>
+			</xsl:if>
+			<xsl:if test="arelda:provenienz/arelda:archivierungsmodusLoeschvorschriften/text()">
+				<xsl:element name="archivalHistory">
+					<xsl:attribute name="isadId">2.3</xsl:attribute>
+					<xsl:attribute name="origin">//provenienz/archivierungsmodusLoeschvorschriften</xsl:attribute>
+					<xsl:value-of select="arelda:provenienz/arelda:archivierungsmodusLoeschvorschriften/text()"/>
+				</xsl:element>
+			</xsl:if>
+			<!--    -->
 			<!-- 3.2.4 Abgebende Stelle -->
 			<xsl:if test="arelda:ablieferndeStelle/text()">
 				<xsl:element name="acqInfo">
@@ -135,7 +158,6 @@
 			<xsl:attribute name="isadId">4</xsl:attribute>
 			<!-- 3.4.1 Zugangsbestimmungen -->
 			<xsl:call-template name="xI2access">
-				<xsl:with-param name="position" select="."/>
 				<xsl:with-param name="orig">//dokument</xsl:with-param>
 			</xsl:call-template>
 		</xsl:element>

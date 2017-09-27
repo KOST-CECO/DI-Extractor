@@ -62,7 +62,7 @@ IF [%STIL%]==[] (
 
 IF [%FMT%]==[] (
     SET FMT=1
-    SET /P "FMT=Ausgabeformat (xIadg / xIsadg 2.0 / EAD ): [1] [2] oder [3] "
+    SET /P "FMT=Ausgabeformat (xIsadg / xIsadg 2.0 / EAD ): [1] [2] oder [3] "
 )
 ECHO.
 
