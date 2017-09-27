@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="ISADG" xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<!-- Ordnungsystemposition   -  type GEVER-->
 	<xsl:template match="arelda:dokument">
@@ -128,8 +128,15 @@
 					</xsl:element>
 				</xsl:element>
 			</xsl:if>
+			<!-- additionalData -->
+			<xsl:if test="arelda:zusatzDaten">
+				<xsl:call-template name="xI2mdwrap">
+					<xsl:with-param name="orig">//dokument/zusatzDaten/merkmal</xsl:with-param>
+				</xsl:call-template>
+			</xsl:if>
 		</xsl:element>
 	</xsl:template>
+	<!--   -->
 	<!-- Ordnungsystemposition  -  type FILE -->
 	<xsl:template match="arelda:dateiRef">
 		<xsl:param name="sig"/>
@@ -213,6 +220,13 @@
 					</xsl:element>
 				</xsl:element>
 			</xsl:if>
+			<!-- additionalData -->
+			<xsl:if test="arelda:zusatzDaten">
+				<xsl:call-template name="xI2mdwrap">
+					<xsl:with-param name="orig">//dokument/zusatzDaten/merkmal</xsl:with-param>
+				</xsl:call-template>
+			</xsl:if>
+			<!--   -->
 		</xsl:element>
 	</xsl:template>
 </xsl:stylesheet>

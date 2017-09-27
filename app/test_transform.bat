@@ -17,9 +17,10 @@ if errorlevel 1 (
    EXIT /B
 )
 
-PAUSE
+REM PAUSE
 
 CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy2005.exe"                   "%CD%\xIadg.2.0_metadata.xml"
 
+SLEEP 10
 
 EXIT /B

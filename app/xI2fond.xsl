@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="ISADG" xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<!-- Ablieferung - Provenienz - Ordnungsystem -->
 	<xsl:template match="arelda:ablieferung">
@@ -163,5 +163,11 @@
 				</xsl:element>
 			</xsl:if>
 		</xsl:element>
+		<!-- additionalData -->
+		<xsl:if test="arelda:zusatzDaten">
+			<xsl:call-template name="xI2mdwrap">
+				<xsl:with-param name="orig">/paket/zusatzDaten/merkmal</xsl:with-param>
+			</xsl:call-template>
+		</xsl:if>
 	</xsl:template>
 </xsl:stylesheet>
