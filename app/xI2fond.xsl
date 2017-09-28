@@ -186,10 +186,32 @@
 			</xsl:if>
 		</xsl:element>
 		<!-- additionalData -->
-		<xsl:if test="arelda:zusatzDaten">
-			<xsl:call-template name="xI2mdwrap">
-				<xsl:with-param name="orig">/paket/zusatzDaten/merkmal</xsl:with-param>
-			</xsl:call-template>
+		<xsl:if test="../arelda:zusatzDaten or arelda:zusatzDaten or arelda:ordnungssystem/arelda:zusatzDaten">
+			<xsl:element name="additionalData">
+				<xsl:element name="mdWrap">
+					<xsl:for-each select="../arelda:zusatzDaten/arelda:merkmal">
+						<xsl:element name="property">
+							<xsl:attribute name="origin">//paket/zusatzDaten/merkmal</xsl:attribute>
+							<xsl:attribute name="key"><xsl:value-of select="./@name"/></xsl:attribute>
+							<xsl:value-of select="./text()"/>
+						</xsl:element>
+					</xsl:for-each>
+					<xsl:for-each select="arelda:zusatzDaten/arelda:merkmal">
+						<xsl:element name="property">
+							<xsl:attribute name="origin">//ablieferung/zusatzDaten/merkmal</xsl:attribute>
+							<xsl:attribute name="key"><xsl:value-of select="./@name"/></xsl:attribute>
+							<xsl:value-of select="./text()"/>
+						</xsl:element>
+					</xsl:for-each>
+					<xsl:for-each select="arelda:ordnungssystem/arelda:zusatzDaten/arelda:merkmal">
+						<xsl:element name="property">
+							<xsl:attribute name="origin">//ordnungssystem/zusatzDaten/merkmal</xsl:attribute>
+							<xsl:attribute name="key"><xsl:value-of select="./@name"/></xsl:attribute>
+							<xsl:value-of select="./text()"/>
+						</xsl:element>
+					</xsl:for-each>
+				</xsl:element>
+			</xsl:element>
 		</xsl:if>
 	</xsl:template>
 </xsl:stylesheet>

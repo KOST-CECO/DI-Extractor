@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="ISADG" xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<!-- Ordnungsystemposition -->
 	<xsl:template match="arelda:dossier">
@@ -185,9 +185,17 @@
 			</xsl:element>
 			<!-- additionalData -->
 			<xsl:if test="arelda:zusatzDaten">
-				<xsl:call-template name="xI2mdwrap">
-					<xsl:with-param name="orig">//dossier/zusatzDaten/merkmal</xsl:with-param>
-				</xsl:call-template>
+				<xsl:element name="additionalData">
+					<xsl:element name="mdWrap">
+						<xsl:for-each select="arelda:zusatzDaten/arelda:merkmal">
+							<xsl:element name="property">
+								<xsl:attribute name="origin">//dossier/zusatzDaten/merkmal</xsl:attribute>
+								<xsl:attribute name="key"><xsl:value-of select="./@name"/></xsl:attribute>
+								<xsl:value-of select="./text()"/>
+							</xsl:element>
+						</xsl:for-each>
+					</xsl:element>
+				</xsl:element>
 			</xsl:if>
 			<!--  GEVER SIP -->
 			<xsl:apply-templates select="arelda:dokument">

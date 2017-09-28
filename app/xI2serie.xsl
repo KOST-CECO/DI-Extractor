@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="ISADG" xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<!-- Ordnungsystemposition -->
 	<xsl:template match="arelda:ordnungssystemposition">
@@ -17,18 +17,18 @@
 				</xsl:call-template>
 				<!-- 3.1.2 Titel -->
 				<xsl:element name="title">
-				<xsl:attribute name="isadId">1.2</xsl:attribute>
-				<xsl:attribute name="origin">//ordnungssystemposition/titel</xsl:attribute>
-				<xsl:attribute name="obligation">mandatory</xsl:attribute>
+					<xsl:attribute name="isadId">1.2</xsl:attribute>
+					<xsl:attribute name="origin">//ordnungssystemposition/titel</xsl:attribute>
+					<xsl:attribute name="obligation">mandatory</xsl:attribute>
 					<xsl:value-of select="arelda:titel"/>
 				</xsl:element>
 				<!-- 3.1.3 Entstehungszeitraum / Laufzeit -->
 				<!--   -->
 				<!-- 3.1.4 Verzeichnungsstufe -->
 				<xsl:element name="descriptionLevel">
-				<xsl:attribute name="isadId">1.4</xsl:attribute>
-				<xsl:attribute name="origin">ingest</xsl:attribute>
-				<xsl:attribute name="obligation">mandatory</xsl:attribute>
+					<xsl:attribute name="isadId">1.4</xsl:attribute>
+					<xsl:attribute name="origin">ingest</xsl:attribute>
+					<xsl:attribute name="obligation">mandatory</xsl:attribute>
 					<xsl:text>Serie</xsl:text>
 				</xsl:element>
 				<!-- 3.1.5 Umfang (Menge und Abmessung) -->
@@ -59,9 +59,17 @@
 			<!--   -->
 			<!-- additionalData -->
 			<xsl:if test="arelda:zusatzDaten">
-				<xsl:call-template name="xI2mdwrap">
-					<xsl:with-param name="orig">//ordnungssystemposition/zusatzDaten/merkmal</xsl:with-param>
-				</xsl:call-template>
+				<xsl:element name="additionalData">
+					<xsl:element name="mdWrap">
+						<xsl:for-each select="arelda:zusatzDaten/arelda:merkmal">
+							<xsl:element name="property">
+								<xsl:attribute name="origin">//ordnungssystemposition/zusatzDaten/merkmal</xsl:attribute>
+								<xsl:attribute name="key"><xsl:value-of select="./@name"/></xsl:attribute>
+								<xsl:value-of select="./text()"/>
+							</xsl:element>
+						</xsl:for-each>
+					</xsl:element>
+				</xsl:element>
 			</xsl:if>
 			<!--   -->
 			<xsl:apply-templates select="arelda:ordnungssystemposition">
