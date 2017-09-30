@@ -128,9 +128,18 @@
 				</xsl:element>
 			</xsl:if>
 			<!-- additionalData -->
-			<xsl:if test="arelda:zusatzDaten">
+			<xsl:if test="arelda:zusatzDaten or arelda:anwendung">
 				<xsl:element name="additionalData">
 					<xsl:element name="mdWrap">
+						<!-- additionalData dossier -->
+						<xsl:if test="arelda:anwendung">
+							<xsl:element name="property">
+								<xsl:attribute name="origin">//ordnungssystemposition/anwendung</xsl:attribute>
+								<xsl:attribute name="key">anwendung</xsl:attribute>
+								<xsl:value-of select="arelda:anwendung"/>
+							</xsl:element>
+						</xsl:if>
+						<!-- additionalData zusatzDaten -->
 						<xsl:for-each select="arelda:zusatzDaten/arelda:merkmal">
 							<xsl:element name="property">
 								<xsl:attribute name="origin">//dokument/zusatzDaten/merkmal</xsl:attribute>

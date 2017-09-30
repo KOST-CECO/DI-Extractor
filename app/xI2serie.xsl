@@ -58,9 +58,25 @@
 			<!-- 3.6.1 Allgemeine Anmerkungen -->
 			<!--   -->
 			<!-- additionalData -->
-			<xsl:if test="arelda:zusatzDaten">
+			<xsl:if test="arelda:zusatzDaten or arelda:nummer or arelda:federfuehrendeOrganisationseinheit">
 				<xsl:element name="additionalData">
 					<xsl:element name="mdWrap">
+						<!-- additionalData ordnungssystem -->
+						<xsl:if test="arelda:nummer">
+							<xsl:element name="property">
+								<xsl:attribute name="origin">//ordnungssystemposition/nummer</xsl:attribute>
+								<xsl:attribute name="key">ordnungssystempositionNummer</xsl:attribute>
+								<xsl:value-of select="arelda:nummer"/>
+							</xsl:element>
+						</xsl:if>
+						<xsl:if test="arelda:federfuehrendeOrganisationseinheit">
+							<xsl:element name="property">
+								<xsl:attribute name="origin">//ordnungssystemposition/federfuehrendeOrganisationseinheit</xsl:attribute>
+								<xsl:attribute name="key">federfuehrendeOrganisationseinheit</xsl:attribute>
+								<xsl:value-of select="arelda:federfuehrendeOrganisationseinheit"/>
+							</xsl:element>
+						</xsl:if>
+						<!-- additionalData zusatzDaten -->
 						<xsl:for-each select="arelda:zusatzDaten/arelda:merkmal">
 							<xsl:element name="property">
 								<xsl:attribute name="origin">//ordnungssystemposition/zusatzDaten/merkmal</xsl:attribute>

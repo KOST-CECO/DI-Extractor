@@ -12,12 +12,10 @@ REM Ausgabeformat (xIadg / xIsadg 2.0 / EAD ): [1] [2] oder [3]
 SET FMT=2
 CALL transform.bat "../sample/arelda_v4-vollstaendig-GEVER.xml"      "xIsadg.2.0_metadata.xml"
 
-if errorlevel 1 (
+IF %ERRORLEVEL% NEQ 0 (
    PAUSE
    EXIT /B
 )
-
-PAUSE
 
 CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy2005.exe"                   "%CD%\xIsadg.2.0_metadata.xml"
 

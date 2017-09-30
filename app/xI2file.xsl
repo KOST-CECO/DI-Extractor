@@ -184,9 +184,25 @@
 				</xsl:if>
 			</xsl:element>
 			<!-- additionalData -->
-			<xsl:if test="arelda:zusatzDaten">
+			<xsl:if test="arelda:zusatzDaten or arelda:federfuehrendeOrganisationseinheit or arelda:vorgang">
 				<xsl:element name="additionalData">
 					<xsl:element name="mdWrap">
+						<!-- additionalData dossier -->
+						<xsl:if test="arelda:federfuehrendeOrganisationseinheit">
+							<xsl:element name="property">
+								<xsl:attribute name="origin">//ordnungssystemposition/federfuehrendeOrganisationseinheit</xsl:attribute>
+								<xsl:attribute name="key">federfuehrendeOrganisationseinheit</xsl:attribute>
+								<xsl:value-of select="arelda:federfuehrendeOrganisationseinheit"/>
+							</xsl:element>
+						</xsl:if>
+						<xsl:if test="arelda:vorgang">
+							<xsl:element name="property">
+								<xsl:attribute name="origin">//ordnungssystemposition/vorgang</xsl:attribute>
+								<xsl:attribute name="key">vorgang</xsl:attribute>
+								<xsl:value-of select="arelda:vorgang"/>
+							</xsl:element>
+						</xsl:if>
+						<!-- additionalData zusatzDaten -->
 						<xsl:for-each select="arelda:zusatzDaten/arelda:merkmal">
 							<xsl:element name="property">
 								<xsl:attribute name="origin">//dossier/zusatzDaten/merkmal</xsl:attribute>
