@@ -18,7 +18,7 @@ IF %ERRORLEVEL% NEQ 0 (
    EXIT /B
 )
 
-
+PAUSE
 CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy2005.exe"                   "%CD%\xIsadg.2.0_metadata.xml"
 
 EXIT /B
