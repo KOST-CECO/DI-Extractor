@@ -195,11 +195,96 @@
 								<xsl:value-of select="arelda:federfuehrendeOrganisationseinheit"/>
 							</xsl:element>
 						</xsl:if>
+						<!-- additionalData vorgang -->
 						<xsl:if test="arelda:vorgang">
 							<xsl:element name="property">
-								<xsl:attribute name="origin">//ordnungssystemposition/vorgang</xsl:attribute>
+								<xsl:attribute name="origin">//dossier/vorgang</xsl:attribute>
 								<xsl:attribute name="key">vorgang</xsl:attribute>
 								<xsl:value-of select="arelda:vorgang"/>
+							</xsl:element>
+						</xsl:if>
+						<!-- additionalData vorgang-aktivitaet -->
+						<xsl:if test="arelda:vorgang/arelda:*">
+							<xsl:element name="property">
+								<xsl:attribute name="origin">//dossier/vorgang</xsl:attribute>
+								<xsl:attribute name="key">vorgang</xsl:attribute>
+								<xsl:for-each select="arelda:vorgang/arelda:titel">
+									<xsl:element name="property">
+										<!-- <xsl:attribute name="origin">//dossier/vorgang/titel</xsl:attribute> -->
+										<xsl:attribute name="key">titel</xsl:attribute>
+										<xsl:value-of select="./text()"/>
+									</xsl:element>
+								</xsl:for-each>
+								<xsl:for-each select="arelda:vorgang/arelda:arbeitsanweisung">
+									<xsl:element name="property">
+										<!-- <xsl:attribute name="origin">//dossier/vorgang/arbeitsanweisung</xsl:attribute> -->
+										<xsl:attribute name="key">arbeitsanweisung</xsl:attribute>
+										<xsl:value-of select="./text()"/>
+									</xsl:element>
+								</xsl:for-each>
+								<xsl:for-each select="arelda:vorgang/arelda:verweis">
+									<xsl:element name="property">
+										<!-- <xsl:attribute name="origin">//dossier/vorgang/verweis</xsl:attribute> -->
+										<xsl:attribute name="key">verweis</xsl:attribute>
+										<xsl:value-of select="./text()"/>
+									</xsl:element>
+								</xsl:for-each>
+								<!-- additionalData aktivitaet -->
+								<xsl:for-each select="arelda:vorgang/arelda:aktivitaet">
+									<xsl:element name="property">
+										<!-- <xsl:attribute name="origin">//dossier/vorgang/aktivitaet</xsl:attribute> -->
+										<xsl:attribute name="key">aktivitaet</xsl:attribute>
+										
+										<xsl:element name="property">
+												<!-- <xsl:attribute name="origin">//dossier/vorgang/aktivitaet/@order</xsl:attribute> -->
+												<xsl:attribute name="key">order</xsl:attribute>
+												<xsl:value-of select="./@order"/>
+											</xsl:element>
+											
+										<xsl:for-each select="arelda:vorschreibung">
+											<xsl:element name="property">
+												<!-- <xsl:attribute name="origin">//dossier/vorgang/aktivitaet/vorschreibung</xsl:attribute> -->
+												<xsl:attribute name="key">vorschreibung</xsl:attribute>
+												<xsl:value-of select="./text()"/>
+											</xsl:element>
+										</xsl:for-each>
+										<xsl:for-each select="arelda:akteur">
+											<xsl:element name="property">
+												<!-- <xsl:attribute name="origin">//dossier/vorgang/aktivitaet/akteur</xsl:attribute> -->
+												<xsl:attribute name="key">akteur</xsl:attribute>
+												<xsl:value-of select="./text()"/>
+											</xsl:element>
+										</xsl:for-each>
+										<xsl:for-each select="arelda:abschlussvermerk">
+											<xsl:element name="property">
+												<!-- <xsl:attribute name="origin">//dossier/vorgang/aktivitaet/abschlussvermerk</xsl:attribute> -->
+												<xsl:attribute name="key">abschlussvermerk</xsl:attribute>
+												<xsl:value-of select="./text()"/>
+											</xsl:element>
+										</xsl:for-each>
+										<xsl:for-each select="arelda:abschlussdatum">
+											<xsl:element name="property">
+												<!-- <xsl:attribute name="origin">//dossier/vorgang/aktivitaet/abschlussdatum</xsl:attribute> -->
+												<xsl:attribute name="key">abschlussdatum</xsl:attribute>
+												<xsl:value-of select="./text()"/>
+											</xsl:element>
+										</xsl:for-each>
+										<xsl:for-each select="arelda:verweis">
+											<xsl:element name="property">
+												<!-- <xsl:attribute name="origin">//dossier/vorgang/aktivitaet/verweis</xsl:attribute> -->
+												<xsl:attribute name="key">verweis</xsl:attribute>
+												<xsl:value-of select="./text()"/>
+											</xsl:element>
+										</xsl:for-each>
+										<xsl:for-each select="arelda:bemerkung">
+											<xsl:element name="property">
+												<!-- <xsl:attribute name="origin">//dossier/vorgang/aktivitaet/bemerkung</xsl:attribute> -->
+												<xsl:attribute name="key">bemerkung</xsl:attribute>
+												<xsl:value-of select="./text()"/>
+											</xsl:element>
+										</xsl:for-each>
+									</xsl:element>
+								</xsl:for-each>
 							</xsl:element>
 						</xsl:if>
 						<!-- additionalData zusatzDaten -->
