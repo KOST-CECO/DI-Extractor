@@ -1,7 +1,7 @@
 @ECHO OFF 
 SETLOCAL
 
-SET INPUT=arelda_v4.1-vollstaendig-GEVER.xml
+SET INPUT=arelda_v4-vollstaendig-FILES.xml
 
 ECHO ===========================================================================
 ECHO Signaturstil: fortlaufend SIG.1 SIG.2 / Ausgabeformat: xIadg 2.0

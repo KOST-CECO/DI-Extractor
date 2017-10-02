@@ -218,34 +218,6 @@
 					<schutzfristenkategorie>#57_schutzfristenkategorie</schutzfristenkategorie>
 					<schutzfrist>30</schutzfrist>
 					<schutzfristenBegruendung>#58_schutzfristenBegruendung</schutzfristenBegruendung>
-					<dokument id="ID5">
-						<titel>#59_dokumentTitel</titel>
-						<autor>#60_dokumentAutor</autor>
-						<erscheinungsform>digital</erscheinungsform>
-						<dokumenttyp>#61_dokumenttyp</dokumenttyp>
-						<registrierdatum>
-							<ca>false</ca>
-							<datum>1967-01-11</datum>
-						</registrierdatum>
-						<entstehungszeitraum>
-							<von>
-								<datum>1967-02-12</datum>
-							</von>
-							<bis>
-								<datum>1967-02-13</datum>
-							</bis>
-						</entstehungszeitraum>
-						<klassifizierungskategorie>#62_klassifizierungskategorie</klassifizierungskategorie>
-						<datenschutz>true</datenschutz>
-						<oeffentlichkeitsstatus>#63_oeffentlichkeitsstatus</oeffentlichkeitsstatus>
-						<oeffentlichkeitsstatusBegruendung>#64_oeffentlichkeitsstatusBegruendung</oeffentlichkeitsstatusBegruendung>
-						<sonstigeBestimmungen>#65_sonstigeBestimmungen</sonstigeBestimmungen>
-						<bemerkung>#66_dokumentBemerkung</bemerkung>
-						<zusatzDaten>
-							<merkmal name="#67_zusatzDatenKey">#68_zusatzDatenValue</merkmal>
-						</zusatzDaten>
-						<dateiRef>ID1</dateiRef>
-					</dokument>
 					<dateiRef>ID1</dateiRef>
 					<umfang>#76f_umfang</umfang>
 				</dossier>

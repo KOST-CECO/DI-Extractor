@@ -58,14 +58,26 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=Neu1.txt
-1=helptext.php
+0=xIfond.xsl
+1=xIserie.xsl
+2=xIfile.xsl
+3=xIitem.xsl
+4=xIsadg_v1.6.1.xsd
 [Selected Project Files]
 Main=processingest.php
-Selected=helptext.php
-[Neu1.txt]
-TopLine=1
-Caret=1,1
-[helptext.php]
-TopLine=1
-Caret=1,1
+Selected=xIsadg_v1.6.1.xsd
+[xIfond.xsl]
+TopLine=34
+Caret=1,44
+[xIserie.xsl]
+TopLine=14
+Caret=1,24
+[xIfile.xsl]
+TopLine=19
+Caret=1,29
+[xIitem.xsl]
+TopLine=113
+Caret=1,123
+[xIsadg_v1.6.1.xsd]
+TopLine=210
+Caret=1,220

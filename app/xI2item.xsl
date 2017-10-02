@@ -212,7 +212,7 @@
 					<xsl:attribute name="isadId">1.4</xsl:attribute>
 					<xsl:attribute name="origin">ingest</xsl:attribute>
 					<xsl:attribute name="obligation">mandatory</xsl:attribute>
-					<xsl:text>File</xsl:text>
+					<xsl:text>Repräsentation</xsl:text>
 				</xsl:element>
 				<!-- 3.1.5 Umfang (Menge und Abmessung) -->
 				<!--   -->
@@ -246,6 +246,7 @@
 				<!--   -->
 			</xsl:element>
 			<!-- 3.6.1 Allgemeine Anmerkungen -->
+			<!-- 
 			<xsl:if test="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:eigenschaft/text()">
 				<xsl:element name="notes">
 					<xsl:attribute name="isadId">6</xsl:attribute>
@@ -256,6 +257,7 @@
 					</xsl:element>
 				</xsl:element>
 			</xsl:if>
+			 -->
 			<!-- additionalData -->
 			<!--   -->
 		</xsl:element>
