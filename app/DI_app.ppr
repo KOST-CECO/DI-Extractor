@@ -66,17 +66,18 @@ DI_app
 5=xI2date.xsl
 6=xI2access.xsl
 7=eCH2xI2sadg.xsl
+8=\\adb.intra.admin.ch\Userhome$\BAR-01\X60014197\config\Desktop\tkdiff.out
 [Selected Project Files]
 Main=processingest.php
-Selected=xI2access.xsl
+Selected=\\adb.intra.admin.ch\Userhome$\BAR-01\X60014197\config\Desktop\tkdiff.out
 [xI2fond.xsl]
 TopLine=1
 Caret=1,1
 [xI2serie.xsl]
-TopLine=1
+TopLine=69
 Caret=1,1
 [xI2file.xsl]
-TopLine=1
+TopLine=200
 Caret=1,1
 [xI2item.xsl]
 TopLine=1
@@ -91,5 +92,8 @@ Caret=1,1
 TopLine=15
 Caret=1,21
 [eCH2xI2sadg.xsl]
-TopLine=1
+TopLine=11
 Caret=1,13
+[\\adb.intra.admin.ch\Userhome$\BAR-01\X60014197\config\Desktop\tkdiff.out]
+TopLine=240
+Caret=1,1
