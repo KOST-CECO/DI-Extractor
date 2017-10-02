@@ -63,14 +63,15 @@ DI_app
 2=xIfile.xsl
 3=xIitem.xsl
 4=xIsadg_v1.6.1.xsd
+5=run_transform.bat
 [Selected Project Files]
 Main=processingest.php
-Selected=xIsadg_v1.6.1.xsd
+Selected=run_transform.bat
 [xIfond.xsl]
 TopLine=34
 Caret=1,44
 [xIserie.xsl]
-TopLine=14
+TopLine=13
 Caret=1,24
 [xIfile.xsl]
 TopLine=19
@@ -81,3 +82,6 @@ Caret=1,123
 [xIsadg_v1.6.1.xsd]
 TopLine=210
 Caret=1,220
+[run_transform.bat]
+TopLine=1
+Caret=1,122
