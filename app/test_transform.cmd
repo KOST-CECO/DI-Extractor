@@ -11,7 +11,7 @@ REM Signaturstil (fortlaufend SIG.1 SIG.2 / hierarchisch SIG.1 SIG.1.1): [1] ode
 SET STIL=1
 REM Ausgabeformat (xIadg / xIsadg 2.0 / EAD ): [1] [2] oder [3]
 SET FMT=2
-CALL transform.bat "../sample/%INPUT%"      "xIsadg.2.0_metadata.xml"
+CALL transform.cmd "../sample/%INPUT%"      "xIsadg.2.0_metadata.xml"
 
 IF %ERRORLEVEL% NEQ 0 (
    PAUSE

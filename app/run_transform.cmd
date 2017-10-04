@@ -9,7 +9,7 @@ REM Signaturstil (fortlaufend SIG.1 SIG.2 / hierarchisch SIG.1 SIG.1.1): [1] ode
 SET STIL=1
 REM Ausgabeformat (xIsadg / xIsadg 2.0 / EAD ): [1] [2] oder [3]
 SET FMT=1
-CALL transform.bat "../sample/SIP_20070923_arelda_v4"      "xIsadg_metadata.xml"
+CALL transform.cmd "../sample/SIP_20070923_arelda_v4"      "xIsadg_metadata.xml"
 CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy2005.exe"           "%CD%\xIsadg_metadata.xml"
 
 ECHO ===========================================================================
@@ -20,7 +20,7 @@ REM Signaturstil (fortlaufend SIG.1 SIG.2 / hierarchisch SIG.1 SIG.1.1): [1] ode
 SET STIL=2
 REM Ausgabeformat (xIsadg / xIsadg 2.0 / EAD ): [1] [2] oder [3]
 SET FMT=1
-CALL transform.bat "../sample/SIP_20070923_arelda_v4"      "xIsadg_metadata.xml"
+CALL transform.cmd "../sample/SIP_20070923_arelda_v4"      "xIsadg_metadata.xml"
 CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy2005.exe"           "%CD%\xIsadg_metadata.xml"
 
 
@@ -32,7 +32,7 @@ REM Signaturstil (fortlaufend SIG.1 SIG.2 / hierarchisch SIG.1 SIG.1.1): [1] ode
 SET STIL=1
 REM Ausgabeformat (xIsadg / xIsadg 2.0 / EAD ): [1] [2] oder [3]
 SET FMT=2
-CALL transform.bat "../sample/SIP_20070923_arelda_v4"      "EAD_metadata.xml"
+CALL transform.cmd "../sample/SIP_20070923_arelda_v4"      "EAD_metadata.xml"
 CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy2005.exe"           "%CD%\EAD_metadata.xml"
 
 ECHO ===========================================================================
@@ -43,7 +43,7 @@ REM Signaturstil (fortlaufend SIG.1 SIG.2 / hierarchisch SIG.1 SIG.1.1): [1] ode
 SET STIL=2
 REM Ausgabeformat (xIsadg / xIsadg 2.0 / EAD ): [1] [2] oder [3]
 SET FMT=2
-CALL transform.bat "../sample/SIP_20070923_arelda_v4"      "EAD_metadata.xml"
+CALL transform.cmd "../sample/SIP_20070923_arelda_v4"      "EAD_metadata.xml"
 CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy2005.exe"           "%CD%\EAD_metadata.xml"
 
 
@@ -55,7 +55,7 @@ REM Signaturstil (fortlaufend SIG.1 SIG.2 / hierarchisch SIG.1 SIG.1.1): [1] ode
 SET STIL=1
 REM Ausgabeformat (xIsadg / xIsadg 2.0 / EAD ): [1] [2] oder [3]
 SET FMT=3
-CALL transform.bat "../sample/SIP_20070923_arelda_v4"      "EAD_metadata.xml"
+CALL transform.cmd "../sample/SIP_20070923_arelda_v4"      "EAD_metadata.xml"
 CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy2005.exe"           "%CD%\EAD_metadata.xml"
 
 ECHO ===========================================================================
@@ -66,7 +66,7 @@ REM Signaturstil (fortlaufend SIG.1 SIG.2 / hierarchisch SIG.1 SIG.1.1): [1] ode
 SET STIL=2
 REM Ausgabeformat (xIsadg / xIsadg 2.0 / EAD ): [1] [2] oder [3]
 SET FMT=3
-CALL transform.bat "../sample/SIP_20070923_arelda_v4"      "EAD_metadata.xml"
+CALL transform.cmd "../sample/SIP_20070923_arelda_v4"      "EAD_metadata.xml"
 CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy2005.exe"           "%CD%\EAD_metadata.xml"
 
 ECHO ===========================================================================
@@ -78,7 +78,7 @@ REM Signaturstil (fortlaufend SIG.1 SIG.2 / hierarchisch SIG.1 SIG.1.1): [1] ode
 SET STIL=1
 REM Ausgabeformat (xIadg / xIsadg 2.0 / EAD ): [1] [2] oder [3]
 SET FMT=2
-CALL transform.bat "../sample/%INPUT%"                 "xIsadg.2.0_metadata.xml"
+CALL transform.cmd "../sample/%INPUT%"                 "xIsadg.2.0_metadata.xml"
 IF %ERRORLEVEL% NEQ 0 (
    PAUSE
    EXIT /B
@@ -95,7 +95,7 @@ REM Signaturstil (fortlaufend SIG.1 SIG.2 / hierarchisch SIG.1 SIG.1.1): [1] ode
 SET STIL=1
 REM Ausgabeformat (xIadg / xIsadg 2.0 / EAD ): [1] [2] oder [3]
 SET FMT=2
-CALL transform.bat "../sample/%INPUT%"                 "xIsadg.2.0_metadata.xml"
+CALL transform.cmd "../sample/%INPUT%"                 "xIsadg.2.0_metadata.xml"
 IF %ERRORLEVEL% NEQ 0 (
    PAUSE
    EXIT /B
@@ -111,7 +111,7 @@ REM Signaturstil (fortlaufend SIG.1 SIG.2 / hierarchisch SIG.1 SIG.1.1): [1] ode
 SET STIL=1
 REM Ausgabeformat (xIadg / xIsadg 2.0 / EAD ): [1] [2] oder [3]
 SET FMT=2
-CALL transform.bat "../sample/%INPUT%"                 "xIsadg.2.0_metadata.xml"
+CALL transform.cmd "../sample/%INPUT%"                 "xIsadg.2.0_metadata.xml"
 IF %ERRORLEVEL% NEQ 0 (
    PAUSE
    EXIT /B

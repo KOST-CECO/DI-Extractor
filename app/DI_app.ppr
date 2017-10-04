@@ -22,10 +22,11 @@ DI_app
 		copyright.php
 		class.inputfilter.php
 		ingest.css
-		transform.bat
-		run_transform.bat
 		..\install_app.cmd
 		extract_element.cmd
+		transform.cmd
+		run_transform.cmd
+		test_transform.cmd
 	+xIsadg
 		eCH2xIsadg.xsl
 		xIfond.xsl
@@ -58,30 +59,10 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=xIfond.xsl
-1=xIserie.xsl
-2=xIfile.xsl
-3=xIitem.xsl
-4=xIsadg_v1.6.1.xsd
-5=run_transform.bat
+0=Neu1.txt
 [Selected Project Files]
 Main=processingest.php
-Selected=run_transform.bat
-[xIfond.xsl]
-TopLine=34
-Caret=1,44
-[xIserie.xsl]
-TopLine=13
-Caret=1,24
-[xIfile.xsl]
-TopLine=19
-Caret=1,29
-[xIitem.xsl]
-TopLine=113
-Caret=1,123
-[xIsadg_v1.6.1.xsd]
-TopLine=210
-Caret=1,220
-[run_transform.bat]
+Selected=Neu1.txt
+[Neu1.txt]
 TopLine=1
-Caret=1,122
+Caret=165,1
