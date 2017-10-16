@@ -221,25 +221,39 @@
 						<datum>1967-01-10</datum>
 					</abschlussdatum>
 					<vorgang>#56_vorgang</vorgang>
-					<vorgang>
+					<vorgang order="1">
 						<titel>#56a_titel</titel>
 						<arbeitsanweisung>#56b_arbeitsanweisung</arbeitsanweisung>
-						<verweis>#56c_verweis</verweis>
+						<federfuehrung>#56c_Vorgang:federfuehrung</federfuehrung>
+						<verweis>#56d_verweis</verweis>
+						<bemerkung>#56e_Vorgang:bemerkung</bemerkung>
+						<zusatzDaten>
+							<merkmal name="#56f_Vorgang:zusatzDatenMerkmal1"/>
+							<merkmal name="#56g_Vorgang:zusatzDatenMerkmal2"/>
+						</zusatzDaten>
 						<aktivitaet order="1">
-							<vorschreibung>#56d_vorschreibung</vorschreibung>
-							<akteur>#56e_akteur</akteur>
-							<abschlussvermerk>#56f_abschlussvermerk</abschlussvermerk>
+							<vorschreibung>#56h_vorschreibung</vorschreibung>
+							<anweisung>#56i_anweisung</anweisung>
+							<bearbeiter>#56k_bearbeiter</bearbeiter>
 							<abschlussdatum>1967-02-14</abschlussdatum>
-							<verweis>#56g_verweis</verweis>
-							<bemerkung>#56h_bemerkung</bemerkung>
+							<verweis>#56l_verweis</verweis>
+							<bemerkung>#56m_bemerkung</bemerkung>
+							<zusatzDaten>
+								<merkmal name="#56n_Aktivität:zusatzDatenMerkmal1"/>
+								<merkmal name="#56o_AktivitätzusatzDatenMerkmal2"/>
+							</zusatzDaten>
 						</aktivitaet>
 						<aktivitaet order="2">
-							<vorschreibung>#56dd_vorschreibung</vorschreibung>
-							<akteur>#56ee_akteur</akteur>
-							<abschlussvermerk>#56ff_abschlussvermerk</abschlussvermerk>
-							<abschlussdatum>1967-02-15</abschlussdatum>
-							<verweis>#56gg_verweis</verweis>
-							<bemerkung>#56hh_bemerkung</bemerkung>
+							<vorschreibung>#56hh_vorschreibung</vorschreibung>
+							<anweisung>#56ii_anweisung</anweisung>
+							<bearbeiter>#56kk_bearbeiter</bearbeiter>
+							<abschlussdatum>1967-02-14</abschlussdatum>
+							<verweis>#56ll_verweis</verweis>
+							<bemerkung>#56mm_bemerkung</bemerkung>
+							<zusatzDaten>
+								<merkmal name="#56nn_Aktivität:zusatzDatenMerkmal1"/>
+								<merkmal name="#56oo_AktivitätzusatzDatenMerkmal2"/>
+							</zusatzDaten>
 						</aktivitaet>
 					</vorgang>
 					<schutzfristenkategorie>#57_schutzfristenkategorie</schutzfristenkategorie>
