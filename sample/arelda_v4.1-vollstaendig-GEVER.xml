@@ -228,8 +228,8 @@
 						<verweis>#56d_verweis</verweis>
 						<bemerkung>#56e_Vorgang:bemerkung</bemerkung>
 						<zusatzDaten>
-							<merkmal name="#56f_Vorgang:zusatzDatenMerkmal1"/>
-							<merkmal name="#56g_Vorgang:zusatzDatenMerkmal2"/>
+							<merkmal name="#56f_Vorgang:zusatzDaten_key"/>
+							<merkmal name="#56g_Vorgang:zusatzDaten_key"/>
 						</zusatzDaten>
 						<aktivitaet order="1">
 							<vorschreibung>#56h_vorschreibung</vorschreibung>
@@ -239,8 +239,8 @@
 							<verweis>#56l_verweis</verweis>
 							<bemerkung>#56m_bemerkung</bemerkung>
 							<zusatzDaten>
-								<merkmal name="#56n_Aktivität:zusatzDatenMerkmal1"/>
-								<merkmal name="#56o_AktivitätzusatzDatenMerkmal2"/>
+								<merkmal name="#56n_Vorgang:zusatzDaten_key"/>
+								<merkmal name="#56o_Vorgang:zusatzDaten_key"/>
 							</zusatzDaten>
 						</aktivitaet>
 						<aktivitaet order="2">
@@ -251,8 +251,8 @@
 							<verweis>#56ll_verweis</verweis>
 							<bemerkung>#56mm_bemerkung</bemerkung>
 							<zusatzDaten>
-								<merkmal name="#56nn_Aktivität:zusatzDatenMerkmal1"/>
-								<merkmal name="#56oo_AktivitätzusatzDatenMerkmal2"/>
+								<merkmal name="#56nn_Vorgang:zusatzDaten_key"/>
+								<merkmal name="#56oo_Vorgang:zusatzDaten_key"/>
 							</zusatzDaten>
 						</aktivitaet>
 					</vorgang>
