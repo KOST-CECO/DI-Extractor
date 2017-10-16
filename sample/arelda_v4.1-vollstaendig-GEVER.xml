@@ -2,7 +2,7 @@
 <paket xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://bar.admin.ch/arelda/v4" xsi:type="paketSIP" schemaVersion="4.1" xsi:schemaLocation="http://bar.admin.ch/arelda/v4 xsd_v4.1/arelda.xsd">
 	<paketTyp>SIP</paketTyp>
 	<zusatzDaten>
-		<merkmal name="#01_zusatzDaten_key">#02_zusatzDaten_value</merkmal>
+		<merkmal name="#01_zusatzDatenKey">#02_zusatzDaten_value</merkmal>
 	</zusatzDaten>
 	<inhaltsverzeichnis>
 		<ordner>
@@ -15,85 +15,85 @@
 					<name>ablieferung.xsd</name>
 					<originalName>ablieferung.xsd</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>aa1f7ad13064e1643ac85478296165af</pruefsumme>
+					<pruefsumme>fc855f31a14976b854dfd035bd515721</pruefsumme>
 				</datei>
 				<datei id="IDb">
 					<name>archivischeNotiz.xsd</name>
 					<originalName>archivischeNotiz.xsd</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>847911efbac472d0ecc6fe1e99873799</pruefsumme>
+					<pruefsumme>ee1eedcb728706f0ecbd2c749efcfdfa</pruefsumme>
 				</datei>
 				<datei id="IDc">
 					<name>archivischerVorgang.xsd</name>
 					<originalName>archivischerVorgang.xsd</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>4a237563fd2d40be9a9ecbf4c0bf946e</pruefsumme>
+					<pruefsumme>5901fc60390194141fca0cd7d30c8e92</pruefsumme>
 				</datei>
 				<datei id="IDd">
 					<name>arelda.xsd</name>
 					<originalName>arelda.xsd</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>f8454632e1ebf97e0aa8d9527ce2641f</pruefsumme>
+					<pruefsumme>5d3da86991a3a279ccc750e9f58d1114</pruefsumme>
 				</datei>
 				<datei id="IDe">
 					<name>base.xsd</name>
 					<originalName>base.xsd</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>cb30854883c6d5640b0965dae5f34afd</pruefsumme>
+					<pruefsumme>f5337efd370eff0f9add3b13b32a862d</pruefsumme>
 				</datei>
 				<datei id="IDf">
 					<name>datei.xsd</name>
 					<originalName>datei.xsd</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>a4276f0c798ce6c497f0a03660ead0d9</pruefsumme>
+					<pruefsumme>d74abd4186d2574572f98c68725c7ba7</pruefsumme>
 				</datei>
 				<datei id="IDg">
 					<name>dokument.xsd</name>
 					<originalName>dokument.xsd</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>721965e5224766040bf0bcd03978809e</pruefsumme>
+					<pruefsumme>d2d79cf335f3a315a9c4516cd47758ad</pruefsumme>
 				</datei>
 				<datei id="IDh">
 					<name>dossier.xsd</name>
 					<originalName>dossier.xsd</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>f3f1141d95e92a291e84cfb30bb30e9a</pruefsumme>
+					<pruefsumme>f2f161bed8102e4f78475dacb1be46de</pruefsumme>
 				</datei>
 				<datei id="IDi">
 					<name>ordner.xsd</name>
 					<originalName>ordner.xsd</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>83e0f91d1a232c7bdd7416970844af1c</pruefsumme>
+					<pruefsumme>ff318839445d3965ee71eed9c30e1c08</pruefsumme>
 				</datei>
 				<datei id="IDj">
 					<name>ordnungssystem.xsd</name>
 					<originalName>ordnungssystem.xsd</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>4b64247b25362382d6c648ba8ff76ad6</pruefsumme>
+					<pruefsumme>3d0fd1128ee990ce0044baf33000af9f</pruefsumme>
 				</datei>
 				<datei id="IDk">
 					<name>ordnungssystemposition.xsd</name>
 					<originalName>ordnungssystemposition.xsd</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>1e7f0a9b914c8baf1235740b133ec90e</pruefsumme>
+					<pruefsumme>7da1caad4ce9b81a28b21a838e42ffc9</pruefsumme>
 				</datei>
 				<datei id="IDl">
 					<name>paket.xsd</name>
 					<originalName>paket.xsd</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>9920c66b7066f645390e922ba803aadb</pruefsumme>
+					<pruefsumme>c0199d40ce380a6b03cff79f2305523d</pruefsumme>
 				</datei>
 				<datei id="IDm">
 					<name>provenienz.xsd</name>
 					<originalName>provenienz.xsd</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>2d6dbc4665cb5169d62549dbbc3f19a7</pruefsumme>
+					<pruefsumme>ae9df90e5fcad6c331838b2a4715c22f</pruefsumme>
 				</datei>
 				<datei id="IDn">
 					<name>zusatzDaten.xsd</name>
 					<originalName>zusatzDaten.xsd</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>a685887b7ad673ea2deac6f96cf3fb4f</pruefsumme>
+					<pruefsumme>bd75d61b80b65b0eb8e62b29473752de</pruefsumme>
 				</datei>
 			</ordner>
 		</ordner>
@@ -107,7 +107,7 @@
 					<name>#05_dateiName.pdf</name>
 					<originalName>#06_dateiOriginalName</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>e5878bd468e3b4f2b4d91a9b67b3de17</pruefsumme>
+					<pruefsumme>71d604ab2d16a7a8cd8b6f506b31cd8d</pruefsumme>
 					<eigenschaft name="#07_eigenschaftName">#08_eigenschaftWert</eigenschaft>
 				</datei>
 			</ordner>
@@ -228,31 +228,31 @@
 						<verweis>#56d_verweis</verweis>
 						<bemerkung>#56e_Vorgang:bemerkung</bemerkung>
 						<zusatzDaten>
-							<merkmal name="#56f_Vorgang:zusatzDaten_key"/>
-							<merkmal name="#56g_Vorgang:zusatzDaten_key"/>
+							<merkmal name="#56f_Vorgang:zusatzDatenKey">#56g_zusatzDatenValue</merkmal>
+							<merkmal name="#56h_Vorgang:zusatzDatenKey">#56i_zusatzDatenValue</merkmal>
 						</zusatzDaten>
 						<aktivitaet order="1">
-							<vorschreibung>#56h_vorschreibung</vorschreibung>
-							<anweisung>#56i_anweisung</anweisung>
-							<bearbeiter>#56k_bearbeiter</bearbeiter>
+							<vorschreibung>#56j_vorschreibung</vorschreibung>
+							<anweisung>#56k_anweisung</anweisung>
+							<bearbeiter>#56l_bearbeiter</bearbeiter>
 							<abschlussdatum>1967-02-14</abschlussdatum>
-							<verweis>#56l_verweis</verweis>
-							<bemerkung>#56m_bemerkung</bemerkung>
+							<verweis>#56m_verweis</verweis>
+							<bemerkung>#56n_bemerkung</bemerkung>
 							<zusatzDaten>
-								<merkmal name="#56n_Vorgang:zusatzDaten_key"/>
-								<merkmal name="#56o_Vorgang:zusatzDaten_key"/>
+								<merkmal name="#56o_Vorgang:zusatzDatenKey">#56p_zusatzDatenValue</merkmal>
+								<merkmal name="#56q_Vorgang:zusatzDatenKey">#56r_zusatzDatenValue</merkmal>
 							</zusatzDaten>
 						</aktivitaet>
 						<aktivitaet order="2">
-							<vorschreibung>#56hh_vorschreibung</vorschreibung>
-							<anweisung>#56ii_anweisung</anweisung>
-							<bearbeiter>#56kk_bearbeiter</bearbeiter>
+							<vorschreibung>#56jj_vorschreibung</vorschreibung>
+							<anweisung>#56kk_anweisung</anweisung>
+							<bearbeiter>#56ll_bearbeiter</bearbeiter>
 							<abschlussdatum>1967-02-14</abschlussdatum>
-							<verweis>#56ll_verweis</verweis>
-							<bemerkung>#56mm_bemerkung</bemerkung>
+							<verweis>#56mm_verweis</verweis>
+							<bemerkung>#56nn_bemerkung</bemerkung>
 							<zusatzDaten>
-								<merkmal name="#56nn_Vorgang:zusatzDaten_key"/>
-								<merkmal name="#56oo_Vorgang:zusatzDaten_key"/>
+								<merkmal name="#56oo_Vorgang:zusatzDatenKey">#56pp_zusatzDatenValue</merkmal>
+								<merkmal name="#56qq_Vorgang:zusatzDatenKey">#56rr_zusatzDatenValue</merkmal>
 							</zusatzDaten>
 						</aktivitaet>
 					</vorgang>
