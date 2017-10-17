@@ -221,7 +221,7 @@
 						<datum>1967-01-10</datum>
 					</abschlussdatum>
 					<vorgang>#56_vorgang</vorgang>
-					<vorgang order="1">
+					<vorgang order="01">
 						<titel>#56a_titel</titel>
 						<arbeitsanweisung>#56b_arbeitsanweisung</arbeitsanweisung>
 						<federfuehrung>#56c_Vorgang:federfuehrung</federfuehrung>
@@ -231,7 +231,7 @@
 							<merkmal name="#56f_Vorgang:zusatzDatenKey">#56g_zusatzDatenValue</merkmal>
 							<merkmal name="#56h_Vorgang:zusatzDatenKey">#56i_zusatzDatenValue</merkmal>
 						</zusatzDaten>
-						<aktivitaet order="1">
+						<aktivitaet order="001">
 							<vorschreibung>#56j_vorschreibung</vorschreibung>
 							<anweisung>#56k_anweisung</anweisung>
 							<bearbeiter>#56l_bearbeiter</bearbeiter>
@@ -243,7 +243,7 @@
 								<merkmal name="#56q_Vorgang:zusatzDatenKey">#56r_zusatzDatenValue</merkmal>
 							</zusatzDaten>
 						</aktivitaet>
-						<aktivitaet order="2">
+						<aktivitaet order="002">
 							<vorschreibung>#56jj_vorschreibung</vorschreibung>
 							<anweisung>#56kk_anweisung</anweisung>
 							<bearbeiter>#56ll_bearbeiter</bearbeiter>
