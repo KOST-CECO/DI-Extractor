@@ -153,38 +153,40 @@
 				</xsl:element>
 			</xsl:if>
 		</xsl:element>
-		<!-- 3.4.1 Zugangsbestimmungen -->
-		<xsl:element name="conditionsAccessUse">
-			<xsl:attribute name="isadId">4</xsl:attribute>
+		<!-- 3.4 Zugangs- und Benutzungsbedingungen -->
+		<xsl:call-template name="xI2access">
 			<!-- 3.4.1 Zugangsbestimmungen -->
-			<xsl:call-template name="xI2access">
-				<xsl:with-param name="orig">//dokument</xsl:with-param>
-			</xsl:call-template>
-		</xsl:element>
-		<!-- 3.4.4 Physische Beschaffenheit und technische Anforderungen -->
+			<!-- 3.4.4 Physische Beschaffenheit und technische Anforderungen -->
+			<xsl:with-param name="orig">//ablieferung</xsl:with-param>
+		</xsl:call-template>
 		<!--   -->
-		<xsl:element name="notes">
-			<xsl:attribute name="isadId">6</xsl:attribute>
-			<!-- 3.6.1 Allgemeine Anmerkungen -->
-			<xsl:if test="arelda:bemerkung/text()">
-				<xsl:element name="note">
-					<xsl:attribute name="origin">//ablieferung/bemerkung</xsl:attribute>
-					<xsl:value-of select="arelda:bemerkung"/>
-				</xsl:element>
-			</xsl:if>
-			<xsl:if test="arelda:provenienz/arelda:bemerkung/text()">
-				<xsl:element name="note">
-					<xsl:attribute name="origin">//provenienz/bemerkung</xsl:attribute>
-					<xsl:value-of select="arelda:provenienz/arelda:bemerkung"/>
-				</xsl:element>
-			</xsl:if>
-			<xsl:if test="arelda:ordnungssystem/arelda:bemerkung/text()">
-				<xsl:element name="note">
-					<xsl:attribute name="origin">//ordnungssystem/bemerkung</xsl:attribute>
-					<xsl:value-of select="arelda:ordnungssystem/arelda:bemerkung"/>
-				</xsl:element>
-			</xsl:if>
-		</xsl:element>
+		<!-- 3.6.1 Allgemeine Anmerkungen -->
+		<xsl:if test="arelda:bemerkung or arelda:provenienz/arelda:bemerkung or //ordnungssystem/bemerkung">
+			<xsl:element name="notes">
+				<xsl:attribute name="isadId">6</xsl:attribute>
+				<!-- 3.6.1 Anmerkungen Ablieferung -->
+				<xsl:if test="arelda:bemerkung/text()">
+					<xsl:element name="note">
+						<xsl:attribute name="origin">//ablieferung/bemerkung</xsl:attribute>
+						<xsl:value-of select="arelda:bemerkung"/>
+					</xsl:element>
+				</xsl:if>
+				<!-- 3.6.1 Anmerkungen Provenienz -->
+				<xsl:if test="arelda:provenienz/arelda:bemerkung/text()">
+					<xsl:element name="note">
+						<xsl:attribute name="origin">//provenienz/bemerkung</xsl:attribute>
+						<xsl:value-of select="arelda:provenienz/arelda:bemerkung"/>
+					</xsl:element>
+				</xsl:if>
+				<!-- 3.6.1 Anmerkungen Ordnungssystem -->
+				<xsl:if test="arelda:ordnungssystem/arelda:bemerkung/text()">
+					<xsl:element name="note">
+						<xsl:attribute name="origin">//ordnungssystem/bemerkung</xsl:attribute>
+						<xsl:value-of select="arelda:ordnungssystem/arelda:bemerkung"/>
+					</xsl:element>
+				</xsl:if>
+			</xsl:element>
+		</xsl:if>
 		<!-- additionalData -->
 		<xsl:if test="../arelda:zusatzDaten or arelda:zusatzDaten or arelda:ordnungssystem/arelda:zusatzDaten">
 			<xsl:element name="additionalData">

@@ -59,10 +59,22 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=extract_element.cmd
+0=xI2fond.xsl
+1=xI2serie.xsl
+2=xI2file.xsl
+3=xI2item.xsl
 [Selected Project Files]
 Main=processingest.php
-Selected=extract_element.cmd
-[extract_element.cmd]
+Selected=xI2fond.xsl
+[xI2fond.xsl]
+TopLine=121
+Caret=1,127
+[xI2serie.xsl]
+TopLine=1
+Caret=1,1
+[xI2file.xsl]
+TopLine=1
+Caret=1,1
+[xI2item.xsl]
 TopLine=1
 Caret=1,1

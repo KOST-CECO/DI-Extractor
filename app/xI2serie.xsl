@@ -46,15 +46,13 @@
 			<!--   -->
 			<!-- 3.3.2 Bewertung und Kassation -->
 			<!--   -->
-			<xsl:element name="conditionsAccessUse">
-				<xsl:attribute name="isadId">4</xsl:attribute>
+			<!-- 3.4 Zugangs- und Benutzungsbedingungen -->
+			<xsl:call-template name="xI2access">
 				<!-- 3.4.1 Zugangsbestimmungen -->
-				<xsl:call-template name="xI2access">
-					<xsl:with-param name="orig">//ordnungssystemposition</xsl:with-param>
-				</xsl:call-template>
 				<!-- 3.4.4 Physische Beschaffenheit und technische Anforderungen -->
-				<!--   -->
-			</xsl:element>
+				<xsl:with-param name="orig">//ordnungsystemposition</xsl:with-param>
+			</xsl:call-template>
+			<!--   -->
 			<!-- 3.6.1 Allgemeine Anmerkungen -->
 			<!--   -->
 			<!-- additionalData -->

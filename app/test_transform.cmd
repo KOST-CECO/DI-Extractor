@@ -4,6 +4,7 @@ SETLOCAL
 SET INPUT=arelda_v4-vollstaendig-FILES.xml
 SET INPUT=arelda_v4-vollstaendig-GEVER.xml
 SET INPUT=arelda_v4.1-vollstaendig-GEVER.xml
+SET INPUT=arelda_v4-minimal-GEVER.xml
 
 
 ECHO ===========================================================================

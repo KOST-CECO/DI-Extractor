@@ -60,21 +60,18 @@
 				</xsl:if>
 				<!--   -->
 			</xsl:element>
-			<xsl:element name="context">
-				<xsl:attribute name="isadId">2</xsl:attribute>
-				<!-- 3.2.1 Name der Provenienzstelle -->
-				<!--   -->
-				<!-- 3.2.2 Verwaltungsgeschichte / Biographische Angaben -->
-				<!--   -->
-				<!-- 3.2.3 Bestandesgeschichte -->
-			</xsl:element>
+			<!-- 3.2.1 Name der Provenienzstelle -->
+			<!--   -->
+			<!-- 3.2.2 Verwaltungsgeschichte / Biographische Angaben -->
+			<!--   -->
+			<!-- 3.2.3 Bestandesgeschichte -->
 			<!--   -->
 			<!-- 3.2.4 Abgebende Stelle -->
 			<!--   -->
-			<xsl:element name="contentStructure">
-				<xsl:attribute name="isadId">3</xsl:attribute>
-				<!-- 3.3.1 Form und Inhalt -->
-				<xsl:if test="arelda:formInhalt or arelda:inhalt">
+			<xsl:if test="arelda:formInhalt or arelda:inhalt">
+				<xsl:element name="contentStructure">
+					<xsl:attribute name="isadId">3</xsl:attribute>
+					<!-- 3.3.1 Form und Inhalt -->
 					<xsl:element name="scopeContent">
 						<xsl:attribute name="isadId">3.1</xsl:attribute>
 						<xsl:if test="arelda:formInhalt">
@@ -117,47 +114,18 @@
 							</xsl:element>
 						</xsl:if>
 					</xsl:element>
-				</xsl:if>
-				<!--   -->
-				<!-- 3.3.2 Bewertung und Kassation -->
-			</xsl:element>
+					<!--   -->
+					<!-- 3.3.2 Bewertung und Kassation -->
+				</xsl:element>
+			</xsl:if>
 			<!--   -->
-			<xsl:element name="conditionsAccessUse">
-				<xsl:attribute name="isadId">4</xsl:attribute>
+			<!-- 3.4 Zugangs- und Benutzungsbedingungen -->
+			<xsl:call-template name="xI2access">
 				<!-- 3.4.1 Zugangsbestimmungen -->
-				<xsl:call-template name="xI2access">
-					<xsl:with-param name="orig">//dossier</xsl:with-param>
-				</xsl:call-template>
 				<!-- 3.4.4 Physische Beschaffenheit und technische Anforderungen -->
-				<xsl:if test="arelda:erscheinungsform">
-					<xsl:element name="physTech">
-						<xsl:attribute name="isadId">4.4</xsl:attribute>
-						<xsl:attribute name="origin">ingest</xsl:attribute>
-						<xsl:choose>
-							<xsl:when test="arelda:erscheinungsform/text()='digital'">
-								<xsl:text>digital</xsl:text>
-							</xsl:when>
-							<xsl:when test="arelda:erscheinungsform/text()='nicht digital'">
-								<xsl:text>analog</xsl:text>
-							</xsl:when>
-							<xsl:when test="arelda:erscheinungsform/text()='gemischt'">
-								<xsl:text>hybrid</xsl:text>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:text>not_defined</xsl:text>
-							</xsl:otherwise>
-						</xsl:choose>
-					</xsl:element>
-				</xsl:if>
-				<xsl:if test="arelda:erscheinungsform">
-					<xsl:element name="physTech">
-						<xsl:attribute name="isadId">4.4</xsl:attribute>
-						<xsl:attribute name="origin">//dossier/erscheinungsform</xsl:attribute>
-						<xsl:value-of select="arelda:erscheinungsform/text()"/>
-					</xsl:element>
-				</xsl:if>
-				<!--   -->
-			</xsl:element>
+				<xsl:with-param name="orig">//dossier</xsl:with-param>
+			</xsl:call-template>
+			<!--   -->
 			<!-- 3.6.1 Allgemeine Anmerkungen -->
 			<xsl:if test="arelda:bemerkung/text()">
 				<xsl:element name="notes">
