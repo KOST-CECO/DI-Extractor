@@ -27,7 +27,7 @@ DI_app
 		transform.cmd
 		run_transform.cmd
 		test_transform.cmd
-	+xIsadg
+	-xIsadg
 		eCH2xIsadg.xsl
 		xIfond.xsl
 		xIserie.xsl
@@ -59,22 +59,10 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=xI2fond.xsl
-1=xI2serie.xsl
-2=xI2file.xsl
-3=xI2item.xsl
+0=..\.gitignore
 [Selected Project Files]
 Main=processingest.php
-Selected=xI2fond.xsl
-[xI2fond.xsl]
-TopLine=121
-Caret=1,127
-[xI2serie.xsl]
+Selected=..\.gitignore
+[..\.gitignore]
 TopLine=1
-Caret=1,1
-[xI2file.xsl]
-TopLine=1
-Caret=1,1
-[xI2item.xsl]
-TopLine=1
-Caret=1,1
+Caret=1,14

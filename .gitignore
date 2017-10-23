@@ -1,4 +1,4 @@
-# Ignore all
+﻿# Ignore all
 *
 # Unignore all with extensions
 !*.*
@@ -6,7 +6,7 @@
 !*/
 ### Above combination will ignore all files without extension ###
 Thumbs.db
-# *.lnk
+*.lnk
 *.db
 # *.url
 # *.txt
