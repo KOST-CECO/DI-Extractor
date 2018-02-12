@@ -59,10 +59,10 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=..\.gitignore
+0=Neu1.txt
 [Selected Project Files]
 Main=processingest.php
-Selected=..\.gitignore
-[..\.gitignore]
+Selected=Neu1.txt
+[Neu1.txt]
 TopLine=1
-Caret=1,14
+Caret=1,15

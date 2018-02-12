@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archivalDescription xmlns="ISADG" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:schemaLocation="ISADG xIsadg_v2.0.xsd">
+   <identity isadId="1">
+      <referenceCode isadId="1.1" origin="archival" obligation="inherited">sig.1</referenceCode>
+      <title isadId="1.2" origin="archival" obligation="mandatory">Bestand-Titel</title>
+      <dates isadId="1.3" origin="//ablieferung/entstehungszeitraum">
+         <fromDate>1967-02-01</fromDate>
+         <toDate>1967-04-02</toDate>
+      </dates>
+      <dates isadId="1.3" origin="//provenienz/existenzzeitraum">
+         <fromDate>1967-01-03</fromDate>
+         <toDate>1967-12-04</toDate>
+      </dates>
+      <dates isadId="1.3" origin="//ordnungssystem/anwendungszeitraum">
+         <fromDate>1967-02-05</fromDate>
+         <toDate>1967-04-06</toDate>
+      </dates>
+      <descriptionLevel isadId="1.4" origin="ingest" obligation="mandatory">Bestand</descriptionLevel>
+   </identity>
+   <context isadId="2">
+      <creator isadId="2.1" origin="//provenienz/aktenbildnerName">#19_aktenbildnerName</creator>
+      <adminBioHistory isadId="2.2" origin="//provenienz/geschichteAktenbildner">#22_geschichteAktenbildner</adminBioHistory>
+      <archivalHistory isadId="2.3" origin="//provenienz/systemName">#20_systemName</archivalHistory>
+      <archivalHistory isadId="2.3" origin="//provenienz/systemBeschreibung">#21_systemBeschreibung</archivalHistory>
+      <archivalHistory isadId="2.3" origin="//provenienz/registratur">#24_registratur</archivalHistory>
+      <acqInfo isadId="2.4" origin="//ablieferung/ablieferndeStelle">#09_ablieferndeStelle</acqInfo>
+   </context>
+   <contentStructure isadId="3">
+      <scopeContent isadId="3.1">
+         <content origin="//ablieferung/ablieferungsteile">#10_ablieferungsteile</content>
+      </scopeContent>
+      <appraisalDestruction isadId="3.2" origin="//ablieferung/referenzBewertungsentscheid">#16_referenzBewertungsentscheid</appraisalDestruction>
+      <arrangement isadId="3.4" origin="//arelda:ordnungssystem/name">#30_ordnungssystemName</arrangement>
+   </contentStructure>
+   <conditionsAccessUse isadId="4">
+      <accessConditions isadId="4.1">
+         <retentionPeriod origin="//ablieferung/schutzfrist">30</retentionPeriod>
+         <retentionPeriodConditions origin="//ablieferung/schutzfristenkategorie">#18_schutzfristenkategorie</retentionPeriodConditions>
+         <retentionPeriodNotes origin="//ablieferung/referenzSchutzfristenFormular">#17_referenzSchutzfristenFormular</retentionPeriodNotes>
+      </accessConditions>
+   </conditionsAccessUse>
+   <notes isadId="6">
+      <note origin="//ablieferung/bemerkung">#11_ablieferungBemerkung</note>
+      <note origin="//provenienz/bemerkung">#23_provenienzBemerkung</note>
+      <note origin="//ordnungssystem/bemerkung">#27_ordnungssystemBemerkung</note>
+   </notes>
+   <additionalData>
+      <mdWrap>
+         <property origin="//paket/@xmlns" key="namespace">http://bar.admin.ch/arelda/v4</property>
+         <property origin="//paket/paketTyp" key="paketTyp">SIP</property>
+         <property origin="//paket/@schemaVersion" key="schemaVersion">4.1</property>
+         <property origin="//ablieferung/ablieferungstyp" key="ablieferungsTyp">GEVER</property>
+         <property origin="//ablieferung/ablieferungsnummer" key="ablieferungsnummer">#14_ablieferungsnummer</property>
+         <property origin="//ablieferung/angebotsnummer" key="angebotsnummer">#15_angebotsnummer</property>
+         <property origin="//ordnungssystem/generation" key="generation">#25_generation</property>
+         <property origin="//ordnungssystem/mitbenutzung" key="mitbenutzung">#26_mitbenutzung</property>
+         <property origin="//paket/zusatzDaten/merkmal" key="#01_zusatzDatenKey">#02_zusatzDaten_value</property>
+         <property origin="//ablieferung/zusatzDaten/merkmal" key="#12_zusatzDatenKey">#13_zusatzDatenValue</property>
+         <property origin="//ordnungssystem/zusatzDaten/merkmal" key="#28_zusatzDatenKey">#29_zusatzDatenValue</property>
+      </mdWrap>
+   </additionalData>
+   <archivalDescription>
+      <identity isadId="1">
+         <referenceCode isadId="1.1" origin="archival" obligation="inherited">sig.2</referenceCode>
+         <title isadId="1.2" origin="//ordnungssystemposition/titel" obligation="mandatory">#39_ordnungssystemTitel</title>
+         <descriptionLevel isadId="1.4" origin="ingest" obligation="mandatory">Serie</descriptionLevel>
+      </identity>
+      <conditionsAccessUse isadId="4">
+         <accessConditions isadId="4.1">
+            <hasPrivacyProtection origin="//ordnungsystemposition/datenschutz">true</hasPrivacyProtection>
+            <openToThePublic origin="//ordnungsystemposition/oeffentlichkeitsstatus">undefined</openToThePublic>
+            <classification origin="//ordnungsystemposition/klassifizierungskategorie">unclassified</classification>
+            <otherAccessConditions origin="//ordnungsystemposition/oeffentlichkeitsstatusBegruendung">#34_oeffentlichkeitsstatusBegruendung</otherAccessConditions>
+            <accessConditionsNotes origin="//ordnungsystemposition/sonstigeBestimmungen">#35_sonstigeBestimmungen</accessConditionsNotes>
+            <retentionPeriod origin="//ordnungsystemposition/schutzfrist">30</retentionPeriod>
+            <retentionPeriodConditions origin="//ordnungsystemposition/schutzfristenkategorie">#40_schutzfristenkategorie</retentionPeriodConditions>
+            <retentionPeriodNotes origin="//ordnungsystemposition/schutzfristenBegruendung">#41_schutzfristenBegruendung</retentionPeriodNotes>
+         </accessConditions>
+      </conditionsAccessUse>
+      <additionalData>
+         <mdWrap>
+            <property origin="//ordnungssystemposition/nummer" key="ordnungssystempositionNummer">#38_ordnungssystemNummer</property>
+            <property origin="//ordnungssystemposition/federfuehrendeOrganisationseinheit"
+                      key="federfuehrendeOrganisationseinheit">#31_federfuehrendeOrganisationseinheit</property>
+            <property origin="//ordnungssystemposition/zusatzDaten/merkmal" key="#36_zusatzDatenKey">#37_zusatzDatenValue</property>
+         </mdWrap>
+      </additionalData>
+      <archivalDescription>
+         <identity isadId="1">
+            <referenceCode isadId="1.1" origin="archival" obligation="inherited">sig.3</referenceCode>
+            <title isadId="1.2" origin="//dossier/titel" obligation="mandatory">#43_dossierTitel</title>
+            <dates isadId="1.3" origin="//dossier/entstehungszeitraum">
+               <fromDate>1967-02-07</fromDate>
+               <toDate>1967-03-08</toDate>
+               <commentDate>#47_entstehungszeitraumAnmerkung</commentDate>
+            </dates>
+            <dates isadId="1.3" origin="//dossier/eroeffnungsdatum">
+               <pointofTime>1967-01-09</pointofTime>
+            </dates>
+            <dates isadId="1.3" origin="//dossier/abschlussdatum">
+               <pointofTime>1967-01-10</pointofTime>
+            </dates>
+            <descriptionLevel isadId="1.4" origin="ingest" obligation="mandatory">Dossier</descriptionLevel>
+         </identity>
+         <contentStructure isadId="3">
+            <scopeContent isadId="3.1">
+               <scope>hybrid</scope>
+               <scope origin="//dossier/formInhalt">#45_formInhalt</scope>
+               <content origin="//dossier/inhalt">#44_dossierInhalt</content>
+            </scopeContent>
+         </contentStructure>
+         <conditionsAccessUse isadId="4">
+            <accessConditions isadId="4.1">
+               <hasPrivacyProtection origin="//dossier/datenschutz">true</hasPrivacyProtection>
+               <openToThePublic origin="//dossier/oeffentlichkeitsstatus">undefined</openToThePublic>
+               <classification origin="//dossier/klassifizierungskategorie">unclassified</classification>
+               <otherAccessConditions origin="//dossier/oeffentlichkeitsstatusBegruendung">#50_oeffentlichkeitsstatusBegruendung</otherAccessConditions>
+               <accessConditionsNotes origin="//dossier/sonstigeBestimmungen">#51_sonstigeBestimmungen</accessConditionsNotes>
+               <retentionPeriod origin="//dossier/schutzfrist">30</retentionPeriod>
+               <retentionPeriodConditions origin="//dossier/schutzfristenkategorie">#57_schutzfristenkategorie</retentionPeriodConditions>
+               <retentionPeriodNotes origin="//dossier/schutzfristenBegruendung">#58_schutzfristenBegruendung</retentionPeriodNotes>
+            </accessConditions>
+            <physTech isadId="4.4" origin="ingest">not_defined</physTech>
+            <physTech isadId="4.4" origin="//dossier/erscheinungsform">keine Angabe</physTech>
+         </conditionsAccessUse>
+         <notes isadId="6">
+            <note origin="//dossier/bemerkung">#52_dossierBemerkung</note>
+         </notes>
+         <additionalReference>
+            <recordReference origin="//dossier/aktenzeichen">#55_aktenzeichen</recordReference>
+            <recordReference origin="//dossier/zusatzmerkmal">#42_zusatzmerkmal</recordReference>
+         </additionalReference>
+         <additionalData>
+            <mdWrap>
+               <property origin="//ordnungssystemposition/federfuehrendeOrganisationseinheit"
+                         key="federfuehrendeOrganisationseinheit">#46_federfuehrendeOrganisationseinheit</property>
+               <property origin="//dossier/vorgang" key="simpleVorgang">#56_vorgang</property>
+               <property origin="//dossier/vorgang" key="Vorgang">
+                  <property key="Order">01</property>
+                  <property key="Titel">#56a_titel</property>
+                  <property key="Arbeitsanweisung">#56b_arbeitsanweisung</property>
+                  <property key="Federfuehrung">#56c_Vorgang:federfuehrung</property>
+                  <property key="Verweis">#56d_verweis</property>
+                  <property key="Bemerkung">#56e_Vorgang:bemerkung</property>
+                  <property key="#56f_Vorgang:zusatzDatenKey">#56g_zusatzDatenValue</property>
+                  <property key="#56h_Vorgang:zusatzDatenKey">#56i_zusatzDatenValue</property>
+                  <property key="Aktivitaet">
+                     <property key="Order">001</property>
+                     <property key="Vorschreibung">#56j_vorschreibung</property>
+                     <property key="Anweisung">#56k_anweisung</property>
+                     <property key="Bearbeiter">#56l_bearbeiter</property>
+                     <property key="Abschlussdatum">1967-02-14</property>
+                     <property key="Verweis">#56m_verweis</property>
+                     <property key="Bemerkung">#56n_bemerkung</property>
+                     <property key="#56o_Vorgang:zusatzDatenKey">#56p_zusatzDatenValue</property>
+                     <property key="#56q_Vorgang:zusatzDatenKey">#56r_zusatzDatenValue</property>
+                  </property>
+                  <property key="Aktivitaet">
+                     <property key="Order">002</property>
+                     <property key="Vorschreibung">#56jj_vorschreibung</property>
+                     <property key="Anweisung">#56kk_anweisung</property>
+                     <property key="Bearbeiter">#56ll_bearbeiter</property>
+                     <property key="Abschlussdatum">1967-02-14</property>
+                     <property key="Verweis">#56mm_verweis</property>
+                     <property key="Bemerkung">#56nn_bemerkung</property>
+                     <property key="#56oo_Vorgang:zusatzDatenKey">#56pp_zusatzDatenValue</property>
+                     <property key="#56qq_Vorgang:zusatzDatenKey">#56rr_zusatzDatenValue</property>
+                  </property>
+               </property>
+               <property origin="//dossier/vorgang" key="Vorgang">
+                  <property key="Order">02</property>
+                  <property key="Titel">#56a_titel</property>
+                  <property key="Arbeitsanweisung">#56b_arbeitsanweisung</property>
+                  <property key="Federfuehrung">#56c_Vorgang:federfuehrung</property>
+                  <property key="Verweis">#56d_verweis</property>
+                  <property key="Bemerkung">#56e_Vorgang:bemerkung</property>
+                  <property key="#56f_Vorgang:zusatzDatenKey">#56g_zusatzDatenValue</property>
+                  <property key="#56h_Vorgang:zusatzDatenKey">#56i_zusatzDatenValue</property>
+                  <property key="Aktivitaet">
+                     <property key="Order">001</property>
+                     <property key="Vorschreibung">#56j_vorschreibung</property>
+                     <property key="Anweisung">#56k_anweisung</property>
+                     <property key="Bearbeiter">#56l_bearbeiter</property>
+                     <property key="Abschlussdatum">1967-02-14</property>
+                     <property key="Verweis">#56m_verweis</property>
+                     <property key="Bemerkung">#56n_bemerkung</property>
+                     <property key="#56o_Vorgang:zusatzDatenKey">#56p_zusatzDatenValue</property>
+                     <property key="#56q_Vorgang:zusatzDatenKey">#56r_zusatzDatenValue</property>
+                  </property>
+                  <property key="Aktivitaet">
+                     <property key="Order">002</property>
+                     <property key="Vorschreibung">#56jj_vorschreibung</property>
+                     <property key="Anweisung">#56kk_anweisung</property>
+                     <property key="Bearbeiter">#56ll_bearbeiter</property>
+                     <property key="Abschlussdatum">1967-02-14</property>
+                     <property key="Verweis">#56mm_verweis</property>
+                     <property key="Bemerkung">#56nn_bemerkung</property>
+                     <property key="#56oo_Vorgang:zusatzDatenKey">#56pp_zusatzDatenValue</property>
+                     <property key="#56qq_Vorgang:zusatzDatenKey">#56rr_zusatzDatenValue</property>
+                  </property>
+               </property>
+               <property origin="//dossier/zusatzDaten/merkmal" key="#53a_zusatzDatenKey">#54a_zusatzDatenValue</property>
+               <property origin="//dossier/zusatzDaten/merkmal" key="#53b_zusatzDatenKey">#54b_zusatzDatenValue</property>
+               <property origin="//dossier/zusatzDaten/merkmal" key="#53c_zusatzDatenKey">#54c_zusatzDatenValue</property>
+            </mdWrap>
+         </additionalData>
+         <archivalDescription>
+            <identity isadId="1">
+               <referenceCode isadId="1.1" origin="archival" obligation="inherited">sig.4</referenceCode>
+               <title isadId="1.2" origin="//dokument/titel" obligation="mandatory">#59_dokumentTitel</title>
+               <dates isadId="1.3" origin="//dokument/entstehungszeitraum">
+                  <fromDate>1967-02-12</fromDate>
+                  <toDate>1967-02-13</toDate>
+               </dates>
+               <dates isadId="1.3" origin="//dokument/registrierdatum">
+                  <pointofTime>1967-01-11</pointofTime>
+               </dates>
+               <descriptionLevel isadId="1.4" origin="ingest" obligation="mandatory">Dokument</descriptionLevel>
+            </identity>
+            <context isadId="2">
+               <creator isadId="2.1" origin="//dokument/autor">#60_dokumentAutor</creator>
+            </context>
+            <contentStructure isadId="3">
+               <scopeContent isadId="3.1">
+                  <content origin="//dokument/dokumenttyp">#61_dokumenttyp</content>
+               </scopeContent>
+            </contentStructure>
+            <conditionsAccessUse isadId="4">
+               <accessConditions isadId="4.1">
+                  <hasPrivacyProtection origin="//dokument/datenschutz">true</hasPrivacyProtection>
+                  <openToThePublic origin="//dokument/oeffentlichkeitsstatus">undefined</openToThePublic>
+                  <classification origin="//dokument/klassifizierungskategorie">unclassified</classification>
+                  <otherAccessConditions origin="//dokument/oeffentlichkeitsstatusBegruendung">#64_oeffentlichkeitsstatusBegruendung</otherAccessConditions>
+                  <accessConditionsNotes origin="//dokument/sonstigeBestimmungen">#65_sonstigeBestimmungen</accessConditionsNotes>
+               </accessConditions>
+               <physTech isadId="4.4" origin="ingest">digital</physTech>
+               <physTech isadId="4.4" origin="//dokument/erscheinungsform">digital</physTech>
+            </conditionsAccessUse>
+            <notes isadId="6">
+               <note isadId="6.1" origin="//dokument/bemerkung">#66_dokumentBemerkung</note>
+            </notes>
+            <additionalData>
+               <mdWrap>
+                  <property origin="//ordnungssystemposition/anwendung" key="anwendung">#69_anwendung</property>
+                  <property origin="//datei/name" key="dateiName">#05_dateiName.pdf</property>
+                  <property origin="//datei/originalName" key="originalName">#06_dateiOriginalName</property>
+                  <property origin="//dokument/zusatzDaten/merkmal" key="#67_zusatzDatenKey">#68_zusatzDatenValue</property>
+               </mdWrap>
+            </additionalData>
+         </archivalDescription>
+      </archivalDescription>
+   </archivalDescription>
+</archivalDescription>

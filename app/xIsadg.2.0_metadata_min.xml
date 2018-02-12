@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archivalDescription xmlns="ISADG" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:schemaLocation="ISADG xIsadg_v2.0.xsd">
+   <identity isadId="1">
+      <referenceCode isadId="1.1" origin="archival" obligation="inherited">sig.1</referenceCode>
+      <title isadId="1.2" origin="archival" obligation="mandatory">Bestand-Titel</title>
+      <descriptionLevel isadId="1.4" origin="ingest" obligation="mandatory">Bestand</descriptionLevel>
+   </identity>
+   <context isadId="2">
+      <creator isadId="2.1" origin="//provenienz/aktenbildnerName">#19_aktenbildnerName</creator>
+      <archivalHistory isadId="2.3" origin="//provenienz/registratur">#24_registratur</archivalHistory>
+      <acqInfo isadId="2.4" origin="//ablieferung/ablieferndeStelle">#09_ablieferndeStelle</acqInfo>
+   </context>
+   <contentStructure isadId="3">
+      <arrangement isadId="3.4" origin="//arelda:ordnungssystem/name">#30_ordnungssystemName</arrangement>
+   </contentStructure>
+   <archivalDescription>
+      <identity isadId="1">
+         <referenceCode isadId="1.1" origin="archival" obligation="inherited">sig.2</referenceCode>
+         <title isadId="1.2" origin="//ordnungssystemposition/titel" obligation="mandatory">#39_ordnungssystemTitel</title>
+         <descriptionLevel isadId="1.4" origin="ingest" obligation="mandatory">Serie</descriptionLevel>
+      </identity>
+      <additionalData>
+         <mdWrap>
+            <property origin="//ordnungssystemposition/nummer" key="ordnungssystempositionNummer">#38_ordnungssystemNummer</property>
+         </mdWrap>
+      </additionalData>
+      <archivalDescription>
+         <identity isadId="1">
+            <referenceCode isadId="1.1" origin="archival" obligation="inherited">sig.3</referenceCode>
+            <title isadId="1.2" origin="//dossier/titel" obligation="mandatory">#43_dossierTitel</title>
+            <dates isadId="1.3" origin="//dossier/entstehungszeitraum">
+               <fromDate>1967</fromDate>
+               <toDate>1967</toDate>
+            </dates>
+            <descriptionLevel isadId="1.4" origin="ingest" obligation="mandatory">Dossier</descriptionLevel>
+         </identity>
+         <additionalReference>
+            <recordReference origin="//dossier/aktenzeichen">#55_aktenzeichen</recordReference>
+         </additionalReference>
+         <archivalDescription>
+            <identity isadId="1">
+               <referenceCode isadId="1.1" origin="archival" obligation="inherited">sig.4</referenceCode>
+               <title isadId="1.2" origin="//dokument/titel" obligation="mandatory">#59_dokumentTitel</title>
+               <descriptionLevel isadId="1.4" origin="ingest" obligation="mandatory">Dokument</descriptionLevel>
+            </identity>
+            <conditionsAccessUse isadId="4">
+               <physTech isadId="4.4" origin="ingest">digital</physTech>
+               <physTech isadId="4.4" origin="//dokument/erscheinungsform">digital</physTech>
+            </conditionsAccessUse>
+            <additionalData>
+               <mdWrap>
+                  <property origin="//datei/name" key="dateiName">#05_dateiName.pdf</property>
+                  <property origin="//datei/originalName" key="originalName">#06_dateiOriginalName</property>
+               </mdWrap>
+            </additionalData>
+         </archivalDescription>
+      </archivalDescription>
+   </archivalDescription>
+</archivalDescription>

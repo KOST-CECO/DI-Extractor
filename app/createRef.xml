@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference>
+   <identity>
+      <referenceCode>sig.1</referenceCode>
+      <depth>0</depth>
+   </identity>
+   <identity>
+      <title>#39_ordnungssystemTitel</title>
+      <referenceCode>sig.1.1</referenceCode>
+      <depth>1</depth>
+   </identity>
+   <identity>
+      <title>#43_dossierTitel</title>
+      <referenceCode>sig.1.1.1</referenceCode>
+      <depth>2</depth>
+   </identity>
+   <identity>
+      <title>#59_dokumentTitel</title>
+      <referenceCode>sig.1.1.1_1</referenceCode>
+      <depth>3</depth>
+   </identity>
+</reference>
