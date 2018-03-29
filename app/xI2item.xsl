@@ -44,7 +44,7 @@
 					<xsl:attribute name="isadId">1.4</xsl:attribute>
 					<xsl:attribute name="origin">ingest</xsl:attribute>
 					<xsl:attribute name="obligation">mandatory</xsl:attribute>
-					<xsl:text>Dokument</xsl:text>
+					<xsl:text>item</xsl:text>
 				</xsl:element>
 				<!-- 3.1.5 Umfang (Menge und Abmessung) -->
 				<!--   -->

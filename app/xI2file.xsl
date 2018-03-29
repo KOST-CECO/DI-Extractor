@@ -48,7 +48,7 @@
 					<xsl:attribute name="isadId">1.4</xsl:attribute>
 					<xsl:attribute name="origin">ingest</xsl:attribute>
 					<xsl:attribute name="obligation">mandatory</xsl:attribute>
-					<xsl:text>Dossier</xsl:text>
+					<xsl:text>file</xsl:text>
 				</xsl:element>
 				<!-- 3.1.5 Umfang (Menge und Abmessung) nur in FilesSIP -->
 				<xsl:if test="arelda:umfang/text()">
