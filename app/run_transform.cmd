@@ -10,7 +10,7 @@ SET STIL=1
 REM Ausgabeformat (xIsadg / xIsadg 2.1 / EAD ): [1] [2] oder [3]
 SET FMT=1
 CALL transform.cmd "../sample/SIP_20070923_arelda_v4"      "xIsadg_metadata.xml"
-CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy2005.exe"           "%CD%\xIsadg_metadata.xml"
+CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy.exe"           "%CD%\xIsadg_metadata.xml"
 
 ECHO ===========================================================================
 ECHO Signaturstil: hierarchisch SIG.1 SIG.1.1 / Ausgabeformat: xIsadg
@@ -21,7 +21,7 @@ SET STIL=2
 REM Ausgabeformat (xIsadg / xIsadg 2.1 / EAD ): [1] [2] oder [3]
 SET FMT=1
 CALL transform.cmd "../sample/SIP_20070923_arelda_v4"      "xIsadg_metadata.xml"
-CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy2005.exe"           "%CD%\xIsadg_metadata.xml"
+CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy.exe"           "%CD%\xIsadg_metadata.xml"
 
 
 ECHO ===========================================================================
@@ -33,7 +33,7 @@ SET STIL=1
 REM Ausgabeformat (xIsadg / xIsadg 2.1 / EAD ): [1] [2] oder [3]
 SET FMT=2
 CALL transform.cmd "../sample/SIP_20070923_arelda_v4"      "EAD_metadata.xml"
-CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy2005.exe"           "%CD%\EAD_metadata.xml"
+CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy.exe"           "%CD%\EAD_metadata.xml"
 
 ECHO ===========================================================================
 ECHO Signaturstil: hierarchisch SIG.1 SIG.1.1 / Ausgabeformat: xIsadg 2.1
@@ -44,7 +44,7 @@ SET STIL=2
 REM Ausgabeformat (xIsadg / xIsadg 2.1 / EAD ): [1] [2] oder [3]
 SET FMT=2
 CALL transform.cmd "../sample/SIP_20070923_arelda_v4"      "EAD_metadata.xml"
-CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy2005.exe"           "%CD%\EAD_metadata.xml"
+CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy.exe"           "%CD%\EAD_metadata.xml"
 
 
 ECHO ===========================================================================
@@ -56,7 +56,7 @@ SET STIL=1
 REM Ausgabeformat (xIsadg / xIsadg 2.1 / EAD ): [1] [2] oder [3]
 SET FMT=3
 CALL transform.cmd "../sample/SIP_20070923_arelda_v4"      "EAD_metadata.xml"
-CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy2005.exe"           "%CD%\EAD_metadata.xml"
+CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy.exe"           "%CD%\EAD_metadata.xml"
 
 ECHO ===========================================================================
 ECHO Signaturstil: hierarchisch SIG.1 SIG.1.1 / Ausgabeformat: EAD
@@ -67,7 +67,7 @@ SET STIL=2
 REM Ausgabeformat (xIsadg / xIsadg 2.1 / EAD ): [1] [2] oder [3]
 SET FMT=3
 CALL transform.cmd "../sample/SIP_20070923_arelda_v4"      "EAD_metadata.xml"
-CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy2005.exe"           "%CD%\EAD_metadata.xml"
+CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy.exe"           "%CD%\EAD_metadata.xml"
 
 ECHO ===========================================================================
 SET INPUT=arelda_v4-vollstaendig-GEVER.xml
@@ -83,7 +83,7 @@ IF %ERRORLEVEL% NEQ 0 (
    PAUSE
    EXIT /B
 )
-CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy2005.exe"  "%CD%\xIsadg.2.1_metadata.xml"
+CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy.exe"  "%CD%\xIsadg.2.1_metadata.xml"
 
 
 ECHO ===========================================================================
@@ -100,7 +100,7 @@ IF %ERRORLEVEL% NEQ 0 (
    PAUSE
    EXIT /B
 )
-CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy2005.exe"  "%CD%\xIsadg.2.1_metadata.xml"
+CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy.exe"  "%CD%\xIsadg.2.1_metadata.xml"
 
 ECHO ===========================================================================
 SET INPUT=arelda_v4-vollstaendig-FILES.xml
@@ -116,6 +116,6 @@ IF %ERRORLEVEL% NEQ 0 (
    PAUSE
    EXIT /B
 )
-CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy2005.exe"  "%CD%\xIsadg.2.1_metadata.xml"
+CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy.exe"  "%CD%\xIsadg.2.1_metadata.xml"
 
 EXIT /B

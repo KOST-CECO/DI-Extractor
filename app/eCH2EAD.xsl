@@ -49,7 +49,7 @@
 			</xsl:element>
 		</xsl:element>
 	</xsl:template>
-	<!-- Ordnungsystem -->
+	<!-- Ordnungssystem -->
 	<xsl:template match="arelda:ablieferung/arelda:ordnungssystem">
 		<xsl:apply-templates select="arelda:ordnungssystemposition">
 			<xsl:with-param name="sig">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archivalDescription xmlns="ISADG" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                     xsi:schemaLocation="ISADG xIsadg_v2.0.xsd">
+                     xsi:schemaLocation="ISADG xIsadg_v2.1.xsd">
    <identity isadId="1">
       <referenceCode isadId="1.1" origin="archival" obligation="inherited">sig.1</referenceCode>
       <title isadId="1.2" origin="archival" obligation="mandatory">Bestand-Titel</title>
@@ -49,13 +49,13 @@
       <mdWrap>
          <property origin="//paket/@xmlns" key="namespace">http://bar.admin.ch/arelda/v4</property>
          <property origin="//paket/paketTyp" key="paketTyp">SIP</property>
-         <property origin="//paket/@schemaVersion" key="schemaVersion">4.1</property>
+         <property origin="//paket/@schemaVersion" key="schemaVersion">4.0</property>
          <property origin="//ablieferung/ablieferungstyp" key="ablieferungsTyp">GEVER</property>
          <property origin="//ablieferung/ablieferungsnummer" key="ablieferungsnummer">#14_ablieferungsnummer</property>
          <property origin="//ablieferung/angebotsnummer" key="angebotsnummer">#15_angebotsnummer</property>
          <property origin="//ordnungssystem/generation" key="generation">#25_generation</property>
          <property origin="//ordnungssystem/mitbenutzung" key="mitbenutzung">#26_mitbenutzung</property>
-         <property origin="//paket/zusatzDaten/merkmal" key="#01_zusatzDatenKey">#02_zusatzDaten_value</property>
+         <property origin="//paket/zusatzDaten/merkmal" key="#01_zusatzDaten_key">#02_zusatzDaten_value</property>
          <property origin="//ablieferung/zusatzDaten/merkmal" key="#12_zusatzDatenKey">#13_zusatzDatenValue</property>
          <property origin="//ordnungssystem/zusatzDaten/merkmal" key="#28_zusatzDatenKey">#29_zusatzDatenValue</property>
       </mdWrap>
@@ -68,14 +68,14 @@
       </identity>
       <conditionsAccessUse isadId="4">
          <accessConditions isadId="4.1">
-            <hasPrivacyProtection origin="//ordnungsystemposition/datenschutz">true</hasPrivacyProtection>
-            <openToThePublic origin="//ordnungsystemposition/oeffentlichkeitsstatus">undefined</openToThePublic>
-            <classification origin="//ordnungsystemposition/klassifizierungskategorie">unclassified</classification>
-            <otherAccessConditions origin="//ordnungsystemposition/oeffentlichkeitsstatusBegruendung">#34_oeffentlichkeitsstatusBegruendung</otherAccessConditions>
-            <accessConditionsNotes origin="//ordnungsystemposition/sonstigeBestimmungen">#35_sonstigeBestimmungen</accessConditionsNotes>
-            <retentionPeriod origin="//ordnungsystemposition/schutzfrist">30</retentionPeriod>
-            <retentionPeriodConditions origin="//ordnungsystemposition/schutzfristenkategorie">#40_schutzfristenkategorie</retentionPeriodConditions>
-            <retentionPeriodNotes origin="//ordnungsystemposition/schutzfristenBegruendung">#41_schutzfristenBegruendung</retentionPeriodNotes>
+            <hasPrivacyProtection origin="//ordnungssystemposition/datenschutz">true</hasPrivacyProtection>
+            <openToThePublic origin="//ordnungssystemposition/oeffentlichkeitsstatus">undefined</openToThePublic>
+            <classification origin="//ordnungssystemposition/klassifizierungskategorie">unclassified</classification>
+            <otherAccessConditions origin="//ordnungssystemposition/oeffentlichkeitsstatusBegruendung">#34_oeffentlichkeitsstatusBegruendung</otherAccessConditions>
+            <accessConditionsNotes origin="//ordnungssystemposition/sonstigeBestimmungen">#35_sonstigeBestimmungen</accessConditionsNotes>
+            <retentionPeriod origin="//ordnungssystemposition/schutzfrist">30</retentionPeriod>
+            <retentionPeriodConditions origin="//ordnungssystemposition/schutzfristenkategorie">#40_schutzfristenkategorie</retentionPeriodConditions>
+            <retentionPeriodNotes origin="//ordnungssystemposition/schutzfristenBegruendung">#41_schutzfristenBegruendung</retentionPeriodNotes>
          </accessConditions>
       </conditionsAccessUse>
       <additionalData>
@@ -136,70 +136,6 @@
                <property origin="//ordnungssystemposition/federfuehrendeOrganisationseinheit"
                          key="federfuehrendeOrganisationseinheit">#46_federfuehrendeOrganisationseinheit</property>
                <property origin="//dossier/vorgang" key="simpleVorgang">#56_vorgang</property>
-               <property origin="//dossier/vorgang" key="Vorgang">
-                  <property key="Order">01</property>
-                  <property key="Titel">#56a_titel</property>
-                  <property key="Arbeitsanweisung">#56b_arbeitsanweisung</property>
-                  <property key="Federfuehrung">#56c_Vorgang:federfuehrung</property>
-                  <property key="Verweis">#56d_verweis</property>
-                  <property key="Bemerkung">#56e_Vorgang:bemerkung</property>
-                  <property key="#56f_Vorgang:zusatzDatenKey">#56g_zusatzDatenValue</property>
-                  <property key="#56h_Vorgang:zusatzDatenKey">#56i_zusatzDatenValue</property>
-                  <property key="Aktivitaet">
-                     <property key="Order">001</property>
-                     <property key="Vorschreibung">#56j_vorschreibung</property>
-                     <property key="Anweisung">#56k_anweisung</property>
-                     <property key="Bearbeiter">#56l_bearbeiter</property>
-                     <property key="Abschlussdatum">1967-02-14</property>
-                     <property key="Verweis">#56m_verweis</property>
-                     <property key="Bemerkung">#56n_bemerkung</property>
-                     <property key="#56o_Vorgang:zusatzDatenKey">#56p_zusatzDatenValue</property>
-                     <property key="#56q_Vorgang:zusatzDatenKey">#56r_zusatzDatenValue</property>
-                  </property>
-                  <property key="Aktivitaet">
-                     <property key="Order">002</property>
-                     <property key="Vorschreibung">#56jj_vorschreibung</property>
-                     <property key="Anweisung">#56kk_anweisung</property>
-                     <property key="Bearbeiter">#56ll_bearbeiter</property>
-                     <property key="Abschlussdatum">1967-02-14</property>
-                     <property key="Verweis">#56mm_verweis</property>
-                     <property key="Bemerkung">#56nn_bemerkung</property>
-                     <property key="#56oo_Vorgang:zusatzDatenKey">#56pp_zusatzDatenValue</property>
-                     <property key="#56qq_Vorgang:zusatzDatenKey">#56rr_zusatzDatenValue</property>
-                  </property>
-               </property>
-               <property origin="//dossier/vorgang" key="Vorgang">
-                  <property key="Order">02</property>
-                  <property key="Titel">#56a_titel</property>
-                  <property key="Arbeitsanweisung">#56b_arbeitsanweisung</property>
-                  <property key="Federfuehrung">#56c_Vorgang:federfuehrung</property>
-                  <property key="Verweis">#56d_verweis</property>
-                  <property key="Bemerkung">#56e_Vorgang:bemerkung</property>
-                  <property key="#56f_Vorgang:zusatzDatenKey">#56g_zusatzDatenValue</property>
-                  <property key="#56h_Vorgang:zusatzDatenKey">#56i_zusatzDatenValue</property>
-                  <property key="Aktivitaet">
-                     <property key="Order">001</property>
-                     <property key="Vorschreibung">#56j_vorschreibung</property>
-                     <property key="Anweisung">#56k_anweisung</property>
-                     <property key="Bearbeiter">#56l_bearbeiter</property>
-                     <property key="Abschlussdatum">1967-02-14</property>
-                     <property key="Verweis">#56m_verweis</property>
-                     <property key="Bemerkung">#56n_bemerkung</property>
-                     <property key="#56o_Vorgang:zusatzDatenKey">#56p_zusatzDatenValue</property>
-                     <property key="#56q_Vorgang:zusatzDatenKey">#56r_zusatzDatenValue</property>
-                  </property>
-                  <property key="Aktivitaet">
-                     <property key="Order">002</property>
-                     <property key="Vorschreibung">#56jj_vorschreibung</property>
-                     <property key="Anweisung">#56kk_anweisung</property>
-                     <property key="Bearbeiter">#56ll_bearbeiter</property>
-                     <property key="Abschlussdatum">1967-02-14</property>
-                     <property key="Verweis">#56mm_verweis</property>
-                     <property key="Bemerkung">#56nn_bemerkung</property>
-                     <property key="#56oo_Vorgang:zusatzDatenKey">#56pp_zusatzDatenValue</property>
-                     <property key="#56qq_Vorgang:zusatzDatenKey">#56rr_zusatzDatenValue</property>
-                  </property>
-               </property>
                <property origin="//dossier/zusatzDaten/merkmal" key="#53a_zusatzDatenKey">#54a_zusatzDatenValue</property>
                <property origin="//dossier/zusatzDaten/merkmal" key="#53b_zusatzDatenKey">#54b_zusatzDatenValue</property>
                <property origin="//dossier/zusatzDaten/merkmal" key="#53c_zusatzDatenKey">#54c_zusatzDatenValue</property>

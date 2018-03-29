@@ -50,7 +50,7 @@
 			<xsl:call-template name="xI2access">
 				<!-- 3.4.1 Zugangsbestimmungen -->
 				<!-- 3.4.4 Physische Beschaffenheit und technische Anforderungen -->
-				<xsl:with-param name="orig">//ordnungsystemposition</xsl:with-param>
+				<xsl:with-param name="orig">//ordnungssystemposition</xsl:with-param>
 			</xsl:call-template>
 			<!--   -->
 			<!-- 3.6.1 Allgemeine Anmerkungen -->

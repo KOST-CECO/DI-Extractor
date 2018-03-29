@@ -1,5 +1,10 @@
 @ECHO OFF
 SETLOCAL
+
+CD app
+CALL test_transform.cmd
+CD ..
+
 ECHO.
 ECHO "Installieren aller notwendigen Dateien in C:\Tools\xampp\htdocs\app -> http://localhost/app"
 ECHO.
@@ -20,7 +25,7 @@ COPY "P:\KOST\Standards\xIsadg\_Workbench\DataDictionary\xIsadg_DataDictionary_v
 
 %UNIX_HOME%\7z.exe a -mx9 "%HTDOCS%\app\eCH-0160_xIsadg&EAD_xsl.zip" "%WORKDIR%\app\*.xs*" "%WORKDIR%\app\*.bat" "%WORKDIR%\app\xsd_*"
 
-PAUSE
+
 CALL "C:\Program Files\Internet Explorer\iexplore.exe" "http://localhost/app/"
 
 EXIT /B

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archivalDescription xmlns="ISADG" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                     xsi:schemaLocation="ISADG xIsadg_v2.0.xsd">
+                     xsi:schemaLocation="ISADG xIsadg_v2.1.xsd">
    <identity isadId="1">
       <referenceCode isadId="1.1" origin="archival" obligation="inherited">sig.1</referenceCode>
       <title isadId="1.2" origin="archival" obligation="mandatory">Bestand-Titel</title>

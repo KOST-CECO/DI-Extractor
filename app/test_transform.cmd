@@ -1,10 +1,10 @@
 @ECHO OFF 
 SETLOCAL
 
-SET INPUT=arelda_v4-vollstaendig-FILES.xml
+REM SET INPUT=arelda_v4-vollstaendig-FILES.xml
 SET INPUT=arelda_v4-vollstaendig-GEVER.xml
-SET INPUT=arelda_v4.1-vollstaendig-GEVER.xml
-SET INPUT=arelda_v4-minimal-GEVER.xml
+REM SET INPUT=arelda_v4.1-vollstaendig-GEVER.xml
+REM SET INPUT=arelda_v4-minimal-GEVER.xml
 
 
 ECHO ===========================================================================
@@ -24,6 +24,6 @@ IF %ERRORLEVEL% NEQ 0 (
 
 REM PAUSE
 
-CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy2005.exe"                   "%CD%\xIsadg.2.1_metadata.xml"
+CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy.exe"                   "%CD%\xIsadg.2.1_metadata.xml"
 
 EXIT /B
