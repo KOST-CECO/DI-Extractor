@@ -38,12 +38,6 @@
 					<xsl:with-param name="orig">//ablieferung/entstehungszeitraum</xsl:with-param>
 				</xsl:call-template>
 			</xsl:if>
-			<xsl:if test="arelda:provenienz/arelda:existenzzeitraum">
-				<xsl:call-template name="xI2date">
-					<xsl:with-param name="range" select="arelda:provenienz/arelda:existenzzeitraum"/>
-					<xsl:with-param name="orig">//provenienz/existenzzeitraum</xsl:with-param>
-				</xsl:call-template>
-			</xsl:if>
 			<xsl:if test="arelda:ordnungssystem/arelda:anwendungszeitraum">
 				<xsl:call-template name="xI2date">
 					<xsl:with-param name="range" select="arelda:ordnungssystem/arelda:anwendungszeitraum"/>
@@ -77,24 +71,15 @@
 					<xsl:value-of select="arelda:provenienz/arelda:geschichteAktenbildner"/>
 				</xsl:element>
 			</xsl:if>
-			<!--
-            TODO
-			-->
 			<xsl:if test="arelda:provenienz/arelda:existenzzeitraum/text()">
 				<xsl:element name="adminBioHistory">
 					<xsl:attribute name="isadId">2.2</xsl:attribute>
 					<xsl:attribute name="origin">//provenienz/existenzzeitraum</xsl:attribute>
 					<xsl:call-template name="xI2simpledate">
 						<xsl:with-param name="range" select="arelda:provenienz/arelda:existenzzeitraum"/>
-						</xsl:call-template>
-					<!--
-					<xsl:value-of select="arelda:provenienz/arelda:existenzzeitraum"/>
-					-->
+					</xsl:call-template>
 				</xsl:element>
 			</xsl:if>
-			<!--
-            TODO
-			-->
 			<!-- 3.2.3 Bestandesgeschichte -->
 			<xsl:if test="arelda:provenienz/arelda:systemName/text()">
 				<xsl:element name="archivalHistory">

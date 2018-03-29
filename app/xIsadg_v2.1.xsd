@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2018 sp1 (http://www.altova.com) by Martin Kaiser (KOST) -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:isad="ISADG" targetNamespace="ISADG" elementFormDefault="qualified" version="2.1">
 	<!--xIsadg_v2.1 (minor version c)-->
 	<xs:annotation>
@@ -270,9 +269,6 @@
 			</xs:simpleContent>
 		</xs:complexType>
 	</xs:element>
-	<!--
-            TODO
-    -->
 	<xs:element name="adminBioHistory">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Verwaltungsgeschichte/Biographische Angaben: Information über Verwaltungsgeschichte der Provenienzstelle bzw. die Biographie, wenn es sich um natürliche Personen handelt, zum besseren Verständnis des zur Verzeichnungseinheit gehörenden Kontextes</xs:documentation>
@@ -303,21 +299,8 @@
 			<xs:attribute name="obligation" type="xs:string" use="optional" fixed="optional"/>
 			<xs:attribute name="archivalOrigin" type="xs:boolean" use="optional"/>
 			<xs:attribute name="origin" type="xs:string" use="optional"/>
-			<!--
-			<xs:simpleContent>
-				<xs:extension base="isad:stringType">
-					<xs:attribute name="isadId" type="xs:string" use="optional" fixed="2.2"/>
-					<xs:attribute name="obligation" type="xs:string" use="optional" fixed="optional"/>
-					<xs:attribute name="archivalOrigin" type="xs:boolean" use="optional"/>
-					<xs:attribute name="origin" type="xs:string" use="optional"/>
-				</xs:extension>
-			</xs:simpleContent>
-		-->
 		</xs:complexType>
 	</xs:element>
-	<!--
-            TODO
-    -->
 	<xs:element name="archivalHistory">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Bestandesgeschichte: Information über den Wechsel der Eigentums- und Besitzverhältnisse der Verzeichnungseinheit, die für deren Authentizität, Integrität, Vollständigkeit und Interpretation von wesentlicher Bedeutung sind</xs:documentation>
