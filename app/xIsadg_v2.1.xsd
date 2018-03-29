@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:isad="ISADG" targetNamespace="ISADG" elementFormDefault="qualified" version="2.0">
-	<!--xIsadg_v2.0 (minor version p)-->
+<!-- edited with XMLSpy v2018 sp1 (http://www.altova.com) by Martin Kaiser (KOST) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:isad="ISADG" targetNamespace="ISADG" elementFormDefault="qualified" version="2.1">
+	<!--xIsadg_v2.1 (minor version c)-->
 	<xs:annotation>
 		<xs:documentation xml:lang="en">isad.xsd: XML Schema based on ISAD(G): General International Standard Archival Description, Stockholm, 19-22 September 1999, represented in XML bei Filip Boudrez - eDAVID - April, 19th 2005</xs:documentation>
 	</xs:annotation>
@@ -194,7 +195,7 @@
 					<xs:attribute name="isadId" type="xs:string" use="optional" fixed="1.1"/>
 					<xs:attribute name="obligation" type="xs:string" use="optional" fixed="inherited"/>
 					<xs:attribute name="archivalOrigin" type="xs:boolean" use="optional"/>
-					<xs:attribute name="origin" type="xs:string" use="optional" fixed="archival"/>
+					<xs:attribute name="origin" type="xs:string" use="optional" default="ingest"/>
 				</xs:extension>
 			</xs:simpleContent>
 		</xs:complexType>
@@ -377,6 +378,7 @@
 		<xs:complexType>
 			<xs:simpleContent>
 				<xs:extension base="isad:stringType">
+					<xs:attribute name="xpointer" type="isad:xpointerType" use="optional"/>
 					<xs:attribute name="isadId" type="xs:string" use="optional" fixed="3.4"/>
 					<xs:attribute name="obligation" type="xs:string" use="optional" fixed="optional"/>
 					<xs:attribute name="archivalOrigin" type="xs:boolean" use="optional"/>
@@ -852,7 +854,7 @@
 		<xs:complexType>
 			<xs:simpleContent>
 				<xs:extension base="isad:uriType">
-					<xs:attribute name="uri" type="xs:string" use="required"/>
+					<xs:attribute name="uri" type="isad:uriType" use="optional"/>
 					<xs:attribute name="obligation" type="xs:string" use="optional" fixed="optional"/>
 					<xs:attribute name="archivalOrigin" type="xs:boolean" use="optional"/>
 					<xs:attribute name="origin" type="xs:string" use="optional"/>
@@ -937,7 +939,7 @@
 		<xs:complexType>
 			<xs:simpleContent>
 				<xs:extension base="isad:xpointerType">
-					<xs:attribute name="xpointer" type="xs:string" use="required"/>
+					<xs:attribute name="xpointer" type="isad:xpointerType" use="optional"/>
 					<xs:attribute name="obligation" type="xs:string" use="optional" fixed="optional"/>
 					<xs:attribute name="archivalOrigin" type="xs:boolean" use="optional"/>
 					<xs:attribute name="origin" type="xs:string" use="optional"/>
@@ -974,28 +976,39 @@
 		<xs:sequence>
 			<xs:element name="property" type="isad:propertyKeyValue" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
+		<xs:attribute name="origin" type="xs:string" use="optional"/>
 		<xs:attribute name="key" type="xs:string" use="required"/>
 	</xs:complexType>
 	<xs:complexType name="propertyKeyValue">
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
+				<xs:attribute name="origin" type="xs:string" use="optional"/>
 				<xs:attribute name="key" type="xs:string" use="required"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
 	<xs:complexType name="xmlDataType">
 		<xs:sequence>
-			<xs:any namespace="##any" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute name="mdtype" use="required">
 			<xs:simpleType>
-				<xs:restriction base="xs:string">
-					<xs:enumeration value="DC"/>
-					<xs:enumeration value="EAD"/>
-					<xs:enumeration value="MARC"/>
-					<xs:enumeration value="MODS"/>
-					<xs:enumeration value="OTHER"/>
-				</xs:restriction>
+				<xs:union>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="DC"/>
+							<xs:enumeration value="EAD"/>
+							<xs:enumeration value="MARC"/>
+							<xs:enumeration value="MODS"/>
+							<xs:enumeration value="OTHER"/>
+						</xs:restriction>
+					</xs:simpleType>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value="[A-Z]+"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:union>
 			</xs:simpleType>
 		</xs:attribute>
 		<xs:attribute name="obligation" type="xs:string" use="optional" fixed="optional"/>
@@ -1007,48 +1020,69 @@
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Klassifizierungskategorie: Grad, indem das Dossier und die enthaltenen Unterlagen vor unberechtigter Einsicht geschützt werden müssen.</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:token">
-			<xs:enumeration value="unclassified"/>
-			<xs:enumeration value="confidential"/>
-			<xs:enumeration value="secret"/>
-			<xs:enumeration value="in_house"/>
-			<xs:enumeration value="other"/>
-		</xs:restriction>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="unclassified"/>
+					<xs:enumeration value="confidential"/>
+					<xs:enumeration value="secret"/>
+					<xs:enumeration value="in_house"/>
+					<xs:enumeration value="other"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:minLength value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
 	</xs:simpleType>
 	<xs:simpleType name="contentType">
-		<xs:restriction base="xs:token">
-			<xs:enumeration value="Darin">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Der Darin-Vermerk wird verwendet, um auf einzelne Teile der Verzeichnungseinheit  hinzuweisen, die in formaler Hinsicht als Besonderheit anzusehen sind, z. B. Karten, Pläne, Zeichnungen, Fotos, herausragende
-Einzelstücke und die nicht aufgrund des Titels zu erwarten sind.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="Enthält">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Enthält: erläutert den gesamten Inhalt der Verzeichnungseinheit</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="Enthält_unter_anderem">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Enthält u. a. (Enthält unter anderem): hebt einzelne Teile der Verzeichnungseinheit hervor, denen qualitativ besondere Bedeutung zuzumessen ist</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="Enthält_vor_allem">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Enthält v. a. (Enthält vor allem): hebt diejenigen inhaltlichen Aspekte hervor, die die Verzeichnungseinheit quantitativ maßgeblich bestimmen</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="Enthält_auch">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Enthält auch: erweitert einen zu eng gefassten Titel der Verzeichnungseinheit</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="Enthält_nur">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Enthält nur: verengt einen zu weit gefassten Titel der Verzeichnungseinheit</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Darin/Enthält Vermerk: ab Version xIsadg 2.1 sollen hier die englischen Bezeichnungen als Platzhalter verwendet werden. 
+			Achtung: die Übersetzung ins Englische ist konträr zur Meinung von Frau Angelika Menne-Haritz in 'Schlüsselbegriffe der Archivterminologie' 1999 https://internet.archivschule.uni-marburg.de/datiii/germanterms.htm</xs:documentation>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="includes">
+						<xs:annotation>
+							<xs:documentation xml:lang="de">Der Darin-Vermerk wird verwendet, um auf einzelne Teile der Verzeichnungseinheit  hinzuweisen, die in formaler Hinsicht als Besonderheit anzusehen sind, z. B. Karten, Pläne, Zeichnungen, Fotos, herausragende Einzelstücke und die nicht aufgrund des Titels zu erwarten sind.</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="contains">
+						<xs:annotation>
+							<xs:documentation xml:lang="de">Enthält: erläutert den gesamten Inhalt der Verzeichnungseinheit</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="contains_inter_alia">
+						<xs:annotation>
+							<xs:documentation xml:lang="de">Enthält u. a. (Enthält unter anderem): hebt einzelne Teile der Verzeichnungseinheit hervor, denen qualitativ besondere Bedeutung zuzumessen ist</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="contains_above_all">
+						<xs:annotation>
+							<xs:documentation xml:lang="de">Enthält v. a. (Enthält vor allem): hebt diejenigen inhaltlichen Aspekte hervor, die die Verzeichnungseinheit quantitativ maßgeblich bestimmen</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="contains_also">
+						<xs:annotation>
+							<xs:documentation xml:lang="de">Enthält auch: erweitert einen zu eng gefassten Titel der Verzeichnungseinheit</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="contains_exclusivley">
+						<xs:annotation>
+							<xs:documentation xml:lang="de">Enthält nur: verengt einen zu weit gefassten Titel der Verzeichnungseinheit</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:minLength value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
 	</xs:simpleType>
 	<xs:simpleType name="dateType_union">
 		<xs:annotation>
@@ -1094,12 +1128,21 @@ Einzelstücke und die nicht aufgrund des Titels zu erwarten sind.</xs:documentat
 		<xs:union memberTypes="isad:formTypeEnumeration isad:formTypeString"/>
 	</xs:simpleType>
 	<xs:simpleType name="formTypeEnumeration">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="digital"/>
-			<xs:enumeration value="analog"/>
-			<xs:enumeration value="hybrid"/>
-			<xs:enumeration value="not_defined"/>
-		</xs:restriction>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="digital"/>
+					<xs:enumeration value="analog"/>
+					<xs:enumeration value="hybrid"/>
+					<xs:enumeration value="not_defined"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
 	</xs:simpleType>
 	<xs:simpleType name="formTypeString">
 		<xs:restriction base="xs:string">
@@ -1108,104 +1151,123 @@ Einzelstücke und die nicht aufgrund des Titels zu erwarten sind.</xs:documentat
 	</xs:simpleType>
 	<xs:simpleType name="levelType">
 		<xs:annotation>
-			<xs:documentation xml:lang="de">Liste der möglichen Verzeichnungsstufen</xs:documentation>
+			<xs:documentation xml:lang="de">Liste der möglichen Verzeichnungsstufen: ab Version xIsadg 2.1 sollen hier die englischen Bezeichnungen als Platzhalter verwendet werden</xs:documentation>
 			<xs:documentation xml:lang="en">level: enumeration</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="Bestand">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Bestand: Menge aller Ablieferungen einer Provenienz</xs:documentation>
-					<xs:documentation xml:lang="en">Fonds</xs:documentation>
-					<xs:documentation xml:lang="fr">Fonds</xs:documentation>
-					<xs:documentation xml:lang="it">Fondo</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="Teilbestand">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Teilbestand: Ablieferung einer Provenienz</xs:documentation>
-					<xs:documentation xml:lang="en">Sub-fonds</xs:documentation>
-					<xs:documentation xml:lang="fr">Sous-fonds</xs:documentation>
-					<xs:documentation xml:lang="it">Sub-fondo</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="Serie">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Serie: Entspricht einer Ordnungssystemposition resp. einer Rubrik im Ordnungssystem</xs:documentation>
-					<xs:documentation xml:lang="en">Series</xs:documentation>
-					<xs:documentation xml:lang="fr">Série organique</xs:documentation>
-					<xs:documentation xml:lang="it">Serie</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="Teilserie">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Teilserie: Entspricht einer Ordnungssystemposition resp. einer Rubrik im Ordnungssystem, die einer anderen Ordnungssystemposition untergeordnet ist</xs:documentation>
-					<xs:documentation xml:lang="en">Sub-series</xs:documentation>
-					<xs:documentation xml:lang="fr">Sous-série organique</xs:documentation>
-					<xs:documentation xml:lang="it">Sotto-serie</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="Dossier">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Dossier: Einer Rubrik im Ordnungssystem zugeordnete sachliche Einheit, die im Geschäftsgang entstanden ist</xs:documentation>
-					<xs:documentation xml:lang="en">File</xs:documentation>
-					<xs:documentation xml:lang="fr">Dossier</xs:documentation>
-					<xs:documentation xml:lang="it">Fascicolo</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="Teildossier">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Teildossier: Bestandteil eines Dossiers und diesem untergeordnet</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="Dokument">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Dokument: Bestandteil eines Dossiers oder Teildossiers und diesem untergeordnet</xs:documentation>
-					<xs:documentation xml:lang="en">Item</xs:documentation>
-					<xs:documentation xml:lang="fr">Pièce</xs:documentation>
-					<xs:documentation xml:lang="it">Unità documentaria</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="Repräsentation">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Repräsentation: (Digitale) Erscheinungsform einer Verzeichniseinheit</xs:documentation>
-					<xs:documentation xml:lang="en">Representation</xs:documentation>
-					<xs:documentation xml:lang="fr">Représentation</xs:documentation>
-					<xs:documentation xml:lang="it">Rappresentanza</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="fonds">
+						<xs:annotation>
+							<xs:documentation xml:lang="de">Bestand: Menge aller Ablieferungen einer Provenienz</xs:documentation>
+							<xs:documentation xml:lang="en">Fonds</xs:documentation>
+							<xs:documentation xml:lang="fr">Fonds</xs:documentation>
+							<xs:documentation xml:lang="it">Fondo</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="sub-fonds">
+						<xs:annotation>
+							<xs:documentation xml:lang="de">Teilbestand: Ablieferung einer Provenienz</xs:documentation>
+							<xs:documentation xml:lang="en">Sub-fonds</xs:documentation>
+							<xs:documentation xml:lang="fr">Sous-fonds</xs:documentation>
+							<xs:documentation xml:lang="it">Sub-fondo</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="series">
+						<xs:annotation>
+							<xs:documentation xml:lang="de">Serie: Entspricht einer Ordnungssystemposition resp. einer Rubrik im Ordnungssystem</xs:documentation>
+							<xs:documentation xml:lang="en">Series</xs:documentation>
+							<xs:documentation xml:lang="fr">Série organique</xs:documentation>
+							<xs:documentation xml:lang="it">Serie</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="sub-series">
+						<xs:annotation>
+							<xs:documentation xml:lang="de">Teilserie: Entspricht einer Ordnungssystemposition resp. einer Rubrik im Ordnungssystem, die einer anderen Ordnungssystemposition untergeordnet ist</xs:documentation>
+							<xs:documentation xml:lang="en">Sub-series</xs:documentation>
+							<xs:documentation xml:lang="fr">Sous-série organique</xs:documentation>
+							<xs:documentation xml:lang="it">Sotto-serie</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="file">
+						<xs:annotation>
+							<xs:documentation xml:lang="de">Dossier: Einer Rubrik im Ordnungssystem zugeordnete sachliche Einheit, die im Geschäftsgang entstanden ist</xs:documentation>
+							<xs:documentation xml:lang="en">File</xs:documentation>
+							<xs:documentation xml:lang="fr">Dossier</xs:documentation>
+							<xs:documentation xml:lang="it">Fascicolo</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="sub-file">
+						<xs:annotation>
+							<xs:documentation xml:lang="de">Teildossier: Bestandteil eines Dossiers und diesem untergeordnet</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="item">
+						<xs:annotation>
+							<xs:documentation xml:lang="de">Dokument: Bestandteil eines Dossiers oder Teildossiers und diesem untergeordnet</xs:documentation>
+							<xs:documentation xml:lang="en">Item</xs:documentation>
+							<xs:documentation xml:lang="fr">Pièce</xs:documentation>
+							<xs:documentation xml:lang="it">Unità documentaria</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="representation">
+						<xs:annotation>
+							<xs:documentation xml:lang="de">Repräsentation: (Digitale) Erscheinungsform einer Verzeichniseinheit</xs:documentation>
+							<xs:documentation xml:lang="en">Representation</xs:documentation>
+							<xs:documentation xml:lang="fr">Représentation</xs:documentation>
+							<xs:documentation xml:lang="it">Rappresentanza</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
 	</xs:simpleType>
 	<xs:simpleType name="openToThePublicType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Öffentlichkeitsstatus: Angabe, ob das Dossier / Dokument gemäss den einschlägigen Datenschutzregelungen schützenswerte Informationen enthält oder nicht.</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:token">
-			<xs:enumeration value="undefined"/>
-			<xs:enumeration value="public"/>
-			<xs:enumeration value="not_public"/>
-		</xs:restriction>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="undefined"/>
+					<xs:enumeration value="public"/>
+					<xs:enumeration value="not_public"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:minLength value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
 	</xs:simpleType>
 	<xs:simpleType name="scopeType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Liste der möglichen Formen von Unterlagen</xs:documentation>
 			<xs:documentation xml:lang="en">level: enumeration</xs:documentation>
 		</xs:annotation>
-		<xs:union memberTypes="isad:scopeTypeEnumeration isad:scopeTypeString"/>
-	</xs:simpleType>
-	<xs:simpleType name="scopeTypeEnumeration">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="text"/>
-			<xs:enumeration value="image"/>
-			<xs:enumeration value="audio"/>
-			<xs:enumeration value="video"/>
-			<xs:enumeration value="structured_data"/>
-			<xs:enumeration value="hybrid"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="scopeTypeString">
-		<xs:restriction base="xs:string">
-			<xs:pattern value=".*"/>
-		</xs:restriction>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="text"/>
+					<xs:enumeration value="image"/>
+					<xs:enumeration value="audio"/>
+					<xs:enumeration value="video"/>
+					<xs:enumeration value="structured_data"/>
+					<xs:enumeration value="hybrid"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
 	</xs:simpleType>
 	<xs:simpleType name="sizeType">
 		<xs:annotation>
@@ -1229,43 +1291,52 @@ Einzelstücke und die nicht aufgrund des Titels zu erwarten sind.</xs:documentat
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Einheiten für die Beschreibung des physischen Umfangs</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="kB">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Kilobyte</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="MB">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Megabyte</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="GB">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Gigabyte</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TB">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Terabyte</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="lfm">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Laufmeter</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="kg">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Kilogramm</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="m3">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Kubikmeter</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="kB">
+						<xs:annotation>
+							<xs:documentation xml:lang="de">Kilobyte</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="MB">
+						<xs:annotation>
+							<xs:documentation xml:lang="de">Megabyte</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="GB">
+						<xs:annotation>
+							<xs:documentation xml:lang="de">Gigabyte</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="TB">
+						<xs:annotation>
+							<xs:documentation xml:lang="de">Terabyte</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="lfm">
+						<xs:annotation>
+							<xs:documentation xml:lang="de">Laufmeter</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="kg">
+						<xs:annotation>
+							<xs:documentation xml:lang="de">Kilogramm</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="m3">
+						<xs:annotation>
+							<xs:documentation xml:lang="de">Kubikmeter</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
 	</xs:simpleType>
 	<xs:simpleType name="uriType">
 		<xs:annotation>
@@ -1280,8 +1351,21 @@ Einzelstücke und die nicht aufgrund des Titels zu erwarten sind.</xs:documentat
 		<xs:annotation>
 			<xs:documentation>any xpointer, whitespace collapsed</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:anyURI">
-			<xs:whiteSpace value="collapse"/>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:anyURI">
+					<xs:minLength value="1"/>
+					<xs:whiteSpace value="collapse"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="isad:emptyType"/>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="emptyType">
+		<xs:restriction base="xs:string">
+			<xs:length value="0"/>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

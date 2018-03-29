@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 if ($wdir=='') { header ("location: ./input.php"); }
 ?>
 <hr>
@@ -45,7 +45,7 @@ if ($wdir=='') { header ("location: ./input.php"); }
                 Ausgabeformat:</td>
             <td>
                 <input type="radio" name="xschema" value="xIsadg" title="Ausgabe als xIsadg Metadaten Datei" checked> xIsadg 1.6.1
-                <input type="radio" name="xschema" value="xI2sadg" title="Ausgabe als xIsadg Metadaten Datei Version 2.0" > xIsadg 2.0
+                <input type="radio" name="xschema" value="xI2sadg" title="Ausgabe als xIsadg Metadaten Datei Version 2.1" > xIsadg 2.1
                 <input type="radio" name="xschema" value="EAD" title="Ausgabe als EAD Metadaten Datei (METS Matterhorn Style)">
                 EAD</td>
             <td>

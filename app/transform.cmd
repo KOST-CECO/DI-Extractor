@@ -62,7 +62,7 @@ IF [%STIL%]==[] (
 
 IF [%FMT%]==[] (
     SET FMT=1
-    SET /P "FMT=Ausgabeformat (xIsadg / xIsadg 2.0 / EAD ): [1] [2] oder [3] "
+    SET /P "FMT=Ausgabeformat (xIsadg / xIsadg 2.1 / EAD ): [1] [2] oder [3] "
 )
 ECHO.
 
@@ -83,11 +83,11 @@ REM schema validate with xmllint
 %LINT%\xmllint.exe -sax -noout -schema xIsadg_v1.6.1.xsd "%OUTPUT%"
 )
 
-REM convert to xIsadg 2.0 and validate with xmllint
+REM convert to xIsadg 2.1 and validate with xmllint
 IF %FMT% == 2 (
 %JAVA_HOME%\bin\java -jar %SAXON%\saxon9.jar -versionmsg:off -s:%ECH-0160% -xsl:eCH2xI2sadg.xsl -o:"%OUTPUT%" fondtitle=%FONDTITLE% archsig=%SIGNATUR% reffilename=%REF%
 REM schema validate with xmllint
-%LINT%\xmllint.exe -sax -noout -schema xIsadg_v2.0.xsd "%OUTPUT%"
+%LINT%\xmllint.exe -sax -noout -schema xIsadg_v2.1.xsd "%OUTPUT%"
 )
 
 REM convert to EAD and validate with xmllint

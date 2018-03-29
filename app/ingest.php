@@ -22,7 +22,7 @@ $metadatafile = '';
     <title>KOST Referenzimplementierung</title>
   </head>
   <body background="background.jpg">
-    <h1>KOST Referenzimplementierung - Descriptive Information 2.0 <span class="versionText">(Rev. 114)</span></h1>
+    <h1>KOST Referenzimplementierung - Descriptive Information 2.1 <span class="versionText">(Rev. 114)</span></h1>
     <?php include 'helptext.php'; ?>
     <i>Eine eCH-0160 Metadaten Datei f&uuml;r die Konvertierung ausw&auml;hlen:</i>
     <br>
@@ -102,8 +102,8 @@ if ($handle = opendir($wdir)) {
                 elseif ($xml->schemaValidate('./xIsadg_v1.6.1.xsd')) {
                     echo "&nbsp;&nbsp;&nbsp; xIsadg_v1.6 DI Metadata";
                 }
-                elseif ($xml->schemaValidate('./xIsadg_v2.0.xsd')) {
-                    echo "&nbsp;&nbsp;&nbsp; xIsadg_v2.0 DI Metadata";
+                elseif ($xml->schemaValidate('./xIsadg_v2.1.xsd')) {
+                    echo "&nbsp;&nbsp;&nbsp; xIsadg_v2.1 DI Metadata";
                 }
                 elseif ($xml->schemaValidate('./ead.xsd')) {
                     echo "&nbsp;&nbsp;&nbsp; EAD Metadata";
