@@ -8,3 +8,10 @@ I think this is the right way:
 git fetch --all
 git reset --hard origin/master
 
+
+proxy settings:
+---------------
+
+git config --unset-all --local --system --global http.proxy
+git config --unset-all http.proxy
+git config --add http.proxy proxy-bvcol.admin.ch:8080

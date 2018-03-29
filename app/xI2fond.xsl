@@ -77,6 +77,24 @@
 					<xsl:value-of select="arelda:provenienz/arelda:geschichteAktenbildner"/>
 				</xsl:element>
 			</xsl:if>
+			<!--
+            TODO
+			-->
+			<xsl:if test="arelda:provenienz/arelda:existenzzeitraum/text()">
+				<xsl:element name="adminBioHistory">
+					<xsl:attribute name="isadId">2.2</xsl:attribute>
+					<xsl:attribute name="origin">//provenienz/existenzzeitraum</xsl:attribute>
+					<xsl:call-template name="xI2simpledate">
+						<xsl:with-param name="range" select="arelda:provenienz/arelda:existenzzeitraum"/>
+						</xsl:call-template>
+					<!--
+					<xsl:value-of select="arelda:provenienz/arelda:existenzzeitraum"/>
+					-->
+				</xsl:element>
+			</xsl:if>
+			<!--
+            TODO
+			-->
 			<!-- 3.2.3 Bestandesgeschichte -->
 			<xsl:if test="arelda:provenienz/arelda:systemName/text()">
 				<xsl:element name="archivalHistory">
