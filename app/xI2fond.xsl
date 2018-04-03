@@ -38,12 +38,6 @@
 					<xsl:with-param name="orig">//ablieferung/entstehungszeitraum</xsl:with-param>
 				</xsl:call-template>
 			</xsl:if>
-			<xsl:if test="arelda:ordnungssystem/arelda:anwendungszeitraum">
-				<xsl:call-template name="xI2date">
-					<xsl:with-param name="range" select="arelda:ordnungssystem/arelda:anwendungszeitraum"/>
-					<xsl:with-param name="orig">//ordnungssystem/anwendungszeitraum</xsl:with-param>
-				</xsl:call-template>
-			</xsl:if>
 			<!-- 3.1.4 Verzeichnungsstufe -->
 			<xsl:element name="descriptionLevel">
 				<xsl:attribute name="isadId">1.4</xsl:attribute>
@@ -119,11 +113,59 @@
 			</xsl:if>
 			<!--    -->
 			<!-- 3.2.4 Abgebende Stelle -->
+			<!-- arelda:paket -->
+			<!-- <xsl:element name="acqInfo">
+						<xsl:attribute name="origin">//paket@xmlns</xsl:attribute>
+						<xsl:for-each select="namespace::*">
+							<xsl:value-of select="."/>
+						</xsl:for-each>
+					</xsl:element> -->
+			<xsl:element name="acqInfo">
+				<xsl:attribute name="isadId">2.4</xsl:attribute>
+				<xsl:attribute name="origin">//paket/@xmlns</xsl:attribute>
+				<xsl:value-of select="namespace-uri()"/>
+			</xsl:element>
+			<xsl:if test="../arelda:paketTyp/text()">
+				<xsl:element name="acqInfo">
+					<xsl:attribute name="isadId">2.4</xsl:attribute>
+					<xsl:attribute name="origin">//paket/paketTyp</xsl:attribute>
+					<xsl:value-of select="../arelda:paketTyp/text()"/>
+				</xsl:element>
+			</xsl:if>
+			<xsl:if test="../@schemaVersion">
+				<xsl:element name="acqInfo">
+					<xsl:attribute name="isadId">2.4</xsl:attribute>
+					<xsl:attribute name="origin">//paket/@schemaVersion</xsl:attribute>
+					<xsl:value-of select="../@schemaVersion"/>
+				</xsl:element>
+			</xsl:if>
+			<!-- arelda:ablieferung -->
 			<xsl:if test="arelda:ablieferndeStelle/text()">
 				<xsl:element name="acqInfo">
 					<xsl:attribute name="isadId">2.4</xsl:attribute>
 					<xsl:attribute name="origin">//ablieferung/ablieferndeStelle</xsl:attribute>
 					<xsl:value-of select="arelda:ablieferndeStelle"/>
+				</xsl:element>
+			</xsl:if>
+			<xsl:if test="./arelda:ablieferungstyp/text()">
+				<xsl:element name="acqInfo">
+					<xsl:attribute name="isadId">2.4</xsl:attribute>
+					<xsl:attribute name="origin">//ablieferung/ablieferungstyp</xsl:attribute>
+					<xsl:value-of select="./arelda:ablieferungstyp"/>
+				</xsl:element>
+			</xsl:if>
+			<xsl:if test="./arelda:ablieferungsnummer/text()">
+				<xsl:element name="acqInfo">
+					<xsl:attribute name="isadId">2.4</xsl:attribute>
+					<xsl:attribute name="origin">//ablieferung/ablieferungsnummer</xsl:attribute>
+					<xsl:value-of select="./arelda:ablieferungsnummer"/>
+				</xsl:element>
+			</xsl:if>
+			<xsl:if test="./arelda:angebotsnummer/text()">
+				<xsl:element name="acqInfo">
+					<xsl:attribute name="isadId">2.4</xsl:attribute>
+					<xsl:attribute name="origin">//ablieferung/angebotsnummer</xsl:attribute>
+					<xsl:value-of select="./arelda:angebotsnummer"/>
 				</xsl:element>
 			</xsl:if>
 		</xsl:element>
@@ -151,8 +193,31 @@
 			<xsl:if test="arelda:ordnungssystem/arelda:name/text()">
 				<xsl:element name="arrangement">
 					<xsl:attribute name="isadId">3.4</xsl:attribute>
-					<xsl:attribute name="origin">//arelda:ordnungssystem/name</xsl:attribute>
+					<xsl:attribute name="origin">//ordnungssystem/name</xsl:attribute>
 					<xsl:value-of select="arelda:ordnungssystem/arelda:name"/>
+				</xsl:element>
+			</xsl:if>
+			<xsl:if test="arelda:ordnungssystem/arelda:anwendungszeitraum/text()">
+				<xsl:element name="arrangement">
+					<xsl:attribute name="isadId">3.4</xsl:attribute>
+					<xsl:attribute name="origin">//ordnungssystem/anwendungszeitraum</xsl:attribute>
+					<xsl:call-template name="xI2simpledate">
+						<xsl:with-param name="range" select="arelda:ordnungssystem/arelda:anwendungszeitraum"/>
+					</xsl:call-template>
+				</xsl:element>
+			</xsl:if>
+			<xsl:if test="arelda:ordnungssystem/arelda:generation/text()">
+				<xsl:element name="arrangement">
+					<xsl:attribute name="isadId">3.4</xsl:attribute>
+					<xsl:attribute name="origin">//ordnungssystem/generation</xsl:attribute>
+					<xsl:value-of select="arelda:ordnungssystem/arelda:generation"/>
+				</xsl:element>
+			</xsl:if>
+			<xsl:if test="arelda:ordnungssystem/arelda:mitbenutzung/text()">
+				<xsl:element name="arrangement">
+					<xsl:attribute name="isadId">3.4</xsl:attribute>
+					<xsl:attribute name="origin">//ordnungssystem/mitbenutzung</xsl:attribute>
+					<xsl:value-of select="arelda:ordnungssystem/arelda:mitbenutzung"/>
 				</xsl:element>
 			</xsl:if>
 		</xsl:element>
@@ -194,65 +259,6 @@
 		<xsl:if test="../arelda:zusatzDaten or arelda:zusatzDaten or arelda:ordnungssystem/arelda:zusatzDaten">
 			<xsl:element name="additionalData">
 				<xsl:element name="mdWrap">
-					<!-- <xsl:element name="property">
-						<xsl:attribute name="origin">//paket@xmlns</xsl:attribute>
-						<xsl:attribute name="key">@xmlns</xsl:attribute>
-						<xsl:for-each select="namespace::*">
-							<xsl:value-of select="."/>
-						</xsl:for-each>
-					</xsl:element> -->
-					<xsl:element name="property">
-						<xsl:attribute name="origin">//paket/@xmlns</xsl:attribute>
-						<xsl:attribute name="key">namespace</xsl:attribute>
-						<xsl:value-of select="namespace-uri()"/>
-					</xsl:element>
-					<xsl:element name="property">
-						<xsl:attribute name="origin">//paket/paketTyp</xsl:attribute>
-						<xsl:attribute name="key">paketTyp</xsl:attribute>
-						<xsl:value-of select="../arelda:paketTyp/text()"/>
-					</xsl:element>
-					<xsl:element name="property">
-						<xsl:attribute name="origin">//paket/@schemaVersion</xsl:attribute>
-						<xsl:attribute name="key">schemaVersion</xsl:attribute>
-						<xsl:value-of select="../@schemaVersion"/>
-					</xsl:element>
-					<!-- additionalData ablieferung -->
-					<xsl:if test="./arelda:ablieferungstyp/text()">
-						<xsl:element name="property">
-							<xsl:attribute name="origin">//ablieferung/ablieferungstyp</xsl:attribute>
-							<xsl:attribute name="key">ablieferungsTyp</xsl:attribute>
-							<xsl:value-of select="./arelda:ablieferungstyp"/>
-						</xsl:element>
-					</xsl:if>
-					<xsl:if test="./arelda:ablieferungsnummer/text()">
-						<xsl:element name="property">
-							<xsl:attribute name="origin">//ablieferung/ablieferungsnummer</xsl:attribute>
-							<xsl:attribute name="key">ablieferungsnummer</xsl:attribute>
-							<xsl:value-of select="./arelda:ablieferungsnummer"/>
-						</xsl:element>
-					</xsl:if>
-					<xsl:if test="./arelda:angebotsnummer/text()">
-						<xsl:element name="property">
-							<xsl:attribute name="origin">//ablieferung/angebotsnummer</xsl:attribute>
-							<xsl:attribute name="key">angebotsnummer</xsl:attribute>
-							<xsl:value-of select="./arelda:angebotsnummer"/>
-						</xsl:element>
-					</xsl:if>
-					<!-- additionalData ordnungssystem -->
-					<xsl:if test="arelda:ordnungssystem/arelda:generation/text()">
-						<xsl:element name="property">
-							<xsl:attribute name="origin">//ordnungssystem/generation</xsl:attribute>
-							<xsl:attribute name="key">generation</xsl:attribute>
-							<xsl:value-of select="arelda:ordnungssystem/arelda:generation"/>
-						</xsl:element>
-					</xsl:if>
-					<xsl:if test="arelda:ordnungssystem/arelda:mitbenutzung/text()">
-						<xsl:element name="property">
-							<xsl:attribute name="origin">//ordnungssystem/mitbenutzung</xsl:attribute>
-							<xsl:attribute name="key">mitbenutzung</xsl:attribute>
-							<xsl:value-of select="arelda:ordnungssystem/arelda:mitbenutzung"/>
-						</xsl:element>
-					</xsl:if>
 					<!-- additionalData zusatzDaten -->
 					<xsl:for-each select="../arelda:zusatzDaten/arelda:merkmal">
 						<xsl:element name="property">

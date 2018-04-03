@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:isad="ISADG" targetNamespace="ISADG" elementFormDefault="qualified" version="2.1">
-	<!--xIsadg_v2.1 (minor version c)-->
+	<!--xIsadg_v2.1 (minor version d)-->
 	<xs:annotation>
 		<xs:documentation xml:lang="en">isad.xsd: XML Schema based on ISAD(G): General International Standard Archival Description, Stockholm, 19-22 September 1999, represented in XML bei Filip Boudrez - eDAVID - April, 19th 2005</xs:documentation>
 	</xs:annotation>
@@ -388,6 +388,32 @@
 			<xs:documentation xml:lang="fr">Mode de classement: Fournir des renseignements sur la structure, l'ordre ou le plan de classement de l'unité de description</xs:documentation>
 			<xs:documentation xml:lang="it">Criteri di ordinamento: Fornire informazioni sulla struttura interna, l'organizzazione e/o il sistema di classificazione dell'unità di descrizione</xs:documentation>
 		</xs:annotation>
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0">
+				<xs:sequence>
+					<xs:element name="fromDate" type="isad:dateType"/>
+					<xs:element name="toDate" type="isad:dateType"/>
+					<xs:element name="commentDate" type="xs:string" minOccurs="0"/>
+				</xs:sequence>
+				<xs:sequence>
+					<xs:element name="pointofTime" type="isad:dateType"/>
+					<xs:element name="commentDate" type="xs:string" minOccurs="0"/>
+				</xs:sequence>
+				<xs:sequence>
+					<xs:annotation>
+						<xs:documentation>DEPRECATED: Elemente Paar "fromYear" - "toYear" (Rückwärtskompatibilität mit Version 1.6)</xs:documentation>
+					</xs:annotation>
+					<xs:element name="fromYear" type="xs:gYear"/>
+					<xs:element name="toYear" type="xs:gYear"/>
+				</xs:sequence>
+			</xs:choice>
+			<xs:attribute name="xpointer" type="isad:xpointerType" use="optional"/>
+			<xs:attribute name="isadId" type="xs:string" use="optional" fixed="3.4"/>
+			<xs:attribute name="obligation" type="xs:string" use="optional" fixed="optional"/>
+			<xs:attribute name="archivalOrigin" type="xs:boolean" use="optional"/>
+			<xs:attribute name="origin" type="xs:string" use="optional"/>
+		</xs:complexType>
+		<!--
 		<xs:complexType>
 			<xs:simpleContent>
 				<xs:extension base="isad:stringType">
@@ -399,6 +425,7 @@
 				</xs:extension>
 			</xs:simpleContent>
 		</xs:complexType>
+	-->
 	</xs:element>
 	<xs:element name="accessConditions">
 		<xs:annotation>
