@@ -15,8 +15,18 @@
       <depth>2</depth>
    </identity>
    <identity>
-      <title>#59_dokumentTitel</title>
+      <title>ID1</title>
       <referenceCode>sig.1.1.1_1</referenceCode>
+      <depth>3</depth>
+   </identity>
+   <identity>
+      <title>ID2</title>
+      <referenceCode>sig.1.1.1_2</referenceCode>
+      <depth>3</depth>
+   </identity>
+   <identity>
+      <title>ID3</title>
+      <referenceCode>sig.1.1.1_3</referenceCode>
       <depth>3</depth>
    </identity>
 </reference>

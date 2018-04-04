@@ -53,7 +53,9 @@
 				<!-- 3.1.5 Umfang (Menge und Abmessung) nur in FilesSIP -->
 				<xsl:if test="arelda:umfang/text()">
 					<xsl:element name="extentMedium">
-						<xsl:element name="description">
+					  <xsl:attribute name="isadId">1.5</xsl:attribute>
+						<xsl:element name="description">	
+              <xsl:attribute name="origin">//dossier/umfang</xsl:attribute>
 							<xsl:value-of select="arelda:umfang/text()"/>
 						</xsl:element>
 					</xsl:element>

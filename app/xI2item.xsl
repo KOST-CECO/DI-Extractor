@@ -184,7 +184,7 @@
 					<xsl:attribute name="isadId">1.4</xsl:attribute>
 					<xsl:attribute name="origin">ingest</xsl:attribute>
 					<xsl:attribute name="obligation">mandatory</xsl:attribute>
-					<xsl:text>Repräsentation</xsl:text>
+					<xsl:text>representation</xsl:text>
 				</xsl:element>
 				<!-- 3.1.5 Umfang (Menge und Abmessung) -->
 				<!--   -->
@@ -197,9 +197,29 @@
 			<!--   -->
 			<!-- 3.2.4 Abgebende Stelle -->
 			<!--   -->
-			<!-- 3.3.1 Form und Inhalt -->
-			<!--   -->
-			<!-- 3.3.2 Bewertung und Kassation -->
+			<!-- 3.3 Inhalt und innere Ordnung -->
+			<xsl:if test="arelda:dokumenttyp or arelda:anwendung or /arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:name">
+				<xsl:element name="contentStructure">
+					<xsl:attribute name="isadId">3</xsl:attribute>
+					<!-- 3.3.1 Form und Inhalt -->
+					<!--   -->
+					<!-- 3.3.4 Ornungssystem und Klassifikation -->
+					<xsl:if test="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:name">
+						<xsl:element name="arrangement">
+							<xsl:attribute name="isadId">3.4</xsl:attribute>
+							<xsl:attribute name="origin">//datei/name</xsl:attribute>
+							<xsl:value-of select="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:name/text()"/>
+						</xsl:element>
+					</xsl:if>
+					<xsl:if test="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:originalName">
+						<xsl:element name="arrangement">
+							<xsl:attribute name="isadId">3.4</xsl:attribute>
+							<xsl:attribute name="origin">//datei/originalName</xsl:attribute>
+							<xsl:value-of select="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:originalName/text()"/>
+						</xsl:element>
+					</xsl:if>
+				</xsl:element>
+			</xsl:if>
 			<!--   -->
 			<xsl:element name="conditionsAccessUse">
 				<xsl:attribute name="isadId">4</xsl:attribute>

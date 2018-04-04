@@ -119,6 +119,7 @@
 						</xsl:choose>
 					</xsl:element>
 				</xsl:if>
+				<!-- 3.4.4 Originalinhalt von arelda:erscheinungsform -->
 				<xsl:if test="arelda:erscheinungsform">
 					<xsl:element name="physTech">
 						<xsl:attribute name="isadId">4.4</xsl:attribute>

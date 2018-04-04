@@ -105,10 +105,24 @@
 				<name>#03_ordnerName</name>
 				<originalName>#04_ordnerOriginalName</originalName>
 				<datei id="ID1">
-					<name>#05_dateiName.pdf</name>
-					<originalName>#06_dateiOriginalName</originalName>
+					<name>#05_id1_dateiName.pdf</name>
+					<originalName>#06_id1_dateiOriginalName</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>e5878bd468e3b4f2b4d91a9b67b3de22</pruefsumme>
+					<eigenschaft name="#07_eigenschaftName">#08_eigenschaftWert</eigenschaft>
+				</datei>
+				<datei id="ID2">
+					<name>#05_id2_dateiName.pdf</name>
+					<originalName>#06_id2_dateiOriginalName</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
 					<pruefsumme>e5878bd468e3b4f2b4d91a9b67b3de17</pruefsumme>
+					<eigenschaft name="#07_eigenschaftName">#08_eigenschaftWert</eigenschaft>
+				</datei>
+				<datei id="ID3">
+					<name>#05_id3_dateiName.pdf</name>
+					<originalName>#06_id3_dateiOriginalName</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>e5878bd468e3b4f2b4d91a9b67b3de33</pruefsumme>
 					<eigenschaft name="#07_eigenschaftName">#08_eigenschaftWert</eigenschaft>
 				</datei>
 			</ordner>
@@ -172,7 +186,7 @@
 				<merkmal name="#28_zusatzDatenKey">#29_zusatzDatenValue</merkmal>
 			</zusatzDaten>
 			<name>#30_ordnungssystemName</name>
-			<ordnungssystemposition id="ID3">
+			<ordnungssystemposition id="ID5">
 				<federfuehrendeOrganisationseinheit>#31_federfuehrendeOrganisationseinheit</federfuehrendeOrganisationseinheit>
 				<klassifizierungskategorie>#32_klassifizierungskategorie</klassifizierungskategorie>
 				<datenschutz>true</datenschutz>
@@ -219,6 +233,8 @@
 					<schutzfrist>30</schutzfrist>
 					<schutzfristenBegruendung>#58_schutzfristenBegruendung</schutzfristenBegruendung>
 					<dateiRef>ID1</dateiRef>
+					<dateiRef>ID2</dateiRef>
+					<dateiRef>ID3</dateiRef>
 					<umfang>#76f_umfang</umfang>
 				</dossier>
 			</ordnungssystemposition>
