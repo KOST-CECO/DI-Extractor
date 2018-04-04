@@ -59,10 +59,5 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=xI2file.xsl
 [Selected Project Files]
 Main=processingest.php
-Selected=xI2file.xsl
-[xI2file.xsl]
-TopLine=121
-Caret=1,154

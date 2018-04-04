@@ -67,7 +67,8 @@
 			<!--   -->
 			<!-- 3.2.4 Abgebende Stelle -->
 			<!--   -->
-			<xsl:if test="arelda:dokumenttyp">
+			<!-- 3.3 Inhalt und innere Ordnung -->
+			<xsl:if test="arelda:dokumenttyp or arelda:anwendung or /arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:name">
 				<xsl:element name="contentStructure">
 					<xsl:attribute name="isadId">3</xsl:attribute>
 					<!-- 3.3.1 Form und Inhalt -->
@@ -79,7 +80,21 @@
 						</xsl:element>
 					</xsl:element>
 					<!--   -->
-					<!-- 3.3.2 Bewertung und Kassation -->
+					<!-- 3.3.4 Ornungssystem und Klassifikation -->
+					<xsl:if test="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:name">
+						<xsl:element name="arrangement">
+							<xsl:attribute name="isadId">3.4</xsl:attribute>
+							<xsl:attribute name="origin">//datei/name</xsl:attribute>
+							<xsl:value-of select="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:name/text()"/>
+						</xsl:element>
+					</xsl:if>
+					<xsl:if test="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:originalName">
+						<xsl:element name="arrangement">
+							<xsl:attribute name="isadId">3.4</xsl:attribute>
+							<xsl:attribute name="origin">//datei/originalName</xsl:attribute>
+							<xsl:value-of select="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:originalName/text()"/>
+						</xsl:element>
+					</xsl:if>
 				</xsl:element>
 			</xsl:if>
 			<!--   -->
@@ -102,7 +117,7 @@
 				</xsl:element>
 			</xsl:if>
 			<!-- additionalData -->
-			<xsl:if test="arelda:zusatzDaten or arelda:anwendung or /arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:name">
+			<xsl:if test="arelda:zusatzDaten">
 				<xsl:element name="additionalData">
 					<xsl:element name="mdWrap">
 						<!-- additionalData dokument -->
@@ -111,20 +126,6 @@
 								<xsl:attribute name="origin">//ordnungssystemposition/anwendung</xsl:attribute>
 								<xsl:attribute name="key">anwendung</xsl:attribute>
 								<xsl:value-of select="arelda:anwendung"/>
-							</xsl:element>
-						</xsl:if>
-						<xsl:if test="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:name">
-							<xsl:element name="property">
-								<xsl:attribute name="origin">//datei/name</xsl:attribute>
-								<xsl:attribute name="key">dateiName</xsl:attribute>
-								<xsl:value-of select="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:name/text()"/>
-							</xsl:element>
-						</xsl:if>
-						<xsl:if test="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:originalName">
-							<xsl:element name="property">
-								<xsl:attribute name="origin">//datei/originalName</xsl:attribute>
-								<xsl:attribute name="key">originalName</xsl:attribute>
-								<xsl:value-of select="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:originalName/text()"/>
 							</xsl:element>
 						</xsl:if>
 						<!-- additionalData zusatzDaten -->
