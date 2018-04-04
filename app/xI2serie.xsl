@@ -35,6 +35,16 @@
 				<!--   -->
 			</xsl:element>
 			<!-- 3.2.1 Name der Provenienzstelle -->
+			<xsl:if test="arelda:federfuehrendeOrganisationseinheit/text()">
+				<xsl:element name="context">
+					<xsl:attribute name="isadId">2</xsl:attribute>
+					<xsl:element name="creator">
+						<xsl:attribute name="isadId">2.1</xsl:attribute>
+						<xsl:attribute name="origin">//ordnungssystemposition/federfuehrendeOrganisationseinheit</xsl:attribute>
+						<xsl:value-of select="arelda:federfuehrendeOrganisationseinheit"/>
+					</xsl:element>
+				</xsl:element>
+			</xsl:if>
 			<!--   -->
 			<!-- 3.2.2 Verwaltungsgeschichte / Biographische Angaben -->
 			<!--   -->
@@ -55,25 +65,19 @@
 			<!--   -->
 			<!-- 3.6.1 Allgemeine Anmerkungen -->
 			<!--   -->
+			<!-- additionalReference -->
+			<xsl:if test="arelda:nummer/text()">
+				<xsl:element name="additionalReference">
+					<xsl:element name="recordReference">
+						<xsl:attribute name="origin">//ordnungssystemposition/nummer</xsl:attribute>
+						<xsl:value-of select="arelda:nummer"/>
+					</xsl:element>
+				</xsl:element>
+			</xsl:if>
 			<!-- additionalData -->
-			<xsl:if test="arelda:zusatzDaten or arelda:nummer or arelda:federfuehrendeOrganisationseinheit">
+			<xsl:if test="arelda:zusatzDaten">
 				<xsl:element name="additionalData">
 					<xsl:element name="mdWrap">
-						<!-- additionalData ordnungssystem -->
-						<xsl:if test="arelda:nummer">
-							<xsl:element name="property">
-								<xsl:attribute name="origin">//ordnungssystemposition/nummer</xsl:attribute>
-								<xsl:attribute name="key">ordnungssystempositionNummer</xsl:attribute>
-								<xsl:value-of select="arelda:nummer"/>
-							</xsl:element>
-						</xsl:if>
-						<xsl:if test="arelda:federfuehrendeOrganisationseinheit">
-							<xsl:element name="property">
-								<xsl:attribute name="origin">//ordnungssystemposition/federfuehrendeOrganisationseinheit</xsl:attribute>
-								<xsl:attribute name="key">federfuehrendeOrganisationseinheit</xsl:attribute>
-								<xsl:value-of select="arelda:federfuehrendeOrganisationseinheit"/>
-							</xsl:element>
-						</xsl:if>
 						<!-- additionalData zusatzDaten -->
 						<xsl:for-each select="arelda:zusatzDaten/arelda:merkmal">
 							<xsl:element name="property">

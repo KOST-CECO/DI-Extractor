@@ -15,3 +15,5 @@ proxy settings:
 git config --unset-all --local --system --global http.proxy
 git config --unset-all http.proxy
 git config --add http.proxy proxy-bvcol.admin.ch:8080
+
+git config --unset-all core.autocrlf
