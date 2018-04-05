@@ -413,19 +413,6 @@
 			<xs:attribute name="archivalOrigin" type="xs:boolean" use="optional"/>
 			<xs:attribute name="origin" type="xs:string" use="optional"/>
 		</xs:complexType>
-		<!--
-		<xs:complexType>
-			<xs:simpleContent>
-				<xs:extension base="isad:stringType">
-					<xs:attribute name="xpointer" type="isad:xpointerType" use="optional"/>
-					<xs:attribute name="isadId" type="xs:string" use="optional" fixed="3.4"/>
-					<xs:attribute name="obligation" type="xs:string" use="optional" fixed="optional"/>
-					<xs:attribute name="archivalOrigin" type="xs:boolean" use="optional"/>
-					<xs:attribute name="origin" type="xs:string" use="optional"/>
-				</xs:extension>
-			</xs:simpleContent>
-		</xs:complexType>
-	-->
 	</xs:element>
 	<xs:element name="accessConditions">
 		<xs:annotation>

@@ -59,5 +59,13 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
+0=Neu1.txt
+1=xIsadg_v2.1.xsd
 [Selected Project Files]
 Main=processingest.php
+[Neu1.txt]
+TopLine=1
+Caret=1,1
+[xIsadg_v2.1.xsd]
+TopLine=1
+Caret=1,1
