@@ -81,20 +81,11 @@
 					</xsl:element>
 					<!--   -->
 					<!-- 3.3.4 Ornungssystem und Klassifikation -->
-					<xsl:if test="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:name">
-						<xsl:element name="arrangement">
-							<xsl:attribute name="isadId">3.4</xsl:attribute>
-							<xsl:attribute name="origin">//datei/name</xsl:attribute>
-							<xsl:value-of select="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:name/text()"/>
-						</xsl:element>
-					</xsl:if>
-					<xsl:if test="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:originalName">
-						<xsl:element name="arrangement">
-							<xsl:attribute name="isadId">3.4</xsl:attribute>
-							<xsl:attribute name="origin">//datei/originalName</xsl:attribute>
-							<xsl:value-of select="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:originalName/text()"/>
-						</xsl:element>
-					</xsl:if>
+					<xsl:call-template name="xI2filename">
+						<xsl:with-param name="fileid">
+							<xsl:value-of select="$fileid"/>
+						</xsl:with-param>
+					</xsl:call-template>
 				</xsl:element>
 			</xsl:if>
 			<!--   -->
@@ -161,22 +152,27 @@
 					<xsl:with-param name="signature" select="$signature"/>
 				</xsl:call-template>
 				<!-- 3.1.2 Titel -->
-				<xsl:if test="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:originalName">
-					<xsl:element name="title">
-						<xsl:attribute name="isadId">1.2</xsl:attribute>
-						<xsl:attribute name="origin">//datei/originalName</xsl:attribute>
-						<xsl:attribute name="obligation">mandatory</xsl:attribute>
-						<xsl:value-of select="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:originalName/text()"/>
-					</xsl:element>
-				</xsl:if>
-				<xsl:if test="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:name">
-					<xsl:element name="title">
-						<xsl:attribute name="isadId">1.2</xsl:attribute>
-						<xsl:attribute name="origin">//datei/name</xsl:attribute>
-						<xsl:attribute name="obligation">mandatory</xsl:attribute>
-						<xsl:value-of select="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:name/text()"/>
-					</xsl:element>
-				</xsl:if>
+				<xsl:choose>
+					<xsl:when test="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:originalName">
+						<xsl:element name="title">
+							<xsl:attribute name="isadId">1.2</xsl:attribute>
+							<xsl:attribute name="origin">//datei/originalName</xsl:attribute>
+							<xsl:attribute name="obligation">mandatory</xsl:attribute>
+							<xsl:value-of select="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:originalName/text()"/>
+						</xsl:element>
+					</xsl:when>
+					<xsl:when test="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:name">
+						<xsl:element name="title">
+							<xsl:attribute name="isadId">1.2</xsl:attribute>
+							<xsl:attribute name="origin">//datei/name</xsl:attribute>
+							<xsl:attribute name="obligation">mandatory</xsl:attribute>
+							<xsl:value-of select="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:name/text()"/>
+						</xsl:element>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:text>dummy title</xsl:text>
+					</xsl:otherwise>
+				</xsl:choose>
 				<!-- 3.1.3 Entstehungszeitraum / Laufzeit -->
 				<!--   -->
 				<!-- 3.1.4 Verzeichnungsstufe -->
@@ -204,20 +200,11 @@
 					<!-- 3.3.1 Form und Inhalt -->
 					<!--   -->
 					<!-- 3.3.4 Ornungssystem und Klassifikation -->
-					<xsl:if test="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:name">
-						<xsl:element name="arrangement">
-							<xsl:attribute name="isadId">3.4</xsl:attribute>
-							<xsl:attribute name="origin">//datei/name</xsl:attribute>
-							<xsl:value-of select="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:name/text()"/>
-						</xsl:element>
-					</xsl:if>
-					<xsl:if test="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:originalName">
-						<xsl:element name="arrangement">
-							<xsl:attribute name="isadId">3.4</xsl:attribute>
-							<xsl:attribute name="origin">//datei/originalName</xsl:attribute>
-							<xsl:value-of select="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:originalName/text()"/>
-						</xsl:element>
-					</xsl:if>
+					<xsl:call-template name="xI2filename">
+						<xsl:with-param name="fileid">
+							<xsl:value-of select="$fileid"/>
+						</xsl:with-param>
+					</xsl:call-template>
 				</xsl:element>
 			</xsl:if>
 			<!--   -->

@@ -10,6 +10,7 @@
 	<xsl:include href="xI2date.xsl"/>
 	<xsl:include href="xI2access.xsl"/>
 	<xsl:include href="xI2reference.xsl"/>
+	<xsl:include href="xI2filename.xsl"/>
 	<!-- schema location -->
 	<xsl:variable name="location">ISADG xIsadg_v2.1.xsd</xsl:variable>
 	<!-- Ablieferung - Provenienz -->
