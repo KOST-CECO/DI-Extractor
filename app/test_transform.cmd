@@ -27,7 +27,7 @@ REM PAUSE
 CALL "C:\Tools\Altova\XMLSpy2005\XMLSpy.exe"                   "%CD%\xIsadg.2.1_metadata.xml"
 
 ECHO ===========================================================================
-ECHO Signaturstil: fortlaufend SIG.1 SIG.2 / Ausgabeformat: xIsadg 2.1
+ECHO Signaturstil: hierarchisch SIG.1 SIG.1.1 / Ausgabeformat: EAD
 SET FONDTITLE=Bestand-Titel
 SET SIGNATUR=sig
 REM Signaturstil (fortlaufend SIG.1 SIG.2 / hierarchisch SIG.1 SIG.1.1): [1] oder [2]

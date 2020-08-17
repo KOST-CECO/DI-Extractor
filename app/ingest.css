@@ -1,4 +1,4 @@
-﻿body {
+body {
 	margin-left:10px;
 	width: 800px;
 	font-family: Verdana, Helvetica, Arial, sans-serif;
@@ -57,5 +57,13 @@ hr {
 	font-size: 12px; 
 	font-weight: normal; 
 	font-style: italic; 
+}
+
+.versionBeta { 
+	font-size: 12px; 
+	font-weight: normal; 
+	font-style: italic; 
+	color: #DC143C;
+
 }
 

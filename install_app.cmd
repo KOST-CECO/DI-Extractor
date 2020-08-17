@@ -4,7 +4,6 @@ SETLOCAL
 CD app
 CALL test_transform.cmd
 CD ..
-EXIT /B
 
 ECHO.
 ECHO "Installieren aller notwendigen Dateien in C:\Tools\xampp\htdocs\app -> http://localhost/app"
