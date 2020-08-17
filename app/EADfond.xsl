@@ -8,6 +8,7 @@
 			<xsl:number/>
 		</xsl:variable>
 		<!-- 3.1.4 Verzeichnungsstufe -->
+		<xsl:attribute name="id"><xsl:value-of select="$signature"/></xsl:attribute>
 		<xsl:attribute name="level">otherlevel</xsl:attribute>
 		<xsl:attribute name="otherlevel">Bestand</xsl:attribute>
 		<xsl:element name="EAD:did">

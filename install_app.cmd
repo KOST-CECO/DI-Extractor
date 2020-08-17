@@ -4,6 +4,7 @@ SETLOCAL
 CD app
 CALL test_transform.cmd
 CD ..
+EXIT /B
 
 ECHO.
 ECHO "Installieren aller notwendigen Dateien in C:\Tools\xampp\htdocs\app -> http://localhost/app"
@@ -13,7 +14,7 @@ PAUSE
 SET UNIX_HOME=C:\Tools\PCUnixUtils
 
 SET WORKDIR=%CD%
-SET HTDOCS=C:\Tools\xampp\htdocs
+SET HTDOCS=C:\tools\xampp-7\htdocs
 
 RMDIR /S /Q %HTDOCS%\app
 

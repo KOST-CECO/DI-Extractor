@@ -10,6 +10,7 @@
 		</xsl:variable>
 		<xsl:element name="EAD:c">
 			<!-- 3.1.4 Verzeichnungsstufe -->
+			<xsl:attribute name="id"><xsl:value-of select="$signature"/></xsl:attribute>
 			<xsl:attribute name="level">otherlevel</xsl:attribute>
 			<xsl:attribute name="otherlevel">Dossier</xsl:attribute>
 			<xsl:element name="EAD:did">
