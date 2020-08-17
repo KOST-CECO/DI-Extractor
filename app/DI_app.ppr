@@ -12,7 +12,7 @@ DocumentRoot=C:\Tools\xampp\htdocs\app
 HTServer=http://localhost:90/app/
 [Project tree]
 DI_app
-	-app
+	+app
 		index.php
 		input.php
 		ingest.php
@@ -39,7 +39,7 @@ DI_app
 		createRef.xsl
 		elementRef.xsl
 		xIsadg_v1.6.1.xsd
-	+xIsadg_v2.0
+	-xIsadg_v2.0
 		eCH2xI2sadg.xsl
 		xI2fond.xsl
 		xI2serie.xsl
@@ -49,7 +49,7 @@ DI_app
 		xI2date.xsl
 		xI2access.xsl
 		xIsadg_v2.0.xsd
-	-EAD
+	+EAD
 		eCH2EAD.xsl
 		EADfond.xsl
 		EADserie.xsl
@@ -59,13 +59,38 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=Neu1.txt
-1=xIsadg_v2.1.xsd
+0=EADfond.xsl
+1=eCH2EAD.xsl
+2=EADserie.xsl
+3=EADfile.xsl
+4=EADitem.xsl
+5=EADdate.xsl
+6=EADaccess.xsl
+7=EADreference.xsl
 [Selected Project Files]
 Main=processingest.php
-[Neu1.txt]
+Selected=EADreference.xsl
+[EADfond.xsl]
+TopLine=1
+Caret=36,2
+[eCH2EAD.xsl]
 TopLine=1
 Caret=1,1
-[xIsadg_v2.1.xsd]
+[EADserie.xsl]
 TopLine=1
-Caret=1,1
+Caret=36,2
+[EADfile.xsl]
+TopLine=1
+Caret=36,2
+[EADitem.xsl]
+TopLine=1
+Caret=36,2
+[EADdate.xsl]
+TopLine=1
+Caret=36,2
+[EADaccess.xsl]
+TopLine=7
+Caret=36,2
+[EADreference.xsl]
+TopLine=3
+Caret=36,2
