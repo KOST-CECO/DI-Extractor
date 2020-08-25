@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ead SYSTEM "ead.dtd">
+<ead>
+	<eadheader>
+		<eadid>FRAN_IR_003500</eadid>
+		<filedesc>
+			<titlestmt>
+				<titleproper>Fonds Vitet (XIXe-XXe siècles)</titleproper>
+			</titlestmt>
+		</filedesc>
+	</eadheader>
+	<archdesc level="fonds">
+		<did>
+			<unitid>111</unitid>
+			<unittitle>Fonds Vitet</unittitle>
+		</did>
+		<dsc>
+			<c id="d_1" level="file">
+				<did>
+					<unitid>222</unitid>
+					<unittitle>LUDOVIC VITET (1802-1873)</unittitle>
+				</did>
+			</c>
+		</dsc>
+	</archdesc>
+</ead>

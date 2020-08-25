@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF SYSTEM "C:\workbench\_Workbench\rico-sampe\rico.dtd">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rico="https://www.ica.org/standards/RiC/ontology#" xml:base="http://data.archives-nationales.culture.gouv.fr/">
+	<rico:Record rdf:about="record/003500">
+		<rico:hasDocumentaryFormType rdf:resource="https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#FindingAid"/>
+		<rico:title xml:lang="fr">Fonds Vitet (XIXe-XXe siècles)</rico:title>
+		<rico:describes rdf:resource="recordResource/003500-top"/>
+		<rico:hasInstantiation>
+			<rico:Instantiation rdf:about="instantiation/003500-i1">
+				<rico:instantiates rdf:resource="record/003500"/>
+				<rico:identifier>FRAN_IR_003500</rico:identifier>
+				<rico:title xml:lang="fr">Fonds Vitet (XIXe-XXe siècles)</rico:title>
+			</rico:Instantiation>
+		</rico:hasInstantiation>
+	</rico:Record>
+	<rico:RecordResource rdf:about="recordResource/003500-top">
+		<rico:describedBy rdf:resource="record/003500"/>
+		<rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordSet"/>
+		<rico:hasRecordSetType rdf:resource="https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Fonds"/>
+		<rico:title xml:lang="fr">Fonds Vitet</rico:title>
+		<rico:hasInstantiation>
+			<rico:Instantiation rdf:about="instantiation/003500-top-i1">
+				<rico:instantiates rdf:resource="recordResource/003500-top"/>
+				<rico:identifier>111</rico:identifier>
+				<rico:title xml:lang="fr">Fonds Vitet</rico:title>
+			</rico:Instantiation>
+		</rico:hasInstantiation>
+		<rico:includes rdf:resource="recordResource/003500-d_1"/>
+	</rico:RecordResource>
+	<rico:RecordResource rdf:about="recordResource/003500-d_1">
+		<rico:includedIn rdf:resource="recordResource/003500-top"/>
+		<rico:hasRecordSetType rdf:resource="https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#File"/>
+		<rico:title xml:lang="fr">LUDOVIC VITET (1802-1873)</rico:title>
+		<rico:hasInstantiation>
+			<rico:Instantiation rdf:about="instantiation/003500-d_1-i1">
+				<rico:instantiates rdf:resource="recordResource/003500-d_1"/>
+				<rico:identifier>222</rico:identifier>
+				<rico:title xml:lang="fr">LUDOVIC VITET (1802-1873)</rico:title>
+			</rico:Instantiation>
+		</rico:hasInstantiation>
+	</rico:RecordResource>
+</rdf:RDF>

@@ -1,0 +1,41 @@
+@base <http://data.archives-nationales.culture.gouv.fr/>.
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rico: <https://www.ica.org/standards/RiC/ontology#>.
+@prefix ric-rst: <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#>.
+@prefix ric-dft: <https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#>.
+
+<record/003500> a rico:Record;
+	rico:describes <recordResource/003500-top>;
+	rico:hasDocumentaryFormType ric-dft:FindingAid;
+	rico:hasInstantiation <instantiation/003500-i1>;
+	rico:title "Fonds Vitet (XIXe-XXe siècles)"@fr.
+
+<instantiation/003500-i1> a rico:Instantiation;
+	rico:identifier "FRAN_IR_003500";
+	rico:instantiates <record/003500>;
+	rico:title "Fonds Vitet (XIXe-XXe siècles)"@fr.
+
+<recordResource/003500-top> a rico:RecordResource, rico:RecordSet;
+	rico:describedBy <record/003500>;
+	rico:hasInstantiation <instantiation/003500-top-i1>;
+	rico:hasRecordSetType ric-rst:Fonds;
+	rico:includes <recordResource/003500-d_1>;
+	rico:title "Fonds Vitet"@fr.
+
+<instantiation/003500-top-i1> a rico:Instantiation;
+	rico:identifier "111";
+	rico:instantiates <recordResource/003500-top>;
+	rico:title "Fonds Vitet"@fr.
+	
+<recordResource/003500-d_1> a rico:RecordResource;
+	rico:hasInstantiation <instantiation/003500-d_1-i1>;
+	rico:hasRecordSetType ric-rst:File;
+	rico:includedIn <recordResource/003500-top>;
+	rico:title "LUDOVIC VITET (1802-1873)"@fr.	
+	
+<instantiation/003500-d_1-i1> a rico:Instantiation;
+	rico:identifier "222";
+	rico:instantiates <recordResource/003500-d_1>;
+	rico:title "LUDOVIC VITET (1802-1873)"@fr.
