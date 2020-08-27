@@ -1,0 +1,124 @@
+@base <http://data.archives-nationales.culture.gouv.fr/>.
+
+@prefix rico: <https://www.ica.org/standards/RiC/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rico: <https://www.ica.org/standards/RiC/ontology#>.
+@prefix ric-rst: <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#>.
+@prefix ric-dft: <https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#>.
+
+<record/> a <https://www.ica.org/standards/RiC/ontology#Record> ;
+  rico:hasDocumentaryFormType ric-dft:FindingAid ;
+  rico:describes <recordResource/-top> ;
+  rico:hasInstantiation <instantiation/-i1> .
+
+<instantiation/-i1> a rico:Instantiation ;
+  rico:instantiates <record/> ;
+  rico:identifier "StASG_RIS" ;
+  rico:heldBy <agent/005061> .
+
+<recordResource/-top> a rico:RecordResource, rico:RecordSet ;
+  rico:describedBy <record/> ;
+  rico:hasRecordSetType ric-rst:Collection ;
+  rico:title "paketSIP"@de ;
+  rico:heldBy <agent/005061> ;
+  rico:hasInstantiation <instantiation/-top-i1> ;
+  rico:includes <recordResource/-d_StASG.1> .
+
+<instantiation/-top-i1> a rico:Instantiation ;
+  rico:instantiates <recordResource/-top> ;
+  rico:title "paketSIP"@de ;
+  rico:heldBy <agent/005061> .
+
+<recordResource/-d_StASG.1> a rico:RecordResource, rico:RecordSet ;
+  rico:includedIn <recordResource/-top> ;
+  rico:hasRecordSetType ric-rst:Fonds ;
+  rico:title "ein Dossier aus dem RIS St.Gallen"@de ;
+  rico:date "2006-12-13/2007-09-23"@de ;
+  rico:history """
+         <html:div xmlns:html="http://www.w3.org/1999/xhtml" namespacelang="fr">
+            <html:h4>Origine</html:h4>
+            <html:p>Grossrat des Kantons St.Gallen</html:p>
+         </html:div>
+"""^^rdf:XMLLiteral ;
+  rico:hasInstantiation <instantiation/-d_StASG.1-i1> ;
+  rico:includes <recordResource/-d_StASG.1.1> .
+
+<instantiation/-d_StASG.1-i1> a rico:Instantiation ;
+  rico:instantiates <recordResource/-d_StASG.1> ;
+  rico:identifier "StASG.1" ;
+  rico:title "ein Dossier aus dem RIS St.Gallen"@de ;
+  rico:date "2006-12-13/2007-09-23"@de ;
+  rico:history """
+               <html:div xmlns:html="http://www.w3.org/1999/xhtml">
+                  <html:div namespacelang="fr">
+                     <html:h4>Informations sur les modalités d’entrée</html:h4>
+                     <html:p>Staatskanzlei des Kantons St.Gallen</html:p>
+                  </html:div>
+                  <html:div namespacelang="fr">
+                     <html:h4>Origine</html:h4>
+                     <html:p>Grossrat des Kantons St.Gallen</html:p>
+                  </html:div>
+               </html:div>
+"""^^rdf:XMLLiteral .
+
+<recordResource/-d_StASG.1.1> a rico:RecordResource, rico:RecordSet ;
+  rico:includedIn <recordResource/-d_StASG.1> ;
+  rico:hasRecordSetType ric-rst:Series ;
+  rico:title "Erziehung, Bildung, Kultur"@de ;
+  rico:hasInstantiation <instantiation/-d_StASG.1.1-i1> ;
+  rico:includes <recordResource/-d_StASG.1.1.1> .
+
+<instantiation/-d_StASG.1.1-i1> a rico:Instantiation ;
+  rico:instantiates <recordResource/-d_StASG.1.1> ;
+  rico:identifier "StASG.1.1" ;
+  rico:title "Erziehung, Bildung, Kultur"@de .
+
+<recordResource/-d_StASG.1.1.1> a rico:RecordResource, rico:RecordSet ;
+  rico:includedIn <recordResource/-d_StASG.1.1> ;
+  rico:hasRecordSetType ric-rst:Series ;
+  rico:title "Schulen"@de ;
+  rico:hasInstantiation <instantiation/-d_StASG.1.1.1-i1> ;
+  rico:includes <recordResource/-d_StASG.1.1.1.1> .
+
+<instantiation/-d_StASG.1.1.1-i1> a rico:Instantiation ;
+  rico:instantiates <recordResource/-d_StASG.1.1.1> ;
+  rico:identifier "StASG.1.1.1" ;
+  rico:title "Schulen"@de .
+
+<recordResource/-d_StASG.1.1.1.1> a rico:RecordResource, rico:RecordSet ;
+  rico:includedIn <recordResource/-d_StASG.1.1.1> ;
+  rico:hasRecordSetType ric-rst:Series ;
+  rico:title "Allgemein"@de ;
+  rico:hasInstantiation <instantiation/-d_StASG.1.1.1.1-i1> ;
+  rico:includes <recordResource/-d_StASG.1.1.1.1.1> .
+
+<instantiation/-d_StASG.1.1.1.1-i1> a rico:Instantiation ;
+  rico:instantiates <recordResource/-d_StASG.1.1.1.1> ;
+  rico:identifier "StASG.1.1.1.1" ;
+  rico:title "Allgemein"@de .
+
+<recordResource/-d_StASG.1.1.1.1.1> a rico:RecordResource, rico:RecordSet ;
+  rico:includedIn <recordResource/-d_StASG.1.1.1.1> ;
+  rico:hasRecordSetType ric-rst:File ;
+  rico:title "X. Nachtrag zum Volksschulgesetz"@de ;
+  rico:date "2006-12-13/2007-04-25"@de ;
+  rico:hasInstantiation <instantiation/-d_StASG.1.1.1.1.1-i1> ;
+  rico:includes <recordResource/-d_StASG.1.1.1.1.1_1> .
+
+<instantiation/-d_StASG.1.1.1.1.1-i1> a rico:Instantiation ;
+  rico:instantiates <recordResource/-d_StASG.1.1.1.1.1> ;
+  rico:identifier "StASG.1.1.1.1.1" ;
+  rico:title "X. Nachtrag zum Volksschulgesetz"@de ;
+  rico:date "2006-12-13/2007-04-25"@de .
+
+<recordResource/-d_StASG.1.1.1.1.1_1> a rico:RecordResource, rico:Record ;
+  rico:includedIn <recordResource/-d_StASG.1.1.1.1.1> ;
+  rico:title "Botschaft und Entwurf der Regierung vom 12. Dezember 2006"@de ;
+  rico:scopeAndContent """<html:p xmlns:html="http://www.w3.org/1999/xhtml" namespacelang="fr">PDF-Dokument</html:p>"""^^rdf:XMLLiteral ;
+  rico:hasInstantiation <instantiation/-d_StASG.1.1.1.1.1_1-i1> .
+
+<instantiation/-d_StASG.1.1.1.1.1_1-i1> a rico:Instantiation ;
+  rico:instantiates <recordResource/-d_StASG.1.1.1.1.1_1> ;
+  rico:identifier "StASG.1.1.1.1.1_1" ;
+  rico:title "Botschaft und Entwurf der Regierung vom 12. Dezember 2006"@de .
+

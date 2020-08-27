@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<paket xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://bar.admin.ch/arelda/v4" xsi:schemaLocation="http://bar.admin.ch/arelda/v4 xsd/arelda.xsd" xsi:type="paketSIP" schemaVersion="4.0">
+	<paketTyp>SIP</paketTyp>
+	<inhaltsverzeichnis>
+		<ordner>
+			<name>header</name>
+			<originalName>header</originalName>
+			<ordner>
+				<name>xsd</name>
+				<originalName>xsd</originalName>
+				<datei id="_TScYQTfMEeK0MoQqr4ob3A">
+					<name>ablieferung.xsd</name>
+					<originalName>ablieferung.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>aa1f7ad13064e1643ac85478296165af</pruefsumme>
+				</datei>
+				<datei id="_TSmJQDfMEeK0MoQqr4ob3A">
+					<name>archivischeNotiz.xsd</name>
+					<originalName>archivischeNotiz.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>847911efbac472d0ecc6fe1e99873799</pruefsumme>
+				</datei>
+				<datei id="_TSmJQTfMEeK0MoQqr4ob3A">
+					<name>archivischerVorgang.xsd</name>
+					<originalName>archivischerVorgang.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>4a237563fd2d40be9a9ecbf4c0bf946e</pruefsumme>
+				</datei>
+				<datei id="_TSvTMDfMEeK0MoQqr4ob3A">
+					<name>arelda.xsd</name>
+					<originalName>arelda.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>f8454632e1ebf97e0aa8d9527ce2641f</pruefsumme>
+				</datei>
+				<datei id="_TS5EMDfMEeK0MoQqr4ob3A">
+					<name>base.xsd</name>
+					<originalName>base.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>cb30854883c6d5640b0965dae5f34afd</pruefsumme>
+				</datei>
+				<datei id="_TS5EMTfMEeK0MoQqr4ob3A">
+					<name>datei.xsd</name>
+					<originalName>datei.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>a4276f0c798ce6c497f0a03660ead0d9</pruefsumme>
+				</datei>
+				<datei id="_TTCOIDfMEeK0MoQqr4ob3A">
+					<name>dokument.xsd</name>
+					<originalName>dokument.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>721965e5224766040bf0bcd03978809e</pruefsumme>
+				</datei>
+				<datei id="_TTCOITfMEeK0MoQqr4ob3A">
+					<name>dossier.xsd</name>
+					<originalName>dossier.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>f3f1141d95e92a291e84cfb30bb30e9a</pruefsumme>
+				</datei>
+				<datei id="_TTL_IDfMEeK0MoQqr4ob3A">
+					<name>ordner.xsd</name>
+					<originalName>ordner.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>83e0f91d1a232c7bdd7416970844af1c</pruefsumme>
+				</datei>
+				<datei id="_TTL_ITfMEeK0MoQqr4ob3A">
+					<name>ordnungssystem.xsd</name>
+					<originalName>ordnungssystem.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>4b64247b25362382d6c648ba8ff76ad6</pruefsumme>
+				</datei>
+				<datei id="_TTVwIDfMEeK0MoQqr4ob3A">
+					<name>ordnungssystemposition.xsd</name>
+					<originalName>ordnungssystemposition.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>1e7f0a9b914c8baf1235740b133ec90e</pruefsumme>
+				</datei>
+				<datei id="_TTVwITfMEeK0MoQqr4ob3A">
+					<name>paket.xsd</name>
+					<originalName>paket.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>9920c66b7066f645390e922ba803aadb</pruefsumme>
+				</datei>
+				<datei id="_TTe6EDfMEeK0MoQqr4ob3A">
+					<name>provenienz.xsd</name>
+					<originalName>provenienz.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>2d6dbc4665cb5169d62549dbbc3f19a7</pruefsumme>
+				</datei>
+				<datei id="_TTe6ETfMEeK0MoQqr4ob3A">
+					<name>zusatzDaten.xsd</name>
+					<originalName>zusatzDaten.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>a685887b7ad673ea2deac6f96cf3fb4f</pruefsumme>
+				</datei>
+			</ordner>
+		</ordner>
+		<ordner>
+			<name>content</name>
+			<originalName>content</originalName>
+			<ordner>
+				<name>22.06.12</name>
+				<originalName>22.06.12</originalName>
+				<datei id="_dPF_4DfSEeKbAdCGaeR48Q">
+					<name>{69D68D97-D16F-4F62-88C8-6E03CD945C3F}.pdf</name>
+					<originalName>{69D68D97-D16F-4F62-88C8-6E03CD945C3F}.pdf</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>7678ae5895f6ddfce5b7503bf77d3e4b</pruefsumme>
+				</datei>
+			</ordner>
+		</ordner>
+	</inhaltsverzeichnis>
+	<ablieferung xsi:type="ablieferungGeverSIP">
+		<ablieferungstyp>GEVER</ablieferungstyp>
+		<ablieferndeStelle>Staatskanzlei des Kantons St.Gallen</ablieferndeStelle>
+		<entstehungszeitraum>
+			<von>
+				<datum>2006-12-13</datum>
+			</von>
+			<bis>
+				<datum>2007-09-23</datum>
+			</bis>
+		</entstehungszeitraum>
+		<ablieferungsnummer>2007/24</ablieferungsnummer>
+		<provenienz>
+			<aktenbildnerName>Grossrat des Kantons St.Gallen</aktenbildnerName>
+			<systemName>RIS</systemName>
+			<registratur>Ratsinformationssystem des Kantons St.Gallen (RIS), Kantonsrat, Gesetzgebung</registratur>
+		</provenienz>
+		<ordnungssystem>
+			<generation>AP Räte</generation>
+			<name>Räte - Aktenplan Kantonsrat und Regierung</name>
+			<ordnungssystemposition id="_TTorEDfMEeK0MoQqr4ob3A">
+				<datenschutz>false</datenschutz>
+				<nummer>2</nummer>
+				<titel>Erziehung, Bildung, Kultur</titel>
+				<ordnungssystemposition id="_hcEeADfPEeKjf7YCJPGTUQ">
+					<datenschutz>false</datenschutz>
+					<nummer>21</nummer>
+					<titel>Schulen</titel>
+					<ordnungssystemposition id="_niZjEDfPEeKjf7YCJPGTUQ">
+						<datenschutz>false</datenschutz>
+						<nummer>210</nummer>
+						<titel>Allgemein</titel>
+						<dossier id="_raJ3wDfPEeKjf7YCJPGTUQ">
+							<titel>X. Nachtrag zum Volksschulgesetz</titel>
+							<erscheinungsform>digital</erscheinungsform>
+							<federfuehrendeOrganisationseinheit>Bildungsdepartement</federfuehrendeOrganisationseinheit>
+							<entstehungszeitraum>
+								<von>
+									<datum>2006-12-13</datum>
+								</von>
+								<bis>
+									<datum>2007-04-25</datum>
+								</bis>
+							</entstehungszeitraum>
+							<aktenzeichen>22.06.12</aktenzeichen>
+							<eroeffnungsdatum>
+								<datum>2006-12-13</datum>
+							</eroeffnungsdatum>
+							<abschlussdatum>
+								<datum>2007-07-31</datum>
+							</abschlussdatum>
+							<dokument id="_-7MuIDfSEeKbAdCGaeR48Q">
+								<titel>Botschaft und Entwurf der Regierung vom 12. Dezember 2006</titel>
+								<autor>Regierungsrat</autor>
+								<erscheinungsform>digital</erscheinungsform>
+								<dokumenttyp>PDF-Dokument</dokumenttyp>
+								<registrierdatum>
+									<datum>2006-12-15</datum>
+								</registrierdatum>
+								<dateiRef>_dPF_4DfSEeKbAdCGaeR48Q</dateiRef>
+							</dokument>
+						</dossier>
+					</ordnungssystemposition>
+				</ordnungssystemposition>
+			</ordnungssystemposition>
+		</ordnungssystem>
+	</ablieferung>
+</paket>

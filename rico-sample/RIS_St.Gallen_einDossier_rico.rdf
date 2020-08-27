@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:rico="https://www.ica.org/standards/RiC/ontology#"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         xml:base="http://data.archives-nationales.culture.gouv.fr/">
+   <rico:Record rdf:about="record/">
+      <rico:hasDocumentaryFormType rdf:resource="https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#FindingAid"/>
+      <rico:describes rdf:resource="recordResource/-top"/>
+      <rico:hasInstantiation>
+         <rico:Instantiation rdf:about="instantiation/-i1">
+            <rico:instantiates rdf:resource="record/"/>
+            <rico:identifier>StASG_RIS</rico:identifier>
+            <rico:heldBy rdf:resource="agent/005061"/>
+         </rico:Instantiation>
+      </rico:hasInstantiation>
+   </rico:Record>
+   <rico:RecordResource rdf:about="recordResource/-top">
+      <rico:describedBy rdf:resource="record/"/>
+      <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordSet"/>
+      <rico:hasRecordSetType rdf:resource="https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Collection"/>
+      <rico:title xml:lang="de">paketSIP</rico:title>
+      <rico:heldBy rdf:resource="agent/005061"/>
+      <rico:hasInstantiation>
+         <rico:Instantiation rdf:about="instantiation/-top-i1">
+            <rico:instantiates rdf:resource="recordResource/-top"/>
+            <rico:title xml:lang="de">paketSIP</rico:title>
+            <rico:heldBy rdf:resource="agent/005061"/>
+         </rico:Instantiation>
+      </rico:hasInstantiation>
+      <rico:includes rdf:resource="recordResource/-d_StASG.1"/>
+   </rico:RecordResource>
+   <rico:RecordResource rdf:about="recordResource/-d_StASG.1">
+      <rico:includedIn rdf:resource="recordResource/-top"/>
+      <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordSet"/>
+      <rico:hasRecordSetType rdf:resource="https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Fonds"/>
+      <rico:title xml:lang="de">ein Dossier aus dem RIS St.Gallen</rico:title>
+      <rico:date xml:lang="de">2006-12-13/2007-09-23</rico:date>
+      <rico:history rdf:parseType="Literal">
+         <html:div xml:lang="de">
+            <html:h4>Origine</html:h4>
+            <html:p>Grossrat des Kantons St.Gallen</html:p>
+         </html:div>
+      </rico:history>
+      <rico:hasInstantiation>
+         <rico:Instantiation rdf:about="instantiation/-d_StASG.1-i1">
+            <rico:instantiates rdf:resource="recordResource/-d_StASG.1"/>
+            <rico:identifier>StASG.1</rico:identifier>
+            <rico:title xml:lang="de">ein Dossier aus dem RIS St.Gallen</rico:title>
+            <rico:date xml:lang="de">2006-12-13/2007-09-23</rico:date>
+            <rico:history rdf:parseType="Literal">
+               <html:div>
+                  <html:div xml:lang="de">
+                     <html:h4>Informations sur les modalités d’entrée</html:h4>
+                     <html:p>Staatskanzlei des Kantons St.Gallen</html:p>
+                  </html:div>
+                  <html:div xml:lang="de">
+                     <html:h4>Origine</html:h4>
+                     <html:p>Grossrat des Kantons St.Gallen</html:p>
+                  </html:div>
+               </html:div>
+            </rico:history>
+         </rico:Instantiation>
+      </rico:hasInstantiation>
+      <rico:includes>
+         <rico:RecordResource rdf:about="recordResource/-d_StASG.1.1">
+            <rico:includedIn rdf:resource="recordResource/-d_StASG.1"/>
+            <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordSet"/>
+            <rico:hasRecordSetType rdf:resource="https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Series"/>
+            <rico:title xml:lang="de">Erziehung, Bildung, Kultur</rico:title>
+            <rico:hasInstantiation>
+               <rico:Instantiation rdf:about="instantiation/-d_StASG.1.1-i1">
+                  <rico:instantiates rdf:resource="recordResource/-d_StASG.1.1"/>
+                  <rico:identifier>StASG.1.1</rico:identifier>
+                  <rico:title xml:lang="de">Erziehung, Bildung, Kultur</rico:title>
+               </rico:Instantiation>
+            </rico:hasInstantiation>
+            <rico:includes>
+               <rico:RecordResource rdf:about="recordResource/-d_StASG.1.1.1">
+                  <rico:includedIn rdf:resource="recordResource/-d_StASG.1.1"/>
+                  <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordSet"/>
+                  <rico:hasRecordSetType rdf:resource="https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Series"/>
+                  <rico:title xml:lang="de">Schulen</rico:title>
+                  <rico:hasInstantiation>
+                     <rico:Instantiation rdf:about="instantiation/-d_StASG.1.1.1-i1">
+                        <rico:instantiates rdf:resource="recordResource/-d_StASG.1.1.1"/>
+                        <rico:identifier>StASG.1.1.1</rico:identifier>
+                        <rico:title xml:lang="de">Schulen</rico:title>
+                     </rico:Instantiation>
+                  </rico:hasInstantiation>
+                  <rico:includes>
+                     <rico:RecordResource rdf:about="recordResource/-d_StASG.1.1.1.1">
+                        <rico:includedIn rdf:resource="recordResource/-d_StASG.1.1.1"/>
+                        <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordSet"/>
+                        <rico:hasRecordSetType rdf:resource="https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Series"/>
+                        <rico:title xml:lang="de">Allgemein</rico:title>
+                        <rico:hasInstantiation>
+                           <rico:Instantiation rdf:about="instantiation/-d_StASG.1.1.1.1-i1">
+                              <rico:instantiates rdf:resource="recordResource/-d_StASG.1.1.1.1"/>
+                              <rico:identifier>StASG.1.1.1.1</rico:identifier>
+                              <rico:title xml:lang="de">Allgemein</rico:title>
+                           </rico:Instantiation>
+                        </rico:hasInstantiation>
+                        <rico:includes>
+                           <rico:RecordResource rdf:about="recordResource/-d_StASG.1.1.1.1.1">
+                              <rico:includedIn rdf:resource="recordResource/-d_StASG.1.1.1.1"/>
+                              <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordSet"/>
+                              <rico:hasRecordSetType rdf:resource="https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#File"/>
+                              <rico:title xml:lang="de">X. Nachtrag zum Volksschulgesetz</rico:title>
+                              <rico:date xml:lang="de">2006-12-13/2007-04-25</rico:date>
+                              <rico:hasInstantiation>
+                                 <rico:Instantiation rdf:about="instantiation/-d_StASG.1.1.1.1.1-i1">
+                                    <rico:instantiates rdf:resource="recordResource/-d_StASG.1.1.1.1.1"/>
+                                    <rico:identifier>StASG.1.1.1.1.1</rico:identifier>
+                                    <rico:title xml:lang="de">X. Nachtrag zum Volksschulgesetz</rico:title>
+                                    <rico:date xml:lang="de">2006-12-13/2007-04-25</rico:date>
+                                 </rico:Instantiation>
+                              </rico:hasInstantiation>
+                              <rico:includes>
+                                 <rico:RecordResource rdf:about="recordResource/-d_StASG.1.1.1.1.1_1">
+                                    <rico:includedIn rdf:resource="recordResource/-d_StASG.1.1.1.1.1"/>
+                                    <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#Record"/>
+                                    <rico:title xml:lang="de">Botschaft und Entwurf der Regierung vom 12. Dezember 2006</rico:title>
+                                    <rico:scopeAndContent rdf:parseType="Literal">
+                                       <html:p xml:lang="de">PDF-Dokument</html:p>
+                                    </rico:scopeAndContent>
+                                    <rico:hasInstantiation>
+                                       <rico:Instantiation rdf:about="instantiation/-d_StASG.1.1.1.1.1_1-i1">
+                                          <rico:instantiates rdf:resource="recordResource/-d_StASG.1.1.1.1.1_1"/>
+                                          <rico:identifier>StASG.1.1.1.1.1_1</rico:identifier>
+                                          <rico:title xml:lang="de">Botschaft und Entwurf der Regierung vom 12. Dezember 2006</rico:title>
+                                       </rico:Instantiation>
+                                    </rico:hasInstantiation>
+                                 </rico:RecordResource>
+                              </rico:includes>
+                           </rico:RecordResource>
+                        </rico:includes>
+                     </rico:RecordResource>
+                  </rico:includes>
+               </rico:RecordResource>
+            </rico:includes>
+         </rico:RecordResource>
+      </rico:includes>
+   </rico:RecordResource>
+</rdf:RDF>
