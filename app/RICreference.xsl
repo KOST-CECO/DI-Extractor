@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="ISADG" xmlns:arelda="http://bar.admin.ch/arelda/v4">
+<xsl:stylesheet version="1.0" 
+		xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+		xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+		xmlns:rico="https://www.ica.org/standards/RiC/ontology#"
+		xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<!-- named template RICreference -->
 	<xsl:template name="RICreference">
 		<xsl:param name="signature"/>
@@ -7,7 +14,7 @@
 			<xsl:text>_</xsl:text>
 			<xsl:value-of select="$signature"/>
 		</xsl:variable>
-		<xsl:element name="referenceCode">
+		<xsl:element name="rico:identifier">
 			<xsl:choose>
 				<xsl:when test="$reffile//reference">
 					<xsl:value-of select="$archsig"/>

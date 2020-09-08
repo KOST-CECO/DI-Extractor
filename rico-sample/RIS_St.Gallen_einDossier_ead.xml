@@ -5,61 +5,61 @@
 		<eadid>StASG_RIS</eadid>
 		<filedesc>
 			<titlestmt>
-				<titleproper/>
+				<titleproper>Ein Dossier aus dem RIS St.Gallen</titleproper>
 			</titlestmt>
+			<editionstmt>
+				<edition>ablieferungGeverSIP</edition>
+			</editionstmt>
 		</filedesc>
 	</eadheader>
-	<archdesc level="collection">
+	<archdesc level="fonds">
 		<did>
+			<unitid>StASG</unitid>
 			<unittitle>paketSIP</unittitle>
+			<unitdate>2006-12-13/2007-09-23</unitdate>
+			<origination>Grossrat des Kantons St.Gallen</origination>
 		</did>
+		<acqinfo>
+			<list>
+				<item>Staatskanzlei des Kantons St.Gallen</item>
+			</list>
+		</acqinfo>
 		<dsc>
-			<c id="d_StASG.1" level="fonds">
+			<c id="d_StASG.1" level="series">
 				<did>
 					<unitid>StASG.1</unitid>
-					<unittitle>ein Dossier aus dem RIS St.Gallen</unittitle>
-					<unitdate>2006-12-13/2007-09-23</unitdate>
-					<origination>Grossrat des Kantons St.Gallen</origination>
+					<unittitle>Erziehung, Bildung, Kultur</unittitle>
 				</did>
-				<acqinfo>
-					<p>Staatskanzlei des Kantons St.Gallen</p>
-				</acqinfo>
 				<c id="d_StASG.1.1" level="series">
 					<did>
 						<unitid>StASG.1.1</unitid>
-						<unittitle>Erziehung, Bildung, Kultur</unittitle>
+						<unittitle>Schulen</unittitle>
 					</did>
 					<c id="d_StASG.1.1.1" level="series">
 						<did>
 							<unitid>StASG.1.1.1</unitid>
-							<unittitle>Schulen</unittitle>
+							<unittitle>Allgemein</unittitle>
 						</did>
-						<c id="d_StASG.1.1.1.1" level="series">
+						<c id="d_StASG.1.1.1.1" level="file">
 							<did>
 								<unitid>StASG.1.1.1.1</unitid>
-								<unittitle>Allgemein</unittitle>
+								<unittitle>X. Nachtrag zum Volksschulgesetz</unittitle>
+								<unitdate>2006-12-13/2007-04-25</unitdate>
 							</did>
-							<c id="d_StASG.1.1.1.1.1" level="file">
+							<phystech>
+								<p>digital</p>
+							</phystech>
+							<c id="d_StASG.1.1.1.1_1" level="item">
 								<did>
-									<unitid>StASG.1.1.1.1.1</unitid>
-									<unittitle>X. Nachtrag zum Volksschulgesetz</unittitle>
-									<unitdate>2006-12-13/2007-04-25</unitdate>
+									<unitid>StASG.1.1.1.1_1</unitid>
+									<unittitle>Botschaft und Entwurf der Regierung vom 12. Dezember 2006</unittitle>
 								</did>
+								<scopecontent>
+									<p>PDF-Dokument</p>
+								</scopecontent>
 								<phystech>
 									<p>digital</p>
 								</phystech>
-								<c id="d_StASG.1.1.1.1.1_1" level="item">
-									<did>
-										<unitid>StASG.1.1.1.1.1_1</unitid>
-										<unittitle>Botschaft und Entwurf der Regierung vom 12. Dezember 2006</unittitle>
-									</did>
-									<scopecontent>
-										<p>PDF-Dokument</p>
-									</scopecontent>
-									<phystech>
-										<p>digital</p>
-									</phystech>
-								</c>
 							</c>
 						</c>
 					</c>

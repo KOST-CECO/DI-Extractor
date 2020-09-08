@@ -1,0 +1,122 @@
+@base <http://www.w3.org/2002/07/owl>.
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix xml: <http://www.w3.org/XML/1998/namespace>.
+@prefix : <http://www.w3.org/2002/07/owl#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix ns: <http://creativecommons.org/ns#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix html: <http://www.w3.org/1999/xhtml>.
+@prefix rico: <https://www.ica.org/standards/RiC/ontology#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix skos1: <skos:>.
+@prefix terms: <http://purl.org/dc/terms/>.
+
+[] rico:source "Ratsinformationssystem des Kantons St.Gallen (RIS), Kantonsrat, Gesetzgebung"^^rdfs:Literal.
+[] owl:topDataProperty "".
+<http://arelda.ch/#agent_001> a 
+                                rico:CorporateBody;
+                              rico:describes "Aktenbildner";
+                              rico:title "Grossrat des Kantons St.Gallen".
+<http://arelda.ch/#agent_002> a 
+                                rico:CorporateBody;
+                              rico:describes "abliefernde Stelle";
+                              rico:title "Staatskanzlei des Kantons St.Gallen".
+<http://arelda.ch/#sip> terms:creator <http://arelda.ch/#agent_002>;
+                        a 
+                          rico:Record,
+                          rico:RecordResource;
+                        rico:date "13.12.2006 - 23.09.2007";
+                        rico:describedBy <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Collection>;
+                        rico:describes "Ratsinformationssystem des Kantons St.Gallen (RIS), Kantonsrat, Gesetzgebung";
+                        rico:hasDocumentaryFormType <https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#FindingAid>;
+                        rico:hasInstantiation <http://arelda.ch/#sip-i1>;
+                        rico:hasRecordSetType "paketSIP";
+                        rico:title "Grossrat des Kantons St.Gallen".
+<http://arelda.ch/#sip-i1> a 
+                             rico:Instantiation;
+                           rico:identifier "2007/24";
+                           rico:instantiates <http://arelda.ch/#sip>;
+                           rico:title "Grossrat des Kantons St.Gallen".
+<http://arelda.ch/#sip_StASG.1> a 
+                                  rico:RecordResource,
+                                  rico:RecordSet;
+                                rico:date "2006-12-13/2007-09-23"@de;
+                                rico:hasInstantiation <http://arelda.ch/#sip_StASG.1-i1>;
+                                rico:hasRecordSetType <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Fonds>;
+                                rico:includedIn <http://arelda.ch/#sip>;
+                                rico:title "ein Dossier aus dem RIS St.Gallen".
+<http://arelda.ch/#sip_StASG.1-i1> a 
+                                     rico:Instantiation;
+                                   rico:date "2006-12-13/2007-09-23"@de;
+                                   rico:identifier "StASG.1";
+                                   rico:instantiates <http://arelda.ch/#sip_StASG.1>;
+                                   rico:title "ein Dossier aus dem RIS St.Gallen".
+<http://arelda.ch/#sip_StASG.1.1> a 
+                                    rico:RecordResource,
+                                    rico:RecordSet;
+                                  rico:hasInstantiation <http://arelda.ch/#sip_StASG.1.1-i1>;
+                                  rico:hasRecordSetType <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Series>;
+                                  rico:includedIn <http://arelda.ch/#sip_StASG.1>;
+                                  rico:includes <http://arelda.ch/#sip_StASG.1.1.1>;
+                                  rico:title "Erziehung, Bildung, Kultur"@de.
+<http://arelda.ch/#sip_StASG.1.1-i1> a 
+                                       rico:Instantiation;
+                                     rico:identifier "StASG.1.1";
+                                     rico:instantiates <http://arelda.ch/#sip_StASG.1.1>;
+                                     rico:title "Erziehung, Bildung, Kultur"@de.
+<http://arelda.ch/#sip_StASG.1.1.1> a 
+                                      rico:RecordResource,
+                                      rico:RecordSet;
+                                    rico:hasInstantiation <http://arelda.ch/#sip_StASG.1.1.1-i1>;
+                                    rico:hasRecordSetType <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Series>;
+                                    rico:includedIn <http://arelda.ch/#sip_StASG.1.1>;
+                                    rico:includes <http://arelda.ch/#sip_StASG.1.1.1.1>;
+                                    rico:title "Schulen"@de.
+<http://arelda.ch/#sip_StASG.1.1.1-i1> a 
+                                         rico:Instantiation;
+                                       rico:identifier "StASG.1.1.1";
+                                       rico:instantiates <http://arelda.ch/#sip_StASG.1.1.1>;
+                                       rico:title "Schulen"@de.
+<http://arelda.ch/#sip_StASG.1.1.1.1> a 
+                                        rico:RecordResource,
+                                        rico:RecordSet;
+                                      rico:hasInstantiation <http://arelda.ch/#sip_StASG.1.1.1.1-i1>;
+                                      rico:hasRecordSetType <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Series>;
+                                      rico:includedIn <http://arelda.ch/#sip_StASG.1.1.1>;
+                                      rico:includes <http://arelda.ch/#sip_StASG.1.1.1.1.1>;
+                                      rico:title "Allgemein"@de.
+<http://arelda.ch/#sip_StASG.1.1.1.1-i1> a 
+                                           rico:Instantiation;
+                                         rico:identifier "StASG.1.1.1.1";
+                                         rico:instantiates <http://arelda.ch/#sip_StASG.1.1.1.1>;
+                                         rico:title "Allgemein"@de.
+<http://arelda.ch/#sip_StASG.1.1.1.1.1> a 
+                                          rico:RecordResource,
+                                          rico:RecordSet;
+                                        rico:date "2006-12-13/2007-04-25"@de;
+                                        rico:hasInstantiation <http://arelda.ch/#sip_StASG.1.1.1.1.1-i1>;
+                                        rico:hasRecordSetType <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#File>;
+                                        rico:includedIn <http://arelda.ch/#sip_StASG.1.1.1.1>;
+                                        rico:includes <http://arelda.ch/#sip_StASG.1.1.1.1.1_1>;
+                                        rico:title "X. Nachtrag zum Volksschulgesetz"@de.
+<http://arelda.ch/#sip_StASG.1.1.1.1.1-i1> a 
+                                             rico:Instantiation;
+                                           rico:date "2006-12-13/2007-04-25"@de;
+                                           rico:identifier "StASG.1.1.1.1.1";
+                                           rico:instantiates <http://arelda.ch/#sip_StASG.1.1.1.1.1>;
+                                           rico:title "X. Nachtrag zum Volksschulgesetz"@de.
+<http://arelda.ch/#sip_StASG.1.1.1.1.1_1> a 
+                                            rico:Record,
+                                            rico:RecordResource;
+                                          rico:hasInstantiation <http://arelda.ch/#sip_StASG.1.1.1.1.1_1-i1>;
+                                          rico:includedIn <http://arelda.ch/#sip_StASG.1.1.1.1.1>;
+                                          rico:scopeAndContent """<html:p xmlns:html=\"http://www.w3.org/1999/xhtml\" xml:lang=\"de\">PDF-Dokument</html:p>"""^^rdf:XMLLiteral;
+                                          rico:title "Botschaft und Entwurf der Regierung vom 12. Dezember 2006"@de.
+<http://arelda.ch/#sip_StASG.1.1.1.1.1_1-i1> a 
+                                               rico:Instantiation;
+                                             rico:identifier "StASG.1.1.1.1.1_1";
+                                             rico:instantiates <http://arelda.ch/#sip_StASG.1.1.1.1.1_1>;
+                                             rico:title "Botschaft und Entwurf der Regierung vom 12. Dezember 2006"@de.

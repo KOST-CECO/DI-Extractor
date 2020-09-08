@@ -1,0 +1,375 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:html="http://www.w3.org/1999/xhtml"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rico="https://www.ica.org/standards/RiC/ontology#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:skos1="skos:"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- https://www.ica.org/standards/RiC/ontology#date -->
+
+    <AnnotationProperty rdf:about="https://www.ica.org/standards/RiC/ontology#date"/>
+    
+
+
+    <!-- https://www.ica.org/standards/RiC/ontology#describedBy -->
+
+    <AnnotationProperty rdf:about="https://www.ica.org/standards/RiC/ontology#describedBy"/>
+    
+
+
+    <!-- https://www.ica.org/standards/RiC/ontology#describes -->
+
+    <AnnotationProperty rdf:about="https://www.ica.org/standards/RiC/ontology#describes"/>
+    
+
+
+    <!-- https://www.ica.org/standards/RiC/ontology#hasDocumentaryFormType -->
+
+    <AnnotationProperty rdf:about="https://www.ica.org/standards/RiC/ontology#hasDocumentaryFormType"/>
+    
+
+
+    <!-- https://www.ica.org/standards/RiC/ontology#hasInstantiation -->
+
+    <AnnotationProperty rdf:about="https://www.ica.org/standards/RiC/ontology#hasInstantiation"/>
+    
+
+
+    <!-- https://www.ica.org/standards/RiC/ontology#hasRecordSetType -->
+
+    <AnnotationProperty rdf:about="https://www.ica.org/standards/RiC/ontology#hasRecordSetType"/>
+    
+
+
+    <!-- https://www.ica.org/standards/RiC/ontology#identifier -->
+
+    <AnnotationProperty rdf:about="https://www.ica.org/standards/RiC/ontology#identifier"/>
+    
+
+
+    <!-- https://www.ica.org/standards/RiC/ontology#includedIn -->
+
+    <AnnotationProperty rdf:about="https://www.ica.org/standards/RiC/ontology#includedIn"/>
+    
+
+
+    <!-- https://www.ica.org/standards/RiC/ontology#includes -->
+
+    <AnnotationProperty rdf:about="https://www.ica.org/standards/RiC/ontology#includes"/>
+    
+
+
+    <!-- https://www.ica.org/standards/RiC/ontology#instantiates -->
+
+    <AnnotationProperty rdf:about="https://www.ica.org/standards/RiC/ontology#instantiates"/>
+    
+
+
+    <!-- https://www.ica.org/standards/RiC/ontology#scopeAndContent -->
+
+    <AnnotationProperty rdf:about="https://www.ica.org/standards/RiC/ontology#scopeAndContent"/>
+    
+
+
+    <!-- https://www.ica.org/standards/RiC/ontology#source -->
+
+    <AnnotationProperty rdf:about="https://www.ica.org/standards/RiC/ontology#source"/>
+    
+
+
+    <!-- https://www.ica.org/standards/RiC/ontology#title -->
+
+    <AnnotationProperty rdf:about="https://www.ica.org/standards/RiC/ontology#title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.ica.org/standards/RiC/ontology#CorporateBody -->
+
+    <Class rdf:about="https://www.ica.org/standards/RiC/ontology#CorporateBody"/>
+    
+
+
+    <!-- https://www.ica.org/standards/RiC/ontology#Instantiation -->
+
+    <Class rdf:about="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+    
+
+
+    <!-- https://www.ica.org/standards/RiC/ontology#Record -->
+
+    <Class rdf:about="https://www.ica.org/standards/RiC/ontology#Record"/>
+    
+
+
+    <!-- https://www.ica.org/standards/RiC/ontology#RecordResource -->
+
+    <Class rdf:about="https://www.ica.org/standards/RiC/ontology#RecordResource"/>
+    
+
+
+    <!-- https://www.ica.org/standards/RiC/ontology#RecordSet -->
+
+    <Class rdf:about="https://www.ica.org/standards/RiC/ontology#RecordSet"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://arelda.ch/#agent_001 -->
+
+    <NamedIndividual rdf:about="http://arelda.ch/#agent_001">
+        <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#CorporateBody"/>
+        <rico:describes>Aktenbildner</rico:describes>
+        <rico:title>Grossrat des Kantons St.Gallen</rico:title>
+    </NamedIndividual>
+    
+
+
+    <!-- http://arelda.ch/#agent_002 -->
+
+    <NamedIndividual rdf:about="http://arelda.ch/#agent_002">
+        <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#CorporateBody"/>
+        <rico:describes>abliefernde Stelle</rico:describes>
+        <rico:title>Staatskanzlei des Kantons St.Gallen</rico:title>
+    </NamedIndividual>
+    
+
+
+    <!-- http://arelda.ch/#sip -->
+
+    <NamedIndividual rdf:about="http://arelda.ch/#sip">
+        <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#Record"/>
+        <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordResource"/>
+        <terms:creator rdf:resource="http://arelda.ch/#agent_002"/>
+        <rico:date>13.12.2006 - 23.09.2007</rico:date>
+        <rico:describedBy rdf:resource="https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Collection"/>
+        <rico:describes>Ratsinformationssystem des Kantons St.Gallen (RIS), Kantonsrat, Gesetzgebung</rico:describes>
+        <rico:hasDocumentaryFormType rdf:resource="https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#FindingAid"/>
+        <rico:hasInstantiation rdf:resource="http://arelda.ch/#sip-i1"/>
+        <rico:hasRecordSetType>paketSIP</rico:hasRecordSetType>
+        <rico:title>Grossrat des Kantons St.Gallen</rico:title>
+    </NamedIndividual>
+    
+
+
+    <!-- http://arelda.ch/#sip-i1 -->
+
+    <NamedIndividual rdf:about="http://arelda.ch/#sip-i1">
+        <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+        <rico:identifier>2007/24</rico:identifier>
+        <rico:instantiates rdf:resource="http://arelda.ch/#sip"/>
+        <rico:title>Grossrat des Kantons St.Gallen</rico:title>
+    </NamedIndividual>
+    
+
+
+    <!-- http://arelda.ch/#sip_StASG.1 -->
+
+    <NamedIndividual rdf:about="http://arelda.ch/#sip_StASG.1">
+        <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordResource"/>
+        <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordSet"/>
+        <rico:date xml:lang="de">2006-12-13/2007-09-23</rico:date>
+        <rico:hasInstantiation rdf:resource="http://arelda.ch/#sip_StASG.1-i1"/>
+        <rico:hasRecordSetType rdf:resource="https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Fonds"/>
+        <rico:includedIn rdf:resource="http://arelda.ch/#sip"/>
+        <rico:title>ein Dossier aus dem RIS St.Gallen</rico:title>
+    </NamedIndividual>
+    
+
+
+    <!-- http://arelda.ch/#sip_StASG.1-i1 -->
+
+    <NamedIndividual rdf:about="http://arelda.ch/#sip_StASG.1-i1">
+        <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+        <rico:date xml:lang="de">2006-12-13/2007-09-23</rico:date>
+        <rico:identifier>StASG.1</rico:identifier>
+        <rico:instantiates rdf:resource="http://arelda.ch/#sip_StASG.1"/>
+        <rico:title>ein Dossier aus dem RIS St.Gallen</rico:title>
+    </NamedIndividual>
+    
+
+
+    <!-- http://arelda.ch/#sip_StASG.1.1 -->
+
+    <NamedIndividual rdf:about="http://arelda.ch/#sip_StASG.1.1">
+        <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordResource"/>
+        <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordSet"/>
+        <rico:hasInstantiation rdf:resource="http://arelda.ch/#sip_StASG.1.1-i1"/>
+        <rico:hasRecordSetType rdf:resource="https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Series"/>
+        <rico:includedIn rdf:resource="http://arelda.ch/#sip_StASG.1"/>
+        <rico:includes rdf:resource="http://arelda.ch/#sip_StASG.1.1.1"/>
+        <rico:title xml:lang="de">Erziehung, Bildung, Kultur</rico:title>
+    </NamedIndividual>
+    
+
+
+    <!-- http://arelda.ch/#sip_StASG.1.1-i1 -->
+
+    <NamedIndividual rdf:about="http://arelda.ch/#sip_StASG.1.1-i1">
+        <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+        <rico:identifier>StASG.1.1</rico:identifier>
+        <rico:instantiates rdf:resource="http://arelda.ch/#sip_StASG.1.1"/>
+        <rico:title xml:lang="de">Erziehung, Bildung, Kultur</rico:title>
+    </NamedIndividual>
+    
+
+
+    <!-- http://arelda.ch/#sip_StASG.1.1.1 -->
+
+    <NamedIndividual rdf:about="http://arelda.ch/#sip_StASG.1.1.1">
+        <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordResource"/>
+        <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordSet"/>
+        <rico:hasInstantiation rdf:resource="http://arelda.ch/#sip_StASG.1.1.1-i1"/>
+        <rico:hasRecordSetType rdf:resource="https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Series"/>
+        <rico:includedIn rdf:resource="http://arelda.ch/#sip_StASG.1.1"/>
+        <rico:includes rdf:resource="http://arelda.ch/#sip_StASG.1.1.1.1"/>
+        <rico:title xml:lang="de">Schulen</rico:title>
+    </NamedIndividual>
+    
+
+
+    <!-- http://arelda.ch/#sip_StASG.1.1.1-i1 -->
+
+    <NamedIndividual rdf:about="http://arelda.ch/#sip_StASG.1.1.1-i1">
+        <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+        <rico:identifier>StASG.1.1.1</rico:identifier>
+        <rico:instantiates rdf:resource="http://arelda.ch/#sip_StASG.1.1.1"/>
+        <rico:title xml:lang="de">Schulen</rico:title>
+    </NamedIndividual>
+    
+
+
+    <!-- http://arelda.ch/#sip_StASG.1.1.1.1 -->
+
+    <NamedIndividual rdf:about="http://arelda.ch/#sip_StASG.1.1.1.1">
+        <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordResource"/>
+        <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordSet"/>
+        <rico:hasInstantiation rdf:resource="http://arelda.ch/#sip_StASG.1.1.1.1-i1"/>
+        <rico:hasRecordSetType rdf:resource="https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Series"/>
+        <rico:includedIn rdf:resource="http://arelda.ch/#sip_StASG.1.1.1"/>
+        <rico:includes rdf:resource="http://arelda.ch/#sip_StASG.1.1.1.1.1"/>
+        <rico:title xml:lang="de">Allgemein</rico:title>
+    </NamedIndividual>
+    
+
+
+    <!-- http://arelda.ch/#sip_StASG.1.1.1.1-i1 -->
+
+    <NamedIndividual rdf:about="http://arelda.ch/#sip_StASG.1.1.1.1-i1">
+        <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+        <rico:identifier>StASG.1.1.1.1</rico:identifier>
+        <rico:instantiates rdf:resource="http://arelda.ch/#sip_StASG.1.1.1.1"/>
+        <rico:title xml:lang="de">Allgemein</rico:title>
+    </NamedIndividual>
+    
+
+
+    <!-- http://arelda.ch/#sip_StASG.1.1.1.1.1 -->
+
+    <NamedIndividual rdf:about="http://arelda.ch/#sip_StASG.1.1.1.1.1">
+        <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordResource"/>
+        <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordSet"/>
+        <rico:date xml:lang="de">2006-12-13/2007-04-25</rico:date>
+        <rico:hasInstantiation rdf:resource="http://arelda.ch/#sip_StASG.1.1.1.1.1-i1"/>
+        <rico:hasRecordSetType rdf:resource="https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#File"/>
+        <rico:includedIn rdf:resource="http://arelda.ch/#sip_StASG.1.1.1.1"/>
+        <rico:includes rdf:resource="http://arelda.ch/#sip_StASG.1.1.1.1.1_1"/>
+        <rico:title xml:lang="de">X. Nachtrag zum Volksschulgesetz</rico:title>
+    </NamedIndividual>
+    
+
+
+    <!-- http://arelda.ch/#sip_StASG.1.1.1.1.1-i1 -->
+
+    <NamedIndividual rdf:about="http://arelda.ch/#sip_StASG.1.1.1.1.1-i1">
+        <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+        <rico:date xml:lang="de">2006-12-13/2007-04-25</rico:date>
+        <rico:identifier>StASG.1.1.1.1.1</rico:identifier>
+        <rico:instantiates rdf:resource="http://arelda.ch/#sip_StASG.1.1.1.1.1"/>
+        <rico:title xml:lang="de">X. Nachtrag zum Volksschulgesetz</rico:title>
+    </NamedIndividual>
+    
+
+
+    <!-- http://arelda.ch/#sip_StASG.1.1.1.1.1_1 -->
+
+    <NamedIndividual rdf:about="http://arelda.ch/#sip_StASG.1.1.1.1.1_1">
+        <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#Record"/>
+        <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordResource"/>
+        <rico:hasInstantiation rdf:resource="http://arelda.ch/#sip_StASG.1.1.1.1.1_1-i1"/>
+        <rico:includedIn rdf:resource="http://arelda.ch/#sip_StASG.1.1.1.1.1"/>
+        <rico:scopeAndContent rdf:parseType="Literal"><html:p xmlns:html="http://www.w3.org/1999/xhtml" xml:lang="de">PDF-Dokument</html:p></rico:scopeAndContent>
+        <rico:title xml:lang="de">Botschaft und Entwurf der Regierung vom 12. Dezember 2006</rico:title>
+    </NamedIndividual>
+    
+
+
+    <!-- http://arelda.ch/#sip_StASG.1.1.1.1.1_1-i1 -->
+
+    <NamedIndividual rdf:about="http://arelda.ch/#sip_StASG.1.1.1.1.1_1-i1">
+        <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+        <rico:identifier>StASG.1.1.1.1.1_1</rico:identifier>
+        <rico:instantiates rdf:resource="http://arelda.ch/#sip_StASG.1.1.1.1.1_1"/>
+        <rico:title xml:lang="de">Botschaft und Entwurf der Regierung vom 12. Dezember 2006</rico:title>
+    </NamedIndividual>
+    <rdf:Description>
+        <rico:source rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Ratsinformationssystem des Kantons St.Gallen (RIS), Kantonsrat, Gesetzgebung</rico:source>
+    </rdf:Description>
+    <rdf:Description>
+        <topDataProperty></topDataProperty>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+

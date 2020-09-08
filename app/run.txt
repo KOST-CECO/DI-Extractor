@@ -2,4 +2,4 @@ REM convert to xIsadg and validate with xmllint
 
 CD C:\workbench\_Workbench\app
 
-java -jar C:\JTools\saxon9\saxon9.jar -versionmsg:off -s:"..\sample\arelda_v4-minimal-GEVER.xml" -xsl:eCH2RIC.xsl -o:"rico.rdf.xml" fondtitle="Bestand Titel" archsig="sig" reffilename=null.xml
+java -jar C:\JTools\saxon9\saxon9.jar -versionmsg:off -s:"..\rico-sample\RIS_St.Gallen_einDossier_arelda.xml" -xsl:eCH2RIC.xsl -o:"rico.rdf.xml" fondtitle="Bestand Titel" archsig="sig" reffilename=null.xml

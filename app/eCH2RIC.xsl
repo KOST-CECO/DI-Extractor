@@ -5,7 +5,10 @@
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 		xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-		xmlns:arelda="http://bar.admin.ch/arelda/v4">
+		xmlns:rico="https://www.ica.org/standards/RiC/ontology#"
+		xmlns:arelda="http://bar.admin.ch/arelda/v4"
+		exclude-result-prefixes="xs xsi arelda">
+
 	<xsl:output method="xml" doctype-system="rico.dtd" encoding="UTF-8" indent="yes" media-type="application/xml"/>
 	<!-- parameter -->
 	<xsl:param name="fondtitle"/>
@@ -20,12 +23,16 @@
 	<xsl:include href="RICfond.xsl"/>
 	<!-- root node transformation sets namespace and schema location -->
 	<xsl:template match="/arelda:paket">
-		<xsl:element name="rdf:RDF">
+		<rdf:RDF xml:base="http://arelda_v4.0.ch/">
+
+		<xsl:element name="rdf:Description">
+			<xsl:attribute name="rdf:about">sip</xsl:attribute>
 			<xsl:apply-templates select="arelda:ablieferung"/>
 			<!-- 
 			<xsl:apply-templates select="arelda:ablieferung/arelda:ordnungssystem"/>
 			 -->
-		</xsl:element>
+			</xsl:element>
+		</rdf:RDF>
 	</xsl:template>
 	<!-- Ordnungssystem -->
 	<xsl:template match="arelda:ablieferung/arelda:ordnungssystem">

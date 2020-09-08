@@ -1,0 +1,110 @@
+@base <http://arelda_v4.0.ch/>.
+
+@prefix rico: <https://www.ica.org/standards/RiC/ontology#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ric-rst: <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#>.
+@prefix ric-dft: <https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#>.
+
+
+<agent_001> a rico:CorporateBody ;
+  rico:describes "Aktenbildner" ;
+  rico:title "Grossrat des Kantons St.Gallen"@de .
+
+<agent_002> a rico:CorporateBody ;
+  rico:describes "abliefernde Stelle" ;
+  rico:title "Staatskanzlei des Kantons St.Gallen"@de .
+
+<sip>  
+  dc:creator <agent_001>, <agent_002> ;
+  a rico:Record, rico:RecordResource ;
+  rico:date "13.12.2006 - 23.09.2007" ;
+  rico:describedBy ric-rst:Collection ;
+  rico:describes "Ratsinformationssystem des Kantons St.Gallen (RIS), Kantonsrat, Gesetzgebung"@de ;
+  rico:hasDocumentaryFormType ric-dft:FindingAid ;
+  rico:hasInstantiation <sip-i1> ;
+  rico:hasRecordSetType "paketSIP" ;
+  rico:title "Grossrat des Kantons St.Gallen"@de .
+
+<sip-i1> a rico:Instantiation ;
+  rico:identifier "2007/24" ;
+  rico:instantiates <sip> ;
+  rico:title "Grossrat des Kantons St.Gallen"@de .
+
+<sip_StASG.1> a rico:RecordResource, rico:RecordSet ;
+  rico:date "2006-12-13/2007-09-23"@de ;
+  rico:hasInstantiation <sip_StASG.1-i1> ;
+  rico:hasRecordSetType ric-rst:Fonds ;
+  rico:includedIn <sip> ;
+  rico:title "ein Dossier aus dem RIS St.Gallen"@de .
+
+<sip_StASG.1-i1> a rico:Instantiation ;
+  rico:date "2006-12-13/2007-09-23"@de ;
+  rico:identifier "StASG.1" ;
+  rico:instantiates <sip_StASG.1> ;
+  rico:title "ein Dossier aus dem RIS St.Gallen"@de .
+
+<sip_StASG.1.1> a rico:RecordResource, rico:RecordSet ;
+  rico:hasInstantiation <sip_StASG.1.1-i1> ;
+  rico:hasRecordSetType ric-rst:Series ;
+  rico:includedIn <sip_StASG.1> ;
+  rico:includes <sip_StASG.1.1.1> ;
+  rico:title "Erziehung, Bildung, Kultur"@de .
+
+<sip_StASG.1.1-i1> a rico:Instantiation ;
+  rico:identifier "StASG.1.1" ;
+  rico:instantiates <sip_StASG.1.1> ;
+  rico:title "Erziehung, Bildung, Kultur"@de .
+
+<sip_StASG.1.1.1> a rico:RecordResource, rico:RecordSet ;
+  rico:hasInstantiation <sip_StASG.1.1.1-i1> ;
+  rico:hasRecordSetType ric-rst:Series ;
+  rico:includedIn <sip_StASG.1.1> ;
+  rico:includes <sip_StASG.1.1.1.1> ;
+  rico:title "Schulen"@de .
+
+<sip_StASG.1.1.1-i1> a rico:Instantiation ;
+  rico:identifier "StASG.1.1.1" ;
+  rico:instantiates <sip_StASG.1.1.1> ;
+  rico:title "Schulen"@de .
+
+<sip_StASG.1.1.1.1> a rico:RecordResource, rico:RecordSet ;
+  rico:hasInstantiation <sip_StASG.1.1.1.1-i1> ;
+  rico:hasRecordSetType ric-rst:Series ;
+  rico:includedIn <sip_StASG.1.1.1> ;
+  rico:includes <sip_StASG.1.1.1.1.1> ;
+  rico:title "Allgemein"@de .
+
+<sip_StASG.1.1.1.1-i1>
+  a rico:Instantiation ;
+  rico:identifier "StASG.1.1.1.1" ;
+  rico:instantiates <sip_StASG.1.1.1.1> ;
+  rico:title "Allgemein"@de .
+
+<sip_StASG.1.1.1.1.1> a rico:RecordResource, rico:RecordSet ;
+  rico:date "2006-12-13/2007-04-25"@de ;
+  rico:hasInstantiation <sip_StASG.1.1.1.1.1-i1> ;
+  rico:hasRecordSetType ric-rst:File ;
+  rico:includedIn <sip_StASG.1.1.1.1> ;
+  rico:includes <sip_StASG.1.1.1.1.1_1> ;
+  rico:title "X. Nachtrag zum Volksschulgesetz"@de .
+
+<sip_StASG.1.1.1.1.1-i1> a rico:Instantiation ;
+  rico:date "2006-12-13/2007-04-25"@de ;
+  rico:identifier "StASG.1.1.1.1.1" ;
+  rico:instantiates <sip_StASG.1.1.1.1.1> ;
+  rico:title "X. Nachtrag zum Volksschulgesetz"@de .
+
+<sip_StASG.1.1.1.1.1_1> a rico:Record, rico:RecordResource ;
+  rico:hasInstantiation <sip_StASG.1.1.1.1.1_1-i1> ;
+  rico:hasRecordSetType ric-rst:Item ;
+  rico:includedIn <sip_StASG.1.1.1.1.1> ;
+  rico:scopeAndContent "PDF-Dokument"@de ;
+  rico:title "Botschaft und Entwurf der Regierung vom 12. Dezember 2006"@de .
+
+<sip_StASG.1.1.1.1.1_1-i1> a rico:Instantiation ;
+  rico:identifier "StASG.1.1.1.1.1_1" ;
+  rico:instantiates <sip_StASG.1.1.1.1.1_1> ;
+  rico:title "Botschaft und Entwurf der Regierung vom 12. Dezember 2006"@de .
+
+

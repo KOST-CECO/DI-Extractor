@@ -1,20 +1,9 @@
-@base <http://data.archives-nationales.culture.gouv.fr/>.
+@base <http://arelda_v4.0.ch/>.
 
-@prefix rico: <https://www.ica.org/standards/RiC/ontology#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rico: <https://www.ica.org/standards/RiC/ontology#>.
 @prefix ric-rst: <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#>.
 @prefix ric-dft: <https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#>.
-
-<record/> a <https://www.ica.org/standards/RiC/ontology#Record> ;
-  rico:hasDocumentaryFormType ric-dft:FindingAid ;
-  rico:describes <recordResource/-top> ;
-  rico:hasInstantiation <instantiation/-i1> .
-
-<instantiation/-i1> a rico:Instantiation ;
-  rico:instantiates <record/> ;
-  rico:identifier "StASG_RIS" ;
-  rico:heldBy <agent/005061> .
 
 <recordResource/-top> a rico:RecordResource, rico:RecordSet ;
   rico:describedBy <record/> ;
@@ -23,10 +12,20 @@
   rico:heldBy <agent/005061> ;
   rico:hasInstantiation <instantiation/-top-i1> ;
   rico:includes <recordResource/-d_StASG.1> .
-
+  
 <instantiation/-top-i1> a rico:Instantiation ;
   rico:instantiates <recordResource/-top> ;
   rico:title "paketSIP"@de ;
+  rico:heldBy <agent/005061> .
+
+<record/> a rico:Record ;
+  rico:hasDocumentaryFormType ric-dft:FindingAid ;
+  rico:describes <recordResource/-top> ;
+  rico:hasInstantiation <instantiation/-i1> .
+
+<instantiation/-i1> a rico:Instantiation ;
+  rico:instantiates <record/> ;
+  rico:identifier "StASG_RIS" ;
   rico:heldBy <agent/005061> .
 
 <recordResource/-d_StASG.1> a rico:RecordResource, rico:RecordSet ;
@@ -114,7 +113,9 @@
 <recordResource/-d_StASG.1.1.1.1.1_1> a rico:RecordResource, rico:Record ;
   rico:includedIn <recordResource/-d_StASG.1.1.1.1.1> ;
   rico:title "Botschaft und Entwurf der Regierung vom 12. Dezember 2006"@de ;
-  rico:scopeAndContent """<html:p xmlns:html="http://www.w3.org/1999/xhtml" namespacelang="fr">PDF-Dokument</html:p>"""^^rdf:XMLLiteral ;
+  rico:scopeAndContent """
+  	<html:p xmlns:html="http://www.w3.org/1999/xhtml" namespacelang="fr">PDF-Dokument</html:p>
+  """^^rdf:XMLLiteral ;
   rico:hasInstantiation <instantiation/-d_StASG.1.1.1.1.1_1-i1> .
 
 <instantiation/-d_StASG.1.1.1.1.1_1-i1> a rico:Instantiation ;

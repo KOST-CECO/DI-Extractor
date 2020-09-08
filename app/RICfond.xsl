@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="ISADG" xmlns:arelda="http://bar.admin.ch/arelda/v4">
+<xsl:stylesheet version="1.0" 
+		xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+		xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+		xmlns:rico="https://www.ica.org/standards/RiC/ontology#"
+		xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<!-- Ablieferung - Provenienz - Ordnungssystem -->
 	<xsl:template match="arelda:ablieferung">
 		<xsl:variable name="signature">
@@ -7,13 +14,14 @@
 			<xsl:text>.</xsl:text>
 			<xsl:number/>
 		</xsl:variable>
-		<xsl:element name="identity">
+
 			<!-- 3.1.1 Signatur -->
 			<xsl:call-template name="RICreference">
 				<xsl:with-param name="signature" select="$signature"/>
 			</xsl:call-template>
+			
 			<!-- 3.1.2 Titel -->
-			<xsl:element name="title">
+			<xsl:element name="rico:title">
 				<xsl:choose>
 					<xsl:when test="$fondtitle">
 						<xsl:value-of select="$fondtitle"/>
@@ -26,6 +34,7 @@
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:element>
+			
 			<!-- 3.1.3 Entstehungszeitraum / Laufzeit -->
 			<xsl:choose>
 				<xsl:when test="arelda:entstehungszeitraum">
@@ -40,12 +49,14 @@
 				</xsl:when>
 				<xsl:otherwise/>
 			</xsl:choose>
+			
 			<!-- 3.1.4 Verzeichnungsstufe -->
-			<xsl:element name="descriptionLevel">
-				<xsl:text>Bestand</xsl:text>
+			<xsl:element name="rico:hasDocumentaryFormType">
+				<xsl:attribute name="rdf:resource">https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#FindingAid</xsl:attribute>
 			</xsl:element>
+			
 			<!-- 3.1.5 Umfang (Menge und Abmessung) -->
-		</xsl:element>
+
 		<xsl:element name="context">
 			<!-- 3.2.1 Name der Provenienzstelle -->
 			<xsl:if test="arelda:provenienz/arelda:aktenbildnerName/text()">
