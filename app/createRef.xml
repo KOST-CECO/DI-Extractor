@@ -5,18 +5,28 @@
       <depth>0</depth>
    </identity>
    <identity>
-      <title>#39_ordnungssystemTitel</title>
+      <title>Erziehung, Bildung, Kultur</title>
       <referenceCode>sig.1.1</referenceCode>
       <depth>1</depth>
    </identity>
    <identity>
-      <title>#43_dossierTitel</title>
+      <title>Schulen</title>
       <referenceCode>sig.1.1.1</referenceCode>
       <depth>2</depth>
    </identity>
    <identity>
-      <title>#59_dokumentTitel</title>
-      <referenceCode>sig.1.1.1_1</referenceCode>
+      <title>Allgemein</title>
+      <referenceCode>sig.1.1.1.1</referenceCode>
       <depth>3</depth>
+   </identity>
+   <identity>
+      <title>X. Nachtrag zum Volksschulgesetz</title>
+      <referenceCode>sig.1.1.1.1.1</referenceCode>
+      <depth>4</depth>
+   </identity>
+   <identity>
+      <title>Botschaft und Entwurf der Regierung vom 12. Dezember 2006</title>
+      <referenceCode>sig.1.1.1.1.1_1</referenceCode>
+      <depth>5</depth>
    </identity>
 </reference>

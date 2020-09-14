@@ -2,4 +2,15 @@ REM convert to xIsadg and validate with xmllint
 
 CD C:\workbench\_Workbench\app
 
-java -jar C:\JTools\saxon9\saxon9.jar -versionmsg:off -s:"..\rico-sample\RIS_St.Gallen_einDossier_arelda.xml" -xsl:eCH2RIC.xsl -o:"rico.rdf.xml" fondtitle="Bestand Titel" archsig="sig" reffilename=null.xml
+REM Dezimale Signatur 1, 1.1, 1.2,
+java -jar C:\JTools\saxon9\saxon9.jar -versionmsg:off -s:"..\rico-sample\RIS_St.Gallen_einDossier_arelda.xml" -xsl:eCH2RIC.xsl -o:"rico.rdf.xml" fondtitle="RIS ein Dossier" archsig="sig" baseuri="http://arelda_v4.0.ch/" reffilename="null.xml"
+
+
+REM Fortlaufende Signatur 1, 2, 3,
+REM create unique reference for each archival object
+java -jar C:\JTools\saxon9\saxon9.jar -versionmsg:off -s:"..\rico-sample\RIS_St.Gallen_einDossier_arelda.xml" -xsl:createRef.xsl -o:"createRef.xml" fondtitle="RIS ein Dossier" archsig="sig" 
+
+REM create running number for each archival object
+java -jar C:\JTools\saxon9\saxon9.jar -versionmsg:off -s:createRef.xml -xsl:elementRef.xsl -o:numberRef.xml fondtitle="RIS ein Dossier" archsig="sig" 
+
+java -jar C:\JTools\saxon9\saxon9.jar -versionmsg:off -s:"..\rico-sample\RIS_St.Gallen_einDossier_arelda.xml" -xsl:eCH2RIC.xsl -o:"rico.rdf.xml" fondtitle="RIS ein Dossier" archsig="sig" baseuri="http://arelda_v4.0.ch/" reffilename="numberRef.xml"
