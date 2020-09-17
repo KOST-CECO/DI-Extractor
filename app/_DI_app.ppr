@@ -1,0 +1,75 @@
+[Config]
+Relative path=1
+Compilator.SaveAll=0
+Compilator.Capture=0
+Compilator.HideOutput=0
+DefaultDir=C:\Tools\workbench\_DI-Extractor\app
+DefaultCPIndex=7
+LogtoEnd=1
+DontOpen=0
+FileFormat=0
+DocumentRoot=C:\Tools\xampp\htdocs\app
+HTServer=http://localhost:90/app/
+[Project tree]
+DI_app
+	+cmd
+		run.txt
+		ToolListe.docx
+		run_transform.cmd
+		transform.cmd
+		..\install_app.cmd
+		extract_element.cmd
+		test_transform.cmd
+	+RIC
+		eCH2RIC.xsl
+		RICserie.xsl
+		RICreference.xsl
+		RICitem.xsl
+		RICfond.xsl
+		RICfile.xsl
+		RICdate.xsl
+		RICaccess.xsl
+	+app
+		index.php
+		input.php
+		ingest.php
+		maninput.php
+		processingest.php
+		helptext.php
+		copyright.php
+		class.inputfilter.php
+		ingest.css
+	-xIsadg
+		eCH2xIsadg.xsl
+		xIfond.xsl
+		xIserie.xsl
+		xIfile.xsl
+		xIitem.xsl
+		xIdate.xsl
+		xIaccess.xsl
+		xIreference.xsl
+		createRef.xsl
+		elementRef.xsl
+		xIsadg_v1.6.1.xsd
+	-xIsadg_v2.0
+		eCH2xI2sadg.xsl
+		xI2fond.xsl
+		xI2serie.xsl
+		xI2file.xsl
+		xI2item.xsl
+		xI2reference.xsl
+		xI2date.xsl
+		xI2access.xsl
+		xIsadg_v2.0.xsd
+	-EAD
+		eCH2EAD.xsl
+		EADfond.xsl
+		EADserie.xsl
+		EADfile.xsl
+		EADitem.xsl
+		EADdate.xsl
+		EADaccess.xsl
+		EADreference.xsl
+[Open project files]
+[Selected Project Files]
+Main=processingest.php

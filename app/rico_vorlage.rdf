@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xmlns:rico="https://www.ica.org/standards/RiC/ontology#" 
+	xml:base="http://arelda_v4.0.ch/">
+
+	<rdf:Description rdf:about="sig.1">
+		<rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordSet"/>
+        <rico:hasRecordSetType rdf:resource="https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Fonds"/>
+		<rico:technicalCharacteristics>paketSIP</rico:technicalCharacteristics>
+		<rico:identifier>sig.1</rico:identifier>
+		<rico:title>RIS ein Dossier</rico:title>
+		<rico:beginningDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-12-13</rico:beginningDate>
+		<rico:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2007-09-23</rico:endDate>
+		<rico:hasProvenance rdf:resource="agent_001"/>
+		<rico:createdBy rdf:resource="agent_002"/>
+		
+		<rico:hasInstantiation>
+			<rico:Instantiation rdf:about="sig.1-i1">
+				<rico:instantiates rdf:resource="sig.1"/>
+				<rico:title xml:lang="de">RIS ein Dossier</rico:title>
+			</rico:Instantiation>
+		</rico:hasInstantiation>
+
+	</rdf:Description>
+
+	<rdf:Description rdf:about="agent_001">
+		<rico:isCreatorOf rdf:resource="sig.1"/>
+		<rico:describes>Aktenbildner</rico:describes>
+		<rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#CorporateBody"/>
+		<rico:title xml:lang="de">Grossrat des Kantons St.Gallen</rico:title>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="agent_002">
+	    <rico:isProvenanceOf rdf:resource="sig.1"/>
+		<rico:describes>abliefernde Stelle</rico:describes>
+		<rico:title xml:lang="de">Staatskanzlei des Kantons St.Gallen</rico:title>
+		<rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#CorporateBody"/>
+	</rdf:Description>
+</rdf:RDF>

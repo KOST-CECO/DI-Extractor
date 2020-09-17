@@ -1,4 +1,4 @@
-REM convert to xIsadg and validate with xmllint
+REM convert to RIC-O
 
 CD C:\workbench\_Workbench\app
 
