@@ -22,14 +22,14 @@ DI_app
 		test_transform.cmd
 	+RIC
 		eCH2RIC.xsl
+		RICfond.xsl
 		RICserie.xsl
 		RICreference.xsl
 		RICitem.xsl
-		RICfond.xsl
 		RICfile.xsl
 		RICdate.xsl
 		RICaccess.xsl
-	+app
+	-app
 		index.php
 		input.php
 		ingest.php
@@ -71,5 +71,10 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
+0=RICfond.xsl
 [Selected Project Files]
 Main=processingest.php
+Selected=RICfond.xsl
+[RICfond.xsl]
+TopLine=106
+Caret=1,115

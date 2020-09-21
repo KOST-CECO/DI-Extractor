@@ -14,7 +14,7 @@
 			<xsl:text>_</xsl:text>
 			<xsl:value-of select="$signature"/>
 		</xsl:variable>
-		<xsl:element name="rico:identifier">
+
 			<xsl:choose>
 				<xsl:when test="$reffile//reference">
 					<xsl:value-of select="$archsig"/>
@@ -38,7 +38,7 @@
 					<xsl:value-of select="$signature"/>
 				</xsl:otherwise>
 			</xsl:choose>
-		</xsl:element>
+
 	</xsl:template>
 	<!--                                         -->
 	<xsl:template match="*" mode="refNo">

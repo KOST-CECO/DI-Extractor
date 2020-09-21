@@ -5,12 +5,22 @@
 	xmlns:rico="https://www.ica.org/standards/RiC/ontology#" 
 	xml:base="http://arelda_v4.0.ch/">
 
+	<rdf:Description rdf:about="sig">
+	    <rdfs:label xml:lang="en">Package</rdfs:label>
+	    <rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#recordResource"/>
+		<rico:technicalCharacteristics>ablieferungGeverSIP</rico:technicalCharacteristics>
+		<rico:identifier>2007/24</rico:identifier>
+		<rico:title xml:lang="de">Ratsinformationssystem des Kantons St.Gallen (RIS), Kantonsrat, Gesetzgebung</rico:title>
+	    <rico:includes rdf:resource="sig.1"/>
+	</rdf:Description>
+
 	<rdf:Description rdf:about="sig.1">
+	    <rdfs:label xml:lang="en">Fond</rdfs:label>
+	    <rico:includedIn rdf:resource="sig"/>
 		<rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordSet"/>
         <rico:hasRecordSetType rdf:resource="https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Fonds"/>
-		<rico:technicalCharacteristics>paketSIP</rico:technicalCharacteristics>
 		<rico:identifier>sig.1</rico:identifier>
-		<rico:title>RIS ein Dossier</rico:title>
+		<rico:title xml:lang="de">RIS ein Dossier</rico:title>
 		<rico:beginningDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-12-13</rico:beginningDate>
 		<rico:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2007-09-23</rico:endDate>
 		<rico:hasProvenance rdf:resource="agent_001"/>
