@@ -5,11 +5,13 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xmlns:dcterms="http://purl.org/dc/terms/" 
 	xmlns:rico="https://www.ica.org/standards/RiC/ontology#" 
 	xmlns:arelda="http://bar.admin.ch/arelda/v4">
 
 	<!-- Ablieferung - Provenienz - Ordnungssystem -->
 	<xsl:template match="arelda:ablieferung">
+		<!-- $signature -->
 		<xsl:variable name="signature">
 			<xsl:call-template name="RICreference">
 				<xsl:with-param name="signature">
@@ -18,6 +20,16 @@
 					<xsl:number/>
 				</xsl:with-param>
 			</xsl:call-template>
+		</xsl:variable>
+		<!-- $aktenbildner -->
+		<xsl:variable name="aktenbildner">
+			<xsl:text>agent_</xsl:text>
+			<xsl:value-of select="generate-id(arelda:provenienz/arelda:aktenbildnerName)"/>
+		</xsl:variable>
+		<!-- $ablieferndeStelle -->
+		<xsl:variable name="ablieferndeStelle">
+			<xsl:text>agent_</xsl:text>
+			<xsl:value-of select="generate-id(arelda:ablieferndeStelle)"/>
 		</xsl:variable>
 
 		<!-- rico:RecordSet Packet -->
@@ -86,9 +98,10 @@
 			<!-- 3.1.5 Umfang (Menge und Abmessung) -->
 
 			<!-- 3.2.1 Name der Provenienzstelle -->
+			<!-- has Provenance -->
 			<xsl:if test="arelda:provenienz/arelda:aktenbildnerName/text()">
 				<xsl:element name="rico:hasProvenance">
-					<xsl:attribute name="rdf:resource">agent_001</xsl:attribute>
+					<xsl:attribute name="rdf:resource"><xsl:value-of select="$aktenbildner"/></xsl:attribute>
 				</xsl:element>
 			</xsl:if>
 
@@ -107,9 +120,9 @@
 			</xsl:if>
 
 			<!-- 3.2.4 Abgebende Stelle -->
-			<xsl:if test="arelda:provenienz/arelda:aktenbildnerName/text()">
+			<xsl:if test="arelda:ablieferndeStelle/text()">
 				<xsl:element name="rico:createdBy">
-					<xsl:attribute name="rdf:resource">agent_002</xsl:attribute>
+					<xsl:attribute name="rdf:resource"><xsl:value-of select="$ablieferndeStelle"/></xsl:attribute>
 				</xsl:element>
 			</xsl:if>
 
@@ -178,7 +191,7 @@
 		<!-- Agents -->
 		
 		<!-- 3.2.1 Name der Provenienzstelle -->
-		<xsl:element name="rdf:Description"><xsl:attribute name="rdf:about">agent_001</xsl:attribute>
+		<xsl:element name="rdf:Description"><xsl:attribute name="rdf:about"><xsl:value-of select="$aktenbildner"/></xsl:attribute>
 			<!-- label -->
 			<xsl:element name="rdfs:label">
 				<xsl:attribute name="xml:lang">en</xsl:attribute>
@@ -207,7 +220,7 @@
 		</xsl:element>
 		
 		<!-- 3.2.4 Abgebende Stelle -->
-		<xsl:element name="rdf:Description"><xsl:attribute name="rdf:about">agent_002</xsl:attribute>
+		<xsl:element name="rdf:Description"><xsl:attribute name="rdf:about"><xsl:value-of select="$ablieferndeStelle"/></xsl:attribute>
 			<!-- label -->
 			<xsl:element name="rdfs:label">
 				<xsl:attribute name="xml:lang">en</xsl:attribute>
@@ -229,6 +242,10 @@
 			<!-- title -->
 			<xsl:if test="arelda:ablieferndeStelle/text()">
 				<xsl:element name="rico:title">
+					<xsl:attribute name="xml:lang"><xsl:value-of select="$lng"/></xsl:attribute>
+					<xsl:value-of select="arelda:ablieferndeStelle"/>
+				</xsl:element>
+				<xsl:element name="dcterms:creator">
 					<xsl:attribute name="xml:lang"><xsl:value-of select="$lng"/></xsl:attribute>
 					<xsl:value-of select="arelda:ablieferndeStelle"/>
 				</xsl:element>

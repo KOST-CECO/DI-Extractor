@@ -8,7 +8,7 @@
 		xmlns:dcterms="http://purl.org/dc/terms/" 
 		xmlns:rico="https://www.ica.org/standards/RiC/ontology#" 
 		xmlns:arelda="http://bar.admin.ch/arelda/v4" 
-		exclude-result-prefixes="xs xsi dcterms arelda">
+		exclude-result-prefixes="xs xsi arelda">
 		
 	<!-- !DOCTYPE rdf:RDF
 	<xsl:output method="xml" doctype-system="rico.dtd" encoding="UTF-8" indent="yes" media-type="application/xml"/> 

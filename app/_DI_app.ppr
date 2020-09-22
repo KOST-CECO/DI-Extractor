@@ -71,10 +71,5 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=RICfond.xsl
 [Selected Project Files]
 Main=processingest.php
-Selected=RICfond.xsl
-[RICfond.xsl]
-TopLine=106
-Caret=1,115
