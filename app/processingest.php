@@ -71,8 +71,11 @@ if ($xschema == 'xIsadg') {
 elseif ($xschema == 'xI2sadg') {
     $xsl->load('eCH2xI2sadg.xsl');
 }
-else {
+elseif ($xschema == 'EAD') {
     $xsl->load('eCH2EAD.xsl');
+}
+else {
+    $xsl->load('eCH2RIC.xsl');
 }
 // Configure the transformer
 $proc = new XSLTProcessor;

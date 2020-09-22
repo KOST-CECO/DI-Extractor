@@ -17,10 +17,11 @@ DI_app
 		ToolListe.docx
 		run_transform.cmd
 		transform.cmd
+		test_transform.cmd
+		win10_transform.cmd
 		..\install_app.cmd
 		extract_element.cmd
-		test_transform.cmd
-	+RIC
+	-RIC
 		eCH2RIC.xsl
 		RICfond.xsl
 		RICserie.xsl
@@ -71,5 +72,14 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
+0=Neu1.txt
+1=ingest.php
 [Selected Project Files]
 Main=processingest.php
+Selected=ingest.php
+[Neu1.txt]
+TopLine=1
+Caret=1,1
+[ingest.php]
+TopLine=11
+Caret=103,25
