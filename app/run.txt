@@ -3,14 +3,14 @@ REM convert to RIC-O
 CD C:\workbench\_Workbench\app
 
 REM Dezimale Signatur 1, 1.1, 1.2,
-java -jar C:\JTools\saxon9\saxon9.jar -versionmsg:off -s:"..\rico-sample\RIS_St.Gallen_einDossier_arelda.xml" -xsl:eCH2RIC.xsl -o:"rico.rdf" fondtitle="RIS ein Dossier" archsig="sig" baseuri="http://arelda_v4.0.ch/" reffilename="null.xml"
-
+java -jar C:\JTools\saxon9\saxon9.jar -versionmsg:off -s:"..\rico-sample\RIS_St.Gallen_3Dossier_arelda.xml" -xsl:eCH2RIC.xsl -o:"rico1.2.3.rdf.xml" fondtitle="RIS ein Dossier" archsig="sig" baseuri="http://arelda_v4.0.ch/" reffilename="null.xml"
 
 REM Fortlaufende Signatur 1, 2, 3,
 REM create unique reference for each archival object
-java -jar C:\JTools\saxon9\saxon9.jar -versionmsg:off -s:"..\rico-sample\RIS_St.Gallen_einDossier_arelda.xml" -xsl:createRef.xsl -o:"createRef.xml" fondtitle="RIS ein Dossier" archsig="sig" 
+java -jar C:\JTools\saxon9\saxon9.jar -versionmsg:off -s:"..\rico-sample\RIS_St.Gallen_3Dossier_arelda.xml" -xsl:createRef.xsl -o:"createRef.xml" fondtitle="RIS ein Dossier" archsig="sig" 
 
 REM create running number for each archival object
 java -jar C:\JTools\saxon9\saxon9.jar -versionmsg:off -s:createRef.xml -xsl:elementRef.xsl -o:numberRef.xml fondtitle="RIS ein Dossier" archsig="sig" 
 
-java -jar C:\JTools\saxon9\saxon9.jar -versionmsg:off -s:"..\rico-sample\RIS_St.Gallen_einDossier_arelda.xml" -xsl:eCH2RIC.xsl -o:"rico.rdf.xml" fondtitle="RIS ein Dossier" archsig="sig" baseuri="http://arelda_v4.0.ch/" reffilename="numberRef.xml"
+java -jar C:\JTools\saxon9\saxon9.jar -versionmsg:off -s:"..\rico-sample\RIS_St.Gallen_3Dossier_arelda.xml" -xsl:eCH2RIC.xsl -o:"rico123.rdf.xml" fondtitle="RIS ein Dossier" archsig="sig" baseuri="http://arelda_v4.0.ch/" reffilename="numberRef.xml"
+

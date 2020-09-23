@@ -40,7 +40,7 @@ DI_app
 		copyright.php
 		class.inputfilter.php
 		ingest.css
-	+xIsadg
+	-xIsadg
 		eCH2xIsadg.xsl
 		xIfond.xsl
 		xIserie.xsl
@@ -72,14 +72,5 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=RICserie.xsl
-1=RICfond.xsl
 [Selected Project Files]
 Main=processingest.php
-Selected=RICserie.xsl
-[RICserie.xsl]
-TopLine=7
-Caret=1,25
-[RICfond.xsl]
-TopLine=1
-Caret=1,24

@@ -84,23 +84,10 @@
 				</xsl:element>
 			</xsl:element>
 			<!--   -->
-			<!-- Fonds -->
+			<!-- Call: Fonds -->
 			<xsl:apply-templates select="arelda:ablieferung"/>
 			<!--   -->
-			<xsl:apply-templates select="arelda:ablieferung/arelda:ordnungssystem"/>
-			<!--   -->
 		</rdf:RDF>
-	</xsl:template>
-	<!--   -->
-	<!-- Ordnungssystem -->
-	<xsl:template match="arelda:ablieferung/arelda:ordnungssystem">
-		<xsl:apply-templates select="arelda:ordnungssystemposition">
-			<xsl:with-param name="sig">
-				<xsl:value-of select="$archsig"/>
-				<xsl:text>.</xsl:text>
-				<xsl:number/>
-			</xsl:with-param>
-		</xsl:apply-templates>
 	</xsl:template>
 	<!--   -->
 	<!-- Ordnungsystemposition -->
