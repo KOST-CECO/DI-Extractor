@@ -35,9 +35,10 @@
 			</xsl:element>
 			<!--   -->
 			<!-- 3.1.1 Signatur -->
-			<xsl:call-template name="RICreference">
-				<xsl:with-param name="signature" select="$signature"/>
-			</xsl:call-template>
+			<!-- identifier -->
+			<xsl:element name="rico:identifier">
+				<xsl:value-of select="$signature"/>
+			</xsl:element>
 			<!--   -->
 			<!-- 3.1.2 Titel -->
 			<!-- title -->
@@ -151,7 +152,7 @@
 				</xsl:element>
 			</xsl:if>
 			-->
-						<!--   -->
+			<!--   -->
 			<!-- included In-->
 			<xsl:element name="rico:includedIn">
 				<xsl:attribute name="rdf:resource">
@@ -191,25 +192,29 @@
 				</xsl:element>
 			</xsl:for-each>
 		<!--   -->
-
 		</xsl:element>
 		<!--  GEVER SIP -->
-		<!--
 			<xsl:apply-templates select="arelda:dokument">
-				<xsl:with-param name="sig" select="$signature"/>
+			<xsl:with-param name="sig">
+				<xsl:value-of select="$sig"/>
+				<xsl:text>.</xsl:text>
+				<xsl:number/>
+			</xsl:with-param>
 			</xsl:apply-templates>
-			 -->
 		<!--  FILE SIP -->
 		<!--
 			<xsl:apply-templates select="arelda:dateiRef">
 				<xsl:with-param name="sig" select="$signature"/>
 			</xsl:apply-templates>
 			 -->
-		<!--  Sub-Dossier -->
-		<!--
-			<xsl:apply-templates select="arelda:dossier">
-				<xsl:with-param name="sig" select="$signature"/>
-			</xsl:apply-templates>
-			-->
+		<!-- Call: Sug-Dossier -->
+		<xsl:apply-templates select="arelda:dossier">
+			<xsl:with-param name="sig">
+				<xsl:value-of select="$sig"/>
+				<xsl:text>.</xsl:text>
+				<xsl:number/>
+			</xsl:with-param>
+		</xsl:apply-templates>
+		<!--   -->
 	</xsl:template>
 </xsl:stylesheet>
