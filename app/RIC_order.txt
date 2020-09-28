@@ -1,0 +1,18 @@
+<rdf:Description
+	<rdfs:label 
+	<rdf:type rdf:resource
+	<rico:hasRecordSetType 
+
+	<rico:identifier
+	<rico:title
+
+	<rico:beginningDate 
+	<rico:endDate 
+
+	<rico:hasProvenance 
+	<rico:createdBy
+
+	<rico:includedIn 
+	<rico:includes 
+
+	<rico:hasInstantiation>

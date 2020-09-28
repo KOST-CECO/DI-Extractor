@@ -30,6 +30,7 @@ DI_app
 		RICfile.xsl
 		RICdate.xsl
 		RICaccess.xsl
+		RIC_order.txt
 	-app
 		index.php
 		input.php
@@ -40,7 +41,7 @@ DI_app
 		copyright.php
 		class.inputfilter.php
 		ingest.css
-	-xIsadg
+	+xIsadg
 		eCH2xIsadg.xsl
 		xIfond.xsl
 		xIserie.xsl

@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" 
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
-	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
-	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
-	xmlns:dcterms="http://purl.org/dc/terms/" 
-	xmlns:rico="https://www.ica.org/standards/RiC/ontology#" 
-	xmlns:arelda="http://bar.admin.ch/arelda/v4">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rico="https://www.ica.org/standards/RiC/ontology#" xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<!--   -->
 	<!-- Ablieferung - Provenienz - Ordnungssystem -->
 	<xsl:template match="arelda:ablieferung">
@@ -33,8 +25,6 @@
 		</xsl:variable>
 		<!--   -->
 		<!-- rico:RecordSet Fonds -->
-		<xsl:value-of select="$archsig"/>
-		<xsl:text/>
 		<xsl:element name="rdf:Description">
 			<xsl:attribute name="rdf:about"><xsl:value-of select="$signature"/></xsl:attribute>
 			<!-- label -->
@@ -42,33 +32,15 @@
 				<xsl:attribute name="xml:lang">en</xsl:attribute>
 				<xsl:text>Fonds</xsl:text>
 			</xsl:element>
-			<!-- included In-->
-			<xsl:element name="rico:includedIn">
-				<xsl:attribute name="rdf:resource">
-					<xsl:call-template name="RICreference">
-						<xsl:with-param name="signature">
-							<xsl:value-of select="$archsig"/>
-						</xsl:with-param>
-					</xsl:call-template>
-				</xsl:attribute>
-			</xsl:element>
-			<!-- includes -->
-			<xsl:for-each select="arelda:ordnungssystem/arelda:ordnungssystemposition">
-				<xsl:element name="rico:includes">
-					<xsl:attribute name="rdf:resource">
-						<xsl:call-template name="RICreference">
-							<xsl:with-param name="signature">
-								<xsl:value-of select="$signature"/>
-								<xsl:text>.</xsl:text>
-								<xsl:number/>
-							</xsl:with-param>
-						</xsl:call-template>
-					</xsl:attribute>
-				</xsl:element>
-			</xsl:for-each>
 			<!-- Record Set -->
 			<xsl:element name="rdf:type">
 				<xsl:attribute name="rdf:resource">https://www.ica.org/standards/RiC/ontology#RecordSet</xsl:attribute>
+			</xsl:element>
+			<!--   -->
+			<!-- 3.1.4 Verzeichnungsstufe -->
+			<!-- RecordSet Type -->
+			<xsl:element name="rico:hasRecordSetType">
+				<xsl:attribute name="rdf:resource">https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Fonds</xsl:attribute>
 			</xsl:element>
 			<!--   -->
 			<!-- 3.1.1 Signatur -->
@@ -93,7 +65,7 @@
 				</xsl:choose>
 			</xsl:variable>
 			<xsl:element name="rico:title">
-				<xsl:attribute name="xml:lang"><xsl:value-of select="$lng"/></xsl:attribute>
+				<xsl:attribute name="xml:lang"><xsl:value-of select="$lang"/></xsl:attribute>
 				<xsl:value-of select="$title"/>
 			</xsl:element>
 			<!--   -->
@@ -113,12 +85,6 @@
 				<xsl:otherwise/>
 			</xsl:choose>
 			<!--   -->
-			<!-- 3.1.4 Verzeichnungsstufe -->
-			<!-- RecordSet Type -->
-			<xsl:element name="rico:hasRecordSetType">
-				<xsl:attribute name="rdf:resource">https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Fonds</xsl:attribute>
-			</xsl:element>
-			<!--   -->
 			<!-- 3.1.5 Umfang (Menge und Abmessung) -->
 			<!--   -->
 			<!-- 3.2.1 Name der Provenienzstelle -->
@@ -129,19 +95,21 @@
 				</xsl:element>
 			</xsl:if>
 			<!--   -->
-			<!-- 3.2.2 Verwaltungsgeschichte / Biographische Angaben -->
+			<!-- 3.2.2 Verwaltungsgeschichte / Biographische Angaben 
 			<xsl:if test="arelda:provenienz/arelda:geschichteAktenbildner/text()">
 				<xsl:element name="adminBioHistory">
 					<xsl:value-of select="arelda:provenienz/arelda:geschichteAktenbildner"/>
 				</xsl:element>
 			</xsl:if>
+			-->
 			<!--   -->
-			<!-- 3.2.3 Bestandesgeschichte -->
+			<!-- 3.2.3 Bestandesgeschichte 
 			<xsl:if test="arelda:provenienz/arelda:systemBeschreibung/text()">
 				<xsl:element name="archivalHistory">
 					<xsl:value-of select="arelda:provenienz/arelda:systemBeschreibung/text()"/>
 				</xsl:element>
 			</xsl:if>
+			-->
 			<!--   -->
 			<!-- 3.2.4 Abgebende Stelle -->
 			<xsl:if test="arelda:ablieferndeStelle/text()">
@@ -150,7 +118,7 @@
 				</xsl:element>
 			</xsl:if>
 			<!--   -->
-			<!-- 3.3.1 Form und Inhalt -->
+			<!-- 3.3.1 Form und Inhalt 
 			<xsl:if test="arelda:ablieferungsteile/text()">
 				<xsl:element name="scopeContent">
 					<xsl:element name="content">
@@ -158,19 +126,21 @@
 					</xsl:element>
 				</xsl:element>
 			</xsl:if>
+			-->
 			<!--   -->
-			<!-- 3.3.2 Bewertung und Kassation -->
+			<!-- 3.3.2 Bewertung und Kassation 
 			<xsl:if test="arelda:referenzBewertungsentscheid/text()">
 				<xsl:element name="appraisalDestruction">
 					<xsl:value-of select="arelda:referenzBewertungsentscheid"/>
 				</xsl:element>
 			</xsl:if>
+			-->
 			<!--   -->
 			<!-- 3.4.1 Zugangsbestimmungen -->
 			<!--   -->
 			<!-- 3.4.4 Physische Beschaffenheit und technische Anforderungen -->
 			<!--   -->
-			<!-- 3.6.1 Allgemeine Anmerkungen -->
+			<!-- 3.6.1 Allgemeine Anmerkungen 
 			<xsl:if test="arelda:bemerkung/text()">
 				<xsl:element name="note">
 					<xsl:value-of select="arelda:bemerkung"/>
@@ -186,6 +156,18 @@
 					<xsl:value-of select="arelda:ordnungssystem/arelda:bemerkung"/>
 				</xsl:element>
 			</xsl:if>
+			-->
+			<!--   -->
+			<!-- included In-->
+			<xsl:element name="rico:includedIn">
+				<xsl:attribute name="rdf:resource"><xsl:call-template name="RICreference"><xsl:with-param name="signature"><xsl:value-of select="$archsig"/></xsl:with-param></xsl:call-template></xsl:attribute>
+			</xsl:element>
+			<!-- includes -->
+			<xsl:for-each select="arelda:ordnungssystem/arelda:ordnungssystemposition">
+				<xsl:element name="rico:includes">
+					<xsl:attribute name="rdf:resource"><xsl:call-template name="RICreference"><xsl:with-param name="signature"><xsl:value-of select="$signature"/><xsl:text>.</xsl:text><xsl:number/></xsl:with-param></xsl:call-template></xsl:attribute>
+				</xsl:element>
+			</xsl:for-each>
 			<!--   -->
 			<!-- 1. Instantiation -->
 			<xsl:element name="rico:hasInstantiation">
@@ -197,7 +179,7 @@
 					</xsl:element>
 					<!-- title -->
 					<xsl:element name="rico:title">
-						<xsl:attribute name="xml:lang"><xsl:value-of select="$lng"/></xsl:attribute>
+						<xsl:attribute name="xml:lang"><xsl:value-of select="$lang"/></xsl:attribute>
 						<xsl:value-of select="$title"/>
 					</xsl:element>
 				</xsl:element>
@@ -227,10 +209,10 @@
 			<xsl:element name="rdf:type">
 				<xsl:attribute name="rdf:resource">https://www.ica.org/standards/RiC/ontology#CorporateBody</xsl:attribute>
 			</xsl:element>
-			<!-- title -->
+			<!-- name -->
 			<xsl:if test="arelda:provenienz/arelda:aktenbildnerName/text()">
-				<xsl:element name="rico:title">
-					<xsl:attribute name="xml:lang"><xsl:value-of select="$lng"/></xsl:attribute>
+				<xsl:element name="rico:name">
+					<xsl:attribute name="xml:lang"><xsl:value-of select="$lang"/></xsl:attribute>
 					<xsl:value-of select="arelda:provenienz/arelda:aktenbildnerName"/>
 				</xsl:element>
 			</xsl:if>
@@ -257,14 +239,14 @@
 			<xsl:element name="rdf:type">
 				<xsl:attribute name="rdf:resource">https://www.ica.org/standards/RiC/ontology#CorporateBody</xsl:attribute>
 			</xsl:element>
-			<!-- title -->
+			<!-- name -->
 			<xsl:if test="arelda:ablieferndeStelle/text()">
-				<xsl:element name="rico:title">
-					<xsl:attribute name="xml:lang"><xsl:value-of select="$lng"/></xsl:attribute>
+				<xsl:element name="rico:name">
+					<xsl:attribute name="xml:lang"><xsl:value-of select="$lang"/></xsl:attribute>
 					<xsl:value-of select="arelda:ablieferndeStelle"/>
 				</xsl:element>
 				<xsl:element name="dcterms:creator">
-					<xsl:attribute name="xml:lang"><xsl:value-of select="$lng"/></xsl:attribute>
+					<xsl:attribute name="xml:lang"><xsl:value-of select="$lang"/></xsl:attribute>
 					<xsl:value-of select="arelda:ablieferndeStelle"/>
 				</xsl:element>
 			</xsl:if>

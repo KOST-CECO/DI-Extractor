@@ -19,10 +19,22 @@
 	<xsl:param name="fondtitle"/>
 	<xsl:param name="archsig"/>
 	<xsl:param name="reffilename"/>
+	<!-- $baseuri -> $base -->
 	<xsl:param name="baseuri"/>
+		<xsl:variable name="base">
+		<xsl:choose>
+			<xsl:when test="$baseuri">
+				<xsl:value-of select="$baseuri"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:text>http://arelda_v4.0.ch/</xsl:text>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
 	<xsl:variable name="reffile" select="document($reffilename)"/>
+	<!-- $language -> $lang -->
 	<xsl:param name="language"/>
-	<xsl:variable name="lng">
+	<xsl:variable name="lang">
 		<xsl:choose>
 			<xsl:when test="$language">
 				<xsl:value-of select="$language"/>
@@ -44,7 +56,7 @@
 	<!-- root node transformation sets namespace and schema location -->
 	<xsl:template match="/arelda:paket">
 		<rdf:RDF>
-			<xsl:attribute name="xml:base"><xsl:value-of select="$baseuri"/></xsl:attribute>
+			<xsl:attribute name="xml:base"><xsl:value-of select="$base"/></xsl:attribute>
 			<!--   -->
 			<!-- Packet / SIP -->
 			<xsl:element name="rdf:Description">
@@ -74,7 +86,7 @@
 				<!-- title -->
 				<xsl:if test="*/*/arelda:registratur/text()">
 					<xsl:element name="rico:title">
-						<xsl:attribute name="xml:lang"><xsl:value-of select="$lng"/></xsl:attribute>
+						<xsl:attribute name="xml:lang"><xsl:value-of select="$lang"/></xsl:attribute>
 						<xsl:value-of select="*/*/arelda:registratur"/>
 					</xsl:element>
 				</xsl:if>

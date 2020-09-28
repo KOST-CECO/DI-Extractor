@@ -23,33 +23,15 @@
 				<xsl:attribute name="xml:lang">en</xsl:attribute>
 				<xsl:text>Series</xsl:text>
 			</xsl:element>
-			<!-- included In-->
-			<xsl:element name="rico:includedIn">
-				<xsl:attribute name="rdf:resource">
-					<xsl:call-template name="RICreference">
-						<xsl:with-param name="signature">
-							<xsl:value-of select="$sig"/>
-						</xsl:with-param>
-					</xsl:call-template>
-				</xsl:attribute>
-			</xsl:element>
-			<!-- includes -->
-			<xsl:for-each select="arelda:ordnungssystemposition">
-				<xsl:element name="rico:includes">
-					<xsl:attribute name="rdf:resource">
-						<xsl:call-template name="RICreference">
-							<xsl:with-param name="signature">
-								<xsl:value-of select="$signature"/>
-								<xsl:text>.</xsl:text>
-								<xsl:number/>
-							</xsl:with-param>
-						</xsl:call-template>
-					</xsl:attribute>
-				</xsl:element>
-			</xsl:for-each>
 			<!-- Record Set -->
 			<xsl:element name="rdf:type">
 				<xsl:attribute name="rdf:resource">https://www.ica.org/standards/RiC/ontology#RecordSet</xsl:attribute>
+			</xsl:element>
+			<!--   -->
+			<!-- 3.1.4 Verzeichnungsstufe -->
+			<!-- RecordSet Type -->
+			<xsl:element name="rico:hasRecordSetType">
+				<xsl:attribute name="rdf:resource">https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Series</xsl:attribute>
 			</xsl:element>
 			<!--   -->
 			<!-- 3.1.1 Signatur -->
@@ -61,17 +43,11 @@
 			<!-- 3.1.2 Titel -->
 			<!-- title -->
 			<xsl:element name="rico:title">
-				<xsl:attribute name="xml:lang"><xsl:value-of select="$lng"/></xsl:attribute>
+				<xsl:attribute name="xml:lang"><xsl:value-of select="$lang"/></xsl:attribute>
 				<xsl:value-of select="arelda:titel"/>
 			</xsl:element>
 			<!--   -->
 			<!-- 3.1.3 Entstehungszeitraum / Laufzeit -->
-			<!--   -->
-			<!-- 3.1.4 Verzeichnungsstufe -->
-			<!-- RecordSet Type -->
-			<xsl:element name="rico:hasRecordSetType">
-				<xsl:attribute name="rdf:resource">https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Series</xsl:attribute>
-			</xsl:element>
 			<!--   -->
 			<!-- 3.1.5 Umfang (Menge und Abmessung) -->
 			<!--   -->
@@ -96,6 +72,45 @@
 			<!--   -->
 			<!-- 3.6.1 Allgemeine Anmerkungen -->
 			<!--   -->
+			<!-- included In-->
+			<xsl:element name="rico:includedIn">
+				<xsl:attribute name="rdf:resource">
+					<xsl:call-template name="RICreference">
+						<xsl:with-param name="signature">
+							<xsl:value-of select="$sig"/>
+						</xsl:with-param>
+					</xsl:call-template>
+				</xsl:attribute>
+			</xsl:element>
+			<!-- includes Series-->
+			<xsl:for-each select="arelda:ordnungssystemposition">
+				<xsl:element name="rico:includes">
+					<xsl:attribute name="rdf:resource">
+						<xsl:call-template name="RICreference">
+							<xsl:with-param name="signature">
+								<xsl:value-of select="$signature"/>
+								<xsl:text>.</xsl:text>
+								<xsl:number/>
+							</xsl:with-param>
+						</xsl:call-template>
+					</xsl:attribute>
+				</xsl:element>
+			</xsl:for-each>
+			<!-- includes Files -->
+			<xsl:for-each select="arelda:dossier">
+				<xsl:element name="rico:includes">
+					<xsl:attribute name="rdf:resource">
+						<xsl:call-template name="RICreference">
+							<xsl:with-param name="signature">
+								<xsl:value-of select="$signature"/>
+								<xsl:text>.</xsl:text>
+								<xsl:number/>
+							</xsl:with-param>
+						</xsl:call-template>
+					</xsl:attribute>
+				</xsl:element>
+			</xsl:for-each>
+		<!--   -->
 		</xsl:element>
 		<!--   -->
 		<!-- Call: Ordnungsystemposition rekursiv -->
@@ -108,10 +123,13 @@
 		</xsl:apply-templates>
 		<!--   -->
 		<!-- Call: Dossier -->
-		<!-- 
 		<xsl:apply-templates select="arelda:dossier">
-			<xsl:with-param name="sig" select="$signature"/>
+			<xsl:with-param name="sig">
+				<xsl:value-of select="$sig"/>
+				<xsl:text>.</xsl:text>
+				<xsl:number/>
+			</xsl:with-param>
 		</xsl:apply-templates>
-			 -->
+		<!--   -->
 	</xsl:template>
 </xsl:stylesheet>

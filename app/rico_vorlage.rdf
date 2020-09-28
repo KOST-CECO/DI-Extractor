@@ -39,13 +39,13 @@
 		<rico:isCreatorOf rdf:resource="sig.1"/>
 		<rico:describes>Aktenbildner</rico:describes>
 		<rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#CorporateBody"/>
-		<rico:title xml:lang="de">Grossrat des Kantons St.Gallen</rico:title>
+		<rico:name xml:lang="de">Grossrat des Kantons St.Gallen</rico:name>
 	</rdf:Description>
 	
 	<rdf:Description rdf:about="agent_002">
 	    <rico:isProvenanceOf rdf:resource="sig.1"/>
 		<rico:describes>abliefernde Stelle</rico:describes>
-		<rico:title xml:lang="de">Staatskanzlei des Kantons St.Gallen</rico:title>
+		<rico:name xml:lang="de">Staatskanzlei des Kantons St.Gallen</rico:name>
 		<rdf:type rdf:resource="https://www.ica.org/standards/RiC/ontology#CorporateBody"/>
 	</rdf:Description>
 </rdf:RDF>
