@@ -73,14 +73,5 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=helptext.php
-1=ingest.css
 [Selected Project Files]
 Main=processingest.php
-Selected=ingest.css
-[helptext.php]
-TopLine=1
-Caret=125,6
-[ingest.css]
-TopLine=36
-Caret=18,72
