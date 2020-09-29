@@ -23,7 +23,7 @@ COPY %WORKDIR%\app\null.xml %HTDOCS%\app
 COPY "P:\KOST\Standards\xIsadg\_Workbench\DataDictionary\eCH-0160_xIsadg&EAD_v2.1.xlsx" %HTDOCS%\app
 COPY "P:\KOST\Standards\xIsadg\_Workbench\DataDictionary\xIsadg_DataDictionary_v2.1.pdf" %HTDOCS%\app
 
-%UNIX_HOME%\7z.exe a -mx9 "%HTDOCS%\app\eCH-0160_xIsadg&EAD_xsl.zip" "%WORKDIR%\app\*.xs*" "%WORKDIR%\app\*.bat" "%WORKDIR%\app\xsd_*"
+%UNIX_HOME%\7z.exe a -mx9 "%HTDOCS%\app\eCH-0160_xIsadg&EAD&RIC.xsl.zip" "%WORKDIR%\app\*.xs*" "%WORKDIR%\app\*.bat" "%WORKDIR%\app\xsd_*"
 
 
 CALL "C:\Program Files\Internet Explorer\iexplore.exe" "http://localhost/app/"

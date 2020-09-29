@@ -1,8 +1,16 @@
+/* CSS Document */
 body {
-	margin-left:10px;
-	width: 800px;
-	font-family: Verdana, Helvetica, Arial, sans-serif;
-	font-size: 11px;
+	margin-left: 10px;
+	width: 950px;
+	font-family: 'Merriweather', serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #333;
+	text-align: left;
+}
+td, th, p, div, span {
+	font-family: inherit;
 }
 form, div, p, h1, h2, h3, h4, h5, h6 {
 	margin: 0;
@@ -11,59 +19,70 @@ form, div, p, h1, h2, h3, h4, h5, h6 {
 table {
 	border: 0;
 }
-
-td, th, p, div, span {
-	font-family: Verdana, Helvetica, Arial, sans-serif;
-	font-size: 11px
-}
 a, a:link, a:visited, a:active, a:focus {
 	color: #FF3300;
-	text-decoration: none
+	text-decoration: none;
 }
 a:hover {
 	color: #FF3300;
 	text-decoration: underline;
 }
 h1, h2, h3, h4, h5, h6 {
-	font-family: Verdana, Helvetica, Arial, sans-serif;
-	font-size: 11px;
+	font-family: "Segoe UI", Verdana, Helvetica, Arial, sans-serif;
+	font-size: 1.5rem;
+	line-height: 1.2;
 }
 h1 {
 	margin-bottom: 12px;
-	font-size: 14px;
-	font-weight: bolder;
-	color: #000000;
-	line-height: 160%;
+	font-weight: 600;
 	background: #eeeeee;
 }
-h3 {
-	margin-top: 12px;
-	margin-bottom: 6px;
-	font-size: 13px;
-	font-weight: bold;
-	color: #335577;
+/* Gelber Button */
+/* h1 {
+	margin-bottom: 12px;
+	font-weight: 600;
+	color: #333;
+	background-color: #fff78f;
+	border-color: #fff78f;
+	border-radius: .65rem;
+	padding: .375rem .75rem;
 }
-
+*/
 hr {
-	margin-left:0;
-	width: 800px;
+	margin-left: 0;
+	width: 950px;
 	height: 1px;
 	background-color: #A0A0A0;
 	border: none;
 	color: #A0A0A0;
 }
-
-.versionText { 
-	font-size: 12px; 
-	font-weight: normal; 
-	font-style: italic; 
+.versionText {
+	font-size: 1rem;
+	font-weight: 400;
+	font-style: italic;
 }
-
-.versionBeta { 
-	font-size: 12px; 
-	font-weight: normal; 
-	font-style: italic; 
+.versionBeta {
+	font-size: 1rem;
+	font-weight: 400;
+	font-style: italic;
 	color: #DC143C;
-
 }
-
+.copyright {
+	font-family: "Segoe UI", Verdana, Helvetica, Arial, sans-serif;
+	font-size: 1rem;
+	font-weight: 600;
+}
+@font-face {
+	font-family: 'Merriweather';
+	font-style: normal;
+	font-weight: 400;
+	src: url("fonts/merriweather-v19-latin-regular.eot");
+	src: local("Merriweather Regular"), local("Merriweather-Regular"), url("fonts/merriweather-v19-latin-regular.eot?#iefix") format("embedded-opentype"), url("fonts/merriweather-v19-latin-regular.woff2") format("woff2"), url("fonts/merriweather-v19-latin-regular.woff") format("woff"), url("fonts/merriweather-v19-latin-regular.ttf") format("truetype"), url("fonts/merriweather-v19-latin-regular.svg#Merriweather") format("svg")
+}
+@font-face {
+	font-family: 'Merriweather';
+	font-style: normal;
+	font-weight: 700;
+	src: url("fonts/merriweather-v19-latin-700.eot");
+	src: local("Merriweather Bold"), local("Merriweather-Bold"), url("fonts/merriweather-v19-latin-700.eot?#iefix") format("embedded-opentype"), url("fonts/merriweather-v19-latin-700.woff2") format("woff2"), url("fonts/merriweather-v19-latin-700.woff") format("woff"), url("fonts/merriweather-v19-latin-700.ttf") format("truetype"), url("fonts/merriweather-v19-latin-700.svg#Merriweather") format("svg")
+}
