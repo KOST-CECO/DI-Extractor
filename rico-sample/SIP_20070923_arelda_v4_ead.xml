@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ead SYSTEM "ead.dtd">
+<ead>
+	<eadheader>
+		<eadid>what_so_ever</eadid>
+		<filedesc>
+			<titlestmt>
+				<titleproper/>
+			</titlestmt>
+		</filedesc>
+	</eadheader>
+	<archdesc level="otherlevel" otherlevel="paketSIP">
+		<did>
+			<unittitle label="main">paketSIP</unittitle>
+			<langmaterial/>
+		</did>
+		<dsc>
+			<c id="sig.1" level="otherlevel" otherlevel="Bestand">
+				<did>
+					<unitid label="refCode">sig.1</unitid>
+					<unittitle label="main">SIP_20070923_arelda_v4</unittitle>
+					<unitdate label="creationPeriod">2006-12-13/2007-09-23</unitdate>
+					<origination>Grossrat des Kantons St.Gallen</origination>
+				</did>
+				<acqinfo>
+					<p>Staatskanzlei des Kantons St.Gallen</p>
+				</acqinfo>
+				<c id="sig.1.1" level="otherlevel" otherlevel="Serie">
+					<did>
+						<unitid label="refCode">sig.2</unitid>
+						<unittitle label="main">Erziehung, Bildung, Kultur</unittitle>
+					</did>
+					<accessrestrict type="restrict">
+						<list>
+							<defitem>
+								<label>hasPrivacyProtection</label>
+								<item>false</item>
+							</defitem>
+						</list>
+					</accessrestrict>
+					<c id="sig.1.1.1" level="otherlevel" otherlevel="Serie">
+						<did>
+							<unitid label="refCode">sig.3</unitid>
+							<unittitle label="main">Schulen</unittitle>
+						</did>
+						<accessrestrict type="restrict">
+							<list>
+								<defitem>
+									<label>hasPrivacyProtection</label>
+									<item>false</item>
+								</defitem>
+							</list>
+						</accessrestrict>
+						<c id="sig.1.1.1.1" level="otherlevel" otherlevel="Serie">
+							<did>
+								<unitid label="refCode">sig.4</unitid>
+								<unittitle label="main">Allgemein</unittitle>
+							</did>
+							<accessrestrict type="restrict">
+								<list>
+									<defitem>
+										<label>hasPrivacyProtection</label>
+										<item>false</item>
+									</defitem>
+								</list>
+							</accessrestrict>
+							<c id="sig.1.1.1.1.1" level="otherlevel" otherlevel="Dossier">
+								<did>
+									<unitid label="refCode">sig.5</unitid>
+									<unittitle label="main">X. Nachtrag zum Volksschulgesetz</unittitle>
+									<unitdate label="creationPeriod">2006-12-13/2007-04-25</unitdate>
+								</did>
+								<accessrestrict type="restrict">
+									<list>
+										<defitem>
+											<label>hasPrivacyProtection</label>
+											<item>false</item>
+										</defitem>
+										<defitem>
+											<label>openToThePublic</label>
+											<item>undefined</item>
+										</defitem>
+										<defitem>
+											<label>classification</label>
+											<item>unclassified</item>
+										</defitem>
+									</list>
+								</accessrestrict>
+								<phystech>
+									<p>digital</p>
+								</phystech>
+								<c id="sig.1.1.1.1.1_1" level="otherlevel" otherlevel="Dokument">
+									<did>
+										<unitid label="refCode">sig.6</unitid>
+										<unittitle label="main">Botschaft und Entwurf der Regierung vom 12. Dezember 2006</unittitle>
+									</did>
+									<scopecontent>
+										<p>PDF-Dokument</p>
+									</scopecontent>
+									<accessrestrict type="restrict">
+										<list>
+											<defitem>
+												<label>openToThePublic</label>
+												<item>undefined</item>
+											</defitem>
+											<defitem>
+												<label>classification</label>
+												<item>unclassified</item>
+											</defitem>
+										</list>
+									</accessrestrict>
+									<phystech>
+										<p>digital</p>
+									</phystech>
+								</c>
+								<c id="sig.1.1.1.1.1_2" level="otherlevel" otherlevel="Dokument">
+									<did>
+										<unitid label="refCode">sig.7</unitid>
+										<unittitle label="main">Aktuelle Mitgliederliste</unittitle>
+									</did>
+									<scopecontent>
+										<p>PDF-Dokument</p>
+									</scopecontent>
+									<accessrestrict type="restrict">
+										<list>
+											<defitem>
+												<label>hasPrivacyProtection</label>
+												<item>false</item>
+											</defitem>
+											<defitem>
+												<label>openToThePublic</label>
+												<item>undefined</item>
+											</defitem>
+											<defitem>
+												<label>classification</label>
+												<item>unclassified</item>
+											</defitem>
+										</list>
+									</accessrestrict>
+									<phystech>
+										<p>digital</p>
+									</phystech>
+								</c>
+								<c id="sig.1.1.1.1.1_3" level="otherlevel" otherlevel="Dokument">
+									<did>
+										<unitid label="refCode">sig.8</unitid>
+										<unittitle label="main">Anträge der vorberatenden Kommission vom 14. März 2007</unittitle>
+									</did>
+									<scopecontent>
+										<p>PDF-Dokument</p>
+									</scopecontent>
+									<accessrestrict type="restrict">
+										<list>
+											<defitem>
+												<label>openToThePublic</label>
+												<item>undefined</item>
+											</defitem>
+											<defitem>
+												<label>classification</label>
+												<item>unclassified</item>
+											</defitem>
+										</list>
+									</accessrestrict>
+									<phystech>
+										<p>digital</p>
+									</phystech>
+								</c>
+								<c id="sig.1.1.1.1.1_4" level="otherlevel" otherlevel="Dokument">
+									<did>
+										<unitid label="refCode">sig.9</unitid>
+										<unittitle label="main">Antrag Hobi-Neu St.Johann zu Art. 20 vom 23. April 2007</unittitle>
+									</did>
+									<scopecontent>
+										<p>PDF-Dokument</p>
+									</scopecontent>
+									<accessrestrict type="restrict">
+										<list>
+											<defitem>
+												<label>openToThePublic</label>
+												<item>undefined</item>
+											</defitem>
+											<defitem>
+												<label>classification</label>
+												<item>unclassified</item>
+											</defitem>
+										</list>
+									</accessrestrict>
+									<phystech>
+										<p>digital</p>
+									</phystech>
+								</c>
+								<c id="sig.1.1.1.1.1_5" level="otherlevel" otherlevel="Dokument">
+									<did>
+										<unitid label="refCode">sig.10</unitid>
+										<unittitle label="main">Antrag SVP-Fraktion zu Art. 19bis vom 23. April 2007</unittitle>
+									</did>
+									<scopecontent>
+										<p>PDF-Dokument</p>
+									</scopecontent>
+									<accessrestrict type="restrict">
+										<list>
+											<defitem>
+												<label>openToThePublic</label>
+												<item>undefined</item>
+											</defitem>
+											<defitem>
+												<label>classification</label>
+												<item>unclassified</item>
+											</defitem>
+										</list>
+									</accessrestrict>
+									<phystech>
+										<p>digital</p>
+									</phystech>
+								</c>
+								<c id="sig.1.1.1.1.1_6" level="otherlevel" otherlevel="Dokument">
+									<did>
+										<unitid label="refCode">sig.11</unitid>
+										<unittitle label="main">Antrag SVP-Fraktion zu Art. 20 vom 23. April 2007</unittitle>
+									</did>
+									<scopecontent>
+										<p>PDF-Dokument</p>
+									</scopecontent>
+									<accessrestrict type="restrict">
+										<list>
+											<defitem>
+												<label>openToThePublic</label>
+												<item>undefined</item>
+											</defitem>
+											<defitem>
+												<label>classification</label>
+												<item>unclassified</item>
+											</defitem>
+										</list>
+									</accessrestrict>
+									<phystech>
+										<p>digital</p>
+									</phystech>
+								</c>
+								<c id="sig.1.1.1.1.1_7" level="otherlevel" otherlevel="Dokument">
+									<did>
+										<unitid label="refCode">sig.12</unitid>
+										<unittitle label="main">Geschäftsverlauf</unittitle>
+									</did>
+									<note>
+										<p>automatisch generiert</p>
+									</note>
+									<scopecontent>
+										<p>XML</p>
+									</scopecontent>
+									<phystech>
+										<p>digital</p>
+									</phystech>
+								</c>
+							</c>
+							<c id="sig.1.1.1.1.2" level="otherlevel" otherlevel="Dossier">
+								<did>
+									<unitid label="refCode">sig.13</unitid>
+									<unittitle label="main">XII. Nachtrag zum Gesetz über die Besoldung der Volksschullehrer</unittitle>
+									<unitdate label="creationPeriod">2006-12-14/2007-06-05</unitdate>
+								</did>
+								<accessrestrict type="restrict">
+									<list>
+										<defitem>
+											<label>hasPrivacyProtection</label>
+											<item>false</item>
+										</defitem>
+										<defitem>
+											<label>openToThePublic</label>
+											<item>undefined</item>
+										</defitem>
+										<defitem>
+											<label>classification</label>
+											<item>unclassified</item>
+										</defitem>
+									</list>
+								</accessrestrict>
+								<phystech>
+									<p>digital</p>
+								</phystech>
+								<c id="sig.1.1.1.1.2_1" level="otherlevel" otherlevel="Dokument">
+									<did>
+										<unitid label="refCode">sig.14</unitid>
+										<unittitle label="main">Botschaft und Entwurf der Regierung vom 19. Dezember 2006</unittitle>
+									</did>
+									<scopecontent>
+										<p>PDF-Dokument</p>
+									</scopecontent>
+									<accessrestrict type="restrict">
+										<list>
+											<defitem>
+												<label>openToThePublic</label>
+												<item>undefined</item>
+											</defitem>
+											<defitem>
+												<label>classification</label>
+												<item>unclassified</item>
+											</defitem>
+										</list>
+									</accessrestrict>
+									<phystech>
+										<p>digital</p>
+									</phystech>
+								</c>
+								<c id="sig.1.1.1.1.2_2" level="otherlevel" otherlevel="Dokument">
+									<did>
+										<unitid label="refCode">sig.15</unitid>
+										<unittitle label="main">Aktuelle Mitgliederliste</unittitle>
+									</did>
+									<scopecontent>
+										<p>PDF-Dokument</p>
+									</scopecontent>
+									<accessrestrict type="restrict">
+										<list>
+											<defitem>
+												<label>hasPrivacyProtection</label>
+												<item>false</item>
+											</defitem>
+											<defitem>
+												<label>openToThePublic</label>
+												<item>undefined</item>
+											</defitem>
+											<defitem>
+												<label>classification</label>
+												<item>unclassified</item>
+											</defitem>
+										</list>
+									</accessrestrict>
+									<phystech>
+										<p>digital</p>
+									</phystech>
+								</c>
+								<c id="sig.1.1.1.1.2_3" level="otherlevel" otherlevel="Dokument">
+									<did>
+										<unitid label="refCode">sig.16</unitid>
+										<unittitle label="main">Antrag SVP-Fraktion vom 23. April 2007</unittitle>
+									</did>
+									<scopecontent>
+										<p>PDF-Dokument</p>
+									</scopecontent>
+									<accessrestrict type="restrict">
+										<list>
+											<defitem>
+												<label>hasPrivacyProtection</label>
+												<item>false</item>
+											</defitem>
+											<defitem>
+												<label>openToThePublic</label>
+												<item>undefined</item>
+											</defitem>
+											<defitem>
+												<label>classification</label>
+												<item>unclassified</item>
+											</defitem>
+										</list>
+									</accessrestrict>
+									<phystech>
+										<p>digital</p>
+									</phystech>
+								</c>
+								<c id="sig.1.1.1.1.2_4" level="otherlevel" otherlevel="Dokument">
+									<did>
+										<unitid label="refCode">sig.17</unitid>
+										<unittitle label="main">Antrag SP-Fraktion zu Art. 4bis vom 23. April 2007</unittitle>
+									</did>
+									<scopecontent>
+										<p>PDF-Dokument</p>
+									</scopecontent>
+									<accessrestrict type="restrict">
+										<list>
+											<defitem>
+												<label>hasPrivacyProtection</label>
+												<item>false</item>
+											</defitem>
+											<defitem>
+												<label>openToThePublic</label>
+												<item>undefined</item>
+											</defitem>
+											<defitem>
+												<label>classification</label>
+												<item>unclassified</item>
+											</defitem>
+										</list>
+									</accessrestrict>
+									<phystech>
+										<p>digital</p>
+									</phystech>
+								</c>
+								<c id="sig.1.1.1.1.2_5" level="otherlevel" otherlevel="Dokument">
+									<did>
+										<unitid label="refCode">sig.18</unitid>
+										<unittitle label="main">Geschäftsverlauf</unittitle>
+									</did>
+									<scopecontent>
+										<p>XML</p>
+									</scopecontent>
+									<phystech>
+										<p>digital</p>
+									</phystech>
+								</c>
+							</c>
+						</c>
+					</c>
+				</c>
+				<c id="sig.1.2" level="otherlevel" otherlevel="Serie">
+					<did>
+						<unitid label="refCode">sig.19</unitid>
+						<unittitle label="main">Finanzen, Regalien, Unternehmungen, Feuerschutz</unittitle>
+					</did>
+					<c id="sig.1.2.1" level="otherlevel" otherlevel="Serie">
+						<did>
+							<unitid label="refCode">sig.20</unitid>
+							<unittitle label="main">Finanzhaushalt des Staates</unittitle>
+						</did>
+						<c id="sig.1.2.1.1" level="otherlevel" otherlevel="Serie">
+							<did>
+								<unitid label="refCode">sig.21</unitid>
+								<unittitle label="main">Finanzausgleich</unittitle>
+							</did>
+							<c id="sig.1.2.1.1.1" level="otherlevel" otherlevel="Dossier">
+								<did>
+									<unitid label="refCode">sig.22</unitid>
+									<unittitle label="main">Gesetz über die Umsetzung der Neugestaltung des Finanzausgleichs und der Aufgabenteilung zwischen Bund und Kantonen</unittitle>
+									<unitdate label="creationPeriod">2007-02-07/2007-09-23</unitdate>
+								</did>
+								<accessrestrict type="restrict">
+									<list>
+										<defitem>
+											<label>hasPrivacyProtection</label>
+											<item>false</item>
+										</defitem>
+									</list>
+								</accessrestrict>
+								<phystech>
+									<p>digital</p>
+								</phystech>
+								<c id="sig.1.2.1.1.1_1" level="otherlevel" otherlevel="Dokument">
+									<did>
+										<unitid label="refCode">sig.23</unitid>
+										<unittitle label="main">Botschaft und Entwurf der Regierung vom 13. Februar 2007</unittitle>
+									</did>
+									<scopecontent>
+										<p>PDF-Dokument</p>
+									</scopecontent>
+									<accessrestrict type="restrict">
+										<list>
+											<defitem>
+												<label>hasPrivacyProtection</label>
+												<item>false</item>
+											</defitem>
+											<defitem>
+												<label>openToThePublic</label>
+												<item>undefined</item>
+											</defitem>
+											<defitem>
+												<label>classification</label>
+												<item>unclassified</item>
+											</defitem>
+										</list>
+									</accessrestrict>
+									<phystech>
+										<p>digital</p>
+									</phystech>
+								</c>
+								<c id="sig.1.2.1.1.1_2" level="otherlevel" otherlevel="Dokument">
+									<did>
+										<unitid label="refCode">sig.24</unitid>
+										<unittitle label="main">Aktuelle Mitgliederliste</unittitle>
+									</did>
+									<scopecontent>
+										<p>PDF-Dokument</p>
+									</scopecontent>
+									<accessrestrict type="restrict">
+										<list>
+											<defitem>
+												<label>openToThePublic</label>
+												<item>undefined</item>
+											</defitem>
+											<defitem>
+												<label>classification</label>
+												<item>unclassified</item>
+											</defitem>
+										</list>
+									</accessrestrict>
+									<phystech>
+										<p>digital</p>
+									</phystech>
+								</c>
+								<c id="sig.1.2.1.1.1_3" level="otherlevel" otherlevel="Dokument">
+									<did>
+										<unitid label="refCode">sig.25</unitid>
+										<unittitle label="main">Anträge der vorberatenden Kommission vom 12. März 2007</unittitle>
+									</did>
+									<scopecontent>
+										<p>PDF-Dokument</p>
+									</scopecontent>
+									<accessrestrict type="restrict">
+										<list>
+											<defitem>
+												<label>openToThePublic</label>
+												<item>undefined</item>
+											</defitem>
+											<defitem>
+												<label>classification</label>
+												<item>unclassified</item>
+											</defitem>
+										</list>
+									</accessrestrict>
+									<phystech>
+										<p>digital</p>
+									</phystech>
+								</c>
+								<c id="sig.1.2.1.1.1_4" level="otherlevel" otherlevel="Dokument">
+									<did>
+										<unitid label="refCode">sig.26</unitid>
+										<unittitle label="main">Ergebnis der 1. Lesung des Kantonsrates vom 24. April 2007</unittitle>
+									</did>
+									<scopecontent>
+										<p>PDF-Dokument</p>
+									</scopecontent>
+									<accessrestrict type="restrict">
+										<list>
+											<defitem>
+												<label>openToThePublic</label>
+												<item>undefined</item>
+											</defitem>
+											<defitem>
+												<label>classification</label>
+												<item>unclassified</item>
+											</defitem>
+										</list>
+									</accessrestrict>
+									<phystech>
+										<p>digital</p>
+									</phystech>
+								</c>
+								<c id="sig.1.2.1.1.1_5" level="otherlevel" otherlevel="Dokument">
+									<did>
+										<unitid label="refCode">sig.27</unitid>
+										<unittitle label="main">Antrag SP-Fraktion zu Art. 36ter vom 23. April 2007</unittitle>
+									</did>
+									<scopecontent>
+										<p>PDF-Dokument</p>
+									</scopecontent>
+									<accessrestrict type="restrict">
+										<list>
+											<defitem>
+												<label>openToThePublic</label>
+												<item>undefined</item>
+											</defitem>
+											<defitem>
+												<label>classification</label>
+												<item>unclassified</item>
+											</defitem>
+										</list>
+									</accessrestrict>
+									<phystech>
+										<p>digital</p>
+									</phystech>
+								</c>
+								<c id="sig.1.2.1.1.1_6" level="otherlevel" otherlevel="Dokument">
+									<did>
+										<unitid label="refCode">sig.28</unitid>
+										<unittitle label="main">Antrag Denoth-St.Gallen vom 23. April 2007</unittitle>
+									</did>
+									<scopecontent>
+										<p>PDF-Dokument</p>
+									</scopecontent>
+									<accessrestrict type="restrict">
+										<list>
+											<defitem>
+												<label>openToThePublic</label>
+												<item>undefined</item>
+											</defitem>
+											<defitem>
+												<label>classification</label>
+												<item>unclassified</item>
+											</defitem>
+										</list>
+									</accessrestrict>
+									<phystech>
+										<p>digital</p>
+									</phystech>
+								</c>
+								<c id="sig.1.2.1.1.1_7" level="otherlevel" otherlevel="Dokument">
+									<did>
+										<unitid label="refCode">sig.29</unitid>
+										<unittitle label="main">Antrag Frei-Diepoldsau zu Art. 36ter vom 23. April 2007</unittitle>
+									</did>
+									<scopecontent>
+										<p>PDF-Dokument</p>
+									</scopecontent>
+									<accessrestrict type="restrict">
+										<list>
+											<defitem>
+												<label>openToThePublic</label>
+												<item>undefined</item>
+											</defitem>
+											<defitem>
+												<label>classification</label>
+												<item>unclassified</item>
+											</defitem>
+										</list>
+									</accessrestrict>
+									<phystech>
+										<p>digital</p>
+									</phystech>
+								</c>
+								<c id="sig.1.2.1.1.1_8" level="otherlevel" otherlevel="Dokument">
+									<did>
+										<unitid label="refCode">sig.30</unitid>
+										<unittitle label="main">Geschäftsverlauf</unittitle>
+									</did>
+									<scopecontent>
+										<p>XML</p>
+									</scopecontent>
+									<phystech>
+										<p>digital</p>
+									</phystech>
+								</c>
+							</c>
+						</c>
+					</c>
+				</c>
+			</c>
+		</dsc>
+	</archdesc>
+</ead>

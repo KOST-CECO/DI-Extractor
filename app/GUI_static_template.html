@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!-- saved from url=(0046)https://kost-ceco.ch/isadg/app_beta/ingest.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="./ingest.css" rel="stylesheet" type="text/css">
+    <title>KOST Referenzimplementierung</title>
+  </head>
+  <body background="./background.jpg">
+    <h1>KOST Referenzimplementierung - Descriptive Information 2.1 <span class="versionBeta">(Rev. 142/beta)</span></h1>
+    		<p> Diese
+			<i>Descriptive Information</i> Referenzimplementierung konvertiert eine eCH-0160 Metadaten Datei in eine xIsadg oder EAD Datei.
+			Die importierte Metadaten Datei wird mit einer Schema Validierung überprüft, verschiedene Metadatenschema werden erkannt; 
+			konvertiert werden können aber nur eCH-0160 Metadaten. Ziel ist das Extrahieren der ISAD(G) relevanten Metadaten, die
+			<i>Descriptive Information</i> nach OAIS für den Import in ein
+			<i>Datamanagement</i> oder ein Findmittel und nicht aber die vollständige Abbildung aller eCH-0160 Metadaten in einem anderen Schema. Grundlage der Konvertierung ist das Papier
+			<a href="https://www.ech.ch/alfresco/s/ech/download?nodeid=e05d969b-1bff-4593-ad57-d751cc5473aa">Extraktion deskriptiver Metadaten aus der archivischen Ablieferungsschnittstelle eCH-0160</a> und der Crosswalk
+			<a href="https://kost-ceco.ch/isadg/app_beta/eCH-0160_xIsadg&amp;EAD_v2.1.xlsx">eCH-0160_xIsadg&amp;EAD_v2.1.xlsx</a>. Unterstützt werden die Ausgangsformate eCH-0160 1.0 und eCH-0160 1.1; Zielformat ist xIsadg v1.6.1 und xIsadg v2.1, EAD in der Ausprägung METS Matterhorn Profil und RIC-O Version 0.1
+			<br> Technisch basiert die Konvertierung auf folgenden XSLT Transformationen
+			<a href="https://kost-ceco.ch/isadg/app_beta/eCH-0160_xIsadg&amp;EAD&amp;RIC.xsl.zip">eCH-0160_xIsadg&amp;EAD&amp;RIC.xsl.zip</a>
+			<br> Eine Windows Commandline Batch Datei mit Saxon9 und xmllint ist in dieser ZIP Datei ebenfalls zu finden.
+			<br> Die Basisdokumente für die Metadatenschema sind die folgenden
+			<i>Data Dictionaries</i> :
+			<br>
+			<a href="https://www.ech.ch/alfresco/s/ech/download?nodeid=4bf53ff1-0e4f-4fb9-9ccc-75a4219bb20c">eCH-0160_V1.0_ArchivischeAblieferungsschnittstelle_DataDictionary.pdf</a> und
+			<a href="https://kost-ceco.ch/isadg/app_beta/xIsadg_DataDictionary_v2.1.pdf">xIsadg_DataDictionary_v2.1.pdf</a>
+			<br>
+			<br>
+		</p>
+    <i>Eine eCH-0160 Metadaten Datei für die Konvertierung auswählen:</i>
+    <br>
+    <!-- Upload Formular, zweispaltig -->
+    <table>
+        <tbody><tr>
+          <th>
+            <form enctype="multipart/form-data" action="https://kost-ceco.ch/isadg/app_beta/ingest.php" method="post">
+              <input name="MAX_FILE_SIZE" value="100000000" type="hidden">
+              <input name="usr" value="usr_rKEOsg" type="hidden">
+              <input name="uploadedfile" size="80" type="file" style="font-size:100%">
+              <input value="Datei übermitteln" type="submit" style="font-size:100%">
+            </form>
+          </th>
+          <th>
+            <form action="https://kost-ceco.ch/isadg/app_beta/ingest.php" method="post">
+              <input name="usr" value="usr_rKEOsg" type="hidden">
+              <input name="RESET" value="true" type="hidden">
+              <input value="Reset" type="submit" style="font-size:100%">
+            </form>
+          </th>
+        </tr>
+    </tbody></table>
+    <hr>
+<i>Folgende Dateien sind bereits übertragen:</i><ul><li>metadata.xml&nbsp;&nbsp;&nbsp; (29776 bytes)&nbsp;&nbsp;&nbsp; eCH-0160 1.0 / arelda_v4 SIP Metadata</li></ul><hr>
+<i> Folgende Datei steht zur Konvertierung bereit:
+    <b>
+        metadata.xml</b></i>
+<br>
+<br>
+<!-- Formular für manuellen Dateninput, dreispaltig -->
+<form action="https://kost-ceco.ch/isadg/app_beta/processingest.php" method="post">
+    <input name="metadatafile" value="metadata.xml" type="hidden">
+    <input name="wdir" value="wdir/usr_rKEOsg" type="hidden">
+    <table style="width: 100%;">
+        <tbody><tr>
+            <td colspan="3" rowspan="1">
+                <i>Manuelle Angaben zur Zielakzession (Archivtektonik):</i></td>
+        </tr>
+        <tr>
+            <td style="text-align: right;">
+                Bestand-Signatur:</td>
+            <td colspan="2" rowspan="1">
+                <input name="collsig" size="20" type="text" title="Signatur (Archiv- &amp; Bestandkürzel) des Knoten in der Archivtektonik an den die Ablieferung eingehängt werden soll"> Bestandtitel:
+                <input name="colltitle" size="60" type="text" title="Beschreibung des Knotens in der Archivtektonik an den die Ablieferung eingehängt werden soll"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="3" rowspan="1">
+                <i>Angaben zur Signaturbildung:</i></td>
+        </tr>
+        <tr>
+            <td style="text-align: right;">
+                Signaturstil:</td>
+            <td colspan="2" rowspan="1">
+                <input type="radio" name="collstyle" value="fortlaufend" title="Fortlaufend nummeriert in der Art SIG.1 SIG.2 SIG.3" checked=""> fortlaufende Nummerierung
+                <input type="radio" name="collstyle" value="dezimal" title="Hierarchische Dezimalgliederung in der Art SIG.1 SIG.1.1 SIG.1.2 SIG.1.3">
+                dezimal Gliederung</td>
+        </tr>
+        <tr>
+            <td style="text-align: right;">
+                Ausgabeformat:</td>
+            <td>
+                <input type="radio" name="xschema" value="xIsadg" title="Ausgabe als xIsadg Metadaten Datei" checked=""> xIsadg 1.6.1
+                <input type="radio" name="xschema" value="xI2sadg" title="Ausgabe als xIsadg Metadaten Datei Version 2.1"> xIsadg 2.1
+                <input type="radio" name="xschema" value="EAD" title="Ausgabe als EAD Metadaten Datei (METS Matterhorn Style)"> EAD
+                <input type="radio" name="xschema" value="RIC" title="Ausgabe als RIC Metadaten Datei Version 0.1"> RIC
+            </td>
+            <td>
+                <div style="text-align: right;">
+                    <input value="Konvertieren" type="submit" style="font-size:100%">
+                </div></td>
+        </tr>
+    </tbody></table>
+</form>
+<hr>
+<table style="width: 100%;">
+	<tbody><tr>
+		<td style="text-align: left;">
+			<span class="copyright">
+				Copyright © 2005-2020 by Koordinationsstelle für die dauerhafte Archivierung elektronischer Unterlagen
+			</span></td>
+		<td align="right">
+			<a href="mailto:info@kost-ceco.ch">
+				<span class="copyright">
+					info@kost-ceco.ch
+				</span></a></td>
+	</tr>
+</tbody></table>
+  
+
+</body></html>

@@ -12,7 +12,7 @@ DocumentRoot=C:\Tools\xampp\htdocs\app
 HTServer=http://localhost:90/app/
 [Project tree]
 DI_app
-	+cmd
+	-cmd
 		run.txt
 		ToolListe.docx
 		run_transform.cmd
@@ -21,7 +21,7 @@ DI_app
 		win10_transform.cmd
 		..\install_app.cmd
 		extract_element.cmd
-	+RIC
+	-RIC
 		eCH2RIC.xsl
 		RICfond.xsl
 		RICserie.xsl
@@ -41,6 +41,7 @@ DI_app
 		copyright.php
 		class.inputfilter.php
 		ingest.css
+		GUI_static_template.html
 	-xIsadg
 		eCH2xIsadg.xsl
 		xIfond.xsl
@@ -73,5 +74,14 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
+0=ingest.css
+1=GUI_static_template.html
 [Selected Project Files]
 Main=processingest.php
+Selected=GUI_static_template.html
+[ingest.css]
+TopLine=58
+Caret=80,80
+[GUI_static_template.html]
+TopLine=1
+Caret=30,21
