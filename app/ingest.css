@@ -1,7 +1,9 @@
 /* CSS Document */
 body {
-	margin-left: 10px;
-	width: 950px;
+	max-width: 950px;
+	margin: auto;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 	font-family: 'Merriweather', serif;
 	font-size: 1rem;
 	font-weight: 400;
@@ -20,11 +22,14 @@ table {
 	border: 0;
 }
 a, a:link, a:visited, a:active, a:focus {
-	color: #FF3300;
+	margin: 0;
+	color: #212529;
+	background-color: #fff78f;
+	border-radius: .45rem;
+	padding: 0 .45rem 0 .45rem;
 	text-decoration: none;
 }
 a:hover {
-	color: #FF3300;
 	text-decoration: underline;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -32,37 +37,35 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 1.5rem;
 	line-height: 1.2;
 }
-h1 {
-	margin-bottom: 12px;
-	font-weight: 600;
-	background: #eeeeee;
-}
 /* Gelber Button */
-/* h1 {
-	margin-bottom: 12px;
+h1 {
 	font-weight: 600;
+	margin-bottom: 12px;
+	margin-bottom: 10px;
+	margin-left: -12px;
 	color: #333;
 	background-color: #fff78f;
 	border-color: #fff78f;
 	border-radius: .65rem;
-	padding: .375rem .75rem;
+	vertical-align: middle;
+	border: 1px solid transparent;
+	padding: .625rem .75rem;
 }
-*/
 hr {
 	margin-left: 0;
 	width: 950px;
-	height: 1px;
+	height: 0.5px;
 	background-color: #A0A0A0;
 	border: none;
 	color: #A0A0A0;
 }
 .versionText {
-	font-size: 1rem;
+	font-size: 1.2rem;
 	font-weight: 400;
 	font-style: italic;
 }
 .versionBeta {
-	font-size: 1rem;
+	font-size: 1.2rem;
 	font-weight: 400;
 	font-style: italic;
 	color: #DC143C;
@@ -70,7 +73,23 @@ hr {
 .copyright {
 	font-family: "Segoe UI", Verdana, Helvetica, Arial, sans-serif;
 	font-size: 1rem;
-	font-weight: 600;
+	font-weight: 400;
+	line-height: 1.5;
+	display: block;
+	color: #ffffff;
+	text-align: center;
+	margin-top: 30px;
+	background-color: #4a4a4a;
+	padding: 45px 45px 90px 45px;
+}
+
+.copyright a, .copyright a:hover {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    	background-color: #4a4a4a;
+	border-color: #4a4a4a;
+
 }
 @font-face {
 	font-family: 'Merriweather';

@@ -76,12 +76,16 @@ DI_app
 [Open project files]
 0=ingest.css
 1=GUI_static_template.html
+2=copyright.php
 [Selected Project Files]
 Main=processingest.php
-Selected=GUI_static_template.html
+Selected=copyright.php
 [ingest.css]
-TopLine=58
-Caret=80,80
+TopLine=66
+Caret=23,91
 [GUI_static_template.html]
+TopLine=89
+Caret=1,119
+[copyright.php]
 TopLine=1
-Caret=30,21
+Caret=8,6
