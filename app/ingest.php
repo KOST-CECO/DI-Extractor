@@ -34,14 +34,14 @@ $metadatafile = '';
               <input name="MAX_FILE_SIZE"  value="100000000" type="hidden">
               <input name="usr" value=<?=$usr?> type="hidden">
               <input name="uploadedfile" size="80" type="file" style="font-size:100%">
-              <input value="Datei &uuml;bermitteln" type="submit" style="font-size:100%">
+              <input class="btn" value="Datei &uuml;bermitteln" type="submit" style="font-size:100%">
             </form>
           </th>
           <th>
             <form action="ingest.php" method="post">
               <input name="usr" value=<?=$usr?> type="hidden">
               <input name="RESET" value="true" type="hidden">
-              <input value="Reset" type="submit" style="font-size:100%">
+              <input class="btn" value="Reset" type="submit" style="font-size:100%">
             </form>
           </th>
         </tr>

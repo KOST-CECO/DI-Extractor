@@ -47,11 +47,11 @@ if ($wdir=='') { header ("location: ./input.php"); }
                 <input type="radio" name="xschema" value="xIsadg" title="Ausgabe als xIsadg Metadaten Datei" checked> xIsadg 1.6.1
                 <input type="radio" name="xschema" value="xI2sadg" title="Ausgabe als xIsadg Metadaten Datei Version 2.1" > xIsadg 2.1
                 <input type="radio" name="xschema" value="EAD" title="Ausgabe als EAD Metadaten Datei (METS Matterhorn Style)"> EAD
-                <input type="radio" name="xschema" value="RIC" title="Ausgabe als RIC Metadaten Datei Version 0.1"> RIC
+                <input type="radio" name="xschema" value="RIC" title="Ausgabe als RIC Metadaten Datei Version 0.1"> RIC 0.1
             </td>
             <td>
                 <div style="text-align: right;">
-                    <input value="Konvertieren" type="submit" style="font-size:100%">
+                    <input class="btn" value="Konvertieren" type="submit" style="font-size:100%">
                 </div></td>
         </tr>
     </table>

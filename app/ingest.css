@@ -1,4 +1,55 @@
 /* CSS Document */
+label {
+  background-color: indigo;
+  color: white;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+#file-chosen{
+  margin-left: 0.3rem;
+  font-family: sans-serif;
+}
+/* CSS Document */
+
+.upload-btn-wrapper {
+  position: relative;
+ 
+  display: inline-block;
+}
+
+.btn2 {
+	font-family: "Segoe UI", Verdana, Helvetica, Arial, sans-serif;
+	font-size: 1rem;
+	font-weight: 600;
+	text-align: center;
+	vertical-align: middle;
+	display: inline-block;
+	color: #333;
+	background-color: #fff78f;
+	border: 1px solid transparent;
+	padding: .375rem .75rem;
+	border-color: #fff78f;
+	border-radius: .65rem;
+	cursor: pointer;
+	user-select: none;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+
+/* CSS Document */
 body {
 	max-width: 950px;
 	margin: auto;
@@ -55,7 +106,7 @@ hr {
 	margin-left: 0;
 	width: 950px;
 	height: 0.5px;
-	background-color: #A0A0A0;
+	background-color: #c9c9c9;
 	border: none;
 	color: #A0A0A0;
 }
@@ -82,14 +133,32 @@ hr {
 	background-color: #4a4a4a;
 	padding: 45px 45px 90px 45px;
 }
-
 .copyright a, .copyright a:hover {
-    display: block;
-    color: #ffffff;
-    text-align: center;
-    	background-color: #4a4a4a;
+	display: block;
+	color: #ffffff;
+	text-align: center;
+	background-color: #4a4a4a;
 	border-color: #4a4a4a;
-
+}
+.btn {
+	font-family: "Segoe UI", Verdana, Helvetica, Arial, sans-serif;
+	font-size: 1rem;
+	font-weight: 600;
+	text-align: center;
+	vertical-align: middle;
+	display: inline-block;
+	color: #333;
+	background-color: #fff78f;
+	border: 1px solid transparent;
+	padding: .375rem .75rem;
+	border-color: #fff78f;
+	border-radius: .65rem;
+	cursor: pointer;
+	user-select: none;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn:hover {
+	background-color: #faeb61;
 }
 @font-face {
 	font-family: 'Merriweather';

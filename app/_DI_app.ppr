@@ -12,7 +12,7 @@ DocumentRoot=C:\Tools\xampp\htdocs\app
 HTServer=http://localhost:90/app/
 [Project tree]
 DI_app
-	-cmd
+	+cmd
 		run.txt
 		ToolListe.docx
 		run_transform.cmd
@@ -74,18 +74,10 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=ingest.css
-1=GUI_static_template.html
-2=copyright.php
+0=Upload0_test.html
 [Selected Project Files]
 Main=processingest.php
-Selected=copyright.php
-[ingest.css]
-TopLine=66
-Caret=23,91
-[GUI_static_template.html]
-TopLine=89
-Caret=1,119
-[copyright.php]
-TopLine=1
-Caret=8,6
+Selected=Upload0_test.html
+[Upload0_test.html]
+TopLine=11
+Caret=1,30
