@@ -74,10 +74,5 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=Upload0_test.html
 [Selected Project Files]
 Main=processingest.php
-Selected=Upload0_test.html
-[Upload0_test.html]
-TopLine=11
-Caret=1,30

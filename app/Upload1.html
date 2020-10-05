@@ -21,16 +21,6 @@ label {
   font-family: sans-serif;
 }
 </style>
-
-<script>
-const actualBtn = document.getElementById('actual-btn');
-
-const fileChosen = document.getElementById('file-chosen');
-
-actualBtn.addEventListener('change', function(){
-  fileChosen.textContent = this.files[0].name
-})
-</script>
 </head>
 <body>
 
@@ -45,5 +35,14 @@ actualBtn.addEventListener('change', function(){
 <!-- name of file chosen -->
 <span id="file-chosen">No file chosen</span>
 
+<script>
+const actualBtn = document.getElementById('actual-btn');
+
+const fileChosen = document.getElementById('file-chosen');
+
+actualBtn.addEventListener('change', function(){
+  fileChosen.textContent = this.files[0].name
+})
+</script>
 </body>
 </html> 

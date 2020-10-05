@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+<style>
+body {
+	background-color: linen;
+}
+label {
+	background-color: indigo;
+	color: white;
+	padding: 0.5rem;
+	font-family: sans-serif;
+	border-radius: 0.3rem;
+	cursor: pointer;
+	margin-top: 1rem;
+}
+#file-chosen {
+	margin-left: 0.3rem;
+	font-family: sans-serif;
+}
+</style>
+		<title> Bootstrap Example
+		</title>
+<script src="./jquery.min.js"></script>
+	</head>
+	<body>
+		<h2>Custom File</h2>
+		<p> To create a custom file upload, wrap a container element with a class of .custom-file around the input with type="file".
+			<br> Then add the .custom-file-input to the file input:
+		</p>
+		<form action="./Upload3.html">
+			<p> Custom file:
+			</p> 
+			<!-- actual upload which is hidden -->
+			<input type="file" class="custom-file-input" id="actual-btn" hidden/>
+			<!-- our custom upload button -->
+			<label for="actual-btn">
+				Choose File
+			</label>
+			<!-- name of file chosen -->
+			<span class="custom-file-label" id="file-chosen">
+				No file chosen
+			</span>
+			<p>
+				<button type="submit"> Submit
+				</button>
+			</p>
+		</form> 
+<script>
+// Add the following code if you want the name of the file appear on select
+$(".custom-file-input").on("change", function() {
+var fileName = $(this).val().split("\\").pop();
+$(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>
+	</body>
+</html>

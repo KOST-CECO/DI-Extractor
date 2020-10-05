@@ -43,12 +43,6 @@
 }
 </style>
 
-<script type="text/javascripe>
-document.getElementById("uploadBtn").onchange = function () { 
-document.getElementById("demo").innerHTML = "Paragraph changed.";
-};
-</script>
-
 	</head>
 	<body>
 	<p id="demo">A Paragraph</p>
@@ -59,5 +53,12 @@ document.getElementById("demo").innerHTML = "Paragraph changed.";
 			<input id="uploadBtn" type="file" class="upload" />
 		</div>
 		<input id="uploadFile" placeholder="0 files selected" disabled="disabled" />
+		
+<script type="text/javascripe>
+document.getElementById("uploadBtn").onchange = function () { 
+document.getElementById("demo").innerHTML = "Paragraph changed.";
+};
+</script>
+
 	</body>
 </html>
