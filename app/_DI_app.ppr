@@ -74,5 +74,14 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
+0=GUI_test.html
+1=ingest.css
 [Selected Project Files]
 Main=processingest.php
+Selected=ingest.css
+[GUI_test.html]
+TopLine=1
+Caret=1,1
+[ingest.css]
+TopLine=99
+Caret=26,129

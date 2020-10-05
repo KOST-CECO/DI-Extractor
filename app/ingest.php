@@ -19,6 +19,7 @@ $metadatafile = '';
 <html>
   <head>
     <link href="ingest.css" rel="stylesheet" type="text/css"/>
+<script src="./jquery.min.js"></script>
     <title>KOST Referenzimplementierung</title>
   </head>
   <body background="background.jpg">
@@ -33,19 +34,33 @@ $metadatafile = '';
             <form enctype="multipart/form-data" action="ingest.php" method="post">
               <input name="MAX_FILE_SIZE"  value="100000000" type="hidden">
               <input name="usr" value=<?=$usr?> type="hidden">
-              <input name="uploadedfile" size="80" type="file" style="font-size:100%">
-              <input class="btn" value="Datei &uuml;bermitteln" type="submit" style="font-size:100%">
+              <!-- actual upload which is hidden -->
+              <input name="uploadedfile" size="80" type="file" class="custom-file-input" id="actual-btn" hidden/> 
+              <!-- custom upload button -->
+              <label class="btn" for="actual-btn"> Datei ausw&auml;hlen </label> 
+              <!-- name of file chosen -->
+              <span class="custom-file-label" id="file-chosen"> Keine Datei ausgew&auml;hlt </span>
+              <!-- submit button -->
+              <input class="btn" value="Datei &uuml;bermitteln" type="submit">
             </form>
           </th>
           <th>
             <form action="ingest.php" method="post">
               <input name="usr" value=<?=$usr?> type="hidden">
               <input name="RESET" value="true" type="hidden">
+              <!-- reset button -->
               <input class="btn" value="Reset" type="submit" style="font-size:100%">
             </form>
           </th>
         </tr>
     </table>
+<script>
+// Add the following code if you want the name of the file appear on select
+$(".custom-file-input").on("change", function() {
+var fileName = $(this).val().split("\\").pop();
+$(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>
     <hr>
 <?php
 // alle Dateien im Arbeitsverzeichnis "$wdir/$usr" löschen

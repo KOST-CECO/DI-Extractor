@@ -20,8 +20,8 @@ if ($wdir=='') { header ("location: ./input.php"); }
             <td style="text-align: right;">
                 Bestand-Signatur:</td>
             <td colspan="2" rowspan="1">
-                <input name="collsig" size="20" type="text" title="Signatur (Archiv- & Bestandk&uuml;rzel) des Knoten in der Archivtektonik an den die Ablieferung eingeh&auml;ngt werden soll"> Bestandtitel:
-                <input name="colltitle" size="60" type="text" title="Beschreibung des Knotens in der Archivtektonik an den die Ablieferung eingeh&auml;ngt werden soll"></td>
+                <input class="form-control" name="collsig" size="16" type="text" title="Signatur (Archiv- & Bestandk&uuml;rzel) des Knoten in der Archivtektonik an den die Ablieferung eingeh&auml;ngt werden soll"> Bestandtitel:
+                <input class="form-control" name="colltitle" size="54" type="text" title="Beschreibung des Knotens in der Archivtektonik an den die Ablieferung eingeh&auml;ngt werden soll"></td>
         </tr>
         <tr>
             <td></td>
