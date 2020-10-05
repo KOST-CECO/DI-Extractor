@@ -4,6 +4,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link href="./ingest.css" rel="stylesheet" type="text/css">
+<script src="./jquery.min.js"></script>
 		<title> KOST Referenzimplementierung
 		</title>
 	</head>
@@ -28,6 +29,7 @@
 			<br>
 			<br>
 		</p>
+		<hr>
 		<i>Eine eCH-0160 Metadaten Datei für die Konvertierung auswählen:</i>
 		<br>
 		<!-- Upload Formular, zweispaltig -->
@@ -38,20 +40,38 @@
 						<form enctype="multipart/form-data" action="https://kost-ceco.ch/isadg/app_beta/ingest.php" method="post">
 							<input name="MAX_FILE_SIZE" value="100000000" type="hidden">
 							<input name="usr" value="usr_rKEOsg" type="hidden">
-							<input class="btn" name="uploadedfile" size="80" type="file" style="font-size:100%">
+							<!-- actual upload which is hidden -->
+							<input name="uploadedfile" size="80" type="file" class="custom-file-input" id="actual-btn" hidden/> 
+							<!-- custom upload button -->
+							<label class="btn" for="actual-btn">
+								Datei auswählen 
+							</label> 
+							<!-- name of file chosen -->
+							<span class="custom-file-label" id="file-chosen">
+								Keine Datei ausgewählt 
+							</span>
+							<!-- submit button -->
 							<input class="btn" value="Datei übermitteln" type="submit" style="font-size:100%">
 						</form>
 					</th>
 					<th>
-						<form action="C:\workbench\_Workbench\app\GUI_static_template.html" method="post">
+						<form action="C:\workbench\_Workbench\app\GUI_test.html" method="post">
 							<input name="usr" value="usr_rKEOsg" type="hidden">
 							<input name="RESET" value="true" type="hidden">
+							<!-- reset button -->
 							<input class="btn" value="Reset" type="submit" style="font-size:100%">
 						</form>
 					</th>
 				</tr>
 			</tbody>
 		</table>
+<script>
+// Add the following code if you want the name of the file appear on select
+$(".custom-file-input").on("change", function() {
+var fileName = $(this).val().split("\\").pop();
+$(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>
 		<hr>
 		<i>Folgende Dateien sind bereits übertragen:</i>
 		<ul>
@@ -76,8 +96,8 @@
 						<td style="text-align: right;">
 							Bestand-Signatur:</td>
 						<td colspan="2" rowspan="1">
-							<input name="collsig" size="20" type="text" title="Signatur (Archiv- &amp; Bestandkürzel) des Knoten in der Archivtektonik an den die Ablieferung eingehängt werden soll"> Bestandtitel:
-							<input name="colltitle" size="60" type="text" title="Beschreibung des Knotens in der Archivtektonik an den die Ablieferung eingehängt werden soll"></td>
+							<input class="form-control" name="collsig" size="16" type="text" title="Signatur (Archiv- &amp; Bestandkürzel) des Knoten in der Archivtektonik an den die Ablieferung eingehängt werden soll"> Bestandtitel:
+							<input class="form-control" name="colltitle" size="54" type="text" title="Beschreibung des Knotens in der Archivtektonik an den die Ablieferung eingehängt werden soll"></td>
 					</tr>
 					<tr>
 						<td></td>
