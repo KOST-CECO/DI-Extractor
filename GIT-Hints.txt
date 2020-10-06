@@ -1,6 +1,5 @@
 How do I force “git pull” to overwrite local files?
 ---------------------------------------------------
-
 Important: If you have any local changes, they will be lost. With or without --hard option, any local commits that haven't been pushed will be lost.[*]
 If you have any files that are not tracked by Git (e.g. uploaded user content), these files will not be affected.
 
@@ -9,11 +8,24 @@ git fetch --all
 git reset --hard origin/master
 
 
-proxy settings:
----------------
+GIT: Proxy Settings Windows 10 (Januar 2018)
+--------------------------------------------
+Diese HTTP Einstellung scheinen mit Windows 10 zu funktionieren:
+[http]
+	# proxy = proxy.edi.admin.ch:8080
+	proxy = http.proxy=proxy-bvcol.admin.ch:8080
 
-git config --unset-all --local --system --global http.proxy
-git config --unset-all http.proxy
-git config --add http.proxy proxy-bvcol.admin.ch:8080
+So werden diese Einstellungen gesetzt:
+	git config --global http.proxy proxy-bvcol.admin.ch:8080
+oder so
+	git config –-global –-edit
+	git config --local –-edit
+	git config --system –-edit
 
-git config --unset-all core.autocrlf
+
+Neues Arbeitsverzeichnis anlegen
+--------------------------------
+git clone https://github.com/KOST-CECO/csv2siard.git _workbench
+cd _workbench
+# Repository überprüfen
+git status

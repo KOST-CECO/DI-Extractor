@@ -74,14 +74,10 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=ingest.css
-1=maninput.php
+0=..\htdocs\.htaccess
 [Selected Project Files]
 Main=processingest.php
-Selected=ingest.css
-[ingest.css]
-TopLine=43
-Caret=2,61
-[maninput.php]
-TopLine=23
-Caret=124,50
+Selected=..\htdocs\.htaccess
+[..\htdocs\.htaccess]
+TopLine=1
+Caret=46,6
