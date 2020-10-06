@@ -64,12 +64,6 @@ hr {
 	font-weight: 400;
 	font-style: italic;
 }
-.versionBeta {
-	font-size: 1.2rem;
-	font-weight: 400;
-	font-style: italic;
-	color: #DC143C;
-}
 .copyright {
 	font-family: "Segoe UI", Verdana, Helvetica, Arial, sans-serif;
 	font-size: 1rem;

@@ -1,4 +1,4 @@
-﻿# Ignore all
+# Ignore all
 *
 # Unignore all with extensions
 !*.*
@@ -11,3 +11,4 @@ Thumbs.db
 # *.url
 # *.txt
 *.exe
+/htdocs

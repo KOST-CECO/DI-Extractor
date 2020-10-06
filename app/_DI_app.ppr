@@ -19,8 +19,8 @@ DI_app
 		transform.cmd
 		test_transform.cmd
 		win10_transform.cmd
-		..\install_app.cmd
 		extract_element.cmd
+		install_app.cmd
 	-RIC
 		eCH2RIC.xsl
 		RICfond.xsl
@@ -74,14 +74,14 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=GUI_test.html
-1=ingest.css
+0=ingest.css
+1=maninput.php
 [Selected Project Files]
 Main=processingest.php
 Selected=ingest.css
-[GUI_test.html]
-TopLine=1
-Caret=1,1
 [ingest.css]
-TopLine=99
-Caret=26,129
+TopLine=43
+Caret=2,61
+[maninput.php]
+TopLine=23
+Caret=124,50
