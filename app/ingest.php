@@ -20,10 +20,10 @@ $metadatafile = '';
   <head>
     <link href="ingest.css" rel="stylesheet" type="text/css"/>
 <script src="./jquery.min.js"></script>
-    <title>KOST Referenzimplementierung</title>
+    <title>KOST Descriptive Information Converter 2.1</title>
   </head>
-  <body background="background.jpg">
-    <h1>KOST Referenzimplementierung - Descriptive Information 2.1 <span class="versionText">(Rev. 155)</span></h1>
+  <body background="./background.jpg">
+    <h1>KOST Descriptive Information Converter 2.1 <span class="versionText">(Rev. 158)</span></h1>
     <?php include 'helptext.php'; ?>
     <i>Eine eCH-0160 Metadaten Datei f&uuml;r die Konvertierung ausw&auml;hlen:</i>
     <br>
@@ -49,7 +49,7 @@ $metadatafile = '';
               <input name="usr" value=<?=$usr?> type="hidden">
               <input name="RESET" value="true" type="hidden">
               <!-- reset button -->
-              <input class="btn" value="Reset" type="submit" style="font-size:100%">
+              &nbsp;&nbsp;&nbsp;<input class="btn" value="Reset" type="submit" style="font-size:100%">
             </form>
           </th>
         </tr>

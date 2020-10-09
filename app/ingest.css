@@ -2,7 +2,7 @@
 body {
 	max-width: 950px;
 	margin: auto;
-	margin-top: 2rem;
+	margin-top: 1rem;
 	margin-bottom: 2rem;
 	font-family: 'Merriweather', serif;
 	font-size: 1rem;
@@ -11,12 +11,8 @@ body {
 	color: #333;
 	text-align: left;
 }
-td, th, p, div, span {
+form, td, th, p, div, span {
 	font-family: inherit;
-}
-form, div, p, h1, h2, h3, h4, h5, h6 {
-	margin: 0;
-	padding: 0;
 }
 table {
 	border: 0;
@@ -32,22 +28,18 @@ a, a:link, a:visited, a:active, a:focus {
 a:hover {
 	text-decoration: underline;
 }
-h1, h2, h3, h4, h5, h6 {
+/* Gelber Button */
+h1 {
 	font-family: "Segoe UI", Verdana, Helvetica, Arial, sans-serif;
 	font-size: 1.5rem;
 	line-height: 1.2;
-}
-/* Gelber Button */
-h1 {
 	font-weight: 600;
-	margin-bottom: 12px;
-	margin-bottom: 10px;
 	margin-left: -12px;
+	display: inline-block;
 	color: #333;
 	background-color: #fff78f;
 	border-color: #fff78f;
 	border-radius: .65rem;
-	vertical-align: middle;
 	border: 1px solid transparent;
 	padding: .625rem .75rem;
 }
