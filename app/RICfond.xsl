@@ -168,22 +168,6 @@
 				</xsl:element>
 			</xsl:for-each>
 			<!--   -->
-			<!-- 1. Instantiation -->
-			<xsl:element name="rico:hasInstantiation">
-				<xsl:element name="rico:Instantiation">
-					<xsl:attribute name="rdf:about"><xsl:value-of select="$signature"/><xsl:text>-i1</xsl:text></xsl:attribute>
-					<!-- instantiates -->
-					<xsl:element name="rico:instantiates">
-						<xsl:attribute name="rdf:resource"><xsl:value-of select="$signature"/></xsl:attribute>
-					</xsl:element>
-					<!-- title -->
-					<xsl:element name="rico:title">
-						<xsl:attribute name="xml:lang"><xsl:value-of select="$lang"/></xsl:attribute>
-						<xsl:value-of select="$title"/>
-					</xsl:element>
-				</xsl:element>
-			</xsl:element>
-			<!--   -->
 		</xsl:element>
 		<!--   -->
 		<!-- Agents -->
