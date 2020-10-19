@@ -74,18 +74,10 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=_xI2date.xsl
-1=RICdate.xsl
-2=eCH2RIC.xsl
+0=RICitem.xsl
 [Selected Project Files]
 Main=processingest.php
-Selected=eCH2RIC.xsl
-[_xI2date.xsl]
-TopLine=1
-Caret=3,10
-[RICdate.xsl]
-TopLine=1
-Caret=24,10
-[eCH2RIC.xsl]
-TopLine=39
-Caret=1,50
+Selected=RICitem.xsl
+[RICitem.xsl]
+TopLine=204
+Caret=1,1

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rico="https://www.ica.org/standards/RiC/ontology#" xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<!--   -->
-	<!-- Item   -  type GEVER-->
+	<!-- Item   -  type GEVER -->
 	<xsl:template match="arelda:dokument">
 		<xsl:param name="sig"/>
 		<!-- $signature -->
@@ -84,11 +84,10 @@
 			<!--   -->
 			<!-- 3.3.2 Bewertung und Kassation -->
 			<!--   -->
-			<!-- 3.4.1 Zugangsbestimmungen 
+			<!-- 3.4.1 Zugangsbestimmungen -->
 			<xsl:call-template name="RICaccess">
 				<xsl:with-param name="position" select="."/>
 			</xsl:call-template>
-			-->
 			<!--   -->
 			<!-- 3.4.4 Physische Beschaffenheit und technische Anforderungen -->
 			<xsl:if test="arelda:erscheinungsform">

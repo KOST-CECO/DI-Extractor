@@ -63,11 +63,11 @@
 			<!--   -->
 			<!-- 3.3.2 Bewertung und Kassation -->
 			<!--   -->
-			<!-- 3.4.1 Zugangsbestimmungen 
+			<!-- 3.4.1 Zugangsbestimmungen  -->
 			<xsl:call-template name="RICaccess">
 				<xsl:with-param name="position" select="."/>
 			</xsl:call-template>
-			-->
+			<!--   -->
 			<!-- 3.4.4 Physische Beschaffenheit und technische Anforderungen -->
 			<!--   -->
 			<!-- 3.6.1 Allgemeine Anmerkungen -->
