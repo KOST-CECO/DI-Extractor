@@ -124,9 +124,9 @@
 				<xsl:with-param name="position" select="."/>
 			</xsl:call-template>
 			-->
-			<!-- 3.4.4 Physische Beschaffenheit und technische Anforderungen 
+			<!-- 3.4.4 Physische Beschaffenheit und technische Anforderungen -->
 			<xsl:if test="arelda:erscheinungsform">
-				<xsl:element name="physTech">
+				<xsl:element name="rico:hasRepresentationType">
 					<xsl:choose>
 						<xsl:when test="arelda:erscheinungsform/text()='digital'">
 							<xsl:text>digital</xsl:text>
@@ -143,15 +143,13 @@
 					</xsl:choose>
 				</xsl:element>
 			</xsl:if>
-			-->
 			<!--   -->
-			<!-- 3.6.1 Allgemeine Anmerkungen 
+			<!-- 3.6.1 Allgemeine Anmerkungen -->
 			<xsl:if test="arelda:bemerkung/text()">
-				<xsl:element name="note">
+				<xsl:element name="rico:descriptiveNote">
 					<xsl:value-of select="arelda:bemerkung"/>
 				</xsl:element>
 			</xsl:if>
-			-->
 			<!--   -->
 			<!-- included In-->
 			<xsl:element name="rico:includedIn">

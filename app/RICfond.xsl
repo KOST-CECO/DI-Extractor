@@ -140,23 +140,22 @@
 			<!--   -->
 			<!-- 3.4.4 Physische Beschaffenheit und technische Anforderungen -->
 			<!--   -->
-			<!-- 3.6.1 Allgemeine Anmerkungen 
+			<!-- 3.6.1 Allgemeine Anmerkungen -->
 			<xsl:if test="arelda:bemerkung/text()">
-				<xsl:element name="note">
+				<xsl:element name="rico:descriptiveNote">
 					<xsl:value-of select="arelda:bemerkung"/>
 				</xsl:element>
 			</xsl:if>
 			<xsl:if test="arelda:provenienz/arelda:bemerkung/text()">
-				<xsl:element name="note">
+				<xsl:element name="rico:descriptiveNote">
 					<xsl:value-of select="arelda:provenienz/arelda:bemerkung"/>
 				</xsl:element>
 			</xsl:if>
 			<xsl:if test="arelda:ordnungssystem/arelda:bemerkung/text()">
-				<xsl:element name="note">
+				<xsl:element name="rico:descriptiveNote">
 					<xsl:value-of select="arelda:ordnungssystem/arelda:bemerkung"/>
 				</xsl:element>
 			</xsl:if>
-			-->
 			<!--   -->
 			<!-- included In-->
 			<xsl:element name="rico:includedIn">

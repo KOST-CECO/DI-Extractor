@@ -21,7 +21,7 @@ DI_app
 		win10_transform.cmd
 		extract_element.cmd
 		install_app.cmd
-	-RIC
+	+RIC
 		eCH2RIC.xsl
 		RICfond.xsl
 		RICserie.xsl
@@ -31,7 +31,7 @@ DI_app
 		RICdate.xsl
 		RICaccess.xsl
 		RIC_order.txt
-	+app
+	-app
 		index.php
 		input.php
 		ingest.php
@@ -54,7 +54,7 @@ DI_app
 		createRef.xsl
 		elementRef.xsl
 		xIsadg_v1.6.1.xsd
-	-xIsadg_v2.0
+	+xIsadg_v2.0
 		eCH2xI2sadg.xsl
 		xI2fond.xsl
 		xI2serie.xsl
@@ -74,14 +74,18 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=ingest.css
-1=ingest.php
+0=_xI2date.xsl
+1=RICdate.xsl
+2=eCH2RIC.xsl
 [Selected Project Files]
 Main=processingest.php
-Selected=ingest.php
-[ingest.css]
-TopLine=92
-Caret=18,92
-[ingest.php]
-TopLine=17
-Caret=87,26
+Selected=eCH2RIC.xsl
+[_xI2date.xsl]
+TopLine=1
+Caret=3,10
+[RICdate.xsl]
+TopLine=1
+Caret=24,10
+[eCH2RIC.xsl]
+TopLine=39
+Caret=1,50

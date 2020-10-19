@@ -16,4 +16,8 @@ java -jar C:\JTools\saxon9\saxon9.jar -versionmsg:off -s:"..\rico-sample\RIS_St.
 
 REM -----------------------------------------------------------------------------------------------------------------------------------
 REM Dezimale Signatur 1, 1.1, 1.2,
-java -jar C:\JTools\saxon9\saxon9.jar -versionmsg:off -s:"..\sample\arelda_v4-vollstaendig-GEVER.xml" -xsl:eCH2RIC.xsl -o:"rico1.2.3.rdf" fondtitle="RIS ein Dossier" archsig="sig" baseuri="http://arelda_v4.0.ch/" reffilename="null.xml"
+java -jar C:\JTools\saxon9\saxon9.jar -versionmsg:off -s:"..\scratch\arelda_v4-vollstaendig-GEVER.xml" -xsl:eCH2RIC.xsl -o:"rico1.2.3.4.rdf" fondtitle="RIS ein Dossier" archsig="sig" baseuri="http://arelda_v4.0.ch/" reffilename="null.xml"
+
+REM -----------------------------------------------------------------------------------------------------------------------------------
+REM Format EAD Dezimale Signatur 1, 1.1, 1.2,
+java -jar C:\JTools\saxon9\saxon9.jar -versionmsg:off -s:"..\sample\arelda_v4-vollstaendig-GEVER.xml" -xsl:eCH2EAD.xsl -o:"ead_1.2.3.xml" fondtitle="RIS ein Dossier" archsig="sig" reffilename="null.xml"
