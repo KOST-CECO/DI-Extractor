@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rico="https://www.ica.org/standards/RiC/ontology#" xmlns:arelda="http://bar.admin.ch/arelda/v4">
 	<!--   -->
-	<!-- Item   -  type GEVER -->
+	<!-- Item ++++++++++++++++++++ type GEVER ++++++++++++++++++++++++++++++++ -->
 	<xsl:template match="arelda:dokument">
 		<xsl:param name="sig"/>
 		<!-- $signature -->
@@ -139,7 +139,7 @@
 			<!--   -->
 		</xsl:element>
 	</xsl:template>
-	<!-- Item  -  type FILE -->
+	<!-- Item ++++++++++++++++++++ type FILES +++++++++++++++++++++++++++++++++ -->
 	<xsl:template match="arelda:dateiRef">
 		<xsl:param name="sig"/>
 		<!-- $signature -->
@@ -228,6 +228,12 @@
 					<xsl:value-of select="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:eigenschaft/text()"/>
 				</xsl:element>
 			</xsl:if>
+			<!--   -->
+			<!-- included In-->
+			<xsl:element name="rico:includedIn">
+				<xsl:attribute name="rdf:resource"><xsl:call-template name="RICreference"><xsl:with-param name="signature"><xsl:value-of select="$sig"/></xsl:with-param></xsl:call-template></xsl:attribute>
+			</xsl:element>
+			<!--   -->
 		</xsl:element>
 	</xsl:template>
 </xsl:stylesheet>

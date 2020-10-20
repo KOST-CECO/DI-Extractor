@@ -161,8 +161,22 @@
 					</xsl:call-template>
 				</xsl:attribute>
 			</xsl:element>
-			<!-- includes Item -->
+			<!-- includes GEVER Item -->
 			<xsl:for-each select="arelda:dokument">
+				<xsl:element name="rico:includes">
+					<xsl:attribute name="rdf:resource">
+						<xsl:call-template name="RICreference">
+							<xsl:with-param name="signature">
+								<xsl:value-of select="$signature"/>
+								<xsl:text>_</xsl:text>
+								<xsl:number/>
+							</xsl:with-param>
+						</xsl:call-template>
+					</xsl:attribute>
+				</xsl:element>
+			</xsl:for-each>
+			<!-- includes FILES Item -->
+			<xsl:for-each select="arelda:dateiRef">
 				<xsl:element name="rico:includes">
 					<xsl:attribute name="rdf:resource">
 						<xsl:call-template name="RICreference">
@@ -200,6 +214,13 @@
 			</xsl:with-param>
 			</xsl:apply-templates>
 		<!--  FILE SIP -->
+			<xsl:apply-templates select="arelda:dateiRef">
+			<xsl:with-param name="sig">
+				<xsl:value-of select="$sig"/>
+				<xsl:text>.</xsl:text>
+				<xsl:number/>
+			</xsl:with-param>
+			</xsl:apply-templates>
 		<!--
 			<xsl:apply-templates select="arelda:dateiRef">
 				<xsl:with-param name="sig" select="$signature"/>
