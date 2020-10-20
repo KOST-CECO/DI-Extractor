@@ -127,6 +127,7 @@
 			<!-- 3.4.4 Physische Beschaffenheit und technische Anforderungen -->
 			<xsl:if test="arelda:erscheinungsform">
 				<xsl:element name="rico:hasRepresentationType">
+					<xsl:attribute name="xml:lang">en</xsl:attribute>
 					<xsl:choose>
 						<xsl:when test="arelda:erscheinungsform/text()='digital'">
 							<xsl:text>digital</xsl:text>
