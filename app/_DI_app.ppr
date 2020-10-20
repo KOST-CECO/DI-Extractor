@@ -12,7 +12,7 @@ DocumentRoot=C:\Tools\xampp\htdocs\app
 HTServer=http://localhost:90/app/
 [Project tree]
 DI_app
-	-cmd
+	+cmd
 		run.txt
 		ToolListe.docx
 		run_transform.cmd
@@ -54,7 +54,7 @@ DI_app
 		createRef.xsl
 		elementRef.xsl
 		xIsadg_v1.6.1.xsd
-	+xIsadg_v2.0
+	-xIsadg_v2.0
 		eCH2xI2sadg.xsl
 		xI2fond.xsl
 		xI2serie.xsl
@@ -74,10 +74,5 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=RICitem.xsl
 [Selected Project Files]
 Main=processingest.php
-Selected=RICitem.xsl
-[RICitem.xsl]
-TopLine=184
-Caret=1,234

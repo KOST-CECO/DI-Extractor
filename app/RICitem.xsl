@@ -121,7 +121,7 @@
 				<xsl:attribute name="rdf:resource"><xsl:call-template name="RICreference"><xsl:with-param name="signature"><xsl:value-of select="$sig"/></xsl:with-param></xsl:call-template></xsl:attribute>
 			</xsl:element>
 			<!--   -->
-			<!-- 1. Instantiation -->
+			<!-- 1. Instantiation ++++++++++++++++++++++++++++++++ -->
 			<xsl:element name="rico:hasInstantiation">
 				<xsl:element name="rico:Instantiation">
 					<xsl:attribute name="rdf:about"><xsl:value-of select="$signature"/><xsl:text>-i1</xsl:text></xsl:attribute>
@@ -129,14 +129,31 @@
 					<xsl:element name="rico:instantiates">
 						<xsl:attribute name="rdf:resource"><xsl:value-of select="$signature"/></xsl:attribute>
 					</xsl:element>
-					<!-- title -->
+					<!-- titel -->
 					<xsl:element name="rico:title">
 						<xsl:attribute name="xml:lang"><xsl:value-of select="$lang"/></xsl:attribute>
 						<xsl:value-of select="arelda:titel"/>
 					</xsl:element>
+					<!-- entstehungszeitraum -->
+					<xsl:if test="arelda:entstehungszeitraum">
+						<xsl:call-template name="RICdate">
+							<xsl:with-param name="range" select="arelda:entstehungszeitraum"/>
+						</xsl:call-template>
+					</xsl:if>
+					<!-- dokumenttyp -->
+					<xsl:if test="arelda:dokumenttyp">
+						<xsl:element name="rico:technicalCharacteristics">
+							<xsl:value-of select="arelda:dokumenttyp/text()"/>
+						</xsl:element>
+					</xsl:if>
+					<!-- bemerkung -->
+					<xsl:if test="arelda:bemerkung/text()">
+						<xsl:element name="rico:descriptiveNote">
+							<xsl:value-of select="arelda:bemerkung"/>
+						</xsl:element>
+					</xsl:if>
 				</xsl:element>
 			</xsl:element>
-			<!--   -->
 		</xsl:element>
 	</xsl:template>
 	<!-- Item ++++++++++++++++++++ type FILES +++++++++++++++++++++++++++++++++ -->
@@ -234,6 +251,34 @@
 				<xsl:attribute name="rdf:resource"><xsl:call-template name="RICreference"><xsl:with-param name="signature"><xsl:value-of select="$sig"/></xsl:with-param></xsl:call-template></xsl:attribute>
 			</xsl:element>
 			<!--   -->
+			<!-- 1. Instantiation ++++++++++++++++++++++++++++++++ -->
+			<xsl:element name="rico:hasInstantiation">
+				<xsl:element name="rico:Instantiation">
+					<xsl:attribute name="rdf:about"><xsl:value-of select="$signature"/><xsl:text>-i1</xsl:text></xsl:attribute>
+					<!-- instantiates -->
+					<xsl:element name="rico:instantiates">
+						<xsl:attribute name="rdf:resource"><xsl:value-of select="$signature"/></xsl:attribute>
+					</xsl:element>
+					<!-- title -->
+					<xsl:element name="rico:title">
+						<xsl:attribute name="xml:lang"><xsl:value-of select="$lang"/></xsl:attribute>
+						<xsl:choose>
+							<xsl:when test="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:originalName">
+								<xsl:value-of select="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:originalName/text()"/>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:name/text()"/>
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:element>
+					<!-- eigenschaft -->
+					<xsl:if test="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:eigenschaft/text()">
+						<xsl:element name="rico:descriptiveNote">
+							<xsl:value-of select="/arelda:paket/arelda:inhaltsverzeichnis/arelda:ordner//arelda:datei[@id=$fileid]/arelda:eigenschaft/text()"/>
+						</xsl:element>
+					</xsl:if>
+				</xsl:element>
+			</xsl:element>
 		</xsl:element>
 	</xsl:template>
 </xsl:stylesheet>
