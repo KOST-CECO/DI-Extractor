@@ -13,6 +13,12 @@ $collsig   = utf8_encode( $myFilter->process( stripslashes($_POST['collsig'] ) )
 $colltitle = utf8_encode( $myFilter->process( stripslashes($_POST['colltitle']) ) );
 $collstyle = utf8_encode( $myFilter->process( stripslashes($_POST['collstyle']) ) );
 $xschema = utf8_encode( $myFilter->process( stripslashes($_POST['xschema']) ) );
+// ric-o paramater
+$baseuri = utf8_encode( $myFilter->process( stripslashes($_POST['baseuri']) ) );
+$language = utf8_encode( $myFilter->process( stripslashes($_POST['language']) ) );
+$creator = utf8_encode( $myFilter->process( stripslashes($_POST['creator']) ) );
+$submissionbody = utf8_encode( $myFilter->process( stripslashes($_POST['submissionbody']) ) );
+$packagename = utf8_encode( $myFilter->process( stripslashes($_POST['packagename']) ) );
 
 /* TODO PHP filter_input sollte verwendet werden
 $collsig   = utf8_encode( stripslashes($_POST['collsig'] ) );
@@ -84,6 +90,12 @@ $proc->importStyleSheet($xsl); // attach the xsl rules
 $proc->setParameter('', 'fondtitle', $colltitle);
 $proc->setParameter('', 'archsig', $collsig);
 $proc->setParameter('', 'reffilename', "$reffile");
+// Set ric-o parameter
+$proc->setParameter('', 'baseuri', "$baseuri");
+$proc->setParameter('', 'language', "$language");
+$proc->setParameter('', 'creator', "$creator");
+$proc->setParameter('', 'submissionbody', "$submissionbody");
+$proc->setParameter('', 'packagename', "$packagename");
 // Transform according to the xsl rules
 $xisadg = $proc->transformToXML($xml);
 

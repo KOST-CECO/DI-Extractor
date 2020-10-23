@@ -1,6 +1,6 @@
 /* CSS Document */
 body {
-	max-width: 950px;
+	max-width: 1000px;
 	margin: auto;
 	margin-top: 1rem;
 	margin-bottom: 2rem;
@@ -45,7 +45,7 @@ h1 {
 }
 hr {
 	margin-left: 0;
-	width: 950px;
+	width: 1000px;
 	height: 0.5px;
 	background-color: #c9c9c9;
 	border: none;
