@@ -21,7 +21,7 @@ DI_app
 		win10_transform.cmd
 		extract_element.cmd
 		install_app.cmd
-	-RIC
+	+RIC
 		eCH2RIC.xsl
 		RICfond.xsl
 		RICserie.xsl
@@ -31,7 +31,7 @@ DI_app
 		RICdate.xsl
 		RICaccess.xsl
 		RIC_order.txt
-	+app
+	-app
 		index.php
 		input.php
 		ingest.php
@@ -76,14 +76,14 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=Neu1.txt
-1=install_app.cmd
+0=RICfond.xsl
+1=eCH2RIC.xsl
 [Selected Project Files]
 Main=processingest.php
-Selected=install_app.cmd
-[Neu1.txt]
-TopLine=1
-Caret=1,1
-[install_app.cmd]
-TopLine=1
-Caret=1,1
+Selected=RICfond.xsl
+[RICfond.xsl]
+TopLine=23
+Caret=17,38
+[eCH2RIC.xsl]
+TopLine=9
+Caret=5,15

@@ -19,6 +19,10 @@
 	<xsl:param name="fondtitle"/>
 	<xsl:param name="archsig"/>
 	<xsl:param name="reffilename"/>
+	<xsl:variable name="reffile" select="document($reffilename)"/>
+	<xsl:param name="creator"/>
+	<xsl:param name="submissionbody"/>
+	<xsl:param name="packagename"/>
 	<!-- $baseuri -> $base -->
 	<xsl:param name="baseuri"/>
 		<xsl:variable name="base">
@@ -31,7 +35,6 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
-	<xsl:variable name="reffile" select="document($reffilename)"/>
 	<!-- $language -> $lang -->
 	<xsl:param name="language"/>
 	<xsl:variable name="lang">

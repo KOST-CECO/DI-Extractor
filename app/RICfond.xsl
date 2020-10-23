@@ -15,13 +15,27 @@
 		</xsl:variable>
 		<!-- $aktenbildner -->
 		<xsl:variable name="aktenbildner">
-			<xsl:text>agent_</xsl:text>
-			<xsl:value-of select="generate-id(arelda:provenienz/arelda:aktenbildnerName)"/>
+			<xsl:choose>
+				<xsl:when test="$creator">
+					<xsl:value-of select="$creator"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:text>agent_</xsl:text>
+					<xsl:value-of select="generate-id(arelda:provenienz/arelda:aktenbildnerName)"/>
+				</xsl:otherwise>
+			</xsl:choose>
 		</xsl:variable>
 		<!-- $ablieferndeStelle -->
 		<xsl:variable name="ablieferndeStelle">
-			<xsl:text>agent_</xsl:text>
-			<xsl:value-of select="generate-id(arelda:ablieferndeStelle)"/>
+			<xsl:choose>
+				<xsl:when test="$submissionbody">
+					<xsl:value-of select="$submissionbody"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:text>agent_</xsl:text>
+					<xsl:value-of select="generate-id(arelda:ablieferndeStelle)"/>
+				</xsl:otherwise>
+			</xsl:choose>
 		</xsl:variable>
 		<!--   -->
 		<!-- rico:RecordSet Fonds -->
