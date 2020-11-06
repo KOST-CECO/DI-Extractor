@@ -114,10 +114,12 @@ closedir($handle);
 }
 
 // We'll be outputting a XML
+// HTML Header ausgeben und damit ein Redirect auslösen
 header('Content-type: application/xml');
 echo $xisadg;
 
-// HTML Header ausgeben und damit ein Redirect auslösen
-//file_put_contents("./$wdir/out.xml", $xisadg);
-//header ("location: ./$wdir/out.xml");
+// RDF Datei kopieren für Abfrage mit SPARQL
+if ($xschema == 'RIC') {
+    file_put_contents("./$wdir.rdf", $xisadg);
+}
 ?>
