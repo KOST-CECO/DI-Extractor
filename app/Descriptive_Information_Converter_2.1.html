@@ -28,6 +28,8 @@
 			<a href="http://ech.ch/de/dokument/4bf53ff1-0e4f-4fb9-9ccc-75a4219bb20c">eCH-0160_V1.1_ArchivischeAblieferungsschnittstelle_DataDictionary.pdf</a> und
 			<a href="https://kost-ceco.ch/cms/dl/b890ad3a2222023b4247d17779062619/xIsadg_DataDictionary_v2.1.pdf">xIsadg_DataDictionary_v2.1.pdf</a>
 			<br>
+			Nach einer Konvertierung in RIC Format steht der RDF Content unter der unten angegebenen 
+			URI für eine SPARQL Auswertung mit einem Online Tool zur Verfügung (z.B. <a href="http://librdf.org/query/">Redland Rasqal RDF Query</a>)
 			<br>
 		</p>
 		<i>Eine eCH-0160 Metadaten Datei f&uuml;r die Konvertierung ausw&auml;hlen:</i>
@@ -98,11 +100,6 @@ $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
 						<input class="form-control" name="colltitle" size="54" type="text" title="Beschreibung des Knotens in der Archivtektonik an den die Ablieferung eingeh&auml;ngt werden soll"></td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
 					<td colspan="3" rowspan="1">
 						<i>Angaben zur Signaturbildung:</i></td>
 				</tr>
@@ -143,9 +140,6 @@ $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
 								<input class="form-control" name="packagename" size="16" type="text" value="SIP..." title="(Datei-)Name des Ablieferungspaketes, z.B. SIP_20120628_BfB_Bm.zip"> &nbsp;&nbsp;Base URI:
 								<input class="form-control" name="baseuri" size="54" type="text" value="http://arelda_v4.0.ch/" title="Basis URI der Resourcen in RIC (default: http://arelda_v4.0.ch/)"></td>
 						</tr>
-						<tr>
-							<td colspan="2"></td>
-						</tr>
 						<td colspan="2"> Aktenbildner/Provenienz (GND o.ä.)
 							<input class="form-control" name="creator" size="20" type="text" title="URI von Aktenbildner/Provenienz, wird keine Normdatei referenziert wird lokal im SIP eine URI gebildet"> &nbsp;&nbsp;Abliefernde Stelle (GND o.ä.)
 							<input class="form-control" name="submissionbody" size="20" type="text" title="URI der abliefernde Stelle, wird keine Normdatei referenziert wird lokal im SIP eine URI gebildet"></td>
@@ -157,6 +151,10 @@ $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
 								<input type="radio" name="language" value="fr" title="Primäre Sprache der Metadaten"> Sprache französisch
 								<input type="radio" name="language" value="it" title="Primäre Sprache der Metadaten"> italienisch
 								<input type="radio" name="language" value="en" title="Primäre Sprache der Metadaten"> englisch</td>
+						</tr>
+						<tr>
+							<td style="text-align: right;">RDF Content URI:</td>
+							<td><span class="uri">http://kost-ceco.ch/isadg/app/wdir/usr_0GpbWj.rdf</span></td>
 						</tr>
 					</tbody>
 				</table>

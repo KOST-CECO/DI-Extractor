@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteCond %{HTTPS} on
+RewriteRule ^ http://%{HTTP_HOST}%{REQUEST_URI} [R=301,NE]
+# AuthType Basic
+# AuthName "TIFF-Analyse Datensammlung"
+# AuthUserFile "/home/kostceco/.htpasswds/public_html/ftp_space/tiff/passwd"
+# require valid-user
+# Options +Indexes 
+# IndexOptions -HTMLTable -FancyIndexing

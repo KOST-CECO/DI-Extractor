@@ -24,7 +24,7 @@ $metadatafile = '';
     <title>KOST Descriptive Information Converter 2.1</title>
   </head>
   <body background="./background.jpg" onload="ricOff()">
-    <h1>KOST Descriptive Information Converter 2.1 <span class="versionText">(Rev. 166)</span></h1>
+    <h1>KOST Descriptive Information Converter 2.1 <span class="versionText">(Rev. 169)</span></h1>
     <?php include 'helptext.php'; ?>
     <i>Eine eCH-0160 Metadaten Datei f&uuml;r die Konvertierung ausw&auml;hlen:</i>
     <br>

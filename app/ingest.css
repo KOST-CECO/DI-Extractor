@@ -17,6 +17,9 @@ form, td, th, p, div, span {
 table {
 	border: 0;
 }
+td {
+	padding: .2rem 0 .2rem 0; 
+}
 a, a:link, a:visited, a:active, a:focus {
 	margin: 0;
 	color: #212529;
@@ -55,6 +58,15 @@ hr {
 	font-size: 1.2rem;
 	font-weight: 400;
 	font-style: italic;
+}
+.uri {
+	font-family: "Segoe UI", Verdana, Helvetica, Arial, sans-serif;
+	font-size: 1rem;
+	color: #495057;
+	padding: .375rem .75rem;
+	background-color: #fff;
+	border: 1px solid #ced4da;
+	border-radius: .25rem;
 }
 .copyright {
 	font-family: "Segoe UI", Verdana, Helvetica, Arial, sans-serif;

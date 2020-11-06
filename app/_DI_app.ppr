@@ -76,14 +76,5 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
-0=processingest.php
-1=ingest.php
 [Selected Project Files]
 Main=processingest.php
-Selected=processingest.php
-[processingest.php]
-TopLine=94
-Caret=26,123
-[ingest.php]
-TopLine=47
-Caret=1,67

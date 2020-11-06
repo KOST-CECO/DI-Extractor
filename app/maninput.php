@@ -25,11 +25,6 @@ if ($wdir=='') { header ("location: ./input.php"); }
                 <input class="form-control" name="colltitle" size="54" type="text" title="Beschreibung des Knotens in der Archivtektonik an den die Ablieferung eingeh&auml;ngt werden soll"></td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
             <td colspan="3" rowspan="1">
                 <i>Angaben zur Signaturbildung:</i></td>
         </tr>
@@ -76,9 +71,6 @@ if ($wdir=='') { header ("location: ./input.php"); }
               <input class="form-control" name="baseuri" size="54" type="text" value="http://arelda_v4.0.ch/" title="Basis URI der Resourcen in RIC (default: http://arelda_v4.0.ch/)">
             </td>
           </tr>
-          <tr>
-            <td colspan="2"></td>
-          </tr>
             <td colspan="2">
               Aktenbildner/Provenienz (GND o.ä.)
               <input class="form-control" name="creator" size="20" type="text" title="URI von Aktenbildner/Provenienz, wird keine Normdatei referenziert wird lokal im SIP eine URI gebildet">
@@ -96,6 +88,10 @@ if ($wdir=='') { header ("location: ./input.php"); }
               <input type="radio" name="language" value="it" title="Primäre Sprache der Metadaten"> italienisch
               <input type="radio" name="language" value="en" title="Primäre Sprache der Metadaten"> englisch
             </td>
+          </tr>
+          <tr>
+            <td style="text-align: right;">RDF Content URI:</td>
+            <td><span class="uri"><?="http://$_SERVER[HTTP_HOST]" . dirname($_SERVER[PHP_SELF]) . "/$wdir"?>.rdf</span></td>
           </tr>
         </tbody>
       </table>

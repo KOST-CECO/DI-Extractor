@@ -18,5 +18,7 @@ if ($wdir=='') { header ("location: ./input.php"); }
 			<a href="http://ech.ch/de/dokument/4bf53ff1-0e4f-4fb9-9ccc-75a4219bb20c">eCH-0160_V1.1_ArchivischeAblieferungsschnittstelle_DataDictionary.pdf</a> und
 			<a href="https://kost-ceco.ch/cms/dl/b890ad3a2222023b4247d17779062619/xIsadg_DataDictionary_v2.1.pdf">xIsadg_DataDictionary_v2.1.pdf</a>
 			<br>
+			Nach einer Konvertierung in RIC Format steht der RDF Content unter der unten angegebenen 
+			URI für eine SPARQL Auswertung mit einem Online Tool zur Verfügung (z.B. <a href="http://librdf.org/query/">Redland Rasqal RDF Query</a>)
 			<br>
 		</p>
