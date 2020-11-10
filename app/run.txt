@@ -21,3 +21,9 @@ java -jar C:\JTools\saxon9\saxon9.jar -versionmsg:off -s:"..\scratch\arelda_v4-v
 REM -----------------------------------------------------------------------------------------------------------------------------------
 REM Format EAD Dezimale Signatur 1, 1.1, 1.2,
 java -jar C:\JTools\saxon9\saxon9.jar -versionmsg:off -s:"..\sample\arelda_v4-vollstaendig-GEVER.xml" -xsl:eCH2EAD.xsl -o:"ead_1.2.3.xml" fondtitle="RIS ein Dossier" archsig="sig" reffilename="null.xml"
+
+REM -----------------------------------------------------------------------------------------------------------------------------------
+REM Triple Store Lösungen
+https://www.w3.org/2009/Talks/0615-qbe/
+https://github.com/semsol/arc2 
+http://librdf.org/query/ 

@@ -1,6 +1,8 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rico: <https://www.ica.org/standards/RiC/ontology#>
-SELECT ?title
+SELECT ?x ?title
+FROM <http://kost-ceco.ch/isadg/app/wdir/usr_dbfdw1.rdf>
 WHERE {
-    ?Description rico:title ?title .
+    ?x rico:title ?title .
+    ?x rico:hasRecordSetType <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#File> .
 }

@@ -12,7 +12,7 @@ DocumentRoot=C:\Tools\xampp\htdocs\app
 HTServer=http://localhost:90/app/
 [Project tree]
 DI_app
-	-cmd
+	+cmd
 		run.txt
 		ToolListe.docx
 		run_transform.cmd
@@ -31,7 +31,7 @@ DI_app
 		RICdate.xsl
 		RICaccess.xsl
 		RIC_order.txt
-	+app
+	-app
 		index.php
 		input.php
 		ingest.php
@@ -76,5 +76,10 @@ DI_app
 		EADaccess.xsl
 		EADreference.xsl
 [Open project files]
+0=Neu1.txt
 [Selected Project Files]
 Main=processingest.php
+Selected=Neu1.txt
+[Neu1.txt]
+TopLine=1
+Caret=1,1
