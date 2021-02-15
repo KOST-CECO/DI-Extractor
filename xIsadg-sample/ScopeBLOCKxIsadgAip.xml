@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--iddossierx1x302-->
+<!--file_1.xml-->
+<!--_5IBdwEcDEeWJDuEy-nTQbw-->
+<isadg:archivalDescription xmlns:isadg="ISADG" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="ISADG xsd/xIsadgAip/xIsadgAip_v1-9.xsd">
+	<isadg:identity>
+		<isadg:referenceCode archivalOrigin="true" isadId="1.1">XII.3.:3.</isadg:referenceCode>
+		<isadg:title isadId="1.2" archivalOrigin="true">SIP_20150820_FULL_ORIGINAL (SAR_test_eCH-0160_Dossier) Neue Version</isadg:title>
+		<isadg:dates archivalOrigin="true" isadId="1.3">
+			<isadg:fromYear>2015</isadg:fromYear>
+			<isadg:toYear>2015</isadg:toYear>
+		</isadg:dates>
+		<isadg:descriptionLevel archivalOrigin="true">Teilbestand</isadg:descriptionLevel>
+	</isadg:identity>
+	<isadg:context>
+		<isadg:creator isadId="2.1">Eintrag Aktenbildner Name d.h. Proveninez</isadg:creator>
+		<isadg:adminBioHistory isadId="2.2">Eintrag Geschichte Aktenbildner</isadg:adminBioHistory>
+		<isadg:archivalHistory isadId="2.3" archivalOrigin="true">
+			[scope:block key="Ablieferungstyp"]FILES[/scope:block]
+		
+			[scope:block key="Quellsystem"]Eintrag Systemname z. Bsp. Filesystem SAR[/scope:block]
+		
+			[scope:block key="Beschreibung Quellsystem"]Eintrag System Beschreibung[/scope:block]
+		
+			[scope:block key="Name der Registratur"]Eintrag Registratur[/scope:block]
+		</isadg:archivalHistory>
+		<isadg:acqInfo isadId="2.4" archivalOrigin="true">Eintrag Abliefernde Stelle z. Bsp. IT-SAR</isadg:acqInfo>
+	</isadg:context>
+	<isadg:contentStructure isadId="3">
+		<isadg:scopeContent isadId="3.1">
+			<isadg:content>Eintrag Ablieferungsteile</isadg:content>
+		</isadg:scopeContent>
+		<isadg:appraisalDestruction isadId="3.2">Eintrag Referenz Bewertungsentscheid</isadg:appraisalDestruction>
+		<isadg:arrangement>
+			[scope:block key="Name Ordnungssystem"]Der Name des Ordnungssystems z.Bsp. SAR Dokablage[/scope:block]
+		
+			[scope:block key="Version Ordnungssystem"]Eintrag Genertation[/scope:block]
+		</isadg:arrangement>
+	</isadg:contentStructure>
+	<isadg:notes isadId="6">
+		<!--Note 1: Bemerkungen zur Ablieferung-->
+		<isadg:note isadId="6.1">Eintrag Ablieferung Bemerkung</isadg:note>
+		<!--Note 2: Bemerkungen zur Provenienz-->
+		<isadg:note isadId="6.1">Eintrag Provenienz Bemerkung</isadg:note>
+		<!--Note 3: Bemerkungen zum Ordnungssystem-->
+		<isadg:note isadId="6.1">Eintrag Ordnungssystem Bemerkung</isadg:note>
+	</isadg:notes>
+	<isadg:additionalData>
+		<isadg:mdWrap archivalOrigin="true">
+			<isadg:property key="Pakettyp" value="SIP"/>
+			<isadg:property key="PaketZusatzdatenArray" value="Zusatz Daten Paket: Wert 1 Zusatz Daten Paket"/>
+			<isadg:property key="PaketZusatzdatenArray" value="Zusatz Daten Paket: Wert 2 Zusatzdaten Paket"/>
+			<isadg:property key="Ablieferungsnummer" value="2015/10"/>
+			<isadg:property key="Schutzfristenkategorie" value="Personendaten"/>
+			<isadg:property key="Schutzfrist" value="80"/>
+			<isadg:property key="ReferenzSchutzfristenFormular" value="Eintrag Referenz Schutzfristen Formular"/>
+			<isadg:property key="AblieferungZusatzdatenArray" value="Zusatz Daten Ablieferung: Wert 1 Zusatzdaten Ablieferung"/>
+			<isadg:property key="AblieferungZusatzdatenArray" value="Zusatz Daten Ablieferung: Wert 2 Zusatzdaten Ablieferung"/>
+			<isadg:property key="Existenzzeitraum" value="2015 - 2015"/>
+			<isadg:property key="Einsatzzeitraum Ordnungssystem" value="2015 - 2015"/>
+			<isadg:property key="OrdnungsSystemZusatzdatenArray" value="Zusatz Daten 1 Ordnungssystem: Wert 1 Zusatz Daten Ordnungssystem"/>
+			<isadg:property key="OrdnungsSystemZusatzdatenArray" value="Zusatz Daten 2 Ordnungssystem: Wert 2 Zusatz Daten Ordnungssystem"/>
+			<isadg:property key="Mitbenutzung Ordnungssystem" value="Eintrag Mitbenutzung des Ordnungssystems"/>
+			<isadg:property key="Archivierungsmodus Löschvorschriften" value="Eintrag Archivierungsmodus Löschvorschriften"/>
+			<isadg:property key="Verwandte Systeme" value="Eintrag Verwandte Systeme"/>
+		</isadg:mdWrap>
+	</isadg:additionalData>
+	<!--ordnungssystemposition :: ID: _cLQQoEb8EeWJDuEy-nTQbw-->
+	<isadg:archivalDescription>
+		<isadg:identity isadId="1">
+			<isadg:referenceCode isadId="1.1">XII.3.:3.00.</isadg:referenceCode>
+			<isadg:title isadId="1.2">Der Titel der Ordnungssystemposition</isadg:title>
+			<isadg:descriptionLevel archivalOrigin="false">Serie</isadg:descriptionLevel>
+		</isadg:identity>
+		<isadg:context/>
+		<isadg:contentStructure isadId="3">
+			<isadg:scopeContent isadId="3.1"/>
+		</isadg:contentStructure>
+		<isadg:conditionsAccessUse isadId="4">
+			<isadg:accessConditions isadId="4.1">
+				<isadg:hasPrivacyProtection>true</isadg:hasPrivacyProtection>
+				<isadg:openToThePublic>public</isadg:openToThePublic>
+				<isadg:classification>confidential</isadg:classification>
+				<isadg:otherAccessConditions>Eintrag der sonstigen Bestimmungen der Ordnungssystemposition</isadg:otherAccessConditions>
+				<isadg:accessConditionsNotes>Eintrag Öffentlichkeitsstatus Begründung Ordnungssystemposition</isadg:accessConditionsNotes>
+			</isadg:accessConditions>
+		</isadg:conditionsAccessUse>
+		<isadg:additionalData>
+			<isadg:mdWrap>
+				<isadg:property key="OrdnungssystempositionID" value="_cLQQoEb8EeWJDuEy-nTQbw"/>
+				<isadg:property key="Federfuehrende Organisationseinheit" value="Eintrag der Federführende Organisation der Ordnungssystemposition"/>
+				<isadg:property key="Schutzfrist" value="80"/>
+				<isadg:property key="Schutzfristen Begründung" value="Eintrag Schutzfrist Begründung des Dossier"/>
+				<isadg:property key="OrdnungSystemPositionZusatzdatenArray" value="Zusatz Daten 1 Ordnungssystemposition: Wert 1 Zusatz Daten Ordnungssystemposition"/>
+			</isadg:mdWrap>
+		</isadg:additionalData>
+		<!--dossier :: ID: _5IBdwEcDEeWJDuEy-nTQbw-->
+		<isadg:archivalDescription>
+			<isadg:identity isadId="1">
+				<isadg:referenceCode isadId="1.1">XII.3.:3.00.1.</isadg:referenceCode>
+				<isadg:title isadId="1.2">Titel des Dossiers z. Bsp. Dokumente SIP Bildung SAR</isadg:title>
+				<isadg:dates isadId="1.3">
+					<isadg:fromYear>2015</isadg:fromYear>
+					<isadg:toYear>2015</isadg:toYear>
+				</isadg:dates>
+				<isadg:descriptionLevel archivalOrigin="false">Dossier</isadg:descriptionLevel>
+				<isadg:extentMedium isadId="1.5">
+					<isadg:medium>Eintrag Umfang des Dossier</isadg:medium>
+				</isadg:extentMedium>
+			</isadg:identity>
+			<isadg:context>
+				<isadg:archivalHistory isadId="2.3">Eintrag Zusatzmerkmal des Dossier</isadg:archivalHistory>
+			</isadg:context>
+			<isadg:contentStructure isadId="3">
+				<isadg:scopeContent isadId="3.1">
+					<isadg:content contentQualifier="Darin">Eintrag Inhalt des Dossier</isadg:content>
+				</isadg:scopeContent>
+			</isadg:contentStructure>
+			<isadg:conditionsAccessUse isadId="4">
+				<isadg:accessConditions isadId="4.1">
+					<isadg:hasPrivacyProtection>true</isadg:hasPrivacyProtection>
+					<isadg:openToThePublic>public</isadg:openToThePublic>
+					<isadg:classification>confidential</isadg:classification>
+					<isadg:otherAccessConditions>Eintrag sonstige Bestimmungen des Dossier</isadg:otherAccessConditions>
+					<isadg:accessConditionsNotes>Eintrag Öffentlichkeitsstatus Begründung Dossier</isadg:accessConditionsNotes>
+				</isadg:accessConditions>
+				<isadg:physTech isadId="4.4">digital</isadg:physTech>
+			</isadg:conditionsAccessUse>
+			<isadg:notes isadId="6">
+				<!--Allgemeine Anmerkungen:-->
+				<isadg:note isadId="6.1">Eintrag Bemerkung zum Dossier</isadg:note>
+			</isadg:notes>
+			<isadg:descriptionControl>
+				<isadg:descriptionsDates>
+					<isadg:mutationDate>2015-12-03</isadg:mutationDate>
+				</isadg:descriptionsDates>
+			</isadg:descriptionControl>
+			<isadg:additionalReference>
+				<isadg:recordReference>00-1</isadg:recordReference>
+			</isadg:additionalReference>
+			<isadg:additionalData>
+				<isadg:mdWrap>
+					<isadg:property key="DossierID" value="_5IBdwEcDEeWJDuEy-nTQbw"/>
+					<isadg:property key="Eroeffnungsdatum" value="-2"/>
+					<isadg:property key="Abschlussdatum" value="-2"/>
+					<isadg:property key="Entstehungszeitraum Anmerkung" value="Eintrag Entstehungszeitraum Anmerkung des Dossier"/>
+					<isadg:property key="Schutzfristenkategorie" value="Personendaten"/>
+					<isadg:property key="Schutzfrist" value="80"/>
+					<isadg:property key="Schutzfristen Begründung" value="Eintrag Schutzfrist Begründung des Dossier"/>
+					<isadg:property key="DossierZusatzdatenArray" value="Eintrag 1 Zusatz Daten Dossier: Wert 1 Zusatz Daten Dossier"/>
+					<isadg:property key="DossierZusatzdatenArray" value="Eintrag 2 Zusatz Daten Dossier: Wert 2 Zusatz Daten Dossier"/>
+				</isadg:mdWrap>
+			</isadg:additionalData>
+			<!--dokument :: ID: _5ILOwEcDEeWJDuEy-nTQbw-->
+			<isadg:archivalDescription>
+				<isadg:identity isadId="1">
+					<isadg:referenceCode isadId="1.1">XII.3.:3.00.1.1.</isadg:referenceCode>
+					<isadg:title isadId="1.2">Titel des Dokuments z. Bsp. Konzept SIP Bildung</isadg:title>
+					<isadg:dates isadId="1.3">
+						<isadg:fromYear>2015</isadg:fromYear>
+						<isadg:toYear>2015</isadg:toYear>
+					</isadg:dates>
+					<isadg:descriptionLevel archivalOrigin="false">Dokument</isadg:descriptionLevel>
+				</isadg:identity>
+				<isadg:context/>
+				<isadg:contentStructure isadId="3">
+					<isadg:scopeContent isadId="3.1">
+						<isadg:content>Eintrag Dokumenttyp des Dokuments</isadg:content>
+					</isadg:scopeContent>
+				</isadg:contentStructure>
+				<isadg:conditionsAccessUse isadId="4">
+					<isadg:accessConditions isadId="4.1">
+						<isadg:hasPrivacyProtection>true</isadg:hasPrivacyProtection>
+						<isadg:openToThePublic>public</isadg:openToThePublic>
+						<isadg:classification>other</isadg:classification>
+						<isadg:otherAccessConditions>Eintrag sonstige Bestimmungen zum Dokument</isadg:otherAccessConditions>
+						<isadg:accessConditionsNotes>Eintrag Schutzfrist Begründung des Dokuments</isadg:accessConditionsNotes>
+					</isadg:accessConditions>
+					<isadg:physTech isadId="4.4">digital</isadg:physTech>
+				</isadg:conditionsAccessUse>
+				<isadg:notes isadId="6">
+					<!--Allgemeine Anmerkungen:-->
+					<isadg:note isadId="6.1">Eintrag Bemerkung zum Dokument</isadg:note>
+				</isadg:notes>
+				<isadg:additionalReference>
+					<isadg:secondaryDataLocator xpointer="premis.xml#object-id_1"/>
+				</isadg:additionalReference>
+				<isadg:additionalData>
+					<isadg:mdWrap>
+						<isadg:property key="DokumentID" value="_5ILOwEcDEeWJDuEy-nTQbw"/>
+						<isadg:property key="Autor" value="Autor des Dokuments"/>
+						<isadg:property key="Registrierdatum" value="01.01.2015"/>
+						<isadg:property key="DokumentZusatzdatenArray" value="Zusatz 1 Daten Dokument: Wert 1 Zusatz Daten Dokument"/>
+						<isadg:property key="DokumentZusatzdatenArray" value="Zusatz 2 Daten Dokument: Wert 2 Zusatz Daten Dokument"/>
+					</isadg:mdWrap>
+				</isadg:additionalData>
+			</isadg:archivalDescription>
+		</isadg:archivalDescription>
+	</isadg:archivalDescription>
+</isadg:archivalDescription>

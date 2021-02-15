@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<paket xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://bar.admin.ch/arelda/v4" xsi:type="paketSIP" schemaVersion="4.0">
+  <paketTyp>SIP</paketTyp>
+  <inhaltsverzeichnis>
+    <ordner>
+      <name>header</name>
+      <originalName>header</originalName>
+      <ordner>
+        <name>xsd</name>
+        <originalName>xsd</originalName>
+        <datei id="_A7pCYVyvEeexwIm3owprpQ">
+          <name>ablieferung.xsd</name>
+          <originalName>ablieferung.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>aa1f7ad13064e1643ac85478296165af</pruefsumme>
+        </datei>
+        <datei id="_A7pCYlyvEeexwIm3owprpQ">
+          <name>archivischeNotiz.xsd</name>
+          <originalName>archivischeNotiz.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>847911efbac472d0ecc6fe1e99873799</pruefsumme>
+        </datei>
+        <datei id="_A7yzYFyvEeexwIm3owprpQ">
+          <name>archivischerVorgang.xsd</name>
+          <originalName>archivischerVorgang.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>4a237563fd2d40be9a9ecbf4c0bf946e</pruefsumme>
+        </datei>
+        <datei id="_A779UFyvEeexwIm3owprpQ">
+          <name>arelda.xsd</name>
+          <originalName>arelda.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>f8454632e1ebf97e0aa8d9527ce2641f</pruefsumme>
+        </datei>
+        <datei id="_A8FuUFyvEeexwIm3owprpQ">
+          <name>base.xsd</name>
+          <originalName>base.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>cb30854883c6d5640b0965dae5f34afd</pruefsumme>
+        </datei>
+        <datei id="_A8O4QFyvEeexwIm3owprpQ">
+          <name>datei.xsd</name>
+          <originalName>datei.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>a4276f0c798ce6c497f0a03660ead0d9</pruefsumme>
+        </datei>
+        <datei id="_A8YpQFyvEeexwIm3owprpQ">
+          <name>dokument.xsd</name>
+          <originalName>dokument.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>721965e5224766040bf0bcd03978809e</pruefsumme>
+        </datei>
+        <datei id="_A8YpQVyvEeexwIm3owprpQ">
+          <name>dossier.xsd</name>
+          <originalName>dossier.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>f3f1141d95e92a291e84cfb30bb30e9a</pruefsumme>
+        </datei>
+        <datei id="_A8iaQFyvEeexwIm3owprpQ">
+          <name>ordner.xsd</name>
+          <originalName>ordner.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>83e0f91d1a232c7bdd7416970844af1c</pruefsumme>
+        </datei>
+        <datei id="_A8rkMFyvEeexwIm3owprpQ">
+          <name>ordnungssystem.xsd</name>
+          <originalName>ordnungssystem.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>4b64247b25362382d6c648ba8ff76ad6</pruefsumme>
+        </datei>
+        <datei id="_A8rkMVyvEeexwIm3owprpQ">
+          <name>ordnungssystemposition.xsd</name>
+          <originalName>ordnungssystemposition.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>1e7f0a9b914c8baf1235740b133ec90e</pruefsumme>
+        </datei>
+        <datei id="_A81VMFyvEeexwIm3owprpQ">
+          <name>paket.xsd</name>
+          <originalName>paket.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>9920c66b7066f645390e922ba803aadb</pruefsumme>
+        </datei>
+        <datei id="_A9IQIFyvEeexwIm3owprpQ">
+          <name>provenienz.xsd</name>
+          <originalName>provenienz.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>2d6dbc4665cb5169d62549dbbc3f19a7</pruefsumme>
+        </datei>
+        <datei id="_A9SBIFyvEeexwIm3owprpQ">
+          <name>zusatzDaten.xsd</name>
+          <originalName>zusatzDaten.xsd</originalName>
+          <pruefalgorithmus>MD5</pruefalgorithmus>
+          <pruefsumme>a685887b7ad673ea2deac6f96cf3fb4f</pruefsumme>
+        </datei>
+      </ordner>
+    </ordner>
+    <ordner>
+      <name>content</name>
+      <originalName>content</originalName>
+      <ordner>
+        <name>Datenobjekte</name>
+        <originalName>Datenobjekte</originalName>
+        <ordner>
+          <name>Protokolle_Bauberatersitzungen</name>
+          <originalName>Protokolle_Bauberatersitzungen</originalName>
+          <datei id="_IVQUQFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_01.pdf</name>
+            <originalName>Protokoll_BBS_2012_01.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>ac6e94b8949518be8bdf0b3430ae4441</pruefsumme>
+          </datei>
+          <datei id="_IWwJEFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_02.pdf</name>
+            <originalName>Protokoll_BBS_2012_02.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>9847d19f730d18c1212c3961d345d60e</pruefsumme>
+          </datei>
+          <datei id="_IX8b4FyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_03.pdf</name>
+            <originalName>Protokoll_BBS_2012_03.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>104b06e3dd7c6bd20ba8a811627430f8</pruefsumme>
+          </datei>
+          <datei id="_IZIusFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_04.pdf</name>
+            <originalName>Protokoll_BBS_2012_04.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>2e18565c90fd2bc14848ec0f7a7213c9</pruefsumme>
+          </datei>
+          <datei id="_IaVBgFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_05.pdf</name>
+            <originalName>Protokoll_BBS_2012_05.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>68b5e091596d06b3f2d2ff0402c0159c</pruefsumme>
+          </datei>
+          <datei id="_Idg4YFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_06.pdf</name>
+            <originalName>Protokoll_BBS_2012_06.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>aa838e63df3765bfc888475c28ad5138</pruefsumme>
+          </datei>
+          <datei id="_Ieo5wFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_07.pdf</name>
+            <originalName>Protokoll_BBS_2012_07.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>4ddd8ba844ffe7d5a13a8880d231fc5e</pruefsumme>
+          </datei>
+          <datei id="_If3o0FyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_08.pdf</name>
+            <originalName>Protokoll_BBS_2012_08.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>e89764bc00b0c36eb7fc91226c3f4006</pruefsumme>
+          </datei>
+          <datei id="_Ihc9MFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_09.pdf</name>
+            <originalName>Protokoll_BBS_2012_09.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>93264c5d820f9f1ef54dc8454af54045</pruefsumme>
+          </datei>
+          <datei id="_IiuvkFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_10.pdf</name>
+            <originalName>Protokoll_BBS_2012_10.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>ade4c630a03249f059648fe9b2614460</pruefsumme>
+          </datei>
+          <datei id="_Ij8QgFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_11.pdf</name>
+            <originalName>Protokoll_BBS_2012_11.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>9a200c39c1ccee20a778a6f60dad03cd</pruefsumme>
+          </datei>
+          <datei id="_IlPRAFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_12.pdf</name>
+            <originalName>Protokoll_BBS_2012_12.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>6c0ec9d25e55b17dba9809e5054220a2</pruefsumme>
+          </datei>
+          <datei id="_Imcx8FyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_13.pdf</name>
+            <originalName>Protokoll_BBS_2012_13.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>366b41ab1a10c911885336a37ad2620c</pruefsumme>
+          </datei>
+          <datei id="_InrhAFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_14.pdf</name>
+            <originalName>Protokoll_BBS_2012_14.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>c037e10d3bb376bf6221e530c926b394</pruefsumme>
+          </datei>
+          <datei id="_Io1-oFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_15.pdf</name>
+            <originalName>Protokoll_BBS_2012_15.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>c7e474312ec92b6176e06674dfc589b5</pruefsumme>
+          </datei>
+          <datei id="_IqMpgFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_16.pdf</name>
+            <originalName>Protokoll_BBS_2012_16.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>780dd44895c429a47e85353ee0d3cfe4</pruefsumme>
+          </datei>
+          <datei id="_IrUD0FyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_17.pdf</name>
+            <originalName>Protokoll_BBS_2012_17.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>3e05dc9942a0bdfaecd044a925deeee1</pruefsumme>
+          </datei>
+          <datei id="_IsnEUFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_19.pdf</name>
+            <originalName>Protokoll_BBS_2012_19.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>1d0e5d1169f7422c304dfa338770f84a</pruefsumme>
+          </datei>
+          <datei id="_IuGSEFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_20.pdf</name>
+            <originalName>Protokoll_BBS_2012_20.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>8d00a14e185e5d3df551babbc912463d</pruefsumme>
+          </datei>
+          <datei id="_IvSk4FyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_21.pdf</name>
+            <originalName>Protokoll_BBS_2012_21.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>3dcb55176790a7fe5d86483ca3082d9c</pruefsumme>
+          </datei>
+          <datei id="_IwZ_MFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_22.pdf</name>
+            <originalName>Protokoll_BBS_2012_22.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>d66bf031ec8681aa1848c3383a0131f4</pruefsumme>
+          </datei>
+          <datei id="_IxpVUFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_23.pdf</name>
+            <originalName>Protokoll_BBS_2012_23.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>2d73f25009c18a5714fee5ed5a745ca3</pruefsumme>
+          </datei>
+          <datei id="_Iyyk0FyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_24.pdf</name>
+            <originalName>Protokoll_BBS_2012_24.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>6dbe003018c322600a55444bba1aefb6</pruefsumme>
+          </datei>
+          <datei id="_I0bjkFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_25.pdf</name>
+            <originalName>Protokoll_BBS_2012_25.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>c90bb5069d4ce2a5220cf64d935c2887</pruefsumme>
+          </datei>
+          <datei id="_I1f6kFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_26.pdf</name>
+            <originalName>Protokoll_BBS_2012_26.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>f65fbf9220c9526ff36ea7a6cbc8ec9c</pruefsumme>
+          </datei>
+          <datei id="_I2rmUFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_27.pdf</name>
+            <originalName>Protokoll_BBS_2012_27.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>b5a4b60e6faf33ff70a1faffea19782f</pruefsumme>
+          </datei>
+          <datei id="_I3znsFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_28.pdf</name>
+            <originalName>Protokoll_BBS_2012_28.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>360e9d509e8b85d8a04ab43815a33766</pruefsumme>
+          </datei>
+          <datei id="_I483MFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_29.pdf</name>
+            <originalName>Protokoll_BBS_2012_29.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>4258c75506e5844cd9d5239adba4c9b7</pruefsumme>
+          </datei>
+          <datei id="_I6E4kFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_30.pdf</name>
+            <originalName>Protokoll_BBS_2012_30.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>4247c36c77256a242b4951adabad64c0</pruefsumme>
+          </datei>
+          <datei id="_I7ktYFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_31.pdf</name>
+            <originalName>Protokoll_BBS_2012_31.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>dbc914e9214fb8979222094fa5da0cc2</pruefsumme>
+          </datei>
+          <datei id="_I9VA4FyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_32.pdf</name>
+            <originalName>Protokoll_BBS_2012_32.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>3c7064a09fa7e34d5381e2c6beda1f48</pruefsumme>
+          </datei>
+          <datei id="_I-rrwFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_33.pdf</name>
+            <originalName>Protokoll_BBS_2012_33.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>d8c52993c1641cc360f1863931852477</pruefsumme>
+          </datei>
+          <datei id="_I_83EFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_34.pdf</name>
+            <originalName>Protokoll_BBS_2012_34.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>e1841efee29510670cb1ff7c7130f13e</pruefsumme>
+          </datei>
+          <datei id="_JBERYFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_35.pdf</name>
+            <originalName>Protokoll_BBS_2012_35.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>7ac8d8875ceec2609d4fb740bdf54ace</pruefsumme>
+          </datei>
+          <datei id="_JCbjUFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_36.pdf</name>
+            <originalName>Protokoll_BBS_2012_36.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>4d406b9476bbce9a527e04f6fa8883e1</pruefsumme>
+          </datei>
+          <datei id="_JDc3AFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_37.pdf</name>
+            <originalName>Protokoll_BBS_2012_37.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>4d1f22c0d183e3dd317715c2f9aaa87b</pruefsumme>
+          </datei>
+          <datei id="_JEuCUFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_38.pdf</name>
+            <originalName>Protokoll_BBS_2012_38.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>5494bc0c8f14474fbfe4e63d76a37516</pruefsumme>
+          </datei>
+          <datei id="_JGVL4FyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_39.pdf</name>
+            <originalName>Protokoll_BBS_2012_39.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>0359a5a0c3e5b2015536c05a68a048f2</pruefsumme>
+          </datei>
+          <datei id="_JHpagFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_40.pdf</name>
+            <originalName>Protokoll_BBS_2012_40.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>1354086d15b9135c523af9984d107600</pruefsumme>
+          </datei>
+          <datei id="_JI7M4FyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_41.pdf</name>
+            <originalName>Protokoll_BBS_2012_41.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>19985529a7778a4c97cb21d8f9c39043</pruefsumme>
+          </datei>
+          <datei id="_JKIGwFyvEeexwIm3owprpQ">
+            <name>Protokoll_BBS_2012_42.pdf</name>
+            <originalName>Protokoll_BBS_2012_42.pdf</originalName>
+            <pruefalgorithmus>MD5</pruefalgorithmus>
+            <pruefsumme>e7cf8b7c3a4a0b3dd1d874871ca40523</pruefsumme>
+          </datei>
+        </ordner>
+      </ordner>
+    </ordner>
+  </inhaltsverzeichnis>
+  <ablieferung xsi:type="ablieferungFilesSIP">
+    <ablieferungstyp>FILES</ablieferungstyp>
+    <ablieferndeStelle>5089 Archäologie und Denkmalpflege</ablieferndeStelle>
+    <entstehungszeitraum>
+      <von>
+        <datum>2012</datum>
+      </von>
+      <bis>
+        <datum>2012</datum>
+      </bis>
+    </entstehungszeitraum>
+    <bemerkung>Vorgängerablieferung: 2016/20</bemerkung>
+    <ablieferungsnummer>2017/51</ablieferungsnummer>
+    <schutzfristenkategorie>Personendaten</schutzfristenkategorie>
+    <schutzfrist>30</schutzfrist>
+    <provenienz>
+      <aktenbildnerName>Archäologie und Denkmalpflege</aktenbildnerName>
+    </provenienz>
+    <ordnungssystem>
+      <name>Ablagestruktur Ablieferung</name>
+      <ordnungssystemposition id="_RnxBcFyvEeexwIm3owprpQ">
+        <nummer>0</nummer>
+        <titel>Datenobjekte</titel>
+        <schutzfrist>30</schutzfrist>
+        <dossier id="_Rn6ycFyvEeexwIm3owprpQ">
+          <titel>Protokolle_Bauberatersitzungen</titel>
+          <erscheinungsform>digital</erscheinungsform>
+          <entstehungszeitraum>
+            <von>
+              <datum>2012</datum>
+            </von>
+            <bis>
+              <datum>2012</datum>
+            </bis>
+          </entstehungszeitraum>
+          <schutzfristenkategorie>Personendaten</schutzfristenkategorie>
+          <schutzfrist>30</schutzfrist>
+          <dokument id="_Rn6ycVyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_01</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_IVQUQFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yclyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_02</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_IWwJEFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yc1yvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_03</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_IX8b4FyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6ydFyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_04</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_IZIusFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6ydVyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_05</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_IaVBgFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6ydlyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_06</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_Idg4YFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yd1yvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_07</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_Ieo5wFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yeFyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_08</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_If3o0FyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yeVyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_09</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_Ihc9MFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yelyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_10</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_IiuvkFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6ye1yvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_11</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_Ij8QgFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yfFyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_12</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_IlPRAFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yfVyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_13</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_Imcx8FyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yflyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_14</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_InrhAFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yf1yvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_15</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_Io1-oFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6ygFyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_16</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_IqMpgFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6ygVyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_17</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_IrUD0FyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yglyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_19</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_IsnEUFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yg1yvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_20</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_IuGSEFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yhFyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_21</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_IvSk4FyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yhVyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_22</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_IwZ_MFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yhlyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_23</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_IxpVUFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yh1yvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_24</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_Iyyk0FyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yiFyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_25</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_I0bjkFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yiVyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_26</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_I1f6kFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yilyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_27</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_I2rmUFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yi1yvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_28</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_I3znsFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yjFyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_29</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_I483MFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yjVyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_30</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_I6E4kFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yjlyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_31</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_I7ktYFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yj1yvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_32</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_I9VA4FyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6ykFyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_33</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_I-rrwFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6ykVyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_34</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_I_83EFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yklyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_35</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_JBERYFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yk1yvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_36</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_JCbjUFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6ylFyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_37</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_JDc3AFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6ylVyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_38</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_JEuCUFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yllyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_39</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_JGVL4FyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6yl1yvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_40</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_JHpagFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6ymFyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_41</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_JI7M4FyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+          <dokument id="_Rn6ymVyvEeexwIm3owprpQ">
+            <titel>Protokoll_BBS_2012_42</titel>
+            <erscheinungsform>digital</erscheinungsform>
+            <dateiRef>_JKIGwFyvEeexwIm3owprpQ</dateiRef>
+          </dokument>
+        </dossier>
+      </ordnungssystemposition>
+    </ordnungssystem>
+  </ablieferung>
+</paket>
+<!--Generated with PackageHandler 2.1.0.Final-->

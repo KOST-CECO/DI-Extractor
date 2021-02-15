@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<paket xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://bar.admin.ch/arelda/v4" xsi:type="paketSIP" schemaVersion="4.1" xsi:schemaLocation="http://bar.admin.ch/arelda/v4 xsd_v4.1/arelda.xsd">
+	<paketTyp>SIP</paketTyp>
+	<zusatzDaten>
+		<merkmal name="#01_zusatzDatenKey">#02_zusatzDaten_value</merkmal>
+	</zusatzDaten>
+	<inhaltsverzeichnis>
+		<ordner>
+			<name>header</name>
+			<originalName>header</originalName>
+			<ordner>
+				<name>xsd</name>
+				<originalName>xsd</originalName>
+				<datei id="IDa">
+					<name>ablieferung.xsd</name>
+					<originalName>ablieferung.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>fc855f31a14976b854dfd035bd515721</pruefsumme>
+				</datei>
+				<datei id="IDb">
+					<name>archivischeNotiz.xsd</name>
+					<originalName>archivischeNotiz.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>ee1eedcb728706f0ecbd2c749efcfdfa</pruefsumme>
+				</datei>
+				<datei id="IDc">
+					<name>archivischerVorgang.xsd</name>
+					<originalName>archivischerVorgang.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>5901fc60390194141fca0cd7d30c8e92</pruefsumme>
+				</datei>
+				<datei id="IDd">
+					<name>arelda.xsd</name>
+					<originalName>arelda.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>5d3da86991a3a279ccc750e9f58d1114</pruefsumme>
+				</datei>
+				<datei id="IDe">
+					<name>base.xsd</name>
+					<originalName>base.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>f5337efd370eff0f9add3b13b32a862d</pruefsumme>
+				</datei>
+				<datei id="IDf">
+					<name>datei.xsd</name>
+					<originalName>datei.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>d74abd4186d2574572f98c68725c7ba7</pruefsumme>
+				</datei>
+				<datei id="IDg">
+					<name>dokument.xsd</name>
+					<originalName>dokument.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>d2d79cf335f3a315a9c4516cd47758ad</pruefsumme>
+				</datei>
+				<datei id="IDh">
+					<name>dossier.xsd</name>
+					<originalName>dossier.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>f2f161bed8102e4f78475dacb1be46de</pruefsumme>
+				</datei>
+				<datei id="IDi">
+					<name>ordner.xsd</name>
+					<originalName>ordner.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>ff318839445d3965ee71eed9c30e1c08</pruefsumme>
+				</datei>
+				<datei id="IDj">
+					<name>ordnungssystem.xsd</name>
+					<originalName>ordnungssystem.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>3d0fd1128ee990ce0044baf33000af9f</pruefsumme>
+				</datei>
+				<datei id="IDk">
+					<name>ordnungssystemposition.xsd</name>
+					<originalName>ordnungssystemposition.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>7da1caad4ce9b81a28b21a838e42ffc9</pruefsumme>
+				</datei>
+				<datei id="IDl">
+					<name>paket.xsd</name>
+					<originalName>paket.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>c0199d40ce380a6b03cff79f2305523d</pruefsumme>
+				</datei>
+				<datei id="IDm">
+					<name>provenienz.xsd</name>
+					<originalName>provenienz.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>ae9df90e5fcad6c331838b2a4715c22f</pruefsumme>
+				</datei>
+				<datei id="IDn">
+					<name>zusatzDaten.xsd</name>
+					<originalName>zusatzDaten.xsd</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>bd75d61b80b65b0eb8e62b29473752de</pruefsumme>
+				</datei>
+			</ordner>
+		</ordner>
+		<ordner>
+			<name>content</name>
+			<originalName>content</originalName>
+			<ordner>
+				<name>#03_ordnerName</name>
+				<originalName>#04_ordnerOriginalName</originalName>
+				<datei id="ID1">
+					<name>#05_dateiName.pdf</name>
+					<originalName>#06_dateiOriginalName</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>71d604ab2d16a7a8cd8b6f506b31cd8d</pruefsumme>
+					<eigenschaft name="#07_eigenschaftName">#08_eigenschaftWert</eigenschaft>
+				</datei>
+			</ordner>
+		</ordner>
+	</inhaltsverzeichnis>
+	<ablieferung xsi:type="ablieferungGeverSIP">
+		<ablieferungstyp>GEVER</ablieferungstyp>
+		<ablieferndeStelle>#09_ablieferndeStelle</ablieferndeStelle>
+		<entstehungszeitraum>
+			<von>
+				<datum>1967-02-01</datum>
+			</von>
+			<bis>
+				<datum>1967-04-02</datum>
+			</bis>
+		</entstehungszeitraum>
+		<ablieferungsteile>#10_ablieferungsteile</ablieferungsteile>
+		<bemerkung>#11_ablieferungBemerkung</bemerkung>
+		<zusatzDaten>
+			<merkmal name="#12_zusatzDatenKey">#13_zusatzDatenValue</merkmal>
+		</zusatzDaten>
+		<ablieferungsnummer>#14_ablieferungsnummer</ablieferungsnummer>
+		<angebotsnummer>#15_angebotsnummer</angebotsnummer>
+		<referenzBewertungsentscheid>#16_referenzBewertungsentscheid</referenzBewertungsentscheid>
+		<referenzSchutzfristenFormular>#17_referenzSchutzfristenFormular</referenzSchutzfristenFormular>
+		<schutzfristenkategorie>#18_schutzfristenkategorie</schutzfristenkategorie>
+		<schutzfrist>30</schutzfrist>
+		<provenienz>
+			<aktenbildnerName>#19_aktenbildnerName</aktenbildnerName>
+			<systemName>#20_systemName</systemName>
+			<systemBeschreibung>#21_systemBeschreibung</systemBeschreibung>
+			<existenzzeitraum>
+				<von>
+					<ca>false</ca>
+					<datum>1967-01-03</datum>
+				</von>
+				<bis>
+					<ca>false</ca>
+					<datum>1967-12-04</datum>
+				</bis>
+			</existenzzeitraum>
+			<geschichteAktenbildner>#22_geschichteAktenbildner</geschichteAktenbildner>
+			<bemerkung>#23_provenienzBemerkung</bemerkung>
+			<registratur>#24_registratur</registratur>
+		</provenienz>
+		<ordnungssystem>
+			<generation>#25_generation</generation>
+			<anwendungszeitraum>
+				<von>
+					<datum>1967-02-05</datum>
+				</von>
+				<bis>
+					<datum>1967-04-06</datum>
+				</bis>
+			</anwendungszeitraum>
+			<mitbenutzung>#26_mitbenutzung</mitbenutzung>
+			<bemerkung>#27_ordnungssystemBemerkung</bemerkung>
+			<zusatzDaten>
+				<merkmal name="#28_zusatzDatenKey">#29_zusatzDatenValue</merkmal>
+			</zusatzDaten>
+			<name>#30_ordnungssystemName</name>
+			<ordnungssystemposition id="ID3">
+				<federfuehrendeOrganisationseinheit>#31_federfuehrendeOrganisationseinheit</federfuehrendeOrganisationseinheit>
+				<klassifizierungskategorie>#32_klassifizierungskategorie</klassifizierungskategorie>
+				<datenschutz>true</datenschutz>
+				<oeffentlichkeitsstatus>#33_oeffentlichkeitsstatus</oeffentlichkeitsstatus>
+				<oeffentlichkeitsstatusBegruendung>#34_oeffentlichkeitsstatusBegruendung</oeffentlichkeitsstatusBegruendung>
+				<sonstigeBestimmungen>#35_sonstigeBestimmungen</sonstigeBestimmungen>
+				<zusatzDaten>
+					<merkmal name="#36_zusatzDatenKey">#37_zusatzDatenValue</merkmal>
+				</zusatzDaten>
+				<nummer>#38_ordnungssystemNummer</nummer>
+				<titel>#39_ordnungssystemTitel</titel>
+				<schutzfristenkategorie>#40_schutzfristenkategorie</schutzfristenkategorie>
+				<schutzfrist>30</schutzfrist>
+				<schutzfristenBegruendung>#41_schutzfristenBegruendung</schutzfristenBegruendung>
+				<dossier id="ID4">
+					<zusatzmerkmal>#42_zusatzmerkmal</zusatzmerkmal>
+					<titel>#43_dossierTitel</titel>
+					<inhalt>#44_dossierInhalt</inhalt>
+					<formInhalt>#45_formInhalt</formInhalt>
+					<erscheinungsform>keine Angabe</erscheinungsform>
+					<federfuehrendeOrganisationseinheit>#46_federfuehrendeOrganisationseinheit</federfuehrendeOrganisationseinheit>
+					<entstehungszeitraum>
+						<von>
+							<datum>1967-02-07</datum>
+						</von>
+						<bis>
+							<datum>1967-03-08</datum>
+						</bis>
+					</entstehungszeitraum>
+					<entstehungszeitraumAnmerkung>#47_entstehungszeitraumAnmerkung</entstehungszeitraumAnmerkung>
+					<klassifizierungskategorie>#48_klassifizierungskategorie</klassifizierungskategorie>
+					<datenschutz>true</datenschutz>
+					<oeffentlichkeitsstatus>#49_oeffentlichkeitsstatus</oeffentlichkeitsstatus>
+					<oeffentlichkeitsstatusBegruendung>#50_oeffentlichkeitsstatusBegruendung</oeffentlichkeitsstatusBegruendung>
+					<sonstigeBestimmungen>#51_sonstigeBestimmungen</sonstigeBestimmungen>
+					<bemerkung>#52_dossierBemerkung</bemerkung>
+					<zusatzDaten>
+						<merkmal name="#53a_zusatzDatenKey">#54a_zusatzDatenValue</merkmal>
+						<merkmal name="#53b_zusatzDatenKey">#54b_zusatzDatenValue</merkmal>
+						<merkmal name="#53c_zusatzDatenKey">#54c_zusatzDatenValue</merkmal>
+					</zusatzDaten>
+					<aktenzeichen>#55_aktenzeichen</aktenzeichen>
+					<eroeffnungsdatum>
+						<ca>false</ca>
+						<datum>1967-01-09</datum>
+					</eroeffnungsdatum>
+					<abschlussdatum>
+						<ca>false</ca>
+						<datum>1967-01-10</datum>
+					</abschlussdatum>
+					<vorgang>#56_vorgang</vorgang>
+					<vorgang order="01">
+						<titel>#56a_titel</titel>
+						<arbeitsanweisung>#56b_arbeitsanweisung</arbeitsanweisung>
+						<federfuehrung>#56c_Vorgang:federfuehrung</federfuehrung>
+						<verweis>#56d_verweis</verweis>
+						<bemerkung>#56e_Vorgang:bemerkung</bemerkung>
+						<zusatzDaten>
+							<merkmal name="#56f_Vorgang:zusatzDatenKey">#56g_zusatzDatenValue</merkmal>
+							<merkmal name="#56h_Vorgang:zusatzDatenKey">#56i_zusatzDatenValue</merkmal>
+						</zusatzDaten>
+						<aktivitaet order="001">
+							<vorschreibung>#56j_vorschreibung</vorschreibung>
+							<anweisung>#56k_anweisung</anweisung>
+							<bearbeiter>#56l_bearbeiter</bearbeiter>
+							<abschlussdatum>1967-02-14</abschlussdatum>
+							<verweis>#56m_verweis</verweis>
+							<bemerkung>#56n_bemerkung</bemerkung>
+							<zusatzDaten>
+								<merkmal name="#56o_Vorgang:zusatzDatenKey">#56p_zusatzDatenValue</merkmal>
+								<merkmal name="#56q_Vorgang:zusatzDatenKey">#56r_zusatzDatenValue</merkmal>
+							</zusatzDaten>
+						</aktivitaet>
+						<aktivitaet order="002">
+							<vorschreibung>#56jj_vorschreibung</vorschreibung>
+							<anweisung>#56kk_anweisung</anweisung>
+							<bearbeiter>#56ll_bearbeiter</bearbeiter>
+							<abschlussdatum>1967-02-14</abschlussdatum>
+							<verweis>#56mm_verweis</verweis>
+							<bemerkung>#56nn_bemerkung</bemerkung>
+							<zusatzDaten>
+								<merkmal name="#56oo_Vorgang:zusatzDatenKey">#56pp_zusatzDatenValue</merkmal>
+								<merkmal name="#56qq_Vorgang:zusatzDatenKey">#56rr_zusatzDatenValue</merkmal>
+							</zusatzDaten>
+						</aktivitaet>
+					</vorgang>
+					<schutzfristenkategorie>#57_schutzfristenkategorie</schutzfristenkategorie>
+					<schutzfrist>30</schutzfrist>
+					<schutzfristenBegruendung>#58_schutzfristenBegruendung</schutzfristenBegruendung>
+					<dokument id="ID5">
+						<titel>#59_dokumentTitel</titel>
+						<autor>#60_dokumentAutor</autor>
+						<erscheinungsform>digital</erscheinungsform>
+						<dokumenttyp>#61_dokumenttyp</dokumenttyp>
+						<registrierdatum>
+							<ca>false</ca>
+							<datum>1967-01-11</datum>
+						</registrierdatum>
+						<entstehungszeitraum>
+							<von>
+								<datum>1967-02-12</datum>
+							</von>
+							<bis>
+								<datum>1967-02-13</datum>
+							</bis>
+						</entstehungszeitraum>
+						<klassifizierungskategorie>#62_klassifizierungskategorie</klassifizierungskategorie>
+						<datenschutz>true</datenschutz>
+						<oeffentlichkeitsstatus>#63_oeffentlichkeitsstatus</oeffentlichkeitsstatus>
+						<oeffentlichkeitsstatusBegruendung>#64_oeffentlichkeitsstatusBegruendung</oeffentlichkeitsstatusBegruendung>
+						<sonstigeBestimmungen>#65_sonstigeBestimmungen</sonstigeBestimmungen>
+						<bemerkung>#66_dokumentBemerkung</bemerkung>
+						<zusatzDaten>
+							<merkmal name="#67_zusatzDatenKey">#68_zusatzDatenValue</merkmal>
+						</zusatzDaten>
+						<dateiRef>ID1</dateiRef>
+						<anwendung>#69_anwendung</anwendung>
+					</dokument>
+				</dossier>
+			</ordnungssystemposition>
+		</ordnungssystem>
+	</ablieferung>
+	<archivischerVorgang>
+		<vorgangstyp>#70_vorgangstyp</vorgangstyp>
+		<beschreibung>#71_beschreibung</beschreibung>
+		<datum>
+			<von>1967-01-13</von>
+			<bis>1967-01-14</bis>
+		</datum>
+		<bearbeiter>#72_bearbeiter</bearbeiter>
+	</archivischerVorgang>
+	<referenzUebernahmedossier>#73_referenzUebernahmedossier</referenzUebernahmedossier>
+</paket>

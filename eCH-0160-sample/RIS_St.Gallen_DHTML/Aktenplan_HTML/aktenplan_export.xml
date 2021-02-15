@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.2 U (http://www.xmlspy.com) by Heinz Gnehm (Schweizerisches Bundesarchiv / Fachstelle ARELDA) -->
+<aktenplaene xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="aktenplan.xsd">
+	<aktenplan>
+		<id>8910465585691065172:11449852:1120210416004</id>
+		<command>update</command>
+		<eintrag>
+			<id>8910465585691065172:11449852:1120210416004</id>
+			<kennzeichen>AP Räte</kennzeichen>
+			<name>Aktenplan Kantonsrat und Regierung</name>
+			<beschreibung/>
+			<newsletter>false</newsletter>
+			<schlagworte/>
+			<eintraege>
+				<eintrag>
+					<id>987278215697538226:31516792:1120212848066</id>
+					<kennzeichen>2</kennzeichen>
+					<name>Erziehung, Bildung, Kultur</name>
+					<beschreibung/>
+					<newsletter>true</newsletter>
+					<schlagworte/>
+					<eintraege>
+						<eintrag>
+							<id>2162699248231772930:4035198:1120212872410</id>
+							<kennzeichen>21</kennzeichen>
+							<name>Schulen</name>
+							<beschreibung/>
+							<newsletter>false</newsletter>
+							<schlagworte/>
+							<eintraege>
+								<eintrag>
+									<id>1364911288086339918:1542984:1120212887754</id>
+									<kennzeichen>210</kennzeichen>
+									<name>Allgemein</name>
+									<beschreibung>ohne ausserschulische Betreuung (AKP Nr 257) und allgemeine Fragen der Anstellung (AKP Nr 143)</beschreibung>
+									<newsletter>false</newsletter>
+									<schlagworte>
+										<schlagwort>Schule</schlagwort>
+										<schlagwort>Schulkoordination</schlagwort>
+										<schlagwort>Unterricht</schlagwort>
+										<schlagwort>Lehrkraft</schlagwort>
+										<schlagwort>Bildungsurlaub</schlagwort>
+										<schlagwort>Erziehungsrat</schlagwort>
+										<schlagwort>Lehrerbesoldung</schlagwort>
+										<schlagwort>hochbegabt</schlagwort>
+										<schlagwort>Basisstufe</schlagwort>
+										<schlagwort>Lehrmittel</schlagwort>
+										<schlagwort>Lehrmittelverlag</schlagwort>
+										<schlagwort>Lehrplan</schlagwort>
+									</schlagworte>
+									<eintraege/>
+								</eintrag>
+							</eintraege>
+						</eintrag>
+					</eintraege>
+				</eintrag>
+				<eintrag>
+					<id>1567936847543299293:13700281:1122570515874</id>
+					<kennzeichen>8</kennzeichen>
+					<name>Finanzen, Regalien, Unternehmungen, Feuerschutz</name>
+					<beschreibung/>
+					<newsletter>true</newsletter>
+					<schlagworte/>
+					<eintraege>
+						<eintrag>
+							<id>1405451596994802269:7111564:1122570851767</id>
+							<kennzeichen>83</kennzeichen>
+							<name>Finanzhaushalt </name>
+							<beschreibung>des Staates</beschreibung>
+							<newsletter>false</newsletter>
+							<schlagworte/>
+							<eintraege>
+								<eintrag>
+									<id>4416000785329772406:11595609:1122570923892</id>
+									<kennzeichen>833</kennzeichen>
+									<name>Finanzausgleich</name>
+									<beschreibung/>
+									<newsletter>false</newsletter>
+									<schlagworte>
+										<schlagwort>Finanzausgleich</schlagwort>
+										<schlagwort>Lastenausgleich</schlagwort>
+										<schlagwort>Amortisationslasten</schlagwort>
+									</schlagworte>
+									<eintraege/>
+								</eintrag>
+							</eintraege>
+						</eintrag>
+					</eintraege>
+				</eintrag>
+			</eintraege>
+		</eintrag>
+	</aktenplan>
+</aktenplaene>
