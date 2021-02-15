@@ -9,7 +9,7 @@ STARTALLOPEN = 0 //replace 0 with 1 to show the whole tree
 USEICONS = 1
 PERSERVESTATE = 1
 ICONPATH = 'icons/' //change if the gif's folder is a subfolder, for example: 'images/'
-foldersTree = gFld("AP Räte - Aktenplan Kantonsrat und Regierung", "aktenplan_export.xml")
+foldersTree = gFld("AP Räte - Aktenplan Kantonsrat und Regierung", "aktenplan.xml")
 
 foldersTreeA=insFld(foldersTree,gFld("8 - Finanzen, Regalien, Unternehmungen, Feuerschutz","aktenplan_export.xml"));
 foldersTreeAA=insFld(foldersTreeA,gFld("83 - Finanzhaushalt des Staates","aktenplan_export.xml"));

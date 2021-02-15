@@ -1,0 +1,36 @@
+<http://data.archives-nationales.culture.gouv.fr/record/003500> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.ica.org/standards/RiC/ontology#Record> .
+<http://data.archives-nationales.culture.gouv.fr/record/003500> <https://www.ica.org/standards/RiC/ontology#hasDocumentaryFormType> <https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#FindingAid> .
+<http://data.archives-nationales.culture.gouv.fr/record/003500> <https://www.ica.org/standards/RiC/ontology#title> "Fonds Vitet (XIXe-XXe si\u00E8cles)"@fr .
+<http://data.archives-nationales.culture.gouv.fr/record/003500> <http://www.w3.org/2000/01/rdf-schema#label> "Fonds Vitet (XIXe-XXe si\u00E8cles)"@fr .
+<http://data.archives-nationales.culture.gouv.fr/record/003500> <https://www.ica.org/standards/RiC/ontology#describes> <http://data.archives-nationales.culture.gouv.fr/recordResource/003500-top> .
+<http://data.archives-nationales.culture.gouv.fr/instantiation/003500-i1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.ica.org/standards/RiC/ontology#Instantiation> .
+<http://data.archives-nationales.culture.gouv.fr/instantiation/003500-i1> <https://www.ica.org/standards/RiC/ontology#instantiates> <http://data.archives-nationales.culture.gouv.fr/record/003500> .
+<http://data.archives-nationales.culture.gouv.fr/instantiation/003500-i1> <https://www.ica.org/standards/RiC/ontology#title> "Fonds Vitet (XIXe-XXe si\u00E8cles)"@fr .
+<http://data.archives-nationales.culture.gouv.fr/instantiation/003500-i1> <http://www.w3.org/2000/01/rdf-schema#label> "Fonds Vitet (XIXe-XXe si\u00E8cles)"@fr .
+<http://data.archives-nationales.culture.gouv.fr/instantiation/003500-i1> <http://purl.org/dc/elements/1.1/format> "text/xml"@en .
+<http://data.archives-nationales.culture.gouv.fr/instantiation/003500-i1> <https://www.ica.org/standards/RiC/ontology#identifier> "FRAN_IR_003500" .
+<http://data.archives-nationales.culture.gouv.fr/record/003500> <https://www.ica.org/standards/RiC/ontology#hasInstantiation> <http://data.archives-nationales.culture.gouv.fr/instantiation/003500-i1> .
+<http://data.archives-nationales.culture.gouv.fr/recordResource/003500-top> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.ica.org/standards/RiC/ontology#RecordResource> .
+<http://data.archives-nationales.culture.gouv.fr/recordResource/003500-top> <https://www.ica.org/standards/RiC/ontology#describedBy> <http://data.archives-nationales.culture.gouv.fr/record/003500> .
+<http://data.archives-nationales.culture.gouv.fr/recordResource/003500-top> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.ica.org/standards/RiC/ontology#RecordSet> .
+<http://data.archives-nationales.culture.gouv.fr/recordResource/003500-top> <https://www.ica.org/standards/RiC/ontology#hasRecordSetType> <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Fonds> .
+<http://data.archives-nationales.culture.gouv.fr/recordResource/003500-top> <https://www.ica.org/standards/RiC/ontology#title> "Fonds Vitet"@fr .
+<http://data.archives-nationales.culture.gouv.fr/recordResource/003500-top> <http://www.w3.org/2000/01/rdf-schema#label> "Fonds Vitet"@fr .
+<http://data.archives-nationales.culture.gouv.fr/instantiation/003500-top-i1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.ica.org/standards/RiC/ontology#Instantiation> .
+<http://data.archives-nationales.culture.gouv.fr/instantiation/003500-top-i1> <https://www.ica.org/standards/RiC/ontology#instantiates> <http://data.archives-nationales.culture.gouv.fr/recordResource/003500-top> .
+<http://data.archives-nationales.culture.gouv.fr/instantiation/003500-top-i1> <https://www.ica.org/standards/RiC/ontology#identifier> "111" .
+<http://data.archives-nationales.culture.gouv.fr/instantiation/003500-top-i1> <https://www.ica.org/standards/RiC/ontology#title> "Fonds Vitet"@fr .
+<http://data.archives-nationales.culture.gouv.fr/instantiation/003500-top-i1> <http://www.w3.org/2000/01/rdf-schema#label> "Fonds Vitet"@fr .
+<http://data.archives-nationales.culture.gouv.fr/recordResource/003500-top> <https://www.ica.org/standards/RiC/ontology#hasInstantiation> <http://data.archives-nationales.culture.gouv.fr/instantiation/003500-top-i1> .
+<http://data.archives-nationales.culture.gouv.fr/recordResource/003500-top> <https://www.ica.org/standards/RiC/ontology#includes> <http://data.archives-nationales.culture.gouv.fr/recordResource/003500-d_1> .
+<http://data.archives-nationales.culture.gouv.fr/recordResource/003500-d_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.ica.org/standards/RiC/ontology#RecordResource> .
+<http://data.archives-nationales.culture.gouv.fr/recordResource/003500-d_1> <https://www.ica.org/standards/RiC/ontology#includedIn> <http://data.archives-nationales.culture.gouv.fr/recordResource/003500-top> .
+<http://data.archives-nationales.culture.gouv.fr/recordResource/003500-d_1> <https://www.ica.org/standards/RiC/ontology#hasRecordSetType> <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#File> .
+<http://data.archives-nationales.culture.gouv.fr/recordResource/003500-d_1> <https://www.ica.org/standards/RiC/ontology#title> "LUDOVIC VITET (1802-1873)"@fr .
+<http://data.archives-nationales.culture.gouv.fr/recordResource/003500-d_1> <http://www.w3.org/2000/01/rdf-schema#label> "LUDOVIC VITET (1802-1873)"@fr .
+<http://data.archives-nationales.culture.gouv.fr/instantiation/003500-d_1-i1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.ica.org/standards/RiC/ontology#Instantiation> .
+<http://data.archives-nationales.culture.gouv.fr/instantiation/003500-d_1-i1> <https://www.ica.org/standards/RiC/ontology#instantiates> <http://data.archives-nationales.culture.gouv.fr/recordResource/003500-d_1> .
+<http://data.archives-nationales.culture.gouv.fr/instantiation/003500-d_1-i1> <https://www.ica.org/standards/RiC/ontology#identifier> "222" .
+<http://data.archives-nationales.culture.gouv.fr/instantiation/003500-d_1-i1> <https://www.ica.org/standards/RiC/ontology#title> "LUDOVIC VITET (1802-1873)"@fr .
+<http://data.archives-nationales.culture.gouv.fr/instantiation/003500-d_1-i1> <http://www.w3.org/2000/01/rdf-schema#label> "LUDOVIC VITET (1802-1873)"@fr .
+<http://data.archives-nationales.culture.gouv.fr/recordResource/003500-d_1> <https://www.ica.org/standards/RiC/ontology#hasInstantiation> <http://data.archives-nationales.culture.gouv.fr/instantiation/003500-d_1-i1> .

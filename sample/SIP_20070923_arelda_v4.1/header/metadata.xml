@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<paket xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://bar.admin.ch/arelda/v4" xsi:schemaLocation="http://bar.admin.ch/arelda/v4 xsd_v4.1/arelda.xsd" xsi:type="paketSIP" schemaVersion="4.1">
+<paket xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://bar.admin.ch/arelda/v4" xsi:schemaLocation="http://bar.admin.ch/arelda/v4 xsd/arelda.xsd" xsi:type="paketSIP" schemaVersion="4.1">
 	<paketTyp>SIP</paketTyp>
 	<inhaltsverzeichnis>
 		<ordner>
@@ -12,7 +12,7 @@
 					<name>ablieferung.xsd</name>
 					<originalName>ablieferung.xsd</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>89ba1985a35b8cceca855efec30f3259</pruefsumme>
+					<pruefsumme>aa1f7ad13064e1643ac85478296165af</pruefsumme>
 				</datei>
 				<datei id="_TSmJQDfMEeK0MoQqr4ob3A">
 					<name>archivischeNotiz.xsd</name>
@@ -24,13 +24,13 @@
 					<name>archivischerVorgang.xsd</name>
 					<originalName>archivischerVorgang.xsd</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>81f9fbd7c8030d7a0a32520b09876690</pruefsumme>
+					<pruefsumme>4a237563fd2d40be9a9ecbf4c0bf946e</pruefsumme>
 				</datei>
 				<datei id="_TSvTMDfMEeK0MoQqr4ob3A">
 					<name>arelda.xsd</name>
 					<originalName>arelda.xsd</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>56e798cb78cec394a384d199396353a4</pruefsumme>
+					<pruefsumme>f8454632e1ebf97e0aa8d9527ce2641f</pruefsumme>
 				</datei>
 				<datei id="_TS5EMDfMEeK0MoQqr4ob3A">
 					<name>base.xsd</name>
@@ -48,13 +48,13 @@
 					<name>dokument.xsd</name>
 					<originalName>dokument.xsd</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>fdd33bb1bf52e740b22a6e2cd24b5356</pruefsumme>
+					<pruefsumme>721965e5224766040bf0bcd03978809e</pruefsumme>
 				</datei>
 				<datei id="_TTCOITfMEeK0MoQqr4ob3A">
 					<name>dossier.xsd</name>
 					<originalName>dossier.xsd</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>20bbe4972fb53bba0362a0c2f7695f79</pruefsumme>
+					<pruefsumme>f3f1141d95e92a291e84cfb30bb30e9a</pruefsumme>
 				</datei>
 				<datei id="_TTL_IDfMEeK0MoQqr4ob3A">
 					<name>ordner.xsd</name>
@@ -72,7 +72,7 @@
 					<name>ordnungssystemposition.xsd</name>
 					<originalName>ordnungssystemposition.xsd</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>b71d20e639f0f663b4d39ff79ef57f1b</pruefsumme>
+					<pruefsumme>1e7f0a9b914c8baf1235740b133ec90e</pruefsumme>
 				</datei>
 				<datei id="_TTVwITfMEeK0MoQqr4ob3A">
 					<name>paket.xsd</name>
@@ -100,115 +100,133 @@
 			<ordner>
 				<name>22.06.12</name>
 				<originalName>22.06.12</originalName>
+				<datei id="_dNdoMDfSEeKbAdCGaeR48Q">
+					<name>geschaeft_{A3A28F5E-0435-4F93-AA8F-B726D42522DC}_20070503152319.xml</name>
+					<originalName>geschaeft_{A3A28F5E-0435-4F93-AA8F-B726D42522DC}_20070503152319.xml</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>3e896badd1495c8a0ea09ae72ca7bc3e</pruefsumme>
+				</datei>
 				<datei id="_dOWZADfSEeKbAdCGaeR48Q">
 					<name>{3AD4D0BA-933C-48E5-A897-41A79638DFF8}.pdf</name>
 					<originalName>{3AD4D0BA-933C-48E5-A897-41A79638DFF8}.pdf</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>b4339c863eac4a174d3a9a1cbe1352c6</pruefsumme>
+					<pruefsumme>4b542fe7bc350f0cc44c0a3b38331e1d</pruefsumme>
 				</datei>
 				<datei id="_dOzE8DfSEeKbAdCGaeR48Q">
 					<name>{46E5084F-407D-4582-8BEE-1D69FC0FC8E5}.pdf</name>
 					<originalName>{46E5084F-407D-4582-8BEE-1D69FC0FC8E5}.pdf</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>6bcb0b7c83372a70adb539f44ab6617a</pruefsumme>
+					<pruefsumme>1dd4ae126f373e25bcbcc26900b99aed</pruefsumme>
 				</datei>
 				<datei id="_dPF_4DfSEeKbAdCGaeR48Q">
 					<name>{69D68D97-D16F-4F62-88C8-6E03CD945C3F}.pdf</name>
 					<originalName>{69D68D97-D16F-4F62-88C8-6E03CD945C3F}.pdf</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>e5878bd468e3b4f2b4d91a9b67b3de17</pruefsumme>
+					<pruefsumme>7678ae5895f6ddfce5b7503bf77d3e4b</pruefsumme>
 				</datei>
 				<datei id="_dPY60TfSEeKbAdCGaeR48Q">
 					<name>{BFB43607-D7F2-4E60-AA50-BB67041229B4}.pdf</name>
 					<originalName>{BFB43607-D7F2-4E60-AA50-BB67041229B4}.pdf</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>e06b639ad2cc86d3f44931d318512fca</pruefsumme>
+					<pruefsumme>a2522ce34c13d958e032836f33425fcf</pruefsumme>
 				</datei>
 				<datei id="_dPsc2jfSEeKbAdCGaeR48Q">
 					<name>{C5B95F35-01E2-4A7E-A1EF-6D6F19301F86}.pdf</name>
 					<originalName>{C5B95F35-01E2-4A7E-A1EF-6D6F19301F86}.pdf</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>55090d69d4f243d91507c2ac73b0427d</pruefsumme>
+					<pruefsumme>42b2d6944ee48e0776a86b9f85ee4c53</pruefsumme>
 				</datei>
 				<datei id="_dP_XyzfSEeKbAdCGaeR48Q">
 					<name>{F30B1CF5-2948-4F23-98DA-BDDBE76E357B}.pdf</name>
 					<originalName>{F30B1CF5-2948-4F23-98DA-BDDBE76E357B}.pdf</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>0bda19c0c1f0a8383f42d1e383a1135c</pruefsumme>
+					<pruefsumme>47186ebb4e21b520f512b9753da41d05</pruefsumme>
 				</datei>
 			</ordner>
 			<ordner>
 				<name>22.06.16</name>
 				<originalName>22.06.16</originalName>
+				<datei id="_3fjouTfiEeKLm53bgNs7IQ">
+					<name>geschaeft_{E74F7BA4-555C-4C93-A228-44927EF88CD5}_20070503105837.xml</name>
+					<originalName>geschaeft_{E74F7BA4-555C-4C93-A228-44927EF88CD5}_20070503105837.xml</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>c2e9afb5a8ea8a1c4b6ed9e888dac4d7</pruefsumme>
+				</datei>
 				<datei id="_3gAUoDfiEeKLm53bgNs7IQ">
 					<name>{2965A3BB-C42D-480F-9BA7-548331FB0A2C}.pdf</name>
 					<originalName>{2965A3BB-C42D-480F-9BA7-548331FB0A2C}.pdf</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>71155860a947a820de1dd895ac03c7fb</pruefsumme>
+					<pruefsumme>c2b71abd59cb459a4cd9985f5d37681f</pruefsumme>
 				</datei>
 				<datei id="_3gTPmTfiEeKLm53bgNs7IQ">
 					<name>{4CE991F8-CA5D-489F-975B-6CCB4EA86091}.pdf</name>
 					<originalName>{4CE991F8-CA5D-489F-975B-6CCB4EA86091}.pdf</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>1ae5a5bf2683a28050f8cb70471852ab</pruefsumme>
+					<pruefsumme>3518bdb60c6a03c014106bf07276cd78</pruefsumme>
 				</datei>
 				<datei id="_3g5FcDfiEeKLm53bgNs7IQ">
 					<name>{A913311A-0C41-47D0-8F3F-D3AF48879232}.pdf</name>
 					<originalName>{A913311A-0C41-47D0-8F3F-D3AF48879232}.pdf</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>873b8197d8885b6cdc4e56c0ea537792</pruefsumme>
+					<pruefsumme>93c6eb4ade814a9ef17493805bc426b9</pruefsumme>
 				</datei>
 				<datei id="_3hVxYDfiEeKLm53bgNs7IQ">
 					<name>{CBDCFF70-DA6C-42EC-9117-AC26249EC88D}.pdf</name>
 					<originalName>{CBDCFF70-DA6C-42EC-9117-AC26249EC88D}.pdf</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>e086a1b9cc22f7bee89f2d66d53944d8</pruefsumme>
+					<pruefsumme>64e63a5765d9d98ca30febdf4145d1d0</pruefsumme>
 				</datei>
 			</ordner>
 			<ordner>
 				<name>22.07.01</name>
 				<originalName>22.07.01</originalName>
+				<datei id="_Q7LAEDfmEeKLm53bgNs7IQ">
+					<name>geschaeft_{AA830A6E-E5D0-4881-8810-E2ABF837E345}_20070507125710.xml</name>
+					<originalName>geschaeft_{AA830A6E-E5D0-4881-8810-E2ABF837E345}_20070507125710.xml</originalName>
+					<pruefalgorithmus>MD5</pruefalgorithmus>
+					<pruefsumme>6fbde07f2e1e6eb4b0de9433c9b885cf</pruefsumme>
+				</datei>
 				<datei id="_Q7nsADfmEeKLm53bgNs7IQ">
 					<name>{546E9770-0E7F-4A9B-A439-55522916DBD0}.pdf</name>
 					<originalName>{546E9770-0E7F-4A9B-A439-55522916DBD0}.pdf</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>cc319f5705cb2902231adbd9102205e0</pruefsumme>
+					<pruefsumme>e40f67a4a81872eb41f1ff108192db1e</pruefsumme>
 				</datei>
 				<datei id="_Q76m-TfmEeKLm53bgNs7IQ">
 					<name>{63669F88-901C-46F9-ACCA-916642777C8D}.pdf</name>
 					<originalName>{63669F88-901C-46F9-ACCA-916642777C8D}.pdf</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>0fdc4e6a83fe9d22683d928e77201c26</pruefsumme>
+					<pruefsumme>da9674d3e4982cb57464b52821bb9e02</pruefsumme>
 				</datei>
 				<datei id="_Q8XS4DfmEeKLm53bgNs7IQ">
 					<name>{7DAF74EC-788B-4475-BFB6-409D3BE8EBDB}.pdf</name>
 					<originalName>{7DAF74EC-788B-4475-BFB6-409D3BE8EBDB}.pdf</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>13c1c4fc34b89b53facc48eab31fae5d</pruefsumme>
+					<pruefsumme>8cb113fe0027bc815597c5ef258ef00b</pruefsumme>
 				</datei>
 				<datei id="_Q8qN1jfmEeKLm53bgNs7IQ">
 					<name>{7DC1EF71-9DE7-421F-810C-3C4683A8122F}.pdf</name>
 					<originalName>{7DC1EF71-9DE7-421F-810C-3C4683A8122F}.pdf</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>5ca2c57761c9b2c4f3a7123d2295db42</pruefsumme>
+					<pruefsumme>5715d405d712b4456d91f7fbf877a6a9</pruefsumme>
 				</datei>
 				<datei id="_Q9svqTfmEeKLm53bgNs7IQ">
 					<name>{90E72247-267C-42C2-88C3-94BF5A62CCF6}.pdf</name>
 					<originalName>{90E72247-267C-42C2-88C3-94BF5A62CCF6}.pdf</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>4819d22245ab3a4f9c0640f3a22f0cef</pruefsumme>
+					<pruefsumme>9b3d7369297134d70a7b8eebdaa08f5e</pruefsumme>
 				</datei>
 				<datei id="_Q-TMmTfmEeKLm53bgNs7IQ">
 					<name>{F1BEE9A7-DDD2-4CB0-9D75-12AB2729CB65}.pdf</name>
 					<originalName>{F1BEE9A7-DDD2-4CB0-9D75-12AB2729CB65}.pdf</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>d2e30dbbae45fd7aadb9d444d8cfc9d9</pruefsumme>
+					<pruefsumme>7d2af4621bd39190a611146260db96f4</pruefsumme>
 				</datei>
 				<datei id="_Q_CzcDfmEeKLm53bgNs7IQ">
 					<name>{F45FA446-118A-4520-8864-B0CA80418DC4}.pdf</name>
 					<originalName>{F45FA446-118A-4520-8864-B0CA80418DC4}.pdf</originalName>
 					<pruefalgorithmus>MD5</pruefalgorithmus>
-					<pruefsumme>59d1e72f8314a041a666a5177ed6a330</pruefsumme>
+					<pruefsumme>9f46ce89007d65ff0299346a9f2fd4a3</pruefsumme>
 				</datei>
 			</ordner>
 		</ordner>
@@ -342,6 +360,13 @@
 								<oeffentlichkeitsstatus>öffentlich</oeffentlichkeitsstatus>
 								<dateiRef>_dPY60TfSEeKbAdCGaeR48Q</dateiRef>
 							</dokument>
+							<dokument id="_9hImEDfhEeKLm53bgNs7IQ">
+								<titel>Geschäftsverlauf</titel>
+								<erscheinungsform>digital</erscheinungsform>
+								<dokumenttyp>XML</dokumenttyp>
+								<bemerkung>automatisch generiert</bemerkung>
+								<dateiRef>_dNdoMDfSEeKbAdCGaeR48Q</dateiRef>
+							</dokument>
 						</dossier>
 						<dossier id="_ACLxEDfjEeKLm53bgNs7IQ">
 							<titel>XII. Nachtrag zum Gesetz über die Besoldung der Volksschullehrer</titel>
@@ -416,6 +441,12 @@
 								<oeffentlichkeitsstatus>öffentlich</oeffentlichkeitsstatus>
 								<dateiRef>_3g5FcDfiEeKLm53bgNs7IQ</dateiRef>
 							</dokument>
+							<dokument id="_PzTrADfkEeKLm53bgNs7IQ">
+								<titel>Geschäftsverlauf</titel>
+								<erscheinungsform>digital</erscheinungsform>
+								<dokumenttyp>XML</dokumenttyp>
+								<dateiRef>_3fjouTfiEeKLm53bgNs7IQ</dateiRef>
+							</dokument>
 						</dossier>
 					</ordnungssystemposition>
 				</ordnungssystemposition>
@@ -449,90 +480,6 @@
 							<abschlussdatum>
 								<datum>2007-09-23</datum>
 							</abschlussdatum>
-							<vorgang>
-								<titel>Geschäft eröffnen</titel>
-								<aktivitaet order="1">
-									<vorschreibung>KRGE 1 KR-Geschäft anmelden</vorschreibung>
-									<abschlussdatum>2007-02-08</abschlussdatum>
-								</aktivitaet>
-								<aktivitaet order="2">
-									<vorschreibung>KRGE 2 Sitzung der Regierung (Nulllesung)</vorschreibung>
-									<abschlussdatum>2007-02-13</abschlussdatum>
-								</aktivitaet>
-								<aktivitaet order="3">
-									<vorschreibung>KRGE 3 Nachbereitung der Regierungssitzung</vorschreibung>
-									<abschlussdatum>2007-02-14</abschlussdatum>
-								</aktivitaet>
-								<aktivitaet order="9">
-									<vorschreibung>KRGE 9 Botschaft und Entwurf ausfertigen</vorschreibung>
-									<abschlussdatum>2007-02-15</abschlussdatum>
-								</aktivitaet>
-								<aktivitaet order="10">
-									<vorschreibung>KRGE 10 Session des Kantonsrates (Kommissionsbestellung)</vorschreibung>
-									<abschlussdatum>2007-02-26</abschlussdatum>
-								</aktivitaet>
-								<aktivitaet order="11">
-									<vorschreibung>KRGE 11 Nachbereitung Kommissionsbestellung</vorschreibung>
-									<abschlussdatum>2007-02-26</abschlussdatum>
-								</aktivitaet>
-								<aktivitaet order="12">
-									<vorschreibung>KRGE 12 Vorbereitung der Sitzung der vorberatenden Kommission</vorschreibung>
-									<abschlussdatum>2007-02-27</abschlussdatum>
-								</aktivitaet>
-								<aktivitaet order="13">
-									<vorschreibung>KRGE 13 Sitzung der vorberatenden Kommission (erste Lesung)</vorschreibung>
-									<abschlussdatum>2007-03-16</abschlussdatum>
-								</aktivitaet>
-								<aktivitaet order="14">
-									<vorschreibung>KRGE 14 Nachbereitung der Sitzung der vorberatenden Kommission (erste Lesung)</vorschreibung>
-									<abschlussdatum>2007-03-16</abschlussdatum>
-								</aktivitaet>
-								<aktivitaet order="15">
-									<vorschreibung>KRGE 15 KR-Geschäft anmelden</vorschreibung>
-									<abschlussdatum>2007-03-16</abschlussdatum>
-								</aktivitaet>
-								<aktivitaet order="16">
-									<vorschreibung>KRGE 16 Sitzung der Regierung (Antrag)</vorschreibung>
-									<abschlussdatum>2007-03-20</abschlussdatum>
-								</aktivitaet>
-								<aktivitaet order="17">
-									<vorschreibung>KRGE 17 Anträge ausfertigen (chamois und rosa)</vorschreibung>
-									<abschlussdatum>2007-03-22</abschlussdatum>
-								</aktivitaet>
-								<aktivitaet order="18">
-									<vorschreibung>KRGE 18 Session des Kantonsrates (erste Lesung / Gesamtabstimmung)</vorschreibung>
-									<abschlussdatum>2007-05-04</abschlussdatum>
-								</aktivitaet>
-								<aktivitaet order="19">
-									<vorschreibung>KRGE 19 Anträge ausfertigen (grau)</vorschreibung>
-									<abschlussdatum>2007-05-04</abschlussdatum>
-								</aktivitaet>
-								<aktivitaet order="20">
-									<vorschreibung>KRGE 20 Ergebnis erster Lesung ausfertigen </vorschreibung>
-									<abschlussdatum>2007-05-04</abschlussdatum>
-								</aktivitaet>
-								<aktivitaet order="26">
-									<vorschreibung>KRGE 26 Session des Kantonsrates (zweite Lesung / Schlussabstimmung / Gesamtabstimmung)</vorschreibung>
-								</aktivitaet>
-								<aktivitaet order="27">
-									<vorschreibung>KRGE 27 Anträge ausfertigen (grau und grün)</vorschreibung>
-								</aktivitaet>
-								<aktivitaet order="28">
-									<vorschreibung>KRGE 28 Sitzung der Regierung (Vollzugsbeschluss)</vorschreibung>
-								</aktivitaet>
-								<aktivitaet order="29">
-									<vorschreibung>KRGE 29 Veröffentlichung der Referendumsvorlage</vorschreibung>
-								</aktivitaet>
-								<aktivitaet order="30">
-									<vorschreibung>KRGE 30 Regierungsgeschäft vorbereiten</vorschreibung>
-								</aktivitaet>
-								<aktivitaet order="31">
-									<vorschreibung>KRGE 31 Sitzung der Regierung (ReVoBe)</vorschreibung>
-								</aktivitaet>
-								<aktivitaet order="32">
-									<vorschreibung>KRGE 32 In der Gesetzessammlung veröffentlichen</vorschreibung>
-								</aktivitaet>
-							</vorgang>
 							<dokument id="_FqL1wDhvEeKLm53bgNs7IQ">
 								<titel>Botschaft und Entwurf der Regierung vom 13. Februar 2007</titel>
 								<autor>Regierungsrat</autor>
@@ -616,6 +563,12 @@
 								<klassifizierungskategorie>nicht klassifiziert</klassifizierungskategorie>
 								<oeffentlichkeitsstatus>öffentlich</oeffentlichkeitsstatus>
 								<dateiRef>_Q-TMmTfmEeKLm53bgNs7IQ</dateiRef>
+							</dokument>
+							<dokument id="_j59AAThvEeKLm53bgNs7IQ">
+								<titel>Geschäftsverlauf</titel>
+								<erscheinungsform>digital</erscheinungsform>
+								<dokumenttyp>XML</dokumenttyp>
+								<dateiRef>_Q7LAEDfmEeKLm53bgNs7IQ</dateiRef>
 							</dokument>
 						</dossier>
 					</ordnungssystemposition>

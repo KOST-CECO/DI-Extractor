@@ -77,9 +77,13 @@ DI_app
 		EADreference.xsl
 [Open project files]
 0=Neu1.txt
+1=P:\KOST\Standards\eCH\eCH-0160_SIP\11_FilesSIP_ohne_DateiRef\FilesSIP_Analyse\FilesSIP_Analyse.go
 [Selected Project Files]
 Main=processingest.php
-Selected=Neu1.txt
+Selected=P:\KOST\Standards\eCH\eCH-0160_SIP\11_FilesSIP_ohne_DateiRef\FilesSIP_Analyse\FilesSIP_Analyse.go
 [Neu1.txt]
+TopLine=1
+Caret=1,1
+[P:\KOST\Standards\eCH\eCH-0160_SIP\11_FilesSIP_ohne_DateiRef\FilesSIP_Analyse\FilesSIP_Analyse.go]
 TopLine=1
 Caret=1,1
