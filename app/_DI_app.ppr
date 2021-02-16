@@ -12,9 +12,8 @@ DocumentRoot=C:\Tools\xampp\htdocs\app
 HTServer=http://localhost:90/app/
 [Project tree]
 DI_app
-	+cmd
+	-cmd
 		run.txt
-		ToolListe.docx
 		run_transform.cmd
 		transform.cmd
 		test_transform.cmd
@@ -22,17 +21,7 @@ DI_app
 		extract_element.cmd
 		install_app.cmd
 		..\.gitignore
-	-RIC
-		eCH2RIC.xsl
-		RICfond.xsl
-		RICserie.xsl
-		RICreference.xsl
-		RICitem.xsl
-		RICfile.xsl
-		RICdate.xsl
-		RICaccess.xsl
-		RIC_order.txt
-	+app
+	-app
 		index.php
 		input.php
 		ingest.php
@@ -76,15 +65,16 @@ DI_app
 		EADdate.xsl
 		EADaccess.xsl
 		EADreference.xsl
+	-RIC
+		eCH2RIC.xsl
+		RICfond.xsl
+		RICserie.xsl
+		RICreference.xsl
+		RICitem.xsl
+		RICfile.xsl
+		RICdate.xsl
+		RICaccess.xsl
+		RIC_order.txt
 [Open project files]
-0=Neu1.txt
-1=..\.gitignore
 [Selected Project Files]
 Main=processingest.php
-Selected=..\.gitignore
-[Neu1.txt]
-TopLine=1
-Caret=1,1
-[..\.gitignore]
-TopLine=1
-Caret=1,1
