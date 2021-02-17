@@ -12,7 +12,7 @@ DocumentRoot=C:\Tools\xampp\htdocs\app
 HTServer=http://localhost:90/app/
 [Project tree]
 DI_app
-	-cmd
+	+cmd
 		run.txt
 		run_transform.cmd
 		transform.cmd

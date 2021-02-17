@@ -21,7 +21,7 @@ COPY %WORKDIR%\app\null.xml %HTDOCS%\app
 COPY "P:\KOST\Standards\xIsadg\_Workbench\DataDictionary\eCH-0160_xIsadg&EAD_v2.1.xlsx" %HTDOCS%\app
 COPY "P:\KOST\Standards\xIsadg\_Workbench\DataDictionary\xIsadg_DataDictionary_v2.1.pdf" %HTDOCS%\app
 
-%ZDIR%\7z.exe a -mx9 "%HTDOCS%\app\eCH-0160_xIsadg&EAD&RIC.xsl.zip" "%WORKDIR%\app\*.xs*" "%WORKDIR%\app\*.bat" "%WORKDIR%\app\xsd_*"
+%ZDIR%\7z.exe a -mx9 "%HTDOCS%\app\eCH-0160_xIsadg&EAD&RIC.xsl.zip" "%WORKDIR%\app\*.xs*" "%WORKDIR%\app\*.cmd" "%WORKDIR%\app\xsd_*"
 
 EXIT /B
 
