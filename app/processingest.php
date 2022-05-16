@@ -27,7 +27,7 @@ $collstyle = utf8_encode( stripslashes($_POST['collstyle']) );
 $xschema = utf8_encode( stripslashes($_POST['xschema']) );
 */
 
-// Referenzdatei für die Signaturnummerierung
+// Referenzdatei fÃ¼r die Signaturnummerierung
 $reffile = "./$wdir/_signaturereference.xml";
 @unlink($reffile);
 
@@ -72,9 +72,11 @@ else {
 // Load the XSLT source
 $xsl = new DOMDocument;
 if ($xschema == 'xIsadg') {
+    // echo "xisadg 1.1";
     $xsl->load('eCH2xIsadg.xsl');
 }
 elseif ($xschema == 'xI2sadg') {
+    // echo "xisadg 1.2";
     $xsl->load('eCH2xI2sadg.xsl');
 }
 elseif ($xschema == 'EAD') {
@@ -99,9 +101,10 @@ $proc->setParameter('', 'packagename', "$packagename");
 // Transform according to the xsl rules
 $xisadg = $proc->transformToXML($xml);
 
-//file_put_contents("outlist.xml", $xisadg); // TEST
+//Here we check, if the file is correctly transformed.
+file_put_contents("outlist.xml", $xisadg); // TEST
 
-// alle Dateien im Arbeitsverzeichnis "$wdir" löschen
+// alle Dateien im Arbeitsverzeichnis "$wdir" lÃ¶schen
 if ($handle = opendir($wdir)) {
     while (false !== ($file = readdir($handle))) {
         if ($file != "." && $file != ".." && $file != ".svn") {
@@ -109,16 +112,18 @@ if ($handle = opendir($wdir)) {
         }
     }
 closedir($handle);
-// Userverzeichnis im Arbeitsverzeichnis löschen
+// Userverzeichnis im Arbeitsverzeichnis lÃ¶schen
 @rmdir($wdir);
 }
 
+
 // We'll be outputting a XML
-// HTML Header ausgeben und damit ein Redirect auslösen
+// HTML Header ausgeben und damit ein Redirect auslÃ¶sen
+
 header('Content-type: application/xml');
 echo $xisadg;
 
-// RDF Datei kopieren für Abfrage mit SPARQL
+// // RDF Datei kopieren fÃ¼r Abfrage mit SPARQL
 if ($xschema == 'RIC') {
     file_put_contents("./$wdir.rdf", $xisadg);
 }

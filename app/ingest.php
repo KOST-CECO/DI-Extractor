@@ -1,5 +1,5 @@
 <?php
-// wenn kein User Verzeichnis existiert wird ein Redirect auf input.php ausgelöst
+// wenn kein User Verzeichnis existiert wird ein Redirect auf input.php ausgelï¿½st
 $usr = '';
 if (array_key_exists('usr', $_GET)) {
     if ($_GET['usr']!='') { $usr = $_GET['usr']; }
@@ -13,6 +13,10 @@ if ($usr=='') { header ("location: ./input.php"); }
 $wdir = "wdir/$usr";
 if (!is_dir($wdir)) { header ("location: ./input.php"); }
 $metadatafile = '';
+?>
+
+<?php
+// echo "hello"
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
@@ -64,7 +68,8 @@ $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
 </script>
     <hr>
 <?php
-// alle Dateien im Arbeitsverzeichnis "$wdir/$usr" löschen
+// alle Dateien im Arbeitsverzeichnis "$wdir/$usr" lï¿½schen
+// Neues file laden in $file
 if (array_key_exists('RESET', $_POST)) {
     if ($_POST['RESET']=='true') {
         if ($handle = opendir($wdir)) {
@@ -101,7 +106,7 @@ if ($handle = opendir($wdir)) {
             echo "$file&nbsp;&nbsp;&nbsp; (" . filesize("$wdir/$file") . " bytes)";
             if (substr($file, -4) == ".xml") {
                 $xml = new DOMDocument();
-                $xml->load("$wdir/$file");
+                $xml->load("$wdir/$file"); 
                 if ($xml->schemaValidate('./xsd_v4/arelda.xsd')) {
                    echo "&nbsp;&nbsp;&nbsp; eCH-0160 1.0 / arelda_v4 SIP Metadata";
                    // konvertierung wird initialisiert
@@ -114,6 +119,28 @@ if ($handle = opendir($wdir)) {
                 }
                 elseif ($xml->schemaValidate('./xsd_v3.13.2/arelda_v3.13.2.xsd')) {
                     echo "&nbsp;&nbsp;&nbsp; arelda_v3.13.2 SIP Metadata";
+                    //nun soll auch die Konvertierung fÃ¼r arelda v3.13.2 initialisiert werden.
+                    //Im file soll dabei die erste Zeile ersetzt werden.
+                    $metadatafile = "$file";
+                    $content=file("$wdir/$file");
+                    //In this file I stored only the headline of an arelda v4-file.
+                    $contentNew=file("Filedefinition_areldaV4.xml");
+
+                    //In the arrayreplace the second line, with the definition of arelda 3.12.3
+                    //with the definition of arelda 4.1
+                    $content[1]=$contentNew[0];
+                    //echo $content[1];
+   
+                    //Here we overwrite the headline of the arelda 3.13.2 with the headline of arelda 4.1
+                    //If the flag is not set differently, the content of the file will be overwritten.
+                    file_put_contents("$wdir/$file",$content);
+
+                    //Here we check if the line in the file has been replaced correctly.
+                    // $content=file("$wdir/$file");
+                    // echo $content[1];
+
+                    $xml = new DOMDocument();
+                    $xml->load("$wdir/$file"); 
                 }
                 elseif ($xml->schemaValidate('./xIsadg_v1.6.1.xsd')) {
                     echo "&nbsp;&nbsp;&nbsp; xIsadg_v1.6 DI Metadata";
@@ -134,9 +161,10 @@ if ($handle = opendir($wdir)) {
     echo "</ul>";
     closedir($handle);
 }
+
 if ($metadatafile != '') {
 include 'maninput.php';
-}
+} 
 include 'copyright.php'; ?>
   </body>
 </html>
