@@ -14,4 +14,7 @@ Thumbs.db
 /htdocs
 /scratch
 *.zip
-/.vs
+# ignore vs projectfiles
+.vs/
+# ignore temp file
+app/outlist.xml
