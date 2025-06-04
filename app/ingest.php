@@ -15,20 +15,16 @@ if (!is_dir($wdir)) { header ("location: ./input.php"); }
 $metadatafile = '';
 ?>
 
-<?php
-// echo "hello"
-?>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
 <html>
   <head>
     <link href="ingest.css" rel="stylesheet" type="text/css"/>
 <script src="./jquery.min.js"></script>
 <script src="./rico.js"></script>
-    <title>KOST Descriptive Information Converter 2.1</title>
+    <title>KOST Descriptive Information Converter 3.0</title>
   </head>
   <body background="./background.jpg" onload="ricOff()">
-    <h1>KOST Descriptive Information Converter 2.1 <span class="versionText">(Rev. 169)</span></h1>
+    <h1>KOST Descriptive Information Converter 3.0 <span class="versionText">(Rev. 1)</span></h1>
     <?php include 'helptext.php'; ?>
     <i>Eine eCH-0160 Metadaten Datei f&uuml;r die Konvertierung ausw&auml;hlen:</i>
     <br>
@@ -36,6 +32,7 @@ $metadatafile = '';
     <table>
         <tr>
           <th>
+              <!-- inputs will be sent to ingest.php after they are sent by submit-button -->
             <form enctype="multipart/form-data" action="ingest.php" method="post">
               <input name="MAX_FILE_SIZE"  value="100000000" type="hidden">
               <input name="usr" value=<?=$usr?> type="hidden">
@@ -45,7 +42,7 @@ $metadatafile = '';
               <label class="btn" for="actual-btn"> Datei ausw&auml;hlen </label> 
               <!-- name of file chosen -->
               <span class="custom-file-label" id="file-chosen"> Keine Datei ausgew&auml;hlt </span>
-              <!-- submit button -->
+              <!-- submit button: submits all values of the form, in this case: the uploaded file -->
               <input class="btn" value="Datei &uuml;bermitteln" type="submit">
             </form>
           </th>
@@ -69,7 +66,6 @@ $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
     <hr>
 <?php
 // alle Dateien im Arbeitsverzeichnis "$wdir/$usr" l�schen
-// Neues file laden in $file
 if (array_key_exists('RESET', $_POST)) {
     if ($_POST['RESET']=='true') {
         if ($handle = opendir($wdir)) {
@@ -106,7 +102,7 @@ if ($handle = opendir($wdir)) {
             echo "$file&nbsp;&nbsp;&nbsp; (" . filesize("$wdir/$file") . " bytes)";
             if (substr($file, -4) == ".xml") {
                 $xml = new DOMDocument();
-                $xml->load("$wdir/$file"); 
+                $xml->load("$wdir/$file");
                 if ($xml->schemaValidate('./xsd_v4/arelda.xsd')) {
                    echo "&nbsp;&nbsp;&nbsp; eCH-0160 1.0 / arelda_v4 SIP Metadata";
                    // konvertierung wird initialisiert
@@ -117,8 +113,13 @@ if ($handle = opendir($wdir)) {
                    // konvertierung wird initialisiert
                    $metadatafile = "$file";
                 }
-                elseif ($xml->schemaValidate('./xsd_v3.13.2/arelda_v3.13.2.xsd')) {
-                    echo "&nbsp;&nbsp;&nbsp; arelda_v3.13.2 SIP Metadata";
+                elseif ($xml->schemaValidate('./xsd_v4.2/arelda.xsd')) {
+                    echo "&nbsp;&nbsp;&nbsp; eCH-0160 1.2 / arelda_v4.2 SIP Metadata";
+                    // konvertierung wird initialisiert
+                    $metadatafile = "$file";
+                 }
+                 elseif ($xml->schemaValidate('./xsd_v3.13.2/arelda_v3.13.2.xsd')) {
+                     echo "&nbsp;&nbsp;&nbsp; arelda_v3.13.2 SIP Metadata";                  
                     //nun soll auch die Konvertierung für arelda v3.13.2 initialisiert werden.
                     //Im file soll dabei die erste Zeile ersetzt werden.
                     $metadatafile = "$file";
@@ -141,18 +142,39 @@ if ($handle = opendir($wdir)) {
 
                     $xml = new DOMDocument();
                     $xml->load("$wdir/$file"); 
-                }
+					 
+                 }
+
                 elseif ($xml->schemaValidate('./xIsadg_v1.6.1.xsd')) {
                     echo "&nbsp;&nbsp;&nbsp; xIsadg_v1.6 DI Metadata";
                 }
                 elseif ($xml->schemaValidate('./xIsadg_v2.1.xsd')) {
                     echo "&nbsp;&nbsp;&nbsp; xIsadg_v2.1 DI Metadata";
                 }
+                elseif ($xml->schemaValidate('./xIsadg_v3.0.xsd')) {
+                    echo "&nbsp;&nbsp;&nbsp; xIsadg_v3.0 DI Metadata";
+                }
                 elseif ($xml->schemaValidate('./ead.xsd')) {
                     echo "&nbsp;&nbsp;&nbsp; EAD Metadata";
                 }
+
                 else {
                     echo "&nbsp;&nbsp;&nbsp; unbekannte XML Datei";
+                    $errors = libxml_get_errors(); 
+                    
+                    // Diese Zeile nur, um xml für eCHv1.2 vereinfacht einlesen zu können.
+                    // Falls das mit xml funktioniert, wieder entfernen.
+                   
+                    $metadatafile = "$file";
+
+                    foreach ($errors as $error) {
+                        echo "&nbsp";
+                        echo $error -> file;
+                        echo "&nbsp";
+                        echo $error -> line;
+                        echo "&nbsp";
+                        echo $error -> message;
+                    }
                 }
             }
             echo "</li>";
@@ -161,10 +183,12 @@ if ($handle = opendir($wdir)) {
     echo "</ul>";
     closedir($handle);
 }
-
+// If a metadatafile has been uploaded, then the webpage-parts for 
+// manual inputs like Bestandessignatur will be displayed.
+// This is done by adding maninput.php to the ingest.php
 if ($metadatafile != '') {
 include 'maninput.php';
-} 
+}
 include 'copyright.php'; ?>
   </body>
 </html>

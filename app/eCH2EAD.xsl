@@ -51,6 +51,7 @@
 	</xsl:template>
 	<!-- Ordnungssystem -->
 	<xsl:template match="arelda:ablieferung/arelda:ordnungssystem">
+		<!-- Das entsprechende Template findet sich in EADserie.xsl -->
 		<xsl:apply-templates select="arelda:ordnungssystemposition">
 			<xsl:with-param name="sig">
 				<xsl:value-of select="$archsig"/>

@@ -37,7 +37,7 @@
 										<xsl:text>not public</xsl:text>
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:text>undefined</xsl:text>
+										<xsl:text>other:</xsl:text> <xsl:value-of select="arelda:oeffentlichkeitsstatus/text()" />
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:element>
@@ -45,6 +45,10 @@
 						<!--   -->
 						<xsl:if test="arelda:klassifizierungskategorie">
 							<xsl:element name="classification">
+								<xsl:attribute name="origin">
+									<xsl:value-of select="$orig" />
+									<xsl:text>/klassifizierungskategorie</xsl:text>
+								</xsl:attribute>
 								<xsl:choose>
 									<xsl:when test="arelda:klassifizierungskategorie/text()='geheim'or arelda:klassifizierungskategorie/text()='streng vertraulich'">
 										<xsl:text>secret</xsl:text>
@@ -53,16 +57,16 @@
 										<xsl:text>confidential</xsl:text>
 									</xsl:when>
 									<xsl:when test="arelda:klassifizierungskategorie/text()='interner gebrauch' or arelda:klassifizierungskategorie/text()='Interner Gebrauch' or arelda:klassifizierungskategorie/text()='interner Gebrauch'">
-										<xsl:text>house_intern</xsl:text>
+										<xsl:text>in_house</xsl:text>
 									</xsl:when>
 									<xsl:when test="arelda:klassifizierungskategorie/text()='nur für hausinternen gebrauch' or arelda:klassifizierungskategorie/text()='Nur für hausinternen Gebrauch'or arelda:klassifizierungskategorie/text()='nur für hausinternen Gebrauch'">
-									<xsl:text>house_intern</xsl:text>
+									<xsl:text>in_house</xsl:text>
 									</xsl:when>
 									<xsl:when test="arelda:klassifizierungskategorie/text()='nur fuer hausinternen gebrauch' or arelda:klassifizierungskategorie/text()='Nur fuer hausinternen Gebrauch' or arelda:klassifizierungskategorie/text()='nur fuer hausinternen Gebrauch'">
-									<xsl:text>house_intern</xsl:text>
+									<xsl:text>in_house</xsl:text>
 									</xsl:when>
 									<xsl:when test="arelda:klassifizierungskategorie/text()='intern'">
-									<xsl:text>house_intern</xsl:text>
+									<xsl:text>in_house</xsl:text>
 									</xsl:when>
 									<xsl:when test="arelda:klassifizierungskategorie/text()='nicht klassifiziert'">
 										<xsl:text>unclassified</xsl:text>
@@ -141,7 +145,11 @@
 				<xsl:if test="arelda:erscheinungsform">
 					<xsl:element name="physTech">
 						<xsl:attribute name="isadId">4.4</xsl:attribute>
-						<xsl:attribute name="origin">ingest</xsl:attribute>
+						<!-- <xsl:attribute name="origin">ingest</xsl:attribute> -->
+						<xsl:attribute name="origin">
+							<xsl:value-of select="$orig" />
+							<xsl:text>/erscheinungsform</xsl:text>
+						</xsl:attribute>
 						<xsl:choose>
 							<xsl:when test="arelda:erscheinungsform/text()='digital'">
 								<xsl:text>digital</xsl:text>
@@ -152,14 +160,17 @@
 							<xsl:when test="arelda:erscheinungsform/text()='gemischt'">
 								<xsl:text>hybrid</xsl:text>
 							</xsl:when>
+							<xsl:when test="arelda:erscheinungsform/text()=''">
+									<xsl:text>keine Angabe</xsl:text>
+							</xsl:when>
 							<xsl:otherwise>
-								<xsl:text>not_defined</xsl:text>
+							<xsl:text>other:</xsl:text> <xsl:value-of select="arelda:erscheinungsform/text()"/>
 							</xsl:otherwise>
 						</xsl:choose>
 					</xsl:element>
 				</xsl:if>
 				<!-- 3.4.4 Originalinhalt von arelda:erscheinungsform -->
-				<xsl:if test="arelda:erscheinungsform">
+				<!-- <xsl:if test="arelda:erscheinungsform">
 					<xsl:element name="physTech">
 						<xsl:attribute name="isadId">4.4</xsl:attribute>
 						<xsl:attribute name="origin">
@@ -168,7 +179,7 @@
 						</xsl:attribute>
 						<xsl:value-of select="arelda:erscheinungsform/text()" />
 					</xsl:element>
-				</xsl:if>
+				</xsl:if> -->
 				<!--   -->
 			</xsl:element>
 		</xsl:if>

@@ -13,3 +13,5 @@ Thumbs.db
 *.exe
 /htdocs
 /scratch
+*.zip
+/.vs

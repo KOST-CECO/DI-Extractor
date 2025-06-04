@@ -16,7 +16,20 @@
 				</xsl:call-template>
 			</xsl:element>
 		</xsl:if>
+		<xsl:if test="($range/arelda:von/arelda:datum/text() = 'keine Angabe' and $range/arelda:bis/arelda:datum/text() = 'keine Angabe')">
+			<xsl:element name="dates">
+				<xsl:attribute name="isadId">1.3</xsl:attribute>
+				<xsl:attribute name="origin"><xsl:value-of select="$orig"/></xsl:attribute>
+					<xsl:element name="fromDate">
+						<xsl:text>unknown</xsl:text>
+					</xsl:element>
+				<xsl:element name="toDate">
+						<xsl:text>unknown</xsl:text>
+				</xsl:element>
+			</xsl:element>
+		</xsl:if>
 	</xsl:template>
+
 	<!-- named template xI2impledate -->
 	<xsl:template name="xI2simpledate">
 		<xsl:param name="range"/>
@@ -91,5 +104,19 @@
 				</xsl:element>
 			</xsl:if>
 		</xsl:if>
+
+		<xsl:if test="($range/arelda:von/arelda:datum/text() = 'keine Angabe' and $range/arelda:bis/arelda:datum/text() = 'keine Angabe')">
+			<xsl:element name="dates">
+				<xsl:attribute name="isadId">1.3</xsl:attribute>
+				<xsl:attribute name="origin"><xsl:value-of select="$orig"/></xsl:attribute>
+					<xsl:element name="fromDate">
+						<xsl:text>unknown</xsl:text>
+					</xsl:element>
+					<xsl:element name="toDate">
+						<xsl:text>unknown</xsl:text>
+					</xsl:element>
+			</xsl:element>
+		</xsl:if>
+
 	</xsl:template>
 </xsl:stylesheet>

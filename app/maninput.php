@@ -41,9 +41,9 @@ if ($wdir=='') { header ("location: ./input.php"); }
                 Ausgabeformat:</td>
             <td>
                 <input type="radio" name="xschema" value="xIsadg" title="Ausgabe als xIsadg Metadaten Datei" onClick="ricOff();" checked> xIsadg 1.6.1
-                <input type="radio" name="xschema" value="xI2sadg" title="Ausgabe als xIsadg Metadaten Datei Version 2.1" onClick="ricOff();"> xIsadg 2.1
-                <input type="radio" name="xschema" value="EAD" title="Ausgabe als EAD Metadaten Datei (METS Matterhorn Style)" onClick="ricOff();"> EAD
-                <input type="radio" name="xschema" value="RIC" title="Ausgabe als RIC Metadaten Datei Version 0.1" onClick="ricOn();"> RIC 0.1(beta)
+                <input type="radio" name="xschema" value="xI2sadg" title="Ausgabe als xIsadg Metadaten Datei Version 2.2" onClick="ricOff();"> xIsadg 3.0
+                <!-- <input type="radio" name="xschema" value="EAD" title="Ausgabe als EAD Metadaten Datei (METS Matterhorn Style)" onClick="ricOff();"> EAD -->
+                <!-- <input type="radio" name="xschema" value="RIC" title="Ausgabe als RIC Metadaten Datei Version 0.1" onClick="ricOn();"> RIC 0.1(beta) -->
             </td>
             <td>
                 <div style="text-align: right;">
