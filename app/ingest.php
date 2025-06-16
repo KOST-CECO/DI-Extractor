@@ -24,7 +24,7 @@ $metadatafile = '';
     <title>KOST Descriptive Information Converter 3.0</title>
   </head>
   <body background="./background.jpg" onload="ricOff()">
-    <h1>KOST Descriptive Information Converter 3.0 <span class="versionText">(Rev. 1)</span></h1>
+    <h1>KOST Descriptive Information Converter 3.0 <span class="versionText">(Rev. 2 WIP)</span></h1>
     <?php include 'helptext.php'; ?>
     <i>Eine eCH-0160 Metadaten Datei f&uuml;r die Konvertierung ausw&auml;hlen:</i>
     <br>
@@ -113,8 +113,16 @@ if ($handle = opendir($wdir)) {
                    // konvertierung wird initialisiert
                    $metadatafile = "$file";
                 }
+                // back in those days they expected the new arelda to have the version 4.2 but later it turned out
+                // the version will be 5.0
                 elseif ($xml->schemaValidate('./xsd_v4.2/arelda.xsd')) {
                     echo "&nbsp;&nbsp;&nbsp; eCH-0160 1.2 / arelda_v4.2 SIP Metadata";
+                    // konvertierung wird initialisiert
+                    $metadatafile = "$file";
+                 }
+                 // db (20250616) added - processing for ech-0160 v1.3
+                 elseif ($xml->schemaValidate('./xsd_v5.1/arelda.xsd')) {
+                    echo "&nbsp;&nbsp;&nbsp; eCH-0160 1.3 / arelda_v5.1 SIP Metadata";
                     // konvertierung wird initialisiert
                     $metadatafile = "$file";
                  }
