@@ -21,11 +21,13 @@ $metadatafile = '';
     <link href="ingest.css" rel="stylesheet" type="text/css"/>
 <script src="./jquery.min.js"></script>
 <script src="./rico.js"></script>
-    <title>KOST Descriptive Information Converter 3.0</title>
+    <title>KOST Descriptive Information Converter 3.0 (2025)</title>
   </head>
   <body background="./background.jpg" onload="ricOff()">
-    <h1>KOST Descriptive Information Converter 3.0 <span class="versionText">(Rev. 2 WIP)</span></h1>
+    <h1>KOST Descriptive Information Converter 3.0 <!--span class="versionText">(Rev. 2 WIP)</span--></h1>
+	<!-- BEGIN: INTRODUCTION TEXT -->
     <?php include 'helptext.php'; ?>
+	<!-- END: INTRODUCTION TEXT -->
     <i>Eine eCH-0160 Metadaten Datei f&uuml;r die Konvertierung ausw&auml;hlen:</i>
     <br>
     <!-- Upload Formular, zweispaltig -->
