@@ -23,7 +23,7 @@ $metadatafile = '';
 <script src="./rico.js"></script>
     <title>KOST Descriptive Information Converter 3.0 (2025)</title>
   </head>
-  <body background="./background.jpg" onload="ricOff()">
+  <body onload="ricOff()">
     <h1>KOST Descriptive Information Converter 3.0 <!--span class="versionText">(Rev. 2 WIP)</span--></h1>
 	<!-- BEGIN: INTRODUCTION TEXT -->
     <?php include 'helptext.php'; ?>
